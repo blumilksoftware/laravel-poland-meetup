@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poland Meetup #21",
+  "date": "2022-03-10 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions", "@tidio"],
+  "presentations": [
+    {
+      "title": "Cykl życia zapytania HTTP (pod maską)",
+      "speakers": [
+        {
+          "person": "@krzysztofrewak",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Jak przemycić Shape Up do Scruma",
+      "speakers": [
+        {
+          "person": "@przemekszustak",
+          "company": "@tidio"
+        }
+      ]
+    },
+    {
+      "title": "Enumy w Laravelu - dlaczego warto stosować?",
+      "speakers": [
+        {
+          "person": "@filipzdunek",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}
