@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poland Meetup #22",
+  "date": "2022-05-19 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions", "@tidio"],
+  "presentations": [
+    {
+      "title": "Kilka słów o castowaniu atrybutów w Eloquent",
+      "speakers": [
+        {
+          "person": "@miloszdziurzynski",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Licencje otwartego oprogramowania",
+      "speakers": [
+        {
+          "person": "@joannarewak",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Jak przyspieszyłem aplikację produkcyjną o ponad 40%",
+      "speakers": [
+        {
+          "person": "@patrykfilipiak",
+          "company": null
+        }
+      ]
+    }
+  ]
+}

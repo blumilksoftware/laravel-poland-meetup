@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poland Meetup Summer Vibes 2022",
+  "date": "2022-08-04 18:00:00",
+  "location": "Wrocław, Hala Świebodzki",
+  "organizers": ["@blumilk", "@highsolutions"],
+  "presentations": [
+    {
+      "title": "Co nas boli w Laravelu?",
+      "speakers": [
+        {
+          "person": "@krzysztofrewak",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Kalambury programistyczne",
+      "speakers": [
+        {
+          "person": "@karolbarcki",
+          "company": "@expansja"
+        }
+      ]
+    },
+    {
+      "title": "Admin panel dla Laravela - a komu to potrzebne?",
+      "speakers": [
+        {
+          "person": "@kamilbartczak",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

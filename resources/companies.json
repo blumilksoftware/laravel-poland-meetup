@@ -1,0 +1,29 @@
+{
+  "@blumilk": {
+    "name": "Blumilk",
+    "logo": "/images/companies/blumilk.png",
+    "location": "Legnica",
+    "organizer": true
+  },
+  "@expansja": {
+    "name": "Expansja",
+    "logo": "/images/companies/expansja.png",
+    "location": "Poznań"
+  },
+  "@highsolutions": {
+    "name": "HighSolutions",
+    "logo": "/images/companies/highsolutions.png",
+    "location": "Poznań",
+    "organizer": true
+  },
+  "@tidio": {
+    "name": "Tidio",
+    "logo": "/images/companies/tidio.png",
+    "location": "Poznań"
+  },
+  "@trui": {
+    "name": "Trui",
+    "logo": "/images/companies/trui.png",
+    "location": "Poznań"
+  }
+}

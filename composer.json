@@ -1,0 +1,26 @@
+{
+  "name": "blumilksoftware/laravel-poland-meetup-website",
+  "description": "Laravel Poland Meetup website builder",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LaravelPolandMeetup\\": "backend/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "illuminate/collections": "^9.29",
+    "nesbot/carbon": "^2.62",
+    "illuminate/support": "^9.29"
+  },
+  "require-dev": {
+    "blumilksoftware/codestyle": "^1.7",
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "build": "php ./backend/builder.php",
+    "cs": "./vendor/bin/php-cs-fixer fix --dry-run --diff --config codestyle.php",
+    "csf": "./vendor/bin/php-cs-fixer fix --diff --config codestyle.php"
+  }
+}

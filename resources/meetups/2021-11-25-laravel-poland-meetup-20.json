@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poland Meetup #20",
+  "date": "2021-11-25-10 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions", "@trui"],
+  "presentations": [
+    {
+      "title": "Laravelowe paczki do uwierzytelniania",
+      "speakers": [
+        {
+          "person": "@kamilpiech",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Przegląd najciekawszych wtyczek do Laravela",
+      "speakers": [
+        {
+          "person": "@tomekzmudzinski",
+          "company": "@trui"
+        }
+      ]
+    }
+  ]
+}
