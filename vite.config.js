@@ -7,5 +7,8 @@ export default defineConfig({
       '@': '/frontend'
     },
   },
-  plugins: [vue()]
+  plugins: [vue()],
+  server: {
+    port: 9088,
+  }
 })
