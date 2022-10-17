@@ -1,20 +1,21 @@
-version: "3.7"
+version: "3.8"
 
 services:
   node:
     container_name: lpm-node
-    image: node:18.8.0-alpine3.16
+    image: node:18.11-alpine3.16
     working_dir: /application
+    user: ${CURRENT_UID:-1000}
     volumes:
       - .:/application
-    restart: always
+    restart: unless-stopped
     tty: true
     ports:
       - ${EXTERNAL_NODE_PORT:-9088}:9088
 
   php:
     container_name: lpm-php
-    image: ghcr.io/blumilksoftware/php:8.1.0.0
+    image: ghcr.io/blumilksoftware/php:8.1
     working_dir: /application
     user: ${CURRENT_UID:-1000}
     volumes:
