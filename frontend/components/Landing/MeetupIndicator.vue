@@ -10,21 +10,24 @@
       <div class="md:ml-auto md:w-1/2 md:pl-10">
         <h2 class="uppercase font-semibold text-zinc-300">
           Następny meetup
-          <span class="text-laravel">&</span>
+          <span class="text-laravel">już</span>
           za miesiąc
         </h2>
         <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Laravel Poland Meetup #22
+          Laravel Poland MeetUp #23
         </div>
-        <p class="mt-3 text-lg text-zinc-300">
-          Spotykamy się już 22 listopada lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus dolorem eius placeat quaerat quia quisquam. Ab ad assumenda blanditiis et eveniet ex iure, laboriosam nostrum porro quam! Error, id.
+        <p class="mt-3 text-2xl text-zinc-300 leading-8">
+          <strong>10 listopad, godzina 18:00, czwartek</strong><br>
+          Zapraszamy fascynatów Laravela i nie tylko!<br>
+          Wstęp free.<br>
+          Tym razem widzimy się online!
         </p>
         <div class="mt-8">
-          <div class="inline-flex gap-4 rounded-md shadow">
-            <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-200">
+          <div class="inline-flex gap-4 rounded-md shadow ">
+            <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300 ">
               Zobacz agendę i szczegóły
             </a>
-            <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-500 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-600">
+            <a href="/meetups" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-500 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">
               Zobacz poprzednie meetupy
             </a>
           </div>
