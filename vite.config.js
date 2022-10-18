@@ -9,6 +9,9 @@ export default defineConfig({
   },
   plugins: [vue()],
   server: {
+    watch: {
+      usePolling: true
+    },
     port: 9088,
   }
 })

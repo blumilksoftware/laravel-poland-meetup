@@ -3,11 +3,13 @@ import AboutMeetup from '@/components/Landing/AboutMeetup.vue'
 import Counters from '@/components/Landing/Counters.vue'
 import HeroSection from '@/components/Landing/HeroSection.vue'
 import MeetupIndicator from '@/components/Landing/MeetupIndicator.vue'
+import JoinUs from '@/components/Landing/JoinUs.vue'
 </script>
 
 <template>
   <hero-section></hero-section>
   <meetup-indicator></meetup-indicator>
   <about-meetup></about-meetup>
+  <join-us></join-us>
   <counters></counters>
 </template>
