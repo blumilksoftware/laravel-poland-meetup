@@ -13,10 +13,10 @@
       </div>
       <div class="mt-8 flex justify-center">
         <div class="inline-flex rounded-md shadow">
-          <a href="/contact" class="inline-flex items-center justify-center rounded-md border border-transparent bg-red-600 px-5 py-3 text-xl font-medium text-white hover:bg-red-800 hover:scale-105 duration-300">Zgłoś prezentację</a>
+          <router-link :to="{ name: 'contact' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-red-600 px-5 py-3 text-xl font-medium text-white hover:bg-red-800 hover:scale-105 duration-300">Zgłoś prezentację</router-link>
         </div>
         <div class="ml-5 inline-flex">
-          <a href="/meetups" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-lg font-medium text-zinc-700 hover:bg-zinc-200 hover:scale-105 duration-300">Zobacz poprzednie prezentacje</a>
+          <router-link :to="{ name: 'meetups' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-lg font-medium text-zinc-700 hover:bg-zinc-200 hover:scale-105 duration-300">Zobacz poprzednie prezentacje</router-link>
         </div>
       </div>
     </div>

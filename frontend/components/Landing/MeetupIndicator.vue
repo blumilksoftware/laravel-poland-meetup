@@ -25,9 +25,8 @@
         <div class="mt-8">
           <div class="inline-flex gap-4 rounded-md shadow ">
             <router-link :to="{ name: 'meetups' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Zobacz szczegóły</router-link>
-            <a href="/meetups" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-500 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">
-              Zobacz poprzednie meetupy
-            </a>
+            <router-link :to="{ name: 'meetups' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-500 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Zobacz poprzednie meetupy</router-link>
+
           </div>
         </div>
       </div>
