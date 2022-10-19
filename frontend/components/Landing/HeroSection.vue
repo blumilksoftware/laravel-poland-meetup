@@ -33,9 +33,9 @@
             {{ ' ' }}
             <span class="block xl:inline">Meetup</span>
           </h1>
-          <p class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-          </p>
+          <blockquote  class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+            It is literally true that you can succeed best and quickest by helping others to succeed. – Napolean Hill
+          </blockquote >
         </div>
       </main>
     </div>

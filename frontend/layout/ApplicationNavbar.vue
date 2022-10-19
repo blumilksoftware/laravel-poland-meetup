@@ -11,7 +11,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
         <div class="flex items-center px-2 lg:px-0">
           <div class="hidden lg:block">
             <div class="flex space-x-4">
-              <router-link :to="{ name: 'landing' }" class="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white">Laravel Poland Meetup</router-link>
+              <router-link :to="{ name: 'landing' }" class="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white">Laravel <span class="text-laravel">Poland</span> Meetup</router-link>
               <router-link :to="{ name: 'meetups' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Meetupy</router-link>
               <router-link :to="{ name: 'companies' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Firmy</router-link>
               <router-link :to="{ name: 'people' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Prowadzący</router-link>
@@ -31,7 +31,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
     <disclosure-panel class="lg:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3">
-        <disclosure-button as="a" href="#" class="block rounded-md bg-zinc-900 px-3 py-2 text-base font-medium text-white">Laravel Poland Meetup</disclosure-button>
+        <disclosure-button as="a" href="#" class="block rounded-md bg-zinc-900 px-3 py-2 text-base font-medium text-white">Laravel <span class="text-red">Poland</span> Meetup</disclosure-button>
         <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Meetupy</disclosure-button>
         <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Firmy</disclosure-button>
         <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Prowadzący</disclosure-button>

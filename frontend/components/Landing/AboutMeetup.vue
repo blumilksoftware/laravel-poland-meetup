@@ -21,16 +21,27 @@
       </div>
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-5xl text-lg m-20 ">
+      <div class="flex justify-center sm:block md:flex">
+        <img height="200px" width="200px" alt="logo Blumilk" src="../../../public/images/companies/blumilk.png"/>
+        <img height="230px" width="230px" alt="logo Highsolutions" src="../../../public/images/companies/highsolutions.png"/>
+      </div>
+      <div class="mx-auto max-w-5xl text-lg m-20 mt-10 ">
         <h1>
           <span class="block text-center text-lg font-semibold text-laravel">Kim jesteśmy?</span>
           <span class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-            Laravel + Poland + Meetup
+            Laravel + Poland + MeetUp
           </span>
         </h1>
-        <p class="mt-8 text-2xl leading-9 text-gray-500"><strong>Laravel Poland MeetUp</strong> to miejsce dla ludzi, którzy nie chcą stać w miejscu. To ciekawe spotkania <strong>non profit</strong>, które poszerzą Twoje kwalifikacje.<br>
-          Od 2018 roku organizujemy cykliczne spotkania w tematyce Laravela,  które z roku na rok cieszą się coraz większym gronem uczestników i prezenterów. <strong>Dołącz do nas!</strong><br>
-        </p>
+        <p class="mt-8 text-2xl leading-9 text-gray-500"><strong>Laravel Poland MeetUp</strong> powstał w 2018 roku z inicjatywy <strong>HIGHSolutions</strong>, do którego w roku X dołączyła firma <strong>Blumilk</strong>. 
+        <p class="mt-8 text-2xl leading-9 text-gray-500">Razem organizujemy eventy dla ludzi, którzy nie chcą stać w miejscu. Są to ciekawe cykliczne spotkania <strong>non profit</strong>, które poszerzą Twoje kwalifikacje.<br></p>
+          </p>
+          <p class="mt-8 text-2xl leading-9 text-gray-500">
+            Spotkania są poświęcone szeroko pojętej tematyce <span class="text-laravel font-bold">Laravela</span> i z roku na rok cieszą się coraz większym gronem uczestników i prezenterów. <br>
+            Spotykamy się, aby promować nowinki, utrwalać dobre praktyki, a przede wszystkim <strong>inspirować się wzajemnie.</strong><br>
+            Chętnie gościmy pasjonatów z różnych środowisk! Jeśli chcesz, aby <strong>Twoja firma</strong> zaistniała na naszym meetupie, zgłoś prezentację na nasze kolejne spotkanie!<br><br>
+            Zachęcamy do udziału w spotkaniach, które odbywają się zarówno w formie zdalnej, jak i stacjonarnej. <br><br>
+            <strong>Dołącz do nas!</strong><br>
+          </p>
       </div>
     </div>
   </div>
