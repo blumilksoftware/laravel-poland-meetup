@@ -11,9 +11,7 @@
           <ul role="list" class="space-y-12 font-bold sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
             <li v-for="person in people" :key="person.name">
               <div class="space-y-4">
-                <div class="aspect-w-3 aspect-h-2">
-                  <img class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" :src="person.image" alt="" />
-                </div>
+                <img class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" :src="person.image" alt="" />
                 <div class="space-y-1 text-lg text-laravel  font-bold font-medium leading-6">
                   <router-link :to="{ name: 'people' }"><h3>{{ person.name }}</h3></router-link>
                   <router-link :to="{ name: 'companies' }"><p class="text-zinc-600">{{ person.company }}</p></router-link>
