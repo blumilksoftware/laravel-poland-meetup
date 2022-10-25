@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scale: {
+        140: '1.40',
+      },
       colors: {
         laravel: '#F05340',
       },

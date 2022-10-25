@@ -10,7 +10,7 @@
       <div class="md:ml-auto md:w-1/2 md:pl-10">
         <h2 class="ppercase font-semibold text-2xl text-zinc-300">
           Następny meetup
-          <span class="text-laravel">już</span>
+          <span id="days" class="text-laravel">już</span>
           za miesiąc
         </h2>
         <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -23,12 +23,13 @@
           Tym razem widzimy się online!
         </p>
         <div class="mt-8">
-          <div class="inline-flex gap-4 rounded-md shadow ">
-            <router-link :to="{ name: 'meetups' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Zobacz szczegóły</router-link>
-            <router-link :to="{ name: 'meetups' }" class="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-500 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Zobacz poprzednie meetupy</router-link>
+          <div class="block gap-4 rounded-md shadow sm:block md:block">
+            <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR2mdIHtj7U2kCAlRMzpzbenpyKdO6HkdMsXTeFjzBm1lypc5oOwmsIfSzI" class="flex items-center justify-center rounded-md border border-transparent bg-laravel px-8 py-3 my-3 text-xl font-bold text-white hover:bg-zinc-300 hover:scale-105 duration-300 ">Zapisz się!</a>
+            <router-link :to="{ name: 'meetups' }" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Poprzednie meetupy</router-link>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
