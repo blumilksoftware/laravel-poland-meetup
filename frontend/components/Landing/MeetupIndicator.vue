@@ -10,21 +10,22 @@
       <div class="md:ml-auto md:w-1/2 md:pl-10">
         <h2 class="ppercase font-semibold text-2xl text-zinc-300">
           Następny meetup
-          <span id="days" class="text-laravel">już</span>
-          za miesiąc
+          <span class="text-laravel">już</span>
+          za miesiąc 
         </h2>
-        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Laravel Poland MeetUp #23
+        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"  v-if="data.name" >
+          {{data.name}}
         </div>
         <p class="mt-3 text-2xl text-zinc-300 leading-8">
-          <strong class="text-laravel">10 listopad, godzina 18:00, czwartek</strong><br>
+          <strong class="text-laravel">{{date}}</strong><br>
           Zapraszamy fascynatów Laravela i nie tylko!<br>
           Wstęp free.<br>
-          Tym razem widzimy się online!
+          <span v-if="data.location === 'online'">Tym razem widzimy się online!</span>
+          <span v-else>Miejsce spotkania: {{data.location}}!</span>
         </p>
         <div class="mt-8">
           <div class="block gap-4 tracking-wide rounded-md shadow sm:block md:block lg:w-3/5">
-            <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR2mdIHtj7U2kCAlRMzpzbenpyKdO6HkdMsXTeFjzBm1lypc5oOwmsIfSzI" class="flex items-center justify-center rounded-md border border-transparent bg-laravel px-8 py-3 my-3 text-xl font-bold text-white hover:bg-zinc-300 hover:scale-105 duration-300 ">Zapisz się!</a>
+            <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR2mdIHtj7U2kCAlRMzpzbenpyKdO6HkdMsXTeFjzBm1lypc5oOwmsIfSzI" class="flex items-center justify-center rounded-md border border-transparent bg-laravel px-8 py-3 my-3 text-xl font-bold text-white hover:bg-red-800 hover:scale-105 duration-300 ">Zapisz się!</a>
             <router-link :to="{ name: 'meetups' }" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Poprzednie meetupy</router-link>
           </div>
         </div>
@@ -33,3 +34,20 @@
   </div>
 </template>
 
+<script>
+import DataMeetup from '../../../resources/meetups/2022-11-10-laravel-poland-meetup-23.json'
+
+export default {
+  data() {
+    return {
+      data: DataMeetup,
+      date: formatter,
+    };
+  },
+};
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: false, hour: 'numeric', minute: 'numeric' };
+let date = new Date(DataMeetup.date);
+let formatter = new Intl.DateTimeFormat( 'pl', options ).format(date);
+
+</script>
