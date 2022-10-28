@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden bg-white pt-16">
+  <div class="relative overflow-hidden bg-white pt-8">
     <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
       <div class="relative mx-auto h-full max-w-prose text-lg" aria-hidden="true">
         <svg class="animate-pulse absolute top-12 left-full translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
@@ -21,18 +21,18 @@
       </div>
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-5xl text-lg m-20 mt-10 ">
+      <div class="mx-auto max-w-5xl text-lg m-20 mt-10 text-justify">
         <h1>
           <span class="block text-center text-lg font-semibold text-laravel">Kim jesteśmy?</span>
           <span class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
             Laravel + Poland + MeetUp
           </span>
         </h1>
-        <p class="mt-8 text-2xl leading-9 text-gray-500"><strong>Laravel Poland MeetUp</strong> powstał w 2018 roku z inicjatywy <strong>HIGHSolutions</strong>, do którego w roku 2021 dołączyła firma <strong>Blumilk</strong>. </p>
-        <p class="mt-8 text-2xl leading-9 text-gray-500">Razem organizujemy eventy dla ludzi, którzy nie chcą stać w miejscu. Są to ciekawe cykliczne spotkania <strong>non profit</strong>, które poszerzą Twoje kwalifikacje.<br></p>          
+        <p class="mt-8 text-2xl leading-9 text-gray-500"><strong>Laravel Poland MeetUp</strong> powstał w 2018 roku z inicjatywy <strong>HIGHSolutions</strong>, do którego w roku 2021 dołączyła firma <strong>Blumilk</strong>. 
+          Razem organizujemy eventy dla ludzi, którzy nie chcą stać w miejscu. Są to ciekawe, cykliczne spotkania <strong>non profit</strong>, które poszerzą Twoje kwalifikacje.<br></p>          
         <p class="mt-8 text-2xl leading-9 text-gray-500">
-          Spotkania są poświęcone szeroko pojętej tematyce <span class="text-laravel font-bold">Laravela</span> i z roku na rok cieszą się coraz większym gronem uczestników i prezenterów. <br>
-          Spotykamy się, aby promować nowinki, utrwalać dobre praktyki, a przede wszystkim <strong>inspirować się wzajemnie.</strong><br>
+          Spotkania są poświęcone szeroko pojętej tematyce <span class="text-laravel font-bold">Laravela</span> i z roku na rok cieszą się coraz większym gronem uczestników i prezenterów.
+          Spotykamy się, aby promować nowinki, utrwalać dobre praktyki, a przede wszystkim <strong>inspirować się wzajemnie.</strong>
           Chętnie gościmy pasjonatów z różnych środowisk! Jeśli chcesz, aby <strong>Twoja firma</strong> zaistniała na naszym meetupie, zgłoś prezentację na nasze kolejne spotkanie!<br><br>
           Zachęcamy do udziału w spotkaniach, które odbywają się zarówno w formie zdalnej, jak i stacjonarnej. <br><br>
           <strong>Dołącz do nas!</strong><br>
@@ -40,8 +40,8 @@
       </div>
       <h3 class="block text-center text-lg font-semibold text-laravel -mb-8">Organizatorzy</h3>
       <div class="block justify-center md:flex md:w-3/5 md:m-auto">
-        <img class="mx-auto center h-48"  alt="logo Blumilk" src="../../../public/images/companies/blumilk.png"/>
-        <img class="mx-auto center h-48 object-cover scale-140" alt="logo Highsolutions" src="../../../public/images/companies/highsolutions.png"/>
+        <img class="mx-auto center h-48"  alt="logo Blumilk" src="@/public/images/companies/blumilk.webp"/>
+        <img class="mx-auto center h-48 object-cover scale-140" alt="logo Highsolutions" src="@/public/images/companies/highsolutions.webp"/>
       </div>
     </div>
   </div>

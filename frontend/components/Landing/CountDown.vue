@@ -10,7 +10,6 @@
 <script>
  export function makeTimer() {
 
-//		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
   var endTime = new Date("29 April 2023 9:56:00 GMT+01:00");			
     endTime = (Date.parse(endTime) / 1000);
 
@@ -39,4 +38,5 @@
 }
 
 setInterval(function() { makeTimer(); }, 1000);
+
 </script>

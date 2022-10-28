@@ -4,7 +4,7 @@
 <template>
   <div class="relative bg-zinc-700">
     <div class="h-72 bg-zinc-600 sm:h-64 md:absolute md:left-0 md:h-full md:w-1/2">
-      <img class="h-full w-full object-cover" src="../../../public/images/lpm_22/310424227_1805613629799141_2350601291274663561_n.jpg" alt="" />
+      <img class="h-full w-full object-cover" src="@/public/images/lpm_22/lpm22-img2.webp" alt="" />
     </div>
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="md:ml-auto md:w-1/2 md:pl-10">
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import DataMeetup from '../../../resources/meetups/2022-11-10-laravel-poland-meetup-23.json'
+import DataMeetup from '@/resources/meetups/2022-11-10-laravel-poland-meetup-23.json'
 
 export default {
   data() {
