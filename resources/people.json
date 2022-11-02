@@ -1,42 +1,98 @@
 {
   "@karolbarcki": {
     "name": "Karol Barcki",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",  
     "linkedin": null
   },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@kamilpiech": {
     "name": "Kamil Piech",
+    "company": "Blumilk",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@joannarewak": {
     "name": "Joanna Rewak",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@krzysztofrewak": {
     "name": "Krzysztof Rewak",
+    "company": "Blumilk",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
   },
   "@przemekszustak": {
     "name": "Przemek Szustak",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@filipzdunek": {
     "name": "Filip Zdunek",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
     "linkedin":  null
   },
   "@tomekzmudzinski": {
     "name": "Tomek Żmudziński",
+    "company": "#",
+    "role": "#",
+    "image": "#", 
+    "bio": "#",
+    "linkedin":  null
+  },
+  "@marcintracz": {
+    "name": "Marcin Tracz",
+    "company": "Blumilk",
+    "role": "#",
+    "image": "../public/images/speakers/marcintracz.png", 
+    "bio": "#",
+    "linkedin":  null
+  },
+  "@mateuszgarbarczyk": {
+    "name": "MateuszGarbarczyk",
+    "company": "HIGHSolutions",
+    "role": "#",
+    "image": "../public/images/speakers/mateuszgarbarczyk.png", 
+    "bio": "#",
     "linkedin":  null
   }
 }

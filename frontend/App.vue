@@ -1,6 +1,6 @@
 <script setup>
-import ApplicationNavbar from '@/layout/ApplicationNavbar.vue'
-import ApplicationFooter from '@/layout/ApplicationFooter.vue'
+import ApplicationNavbar from '@/frontend/layout/ApplicationNavbar.vue'
+import ApplicationFooter from '@/frontend/layout/ApplicationFooter.vue'
 </script>
 
 <template>

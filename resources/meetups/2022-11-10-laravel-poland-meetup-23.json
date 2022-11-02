@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poland Meetup #23",
+  "date": "2022-11-10 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions"],
+  "presentations": [
+    {
+      "title": "xD bug - jak debugować PHP-owe aplikacje",
+      "speakers": [
+        {
+          "person": "@marcintracz",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "WebRTC+Websockety - Jak stworzyłem aplikację do kamerek internetowych w Laravelu",
+      "speakers": [
+        {
+          "person": "@mateuszgarbarczyk",
+          "company": "@mirit"
+        }
+      ]
+    }
+  ]
+}
