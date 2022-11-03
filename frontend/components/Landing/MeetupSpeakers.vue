@@ -11,14 +11,14 @@
         <div class="">
           <ul role="list" class="flex flex-wrap font-bold justify-center">
             <li class="w-full md:w-1/3 xl:w-1/4 m-6" v-if="!people.length">
-              <img class="mx-auto h-40 w-40 rounded-full brightness- animate-pulse shadow-xl xl:h-40 xl:w-40" src="@/public/images/speakers/placeholder.webp" alt="" />
+              <img class="mx-auto h-40 w-40 rounded-full brightness- animate-pulse shadow-xl xl:h-40 xl:w-40" src="/images/speakers/placeholder.webp" alt="" />
               <div class="my-3 rounded-xl animate-pulse bg-red-200 w-1/3 h-4"></div>
               <div class="my-3 rounded-xl animate-pulse bg-zinc-300 w-1/2 h-4"></div>
               <div class="my-3 rounded-xl animate-pulse bg-zinc-300 w-3/5 h-4"></div>
             </li>
             <li class="w-full md:w-1/3 xl:w-1/4 m-6" v-for="person in people" :key="person.name">
               <img class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" v-if="person.image.length > 2" :src="person.image" alt="" />
-              <img class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" v-else src="@/public/images/speakers/placeholder.webp" alt="" />
+              <img class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" v-else src="/images/speakers/placeholder.webp" alt="" />
               <div class="my-3 text-lg text-laravel font-bold font-medium leading-6">
                 <router-link :to="{ name: 'people' }"><h3>{{ person.name }}</h3></router-link>
                 <router-link :to="{ name: 'companies' }"><p class="text-zinc-600">{{ person.company }}</p></router-link>
@@ -40,8 +40,8 @@
 </template>
 
 <script setup>
-import LinkedinIcon from '@/frontend/components/Icons/LinkedinIcon.vue';
-import TwitterIcon from '@/frontend/components/Icons/TwitterIcon.vue';
+import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue';
+import TwitterIcon from '@/components/Icons/TwitterIcon.vue';
 
 const people = [
   {

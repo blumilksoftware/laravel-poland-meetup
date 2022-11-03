@@ -1,4 +1,3 @@
-
 <script setup>
 import { PresentationChartBarIcon, UsersIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/solid'
 </script>

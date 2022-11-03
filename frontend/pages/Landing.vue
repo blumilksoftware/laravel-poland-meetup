@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import HeroSection from '@/frontend/components/Landing/HeroSection.vue'
-import MeetupIndicator from '@/frontend/components/Landing/MeetupIndicator.vue'
-import MeetupSpeakers from '@/frontend/components/Landing/MeetupSpeakers.vue'
-import AboutMeetup from '@/frontend/components/Landing/AboutMeetup.vue'
-import JoinUs from '@/frontend/components/Landing/JoinUs.vue'
-import Counters from '@/frontend/components/Landing/Counters.vue'
+<script setup>
+import HeroSection from '@/components/Landing/HeroSection.vue'
+import MeetupIndicator from '@/components/Landing/MeetupIndicator.vue'
+import MeetupSpeakers from '@/components/Landing/MeetupSpeakers.vue'
+import AboutMeetup from '@/components/Landing/AboutMeetup.vue'
+import JoinUs from '@/components/Landing/JoinUs.vue'
+import Counters from '@/components/Landing/Counters.vue'
 </script>
 
 <template>

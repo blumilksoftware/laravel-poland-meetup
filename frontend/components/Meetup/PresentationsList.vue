@@ -1,6 +1,4 @@
 <script setup>
-import { CheckCircleIcon, ChevronRightIcon, EnvelopeIcon } from '@heroicons/vue/20/solid'
-
 defineProps({
   presentations: Array,
 })
