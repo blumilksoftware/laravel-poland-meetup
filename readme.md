@@ -17,5 +17,10 @@ docker-compose exec node npm install
 docker-compose exec node npm run dev
 ```
 
+Or you can just run:
+```bash
+make setup
+```
+
 ### Deployment
 The website should be automatically deployed to GitHub Pages with every pull requests to the `main` branch.
