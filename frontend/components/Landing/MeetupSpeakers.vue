@@ -47,7 +47,7 @@ const people = [
   {
     name: 'Marcin Tracz',
     company: 'Blumilk',
-    image: '../../../public/images/speakers/marcintracz.webp',  
+    image: '/images/speakers/marcintracz.webp',
     bio: 'xD bug - jak debugować PHP-owe aplikacje',
     twitterUrl: '#',
     linkedinUrl: '#',
@@ -55,7 +55,7 @@ const people = [
   {
     name: 'Mateusz Garbarczyk',
     company: 'HIGHSolutions',
-    image: '../../../public/images/speakers/mateuszgarbarczyk.webp',
+    image: '/images/speakers/mateuszgarbarczyk.webp',
     bio: 'WebRTC + Websockety - Jak stworzyłem aplikację do kamerek internetowych w Laravelu',
     twitterUrl: '#',
     linkedinUrl: '#',
