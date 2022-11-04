@@ -83,15 +83,15 @@
     "name": "Marcin Tracz",
     "company": "Blumilk",
     "role": "#",
-    "image": "../public/images/speakers/marcintracz.png", 
+    "image": "../public/images/speakers/marcintracz.webp", 
     "bio": "#",
     "linkedin":  null
   },
   "@mateuszgarbarczyk": {
-    "name": "MateuszGarbarczyk",
+    "name": "Mateusz Garbarczyk",
     "company": "HIGHSolutions",
     "role": "#",
-    "image": "../public/images/speakers/mateuszgarbarczyk.png", 
+    "image": "../public/images/speakers/mateuszgarbarczyk.webp", 
     "bio": "#",
     "linkedin":  null
   }

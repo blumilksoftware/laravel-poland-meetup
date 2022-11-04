@@ -23,7 +23,7 @@ class Person
     {
         return [
             "name" => $this->name,
-            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . $this->name,
+            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ","-",$this->name),
         ];
     }
 }
