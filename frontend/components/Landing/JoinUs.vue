@@ -1,7 +1,7 @@
 <template>
   <div class="w-100% relative bg-zinc-800 my-20 ">
     <div class="absolute inset-0">
-      <img class="h-full w-full object-cover" src="@/public/images/lpm_22/lpm22-img1.webp" alt="" />
+      <img class="h-full w-full object-cover" src="/images/lpm_22/lpm22-img1.webp" alt="" />
       <div class="absolute inset-0 bg-zinc-800 mix-blend-multiply" aria-hidden="true" ></div>
     </div>
     <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
