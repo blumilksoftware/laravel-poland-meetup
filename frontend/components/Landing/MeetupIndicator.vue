@@ -6,7 +6,7 @@ let date = ref()
 let data = ref()
 
 onMounted(() => {
-  fetch('/api/meetups/2022-11-24-laravel-poland-meetup-23.json').then((response) => response.json()).then((meetup) => {
+  fetch('/api/meetups/2022-11-10-laravel-poland-meetup-23.json').then((response) => response.json()).then((meetup) => {
     data.value = meetup
     date.value = new Date(meetup.date)
   })

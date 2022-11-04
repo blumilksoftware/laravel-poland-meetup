@@ -1,8 +1,7 @@
 <script setup>
-import Meetup from '@/resources/meetups/2022-11-10-laravel-poland-meetup-23.json';
-import People from '@/resources/people.json';
-import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
-import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
+import Meetup from '/resources/meetups/2022-11-10-laravel-poland-meetup-23.json';
+import People from '/resources/people.json';
+import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue';
 
 const people = [
   {
