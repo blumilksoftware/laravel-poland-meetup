@@ -1,47 +1,35 @@
-
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref  } from 'vue'
+import CountDown from './CountDown.vue'
 
 let date = ref()
 let data = ref()
+let dateFull = ref()
 
 onMounted(() => {
   fetch('/api/meetups/2022-11-10-laravel-poland-meetup-23.json').then((response) => response.json()).then((meetup) => {
     data.value = meetup
     date.value = new Date(meetup.date)
+    dateFull.value = meetup.dateFull
   })
 })
+let today = new Date ();
 
-const options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  hour12: false,
-  hour: 'numeric',
-  minute: 'numeric',
-}
 </script>
+
 <template>
   <div class="relative bg-zinc-700" v-if="data">
     <div class="h-72 bg-zinc-600 sm:h-64 md:absolute md:left-0 md:h-full md:w-1/2">
       <img class="h-full w-full object-cover" src="/images/lpm_22/lpm22-img2.webp" alt=""/>
     </div>
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="md:ml-auto md:w-1/2 md:pl-10" v-if="data.date === invalid" >
-        <div class="mt-3 space-y-3 sm:tracking-wider text-white" >
-          <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
-          <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 font-bold">facebooku</a>, aby być na bieżąco!</p>
-          <p class="text-2xl font-semibold">Sprawdź też, czy nie ominęło cię coś interesującego w<span class="text-laravel font-bold"> poprzednich meetupach. </span></p>
-        </div>
-      </div>
-      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else>
-        <count-down :date="data.date"></count-down> 
-        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"  v-if="data && data.name" >
+      <div class="md:ml-auto md:w-1/2 md:pl-10" v-if="data">
+        <count-down :date="date"></count-down> 
+        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl" v-if="data && data.name">
           {{ data.name }}
         </div>
         <p class="mt-3 text-2xl text-zinc-300 leading-8">
-          <strong class="text-laravel">{{ date }}</strong><br>
+          <strong class="text-laravel">{{ dateFull }}</strong><br>
           Zapraszamy fascynatów Laravela i nie tylko!<br>
           Wstęp free.<br>
           <span v-if="data.location === 'online'">Tym razem widzimy się online!</span>
@@ -52,6 +40,16 @@ const options = {
             <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR2mdIHtj7U2kCAlRMzpzbenpyKdO6HkdMsXTeFjzBm1lypc5oOwmsIfSzI" class="flex items-center justify-center rounded-md border border-transparent bg-laravel px-8 py-3 my-3 text-xl font-bold text-white hover:bg-red-800 hover:scale-105 duration-300" target="_blank">Zapisz się!</a>
             <router-link :to="{ name: 'meetups' }" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-base font-medium text-zinc-900 hover:bg-zinc-300 hover:scale-105 duration-300">Poprzednie meetupy</router-link>
           </div>
+        </div>
+      </div>
+      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!data || date < today">
+        <div class="mt-3 space-y-3 sm:tracking-wider text-white">
+          <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
+          <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">facebooku</a>, aby być na bieżąco!</p>
+          <p class="text-2xl font-semibold">
+            Sprawdź też, czy nie ominęło cię coś interesującego w
+            <router-link :to="{ name: 'meetups' }" class="text-laravel font-bold"> poprzednich meetupach.</router-link>
+          </p>
         </div>
       </div>
     </div>

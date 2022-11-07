@@ -35,22 +35,28 @@ function countDown () {
       now = (Date.parse(now) / 1000);
 
   const timeLeft = endTime - now;
-  
+
   if( timeLeft <= 0) {
     finish = true;
   }
-      
   days = Math.floor(timeLeft / 86400); 
 }
 countDown();
 </script>
 
 <template>
-  <h2 class="uppercase font-semibold text-3xl text-zinc-300" v-if="!finish">
+  <h2 class="uppercase font-semibold text-3xl text-zinc-300" v-if="finish == false">
     Następny meetup już
     <span class="text-laravel" v-if="isToday"> dziś!</span>
     <span class="text-laravel" v-else-if="isTomorrow"> jutro!</span>
     <span class="text-laravel" v-else > za {{days}} dni!</span>
   </h2>
-  <h2 class="uppercase font-bold text-3xl text-zinc-300" v-if="finish"> Kolejne spotkanie już za nami!</h2>
+  <div class="mt-3 space-y-3 sm:tracking-wider text-white" v-else>
+    <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
+    <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">facebooku</a>, aby być na bieżąco!</p>
+    <p class="text-2xl font-semibold">
+      Sprawdź też, czy nie ominęło cię coś interesującego w
+      <router-link :to="{ name: 'meetups' }" class="text-laravel font-bold"> poprzednich meetupach.</router-link>
+    </p>
+  </div>
 </template>

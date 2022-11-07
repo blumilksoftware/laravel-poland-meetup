@@ -18,7 +18,6 @@ let meetupHour = new Date(date);
 let formatter2 = new Intl.DateTimeFormat( 'pl', options2 ).format(meetupHour);
 </script>
 
-
 <template>
   <span>{{formatter1}}<br>godzina {{formatter2}}</span>
 </template>
