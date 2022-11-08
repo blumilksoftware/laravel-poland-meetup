@@ -32,9 +32,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
-            "speakers" => $this->presentations->map(fn(Presentation $presentation): Collection => $presentation->speakers)
-                ->flatten()
-                ->map(fn(Speaker $speaker): array => $speaker->person->toMeetupListEntry()),
+            "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
         ];
     }
 

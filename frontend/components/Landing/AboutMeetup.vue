@@ -38,10 +38,12 @@
           <strong>Dołącz do nas!</strong><br>
         </p>
       </div>
-      <h3 class="block text-center text-lg font-semibold text-laravel -mb-8">Organizatorzy</h3>
-      <div class="block justify-center md:flex md:w-3/5 md:m-auto">
-        <img class="mx-auto center h-48"  alt="logo Blumilk" src="/images/companies/blumilk.webp"/>
-        <img class="mx-auto center h-48 object-cover scale-140" alt="logo Highsolutions" src="/images/companies/highsolutions.webp"/>
+      <div>
+        <h3 class="block text-center text-lg font-semibold text-laravel -mb-8">Organizatorzy</h3>
+        <div class="block justify-center md:flex md:w-3/5 md:m-auto">
+          <img class="mx-auto center h-48"  alt="logo Blumilk" src="/images/companies/blumilk.webp"/>
+          <img class="mx-auto center h-48 object-cover scale-140" alt="logo Highsolutions" src="/images/companies/highsolutions.webp"/>
+        </div>
       </div>
     </div>
   </div>

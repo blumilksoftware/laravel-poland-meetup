@@ -13,11 +13,6 @@ onMounted(async() => {
     dateFull.value = meetup.dateFull
     presentations.value = meetup.presentations
   })
-  fetch('/api/meetups/2022-11-10-laravel-poland-meetup-23.json').then((response) => response.json()).then((meetup) => {
-    data.value = meetup
-    dateFull.value = meetup.dateFull
-    presentations.value = meetup.presentations
-  })
 })
 
 </script>
@@ -25,7 +20,7 @@ onMounted(async() => {
 <template>
   <div class="bg-white">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 lg:py-12">
-      <div class="block m-8">
+      <div class="block m-8" v-if="data">
         <div class="text-center mb-14">
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Tematy prezentacji <br>
             <span class="text-laravel">{{ dateFull }}</span>
@@ -43,9 +38,9 @@ onMounted(async() => {
                   <router-link :to="{ name: 'companies' }"><p class="text-zinc-600">{{ speaker.company }}</p></router-link>
                 </div>
                 <ul role="list" class="flex my-4 space-x-3">
-                  <!-- <li>
-                    <linkedin-icon :href="People[speaker.name].linkedin"></linkedin-icon>
-                  </li> -->
+                  <li>
+                    <linkedin-icon :href="speaker.linkedin"></linkedin-icon>
+                  </li>
                 </ul>
               </div>
               <div class="text-lg">
