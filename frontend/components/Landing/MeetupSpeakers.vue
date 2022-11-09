@@ -1,5 +1,4 @@
 <script setup>
-import People from '/resources/people.json';
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue';
 import { onMounted, ref } from 'vue'
 

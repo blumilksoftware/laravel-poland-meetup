@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  date: Date,
+  date: String,
 })
 
 let finish = false;

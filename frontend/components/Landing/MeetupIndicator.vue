@@ -1,39 +1,54 @@
 <script setup>
-import { onMounted, ref  } from 'vue'
+import { onMounted, ref, computed  } from 'vue'
 import CountDown from './CountDown.vue'
 
-let date = ref()
-let data = ref()
-let dateFull = ref()
+const meetupsList = ref()
 
 onMounted(() => {
-  fetch('/api/meetups/2022-11-10-laravel-poland-meetup-23.json').then((response) => response.json()).then((meetup) => {
-    data.value = meetup
-    date.value = new Date(meetup.date)
-    dateFull.value = meetup.dateFull
+  fetch('/api/meetups.json').then((response) => response.json()).then((meetups) => {
+    meetupsList.value = meetups
   })
 })
-let today = new Date ();
+
+const today = new Date();
+
+const findNextMeetup = computed(() => {
+  const futureMeetups = [];
+  
+  for(let meetup of meetupsList.value) {
+    if(new Date(meetup.date) > today) {
+      futureMeetups.push(meetup)
+    }
+  }
+
+  futureMeetups.sort(function(a, b){
+    return (new Date(b.date)) - new Date((a.date))
+  })
+    
+  let nextMeetup = futureMeetups[futureMeetups.length -1]
+
+  return nextMeetup
+})
 
 </script>
 
 <template>
-  <div class="relative bg-zinc-700" v-if="data">
+  <div class="relative bg-zinc-700" v-if="meetupsList">
     <div class="h-72 bg-zinc-600 sm:h-64 md:absolute md:left-0 md:h-full md:w-1/2">
       <img class="h-full w-full object-cover" src="/images/lpm_22/lpm22-img2.webp" alt=""/>
     </div>
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="md:ml-auto md:w-1/2 md:pl-10" v-if="data">
-        <count-down :date="date"></count-down> 
-        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl" v-if="data && data.name">
-          {{ data.name }}
+      <div class="md:ml-auto md:w-1/2 md:pl-10" v-if="findNextMeetup">
+        <count-down :date="findNextMeetup.date"></count-down> 
+        <div class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl" v-if="meetupsList && findNextMeetup.name">
+          {{ findNextMeetup.name }}
         </div>
         <p class="mt-3 text-2xl text-zinc-300 leading-8">
-          <strong class="text-laravel">{{ dateFull }}</strong><br>
+          <strong class="text-laravel">{{ findNextMeetup.dateFull }}</strong><br>
           Zapraszamy fascynatów Laravela i nie tylko!<br>
           Wstęp free.<br>
-          <span v-if="data.location === 'online'">Tym razem widzimy się online!</span>
-          <span v-else>Miejsce spotkania: {{ data.location }}</span>
+          <span v-if="findNextMeetup.location === 'online'">Tym razem widzimy się online!</span>
+          <span v-else>Miejsce spotkania: {{ findNextMeetup.location }}</span>
         </p>
         <div class="mt-8">
           <div class="block gap-4 tracking-wide rounded-md shadow sm:block md:block lg:w-3/5">
@@ -42,7 +57,7 @@ let today = new Date ();
           </div>
         </div>
       </div>
-      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!data || date < today">
+      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!meetupsList || !findNextMeetup">
         <div class="mt-3 space-y-3 sm:tracking-wider text-white">
           <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
           <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">facebooku</a>, aby być na bieżąco!</p>
