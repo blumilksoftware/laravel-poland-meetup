@@ -51,12 +51,4 @@ countDown();
     <span class="text-laravel" v-else-if="isTomorrow"> jutro!</span>
     <span class="text-laravel" v-else > za {{days}} dni!</span>
   </h2>
-  <div class="mt-3 space-y-3 sm:tracking-wider text-white" v-else>
-    <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
-    <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">Facebooku</a>, aby być na bieżąco!</p>
-    <p class="text-2xl font-semibold">
-      Sprawdź też, czy nie ominęło Cię coś interesującego w
-      <router-link :to="{ name: 'meetups' }" class="text-laravel font-bold"> poprzednich meetupach.</router-link>
-    </p>
-  </div>
 </template>

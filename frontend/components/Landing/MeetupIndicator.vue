@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, ref, computed  } from 'vue'
+import { onMounted, ref, computed, watch  } from 'vue'
 import CountDown from './CountDown.vue'
 
-const meetupsList = ref()
+const meetupsList = ref([])
 
 onMounted(() => {
   fetch('/api/meetups.json').then((response) => response.json()).then((meetups) => {
@@ -13,8 +13,8 @@ onMounted(() => {
 const today = new Date();
 
 const findNextMeetup = computed(() => {
-  const futureMeetups = [];
-  
+  const futureMeetups = []
+
   for(let meetup of meetupsList.value) {
     if(new Date(meetup.date) > today) {
       futureMeetups.push(meetup)
@@ -22,14 +22,13 @@ const findNextMeetup = computed(() => {
   }
 
   futureMeetups.sort(function(a, b){
-    return (new Date(b.date)) - new Date((a.date))
+    return (b.date) - (a.date)
   })
     
   let nextMeetup = futureMeetups[futureMeetups.length -1]
 
   return nextMeetup
 })
-
 </script>
 
 <template>
@@ -57,13 +56,13 @@ const findNextMeetup = computed(() => {
           </div>
         </div>
       </div>
-      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!meetupsList || !findNextMeetup">
+      <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!findNextMeetup">
         <div class="mt-3 space-y-3 sm:tracking-wider text-white">
-          <h1 class="text-3xl font-bold sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
-          <p class="text-3xl">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">facebooku</a>, aby być na bieżąco!</p>
+          <h1 class="text-3xl sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
+          <p class="text-3xl text-zinc-300">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">Facebooku</a>, aby być na bieżąco!</p>
           <p class="text-2xl font-semibold">
-            Sprawdź też, czy nie ominęło cię coś interesującego w
-            <router-link :to="{ name: 'meetups' }" class="text-laravel font-bold"> poprzednich meetupach.</router-link>
+            Sprawdź też, czy nie ominęło Cię coś interesującego w
+            <router-link :to="{ name: 'meetups' }" class="text-laravel font-semibold"> poprzednich meetupach.</router-link>
           </p>
         </div>
       </div>
