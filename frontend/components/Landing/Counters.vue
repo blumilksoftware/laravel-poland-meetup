@@ -3,34 +3,28 @@ import { PresentationChartBarIcon, UsersIcon, ChatBubbleLeftIcon } from '@heroic
 import { onMounted, ref, computed } from 'vue'
 
 const data = ref([])
+const speakers = ref([])
 
 onMounted(() => {
    fetch('/api/meetups.json').then((response) => response.json()).then((meetup) => {
     data.value = meetup
+  }),
+  fetch('/api/people.json').then((response) => response.json()).then((people) => {
+    speakers.value = people
   })
 })
 
 const countPresentations = computed(() => {
   let presentations = 0;
+  
   for(let meetup of data.value) {
-    for(let presentation of meetup.presentations){
-      presentations++;
-    }
+    presentations += meetup.presentations.length;
   }
   return presentations
 })
 
 const countSpeakers = computed(() => {
-  let speakers = []; 
-
-  for(let meetup of data.value) {
-    for(let presentation of meetup.presentations){
-      for(let speaker of presentation.speakers){
-        speakers.push(speaker.name);
-      }
-    }
-  }
-  let uniqueSpeakers = [...new Set(speakers)].length;
+  let uniqueSpeakers = speakers.value.length
   return uniqueSpeakers
 })
 

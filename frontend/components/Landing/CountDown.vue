@@ -13,9 +13,8 @@ let endDate = new Date(props.date);
 if (endDate.toDateString() === now.toDateString()) {
     isToday = true;
 } else if (
-    new Date(now.getDate() + 1).toDateString === endDate.toDateString) {
-      
-    isTomorrow = true;
+    new Date(now.setDate(now.getDate() + 1)).toDateString() === endDate.toDateString()) {
+      isTomorrow = true;
 } else {
     isToday = false;
     isTomorrow = false;
@@ -42,7 +41,7 @@ countDown();
 </script>
 
 <template>
-  <h2 class="uppercase font-semibold text-3xl text-zinc-300" v-if="finish == false">
+  <h2 class="uppercase font-semibold text-3xl text-zinc-300" v-if="!finish">
     Następny meetup już
     <span class="text-laravel" v-if="isToday"> dziś!</span>
     <span class="text-laravel" v-else-if="isTomorrow"> jutro!</span>
