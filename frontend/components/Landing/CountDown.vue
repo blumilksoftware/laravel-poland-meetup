@@ -13,9 +13,8 @@ let endDate = new Date(props.date);
 if (endDate.toDateString() === now.toDateString()) {
     isToday = true;
 } else if (
-    endDate.getDate()  == now.getDate() +1 && 
-    endDate.getMonth() == now.getMonth()   &&
-    endDate.getYear()  == now.getYear()) {
+    new Date(now.getDate() + 1).toDateString === endDate.toDateString) {
+      
     isTomorrow = true;
 } else {
     isToday = false;
