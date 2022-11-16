@@ -58,11 +58,11 @@ const findNextMeetup = computed(() => {
       </div>
       <div class="md:ml-auto md:w-1/2 md:pl-10" v-else-if="!findNextMeetup">
         <div class="mt-3 space-y-3 sm:tracking-wider text-white">
-          <h1 class="text-3xl sm:text-4xl">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
-          <p class="text-3xl text-zinc-300">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">Facebooku</a>, aby być na bieżąco!</p>
-          <p class="text-2xl font-semibold">
+          <h1 class="text-3xl sm:text-4xl font-semibold">Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span></h1>
+          <p class="text-2xl text-zinc-300">Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="text-cyan-600 tracking-normal font-bold">Facebooku</a>, aby być na bieżąco!</p>
+          <p class="text-2xl text-zinc-300 font-medium">
             Sprawdź też, czy nie ominęło Cię coś interesującego w
-            <router-link :to="{ name: 'meetups' }" class="text-laravel font-semibold"> poprzednich meetupach.</router-link>
+            <router-link :to="{ name: 'meetups' }" class="text-laravel font-semibold"> poprzednich meetupach</router-link>.
           </p>
         </div>
       </div>
