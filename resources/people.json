@@ -1,7 +1,6 @@
 {
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",  
@@ -9,7 +8,6 @@
   },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -17,7 +15,6 @@
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -25,7 +22,6 @@
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -33,7 +29,6 @@
   },
   "@kamilpiech": {
     "name": "Kamil Piech",
-    "company": "Blumilk",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -41,7 +36,6 @@
   },
   "@joannarewak": {
     "name": "Joanna Rewak",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -49,7 +43,6 @@
   },
   "@krzysztofrewak": {
     "name": "Krzysztof Rewak",
-    "company": "Blumilk",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -57,7 +50,6 @@
   },
   "@przemekszustak": {
     "name": "Przemek Szustak",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -65,7 +57,6 @@
   },
   "@filipzdunek": {
     "name": "Filip Zdunek",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -73,7 +64,6 @@
   },
   "@tomekzmudzinski": {
     "name": "Tomek Żmudziński",
-    "company": "#",
     "role": "#",
     "image": "#", 
     "bio": "#",
@@ -81,7 +71,6 @@
   },
   "@marcintracz": {
     "name": "Marcin Tracz",
-    "company": "Blumilk",
     "role": "#",
     "image": "../public/images/speakers/marcintracz.webp", 
     "bio": "#",
@@ -89,7 +78,6 @@
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
-    "company": "MirIT",
     "role": "#",
     "image": "../public/images/speakers/mateuszgarbarczyk.webp", 
     "bio": "#",
