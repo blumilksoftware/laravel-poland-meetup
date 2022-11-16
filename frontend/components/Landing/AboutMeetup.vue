@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden bg-white pt-8">
+  <div class="relative overflow-hidden bg-white my-20">
     <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
       <div class="relative mx-auto h-full max-w-prose text-lg" aria-hidden="true">
         <svg class="animate-pulse absolute top-12 left-full translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
@@ -38,10 +38,12 @@
           <strong>Dołącz do nas!</strong><br>
         </p>
       </div>
-      <h3 class="block text-center text-lg font-semibold text-laravel -mb-8">Organizatorzy</h3>
-      <div class="block justify-center md:flex md:w-3/5 md:m-auto">
-        <img class="mx-auto center h-48"  alt="logo Blumilk" src="/images/companies/blumilk.webp"/>
-        <img class="mx-auto center h-48 object-cover scale-140" alt="logo Highsolutions" src="/images/companies/highsolutions.webp"/>
+      <div>
+        <h3 class="block text-center text-lg font-semibold text-laravel -mb-8">Organizatorzy</h3>
+        <div class="block justify-center md:flex md:w-3/5 md:m-auto">
+          <img class="mx-auto center h-48"  alt="logo Blumilk" src="/images/companies/blumilk.webp"/>
+          <img class="mx-auto center h-48 object-cover scale-140" alt="logo HighSolutions" src="/images/companies/highsolutions.webp"/>
+        </div>
       </div>
     </div>
   </div>
