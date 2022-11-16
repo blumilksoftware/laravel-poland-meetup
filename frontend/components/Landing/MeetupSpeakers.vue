@@ -28,8 +28,7 @@ const { nextMeetup } = useFindNextMeetup()
         </svg>
       </div>
     </div>
-
-    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 lg:py-12">
+    <div class="relative mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 lg:py-12">
       <div class="block m-8" v-if="nextMeetup">
         <div class="text-center mb-14">
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Tematy prezentacji <br>
