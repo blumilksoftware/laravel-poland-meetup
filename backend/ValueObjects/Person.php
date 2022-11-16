@@ -17,7 +17,8 @@ class Person
         public readonly Collection $meetups = new Collection(),
     ) {}
 
-    public function toListedEntry(): array {
+    public function toListedEntry(): array
+    {
         return [
             "name" => $this->name,
             "role" => $this->role,

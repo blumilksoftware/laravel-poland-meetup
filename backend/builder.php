@@ -38,7 +38,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(
         $meetup["name"],
         $meetup["location"],
-        Carbon::parse($meetup["date"])->locale('pl_PL'),
+        Carbon::parse($meetup["date"])->locale("pl_PL"),
         Collection::make($meetup["presentations"])->map(
             fn(array $presentation): Presentation => new Presentation(
                 title: $presentation["title"],
@@ -46,7 +46,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
                     fn(array $speaker): Speaker => new Speaker(
                         person: $people[$speaker["person"]],
                         company: $companies[$speaker["company"]] ?? null,
-                    )
+                    ),
                 ),
                 tags: Collection::make(),
             ),
@@ -69,7 +69,7 @@ function saveData(Collection $people, Collection $companies, Collection $meetups
         filename: $apiPath . "/people.json",
         data: json_encode(
             value: $people->map(fn(Person $person): array => $person->toListedEntry())->values(),
-            flags: $flags
+            flags: $flags,
         ),
     );
 
@@ -77,7 +77,7 @@ function saveData(Collection $people, Collection $companies, Collection $meetups
         filename: $apiPath . "/companies.json",
         data: json_encode(
             value: $companies->map(fn(Company $company): array => $company->toListedEntry())->values(),
-            flags: $flags
+            flags: $flags,
         ),
     );
 
@@ -85,12 +85,12 @@ function saveData(Collection $people, Collection $companies, Collection $meetups
         filename: $apiPath . "/meetups.json",
         data: json_encode(
             value: $meetups->map(fn(Meetup $meetup): array => $meetup->toListedEntry())->values(),
-            flags: $flags
+            flags: $flags,
         ),
     );
 
-    if(!is_dir($apiPath . "/meetups")) {
-        mkdir( $apiPath . "/meetups");
+    if (!is_dir($apiPath . "/meetups")) {
+        mkdir($apiPath . "/meetups");
     }
 
     /** @var Meetup $meetup */
@@ -100,6 +100,18 @@ function saveData(Collection $people, Collection $companies, Collection $meetups
             data: json_encode(value: $meetup->toDetailedEntry(), flags: $flags),
         );
     }
+
+    file_put_contents(
+        filename: $apiPath . "/counters.json",
+        data: json_encode(
+            value: [
+                "meetups" => $meetups->count(),
+                "presentations" => $meetups->map(fn(Meetup $meetup): int => $meetup->presentations->count())->sum(),
+                "people" => $people->count(),
+            ],
+            flags: $flags,
+        ),
+    );
 }
 
 [$people, $companies, $meetups] = retrieveData();
