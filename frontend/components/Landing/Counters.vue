@@ -1,32 +1,16 @@
 <script setup>
 import { PresentationChartBarIcon, UsersIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/solid'
-import { onMounted, ref, computed } from 'vue'
+import { onMounted, ref } from 'vue'
 
-const data = ref([])
-const speakers = ref([])
+const data = ref({})
 
-onMounted(() => {
-   fetch('/api/meetups.json').then((response) => response.json()).then((meetup) => {
-    data.value = meetup
-  }),
-  fetch('/api/people.json').then((response) => response.json()).then((people) => {
-    speakers.value = people
+
+onMounted( () => {
+  fetch('/api/counters.json').then((response) => response.json()).then((counters) => {
+    data.value = counters
   })
 })
-
-const countPresentations = computed(() => {
-  let presentations = 0;
-  
-  for(let meetup of data.value) {
-    presentations += meetup.presentations.length;
-  }
-  return presentations
-})
-
-const countSpeakers = computed(() => {
-  let uniqueSpeakers = speakers.value.length
-  return uniqueSpeakers
-})
+console.log('data', data.value)
 
 </script>
 
@@ -45,21 +29,21 @@ const countSpeakers = computed(() => {
         <router-link :to="{ name: 'meetups' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300">
           <div class="flex flex-col py-3 hover:scale-110">
           <dt class="order-2 mt-2 text-lg font-medium leading-6 text-red-100">meetupów</dt>
-          <dd class="order-1 text-5xl font-bold tracking-tight text-white">{{ data.length }}</dd>
+          <dd class="order-1 text-7xl font-bold tracking-tight text-white">{{ data.meetups }}</dd>
           <chat-bubble-left-icon class="text-white h-16 mb-6" aria-hidden="true"></chat-bubble-left-icon>
         </div>
         </router-link>
         <router-link :to="{ name: 'meetups' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300">
           <div class="mt-10 flex flex-col py-3 hover:scale-110 sm:mt-0">
             <dt class="order-2 mt-2 text-lg font-medium leading-6 text-red-100">prezentacji</dt>
-            <dd class="order-1 text-5xl font-bold tracking-tight text-white">{{ countPresentations }}</dd>
+            <dd class="order-1 text-7xl font-bold tracking-tight text-white">{{ data.presentations }}</dd>
             <presentation-chart-bar-icon class="text-white h-16 mb-6" aria-hidden="true"></presentation-chart-bar-icon>
           </div>
         </router-link>
         <router-link :to="{ name: 'people' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300">
           <div class="mt-10 flex flex-col py-3 hover:scale-110 sm:mt-0">
             <dt class="order-2 mt-2 text-lg font-medium leading-6 text-red-100">prezenterów</dt>
-            <dd class="order-1 text-5xl font-bold tracking-tight text-white">{{ countSpeakers }}</dd>
+            <dd class="order-1 text-7xl font-bold tracking-tight text-white">{{ data.people }}</dd>
             <users-icon class="text-white h-16 mb-6" aria-hidden="true"></users-icon>
           </div>
         </router-link>
