@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden bg-white pt-8">
+  <div class="relative overflow-hidden bg-white my-20">
     <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
       <div class="relative mx-auto h-full max-w-prose text-lg" aria-hidden="true">
         <svg class="animate-pulse absolute top-12 left-full translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
