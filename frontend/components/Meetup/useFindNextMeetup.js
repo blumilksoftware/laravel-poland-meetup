@@ -1,4 +1,3 @@
-// work in progress
 import MeetupsList from '/public/api/meetups.json'
 import { ref, onMounted} from 'vue'
 const meetupsList = ref([])
@@ -27,9 +26,8 @@ onMounted(() => {
       futureMeetups.sort(( a, b ) => {
         return new Date(a.date).getTime()  -  new Date(b.date).getTime()
       })
-      console.log('futureMeetups', futureMeetups)
+
       nextMeetup.value = futureMeetups[0]
-      console.log('nextMeetup', nextMeetup)
     };
     
     findMeetup()
