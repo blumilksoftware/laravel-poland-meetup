@@ -25,5 +25,10 @@
     "name": "Trui",
     "logo": "/images/companies/trui.png",
     "location": "Poznań"
+  },
+  "@mirit": {
+    "name": "MirIT",
+    "logo": "#",
+    "location": "Pleszew"
   }
 }
