@@ -27,7 +27,7 @@ class Person
             "linkedin" => $this->linkedin,
         ];
     }
-    
+
     public function toMeetupListEntry()
     {
         return [
@@ -36,7 +36,7 @@ class Person
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,
-            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ","-",$this->name),
+            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->name),
         ];
     }
 }

@@ -15,6 +15,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <meetup-header :meetup="meetup"></meetup-header>
-  <presentations-list class="mt-12" :presentations="meetup.presentations"></presentations-list>
+  <meetup-header :meetup="meetup"/>
+  <presentations-list class="mt-12" :presentations="meetup.presentations"/>
 </template>

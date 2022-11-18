@@ -12,5 +12,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <companies-grid class="mt-12" :companies="companies"></companies-grid>
+  <companies-grid class="mt-12" :companies="companies"/>
 </template>

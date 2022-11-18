@@ -1,5 +1,5 @@
 import MeetupsList from '/public/api/meetups.json'
-import { ref, onMounted} from 'vue'
+import { ref, onMounted } from 'vue'
 const meetupsList = ref([])
 
 onMounted(() => {
@@ -28,7 +28,7 @@ onMounted(() => {
       })
 
       nextMeetup.value = futureMeetups[0]
-    };
+    }
     
     findMeetup()
 
