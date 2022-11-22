@@ -1,22 +1,29 @@
 <script setup>
 defineProps({
-  presentations: Array,
+  presentations: {
+    type: Array,
+    default: () => [],
+  },
 })
 </script>
 
 <template>
   <div class="overflow-hidden bg-white">
     <div class="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
-      <h3 class="text-xl pl-4 font-medium leading-8 text-gray-900">Prezentacje</h3>
+      <h3 class="pl-4 text-xl font-medium leading-8 text-gray-900">
+        Prezentacje
+      </h3>
     </div>
     <ul role="list" class="divide-y divide-gray-200">
       <li v-for="(presentation, id) in presentations" :key="id">
         <div class="block hover:bg-gray-50">
-          <div class="flex items-center px-4 py-4 sm:px-6">
+          <div class="flex items-center p-4 sm:px-6">
             <div class="flex min-w-0 flex-1 items-center">
               <div class="w-[36em] pl-4">
-                <div class="truncate font-medium text-lg">{{ presentation.title }}</div>
-                <div class="mt-2 flex gap-3 items-center text-sm" v-for="speaker in presentation.speakers">
+                <div class="truncate text-lg font-medium">
+                  {{ presentation.title }}
+                </div>
+                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="mt-2 flex items-center gap-3 text-sm">
                   <img class="h-6 w-6 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name">
                   <span v-if="speaker.company">{{ speaker.name }}, {{ speaker.company }}</span>
                   <span v-else>{{ speaker.name }}</span>

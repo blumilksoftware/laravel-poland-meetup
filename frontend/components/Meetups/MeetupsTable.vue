@@ -8,7 +8,7 @@ import { CalendarIcon, ChevronRightIcon, MapPinIcon } from '@heroicons/vue/24/ou
 const props = defineProps({
   meetups: {
     type: Array,
-    default: [],
+    default: () => [],
   },
 })
 

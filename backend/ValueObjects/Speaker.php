@@ -16,7 +16,7 @@ class Speaker
         return [
             "name" => $this->person->name,
             "image" => $this->person->image,
-            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" .str_replace(" ","-",$this->person->name),
+            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->person->name),
             "linkedin" => $this->person->linkedin,
             "company" => $this->company?->name,
         ];

@@ -8,10 +8,10 @@ import Counters from '@/components/Landing/Counters.vue'
 </script>
 
 <template>
-  <hero-section></hero-section>
-  <meetup-indicator></meetup-indicator>
-  <meetup-speakers></meetup-speakers>
-  <about-meetup></about-meetup>
-  <join-us></join-us>
-  <counters></counters>
+  <hero-section/>
+  <meetup-indicator/>
+  <meetup-speakers/>
+  <about-meetup/>
+  <join-us/>
+  <counters/>
 </template>

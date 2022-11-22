@@ -5,17 +5,27 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
 </script>
 
 <template>
-  <disclosure as="nav" class="bg-zinc-800" v-slot="{ open }">
+  <disclosure v-slot="{ open }" as="nav" class="bg-zinc-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="flex items-center px-2 lg:px-0">
           <div class="hidden lg:block">
             <div class="flex space-x-4">
-              <router-link :to="{ name: 'landing' }" class="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium hover:bg-zinc-700 text-white">Laravel <span class="text-laravel">Poland</span> MeetUp</router-link>
-              <router-link :to="{ name: 'meetups' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Meetupy</router-link>
-              <router-link :to="{ name: 'companies' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Firmy</router-link>
-              <router-link :to="{ name: 'people' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Prowadzący</router-link>
-              <router-link :to="{ name: 'contact' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">Kontakt</router-link>
+              <router-link :to="{ name: 'landing' }" class="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-700">
+                Laravel <span class="text-laravel">Poland</span> MeetUp
+              </router-link>
+              <router-link :to="{ name: 'meetups' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
+                Meetupy
+              </router-link>
+              <router-link :to="{ name: 'companies' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
+                Firmy
+              </router-link>
+              <router-link :to="{ name: 'people' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
+                Prowadzący
+              </router-link>
+              <router-link :to="{ name: 'contact' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
+                Kontakt
+              </router-link>
             </div>
           </div>
         </div>
@@ -31,11 +41,31 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
 
     <disclosure-panel class="lg:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3">
-        <router-link :to="{ name: 'landing' }"><disclosure-button as="a" href="#" class="block rounded-md bg-zinc-900 px-3 py-2 text-2xl font-thin tracking-wide hover:bg-zinc-700 text-white">Laravel <span class="text-laravel">Poland</span> MeetUp</disclosure-button></router-link>
-        <router-link :to="{ name: 'meetups' }"><disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">Meetupy</disclosure-button></router-link>  
-        <router-link :to="{ name: 'companies' }"><disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">Firmy</disclosure-button></router-link>
-        <router-link :to="{ name: 'people' }"><disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">Prowadzący</disclosure-button></router-link>
-        <router-link :to="{ name: 'contact' }"><disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">Kontakt</disclosure-button></router-link>
+        <router-link :to="{ name: 'landing' }">
+          <disclosure-button as="a" href="#" class="block rounded-md bg-zinc-900 px-3 py-2 text-2xl font-thin tracking-wide text-white hover:bg-zinc-700">
+            Laravel <span class="text-laravel">Poland</span> MeetUp
+          </disclosure-button>
+        </router-link>
+        <router-link :to="{ name: 'meetups' }">
+          <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">
+            Meetupy
+          </disclosure-button>
+        </router-link>  
+        <router-link :to="{ name: 'companies' }">
+          <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">
+            Firmy
+          </disclosure-button>
+        </router-link>
+        <router-link :to="{ name: 'people' }">
+          <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">
+            Prowadzący
+          </disclosure-button>
+        </router-link>
+        <router-link :to="{ name: 'contact' }">
+          <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">
+            Kontakt
+          </disclosure-button>
+        </router-link>
       </div>
     </disclosure-panel>
   </disclosure>

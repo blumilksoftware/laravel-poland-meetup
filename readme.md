@@ -22,5 +22,18 @@ Or you can just run:
 make setup
 ```
 
+#### Codestyle
+Linters for backend and frontend are available:
+```bash
+docker-compose exec php composer cs
+docker-compose exec node npm run lint
+```
+
+Fixers for backend and frontend are available:
+```bash
+docker-compose exec php composer csf
+docker-compose exec node npm run lintf
+```
+
 ### Deployment
 The website should be automatically deployed to GitHub Pages with every pull requests to the `main` branch.

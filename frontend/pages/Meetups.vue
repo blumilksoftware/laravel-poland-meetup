@@ -12,5 +12,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <meetups-table class="mt-12" :meetups="meetups"></meetups-table>
+  <meetups-table class="mt-12" :meetups="meetups"/>
 </template>
