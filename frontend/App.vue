@@ -5,10 +5,10 @@ import ApplicationFooter from '@/layout/ApplicationFooter.vue'
 
 <template>
   <div class="flex flex-col">
-    <application-navbar></application-navbar>
+    <application-navbar/>
     <div class="container mx-auto">
-      <router-view></router-view>
+      <router-view/>
     </div>
-    <application-footer></application-footer>
+    <application-footer/>
   </div>
 </template>
