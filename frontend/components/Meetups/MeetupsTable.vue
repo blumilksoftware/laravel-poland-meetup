@@ -1,9 +1,6 @@
 <script setup>
-//work in progress
-//filteredMeetups need to be improve
-
 import { ref, computed, defineProps } from 'vue'
-import { CalendarIcon, ChevronRightIcon, MapPinIcon } from '@heroicons/vue/24/outline'
+import { CalendarIcon, ChevronRightIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon  } from '@heroicons/vue/24/outline'
 
 const props = defineProps({
   meetups: {
@@ -12,64 +9,65 @@ const props = defineProps({
   },
 })
 
-const searchValue = ref('')
+const searchMeetup = ref('')
+const searchPresentation = ref('')
+const searchSpeaker = ref('')
 
-const searchSpeakers = (meetup) => { 
- if( meetup.presentations.some(({ speakers }) => 
-    speakers.some(({ name }) => 
-      name.toLowerCase().includes(searchValue.value.toLowerCase()),
+const searchSpeakers = ( meetups ) => {
+  return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
+  speakers.some(({ name }) => 
+  name.toLowerCase().includes(searchSpeaker.value.toLowerCase()),
     ),
-  )) {
-    return meetup
-  }
+  ))
 }
 
-const searchPresentations = (meetup) => { 
-  if(meetup.presentations.some(({ title }) => 
-    title.toLowerCase().includes(searchValue.value.toLowerCase()),
-    )) { 
-    return meetup 
-  }
+const searchPresentations = ( meetups ) => {
+  return meetups.filter(meetup => 
+    meetup.presentations.some(({ title, tags }) => 
+      title.toLowerCase().includes(searchPresentation.value.toLowerCase()) +
+      tags.some(tag => tag.toLowerCase().includes(searchPresentation.value.toLowerCase())),
+    ),
+  )  
 }
 
-const searchMeetupProperty = (meetup) => {
-  const arrayMeetup = Object.values(meetup)
-  let array = []
-
-  for(const elem of arrayMeetup) {
-
-    if(typeof elem === 'string') {
-      array.push(elem)
-    }
-  }
-
-  if(array.some(elem => elem.toLowerCase().includes(searchValue.value.toLowerCase()))) {
-    return meetup
-  }
+const searchMeetupProperties = ( meetups ) => {
+  return meetups.filter(meetup => 
+    Object.values(meetup).some(elem =>
+      typeof elem === 'string' &&
+      elem.toLowerCase().includes(searchMeetup.value.toLowerCase()),
+    ),
+  )
 }
-
+   
 const filteredMeetups = computed (() => {
-  return props.meetups.filter((meetup) => {
-    if (!searchValue.value) {
-      return props.meetups
-    }
-    return searchPresentations(meetup) || searchSpeakers(meetup) || searchMeetupProperty(meetup)
-  })
+    return searchMeetupProperties(searchSpeakers(searchPresentations(props.meetups)))
 })
 
 </script>
 
 <template>
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
-    <form class="my-6 -mt-5 flex justify-center sm:justify-start">
-      <label class="relative block w-11/12 md:w-56">
+    <form class="my-6 -mt-5 block justify-center sm:flex">
+      <label class="relative flex w-11/12 md:w-56">
         <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <svg class="h-5 w-5 fill-zinc-300" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
-          </svg>
+          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
         </span>
         <span class="sr-only">Szukaj</span>
-        <input v-model="searchValue" type="text" class="sm:text-md block h-12 w-full rounded-full border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj...">
+        <input v-model="searchMeetup" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj meetupu...">
+      </label>
+      <label class="relative flex w-11/12 md:w-56">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
+        </span>
+        <span class="sr-only">Szukaj</span>
+        <input v-model="searchSpeaker" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj prelegentów...">
+      </label>
+      <label class="relative flex w-11/12 md:w-56">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
+        </span>
+        <span class="sr-only">Szukaj</span>
+        <input v-model="searchPresentation" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj prezentacji...">
       </label>
     </form>
     <div class="overflow-hidden bg-white">
@@ -97,9 +95,9 @@ const filteredMeetups = computed (() => {
                     </div>
                   </div>
                   <div>
-                    <ul class="ml-2 list-inside list-disc font-semibold text-zinc-600">
-                      <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate">
-                        {{ presentation.title }}
+                    <ul class="list-inside  text-sm text-zinc-600">
+                      <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
+                        <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 text-gray-400"/>{{ presentation.title }}
                       </li>
                     </ul>
                   </div>
