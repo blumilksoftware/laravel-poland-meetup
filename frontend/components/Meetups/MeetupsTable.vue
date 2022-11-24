@@ -10,13 +10,31 @@ const props = defineProps({
 })
 
 const searchMeetup = ref('')
-const searchPresentation = ref('')
+const searchCompany = ref('')
 const searchSpeaker = ref('')
+const searchPresentation = ref('')
+
+const searchMeetupProperties = ( meetups ) => {
+  return meetups.filter(meetup => 
+    Object.values(meetup).some(elem =>
+      typeof elem === 'string' &&
+      elem.toLowerCase().includes(searchMeetup.value.toLowerCase()),
+    ),
+  )
+}
+
+const searchCompanies = ( meetups ) => {
+  return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
+  speakers.some(({ company }) => 
+  company.toLowerCase().includes(searchCompany.value.toLowerCase()),
+  ),
+  ))
+}
 
 const searchSpeakers = ( meetups ) => {
   return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
-  speakers.some(({ name }) => 
-  name.toLowerCase().includes(searchSpeaker.value.toLowerCase()),
+    speakers.some(({ name }) => 
+      name.toLowerCase().includes(searchSpeaker.value.toLowerCase()),
     ),
   ))
 }
@@ -29,18 +47,9 @@ const searchPresentations = ( meetups ) => {
     ),
   )  
 }
-
-const searchMeetupProperties = ( meetups ) => {
-  return meetups.filter(meetup => 
-    Object.values(meetup).some(elem =>
-      typeof elem === 'string' &&
-      elem.toLowerCase().includes(searchMeetup.value.toLowerCase()),
-    ),
-  )
-}
    
 const filteredMeetups = computed (() => {
-    return searchMeetupProperties(searchSpeakers(searchPresentations(props.meetups)))
+    return searchMeetupProperties(searchCompanies(searchSpeakers(searchPresentations(props.meetups))))
 })
 
 </script>
@@ -54,6 +63,13 @@ const filteredMeetups = computed (() => {
         </span>
         <span class="sr-only">Szukaj</span>
         <input v-model="searchMeetup" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj meetupu...">
+      </label>
+      <label class="relative flex w-11/12 md:w-56">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
+        </span>
+        <span class="sr-only">Szukaj</span>
+        <input v-model="searchCompany" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj firmy...">
       </label>
       <label class="relative flex w-11/12 md:w-56">
         <span class="absolute inset-y-0 left-0 flex items-center pl-2">
