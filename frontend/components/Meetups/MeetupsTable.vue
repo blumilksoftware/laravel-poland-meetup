@@ -25,8 +25,8 @@ const searchMeetupProperties = ( meetups ) => {
 
 const searchCompanies = ( meetups ) => {
   return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
-  speakers.some(({ company }) => 
-  company.toLowerCase().includes(searchCompany.value.toLowerCase()),
+    speakers.some(({ company }) => 
+    company.toLowerCase().includes(searchCompany.value.toLowerCase()),
   ),
   ))
 }
