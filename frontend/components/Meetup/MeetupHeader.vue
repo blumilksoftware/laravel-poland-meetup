@@ -1,4 +1,6 @@
 <script setup>
+import { CalendarDaysIcon } from '@heroicons/vue/24/outline'
+
 defineProps({
   meetup: {
     type: Object,
@@ -34,7 +36,10 @@ defineProps({
       <h2 v-if="meetup" class="text-5xl font-bold tracking-tight text-laravel">
         {{ meetup.name }}
       </h2>
-      <p class="block text-2xl text-gray-500 ">{{ meetup.dateFull }}</p>
+      <div class="flex text-2xl text-gray-500 justify-center align-center">
+        <calendar-days-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"></calendar-days-icon>
+        <p>{{ meetup.dateFull }}</p>
+      </div>
     </div>
   </div>
 </template>
