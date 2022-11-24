@@ -30,10 +30,11 @@ defineProps({
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:flex lg:justify-center lg:px-8">
-      <h2 v-if="meetup" class="text-5xl font-bold tracking-tight text-gray-900">
+    <div class="mx-auto text-center space-y-5 max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:block lg:justify-center lg:px-8">
+      <h2 v-if="meetup" class="text-5xl font-bold tracking-tight text-laravel">
         {{ meetup.name }}
       </h2>
+      <p class="block text-2xl text-gray-500 ">{{ meetup.dateFull }}</p>
     </div>
   </div>
 </template>
