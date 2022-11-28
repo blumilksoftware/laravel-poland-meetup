@@ -58,39 +58,47 @@ const filteredMeetups = computed (() => {
 <template>
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
     <form class="my-6 -mt-5 block justify-center sm:flex">
-      <label class="relative flex md:w-56">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
-        </span>
-        <span class="sr-only">Szukaj</span>
-        <input v-model="searchMeetup" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj meetupu...">
-      </label>
-      <label class="relative flex md:w-56">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
-        </span>
-        <span class="sr-only">Szukaj</span>
-        <input v-model="searchCompany" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj firmy...">
-      </label>
-      <label class="relative flex md:w-56">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
-        </span>
-        <span class="sr-only">Szukaj</span>
-        <input v-model="searchSpeaker" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj prelegentów...">
-      </label>
-      <label class="relative flex md:w-56">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/> 
-        </span>
-        <span class="sr-only">Szukaj</span>
-        <input v-model="searchPresentation" type="text" class="sm:text-md block h-12 w-full rounded-sm border border-slate-300 bg-white py-2 pl-9 pr-3 text-lg text-zinc-600 shadow-sm placeholder:italic placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-400" placeholder="Szukaj prezentacji...">
-      </label>
+      <div class="my-4 md:mx-4 md:my-0">
+        <label for="meetup" class="ml-px block pl-4 text-sm font-medium text-zinc-700">Meetupy</label>
+        <div class="relative mt-1">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
+          </span>
+          <input v-model="searchMeetup" type="text" name="meetup" class="block w-full rounded-full border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="#23">
+        </div>
+      </div>
+      <div class="my-4 md:mx-4 md:my-0">
+        <label for="company" class="ml-px block pl-4 text-sm font-medium text-zinc-700">Firmy</label>
+        <div class="relative mt-1">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
+          </span>
+          <input v-model="searchCompany" type="text" name="comapny" class="block w-full rounded-full border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Blumilk">
+        </div>
+      </div>
+      <div class="my-4 md:mx-4 md:my-0">
+        <label for="speaker" class="ml-px block pl-4 text-sm font-medium text-zinc-700">Prelegenci</label>
+        <div class="relative mt-1">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
+          </span>
+          <input v-model="searchSpeaker" type="text" name="speaker" class="block w-full rounded-full border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Jan Kowalski">
+        </div>
+      </div>
+      <div class="my-4 md:mx-4 md:my-0">
+        <label for="presentation" class="ml-px block pl-4 text-sm font-medium text-zinc-700">Prezentacje</label>
+        <div class="relative mt-1">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
+          </span>
+          <input v-model="searchPresentation" type="text" name="presentation" class="block w-full rounded-full border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Laravel...">
+        </div>
+      </div>
     </form>
     <div class="overflow-hidden bg-white">
-      <ul role="list" class="divide-y divide-gray-200">
+      <ul role="list" class="divide-y divide-zinc-200">
         <li v-for="meetup in filteredMeetups" :key="meetup.id" class="w-11/12 sm:w-full">
-          <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="block hover:bg-gray-50">
+          <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="block hover:bg-zinc-50">
             <div class="flex items-center p-4 sm:px-6">
               <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
                 <div class="space-y-2 truncate">
@@ -100,13 +108,13 @@ const filteredMeetups = computed (() => {
                     </p>
                   </div>
                   <div class="mt-2 flex">
-                    <div class="flex items-center gap-4 text-sm text-gray-500">
+                    <div class="flex items-center gap-4 text-sm text-zinc-500">
                       <div class="flex">
-                        <calendar-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/>
+                        <calendar-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
                         <time :datetime="meetup.date">{{ meetup.dateFull }}</time>
                       </div>
                       <div class="flex">
-                        <map-pin-icon class="mr-1.5 h-5 w-5 shrink-0 text-gray-400" aria-hidden="true"/>
+                        <map-pin-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
                         {{ meetup.location }}
                       </div>
                     </div>
@@ -114,14 +122,14 @@ const filteredMeetups = computed (() => {
                   <div>
                     <ul class="list-inside text-sm text-zinc-600">
                       <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
-                        <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 text-gray-400"/>{{ presentation.title }}
+                        <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 text-zinc-400"/>{{ presentation.title }}
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div class="visible ml-5 shrink-0">
-                <chevron-right-icon class="h-5 w-5 text-gray-400" aria-hidden="true"/>
+                <chevron-right-icon class="h-5 w-5 text-zinc-400" aria-hidden="true"/>
               </div>
             </div>
           </router-link>
