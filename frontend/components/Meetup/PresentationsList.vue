@@ -1,4 +1,6 @@
 <script setup>
+import { PresentationChartLineIcon } from '@heroicons/vue/24/outline'
+
 defineProps({
   presentations: {
     type: Array,
@@ -20,11 +22,12 @@ defineProps({
           <div class="flex items-center p-4 sm:px-6">
             <div class="flex min-w-0 flex-1 items-center">
               <div class="w-[36em] pl-4">
-                <div class="truncate text-lg font-medium">
+                <div class="items-center flex truncate text-lg font-medium">
+                  <presentation-chart-line-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
                   {{ presentation.title }}
                 </div>
-                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="mt-2 flex items-center gap-3 text-sm">
-                  <img class="h-6 w-6 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name">
+                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="items-center mt-2 flex items-center gap-3 text-md">
+                  <img class="h-8 w-8 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name">
                   <span v-if="speaker.company">{{ speaker.name }}, {{ speaker.company }}</span>
                   <span v-else>{{ speaker.name }}</span>
                 </div>
