@@ -123,73 +123,71 @@ let showDetails = ref(null)
     <div class="overflow-hidden bg-white">
       <ul role="list" class="divide-y divide-zinc-200">
         <li v-for="meetup in filteredMeetups" :key="meetup.id" class="w-11/12 sm:w-full" @mouseenter="showDetails = meetup.id" @mouseleave="showDetails = null">
-          <Transition transition duration="1000">
-            <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="block hover:bg-zinc-50">
-              <div class="flex items-center">
-                <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
-                  <div class="w-full space-y-2 truncate p-4 sm:px-6">
-                    <div class="flex text-xl">
-                      <p class="text-laravel truncate font-medium">
-                        {{ meetup.name }}
-                      </p>
-                    </div>
-                    <div class="mt-2 flex">
-                      <div class="flex items-center gap-4 text-sm text-zinc-500">
-                        <div class="flex">
-                          <calendar-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
-                          <time :datetime="meetup.date">{{ meetup.dateFull }}</time>
-                        </div>
-                        <div class="flex">
-                          <map-pin-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
-                          {{ meetup.location }}
-                        </div>
-                      </div>
-                    </div>
-                    <div v-if="meetup.presentations.length" class="inner">
-                      <ul class="text-md my-5 list-inside tracking-tight text-zinc-600">
-                        <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
-                          <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>{{ presentation.title }}
-                        </li>
-                      </ul>
-                    </div>
-                    <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
-                      <p>Tagi: </p>
-                      <ul class="flex space-x-1">
-                        <li v-for="tag of meetupTags(meetup)" :key="tag" class="text-zinc-400">
-                          {{ tag }}{{ ',' }}
-                        </li>
-                      </ul>
-                    </div>
-                    <Transition duration="550" name="nested">
-                      <div v-if="showDetails === meetup.id" class="flex items-center opacity-100 transition duration-700 ease-in-out">
-                        <users-icon class="text-laravel-500 mr-1.5 inline-block h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
-                        <ul class="flex items-center space-x-1">
-                          <li v-for="speaker of meetupSpeakers(meetup)" :key="speaker.name" class="flex text-zinc-600">
-                            {{ speaker.name }}{{ ', ' }}
-                            <!-- <img class="h-8 w-8 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name"> -->
-                          </li>
-                        </ul>
-                      </div>
-                    </Transition>
-                    <Transition duration="550" delay="{ enter: 300, leave: 500 }" name="nested">
-                      <div v-if="showDetails === meetup.id" class="flex space-x-3">
-                        <ul class="flex space-x-1">
-                          <li v-for="company of meetupCompanies(meetup)" :key="company" class="flex text-zinc-600">
-                            <div class="block justify-center md:m-auto md:flex md:w-3/5">
-                              <img v-if="'/images/companies/' + company + '.webp'" class="center mx-auto h-12 object-contain" :alt="'logo ' + company" :src="'/images/companies/' + company + '.webp'">
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </Transition>
+          <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="block hover:bg-zinc-50">
+            <div class="flex items-center">
+              <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+                <div class="w-full space-y-2 truncate p-4 sm:px-6">
+                  <div class="flex text-xl">
+                    <p class="text-laravel truncate font-medium">
+                      {{ meetup.name }}
+                    </p>
                   </div>
-                </div>
-                <div class="visible ml-5 shrink-0 p-4 sm:px-6">
-                  <chevron-right-icon class="h-5 w-5 text-zinc-400" aria-hidden="true"/>
+                  <div class="mt-2 flex">
+                    <div class="flex items-center gap-4 text-sm text-zinc-500">
+                      <div class="flex">
+                        <calendar-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
+                        <time :datetime="meetup.date">{{ meetup.dateFull }}</time>
+                      </div>
+                      <div class="flex">
+                        <map-pin-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
+                        {{ meetup.location }}
+                      </div>
+                    </div>
+                  </div>
+                  <div v-if="meetup.presentations.length" class="inner">
+                    <ul class="text-md my-3 list-inside tracking-tight text-zinc-600">
+                      <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
+                        <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>{{ presentation.title }}
+                      </li>
+                    </ul>
+                  </div>
+                  <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
+                    <p>Tagi: </p>
+                    <ul class="flex space-x-1">
+                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="text-zinc-400">
+                        {{ tag }}{{ ',' }}
+                      </li>
+                    </ul>
+                  </div>
+                  <Transition duration="550" name="nested">
+                    <div v-if="showDetails === meetup.id" class="flex items-center opacity-100 transition duration-700 ease-in-out">
+                      <users-icon class="text-laravel-500 mr-1.5 inline-block h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
+                      <ul class="flex items-center space-x-1">
+                        <li v-for="speaker of meetupSpeakers(meetup)" :key="speaker.name" class="flex text-zinc-600">
+                          {{ speaker.name }}{{ ', ' }}
+                          <!-- <img class="h-8 w-8 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name"> -->
+                        </li>
+                      </ul>
+                    </div>
+                  </Transition>
+                  <Transition duration="550" delay="{ enter: 300, leave: 500 }" name="nested">
+                    <div v-if="showDetails === meetup.id" class="flex space-x-3">
+                      <ul class="flex space-x-1">
+                        <li v-for="company of meetupCompanies(meetup)" :key="company" class="flex text-zinc-600">
+                          <div class="block justify-center md:m-auto md:flex md:w-3/5">
+                            <img v-if="'/images/companies/' + company + '.webp'" class="center mx-auto h-12 object-contain" :alt="'logo ' + company" :src="'/images/companies/' + company + '.webp'">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </Transition>
                 </div>
               </div>
-            </router-link>
-          </Transition>
+              <div class="visible ml-5 shrink-0 p-4 sm:px-6">
+                <chevron-right-icon class="h-5 w-5 text-zinc-400" aria-hidden="true"/>
+              </div>
+            </div>
+          </router-link>
         </li>
         <li v-if="!filteredMeetups.length" class="space-y-7 text-xl text-zinc-500">
           <p class="m-8 text-left md:text-center">
@@ -216,7 +214,18 @@ let showDetails = ref(null)
 </template>
 
 <style scoped>
-.nested-enter-active, .nested-leave-active {
+.list-enter-active, 
+.list-leave-active {
+  transition: all 3.3s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+transform: translateX(30px);
+  opacity: 0;
+}
+.nested-enter-active,
+.nested-leave-active {
 	transition: all 0.3s ease-in-out;
 }
 
