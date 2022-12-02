@@ -5,7 +5,7 @@
   "organizers": ["@blumilk", "@highsolutions"],
   "presentations": [
     {
-      "title": "Prezentacja nr 1",
+      "title": "Lorem pipsum dolor sit amet",
       "speakers": [
         {
           "person": "@kamilpiech",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "title": "Prezentacja nr 2",
+      "title": "consectetur adipiscing elit, sed do eiusmod tempor",
       "speakers": [
         {
           "person": "@tomekzmudzinski",

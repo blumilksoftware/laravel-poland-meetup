@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, defineProps } from 'vue'
-import { CalendarIcon, ChevronRightIcon, ChevronDoubleLeftIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon, UsersIcon  } from '@heroicons/vue/24/outline'
+import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon, UsersIcon  } from '@heroicons/vue/24/outline'
 import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
 
 const props = defineProps({
@@ -16,7 +16,7 @@ const searchSpeaker = ref('')
 const searchPresentation = ref('')
 const showDetails = ref(null)
 const { nextMeetup } = useFindNextMeetup()
-let filteredMeetups = {}
+let filteredMeetups = ref([])
 
 const searchMeetupProperties = ( meetups ) => {
   return meetups.filter(meetup => 
@@ -80,7 +80,7 @@ filteredMeetups = computed (() => {
   }
   
   futureMeetups.sort(compare)
-  oldMeetups.sort(compare)
+  oldMeetups.sort(compare).reverse()
   
   for(const item of futureMeetups) {
     returnMeetupList.push(item)
@@ -170,13 +170,13 @@ const meetupTags = ( meetup ) => {
                         {{ meetup.name }}
                       </p>
                     </div>
-                    <div v-else-if="meetup.date >= nextMeetup.date" class="flex">
+                    <div v-else-if="meetup.date >= nextMeetup.date" class="block sm:flex">
                       <p class="truncate">
                         {{ meetup.name }}
                       </p>
                       <div v-if="nextMeetup.id === meetup.id" class="flex">
-                        <chevron-double-left-icon class="mx-3 inline-block h-5 w-5 self-center" aria-hidden="true"/>
-                        <p>
+                        <exclamation-circle-icon class="mr-3 inline-block h-5 w-5 self-center" aria-hidden="true"/>
+                        <p class="text-lg">
                           Najbliższe wydarzenie
                         </p>
                       </div>
@@ -196,38 +196,38 @@ const meetupTags = ( meetup ) => {
                   </div>
                   <div v-if="meetup.presentations.length">
                     <ul class="text-md my-3 list-inside tracking-tight text-zinc-600">
-                      <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
+                      <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1 font-medium">
                         <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>{{ presentation.title }}
                       </li>
                     </ul>
                   </div>
-                  <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
-                    <p>Tagi: </p>
-                    <ul class="flex space-x-1">
-                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="text-zinc-400">
-                        {{ tag }}{{ ',' }}
-                      </li>
-                    </ul>
-                  </div>
-                  <Transition duration="550" name="nested">
-                    <div v-if="showDetails === meetup.id" class="flex items-center opacity-100 transition duration-700 ease-in-out">
-                      <users-icon class="text-laravel-500 mr-1.5 inline-block h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
-                      <ul class="flex items-center space-x-1">
-                        <li v-for="speaker of meetupSpeakers(meetup)" :key="speaker.name" class="flex text-zinc-600">
-                          {{ speaker.name }}{{ ', ' }}
-                        </li>
-                      </ul>
-                    </div>
-                  </Transition>
-                  <Transition duration="550" delay="{ enter: 300, leave: 500 }" name="nested">
-                    <div v-if="showDetails === meetup.id" class="flex space-x-3">
-                      <ul class="flex space-x-1">
-                        <li v-for="company of meetupCompanies(meetup)" :key="company" class="flex text-zinc-600">
-                          <div class="block justify-center md:m-auto md:flex md:w-3/5">
-                            <img v-if="'/images/companies/' + company + '.webp'" class="center mx-auto h-12 object-contain" :alt="'logo ' + company" :src="'/images/companies/' + company + '.webp'">
-                          </div>
-                        </li>
-                      </ul>
+                  <Transition duration="550" name="list">
+                    <div v-show="showDetails === meetup.id" class="inner block items-center opacity-100 transition duration-700 ease-in-out">
+                      <div class="flex">
+                        <users-icon class="text-laravel-500 mr-1.5 inline-block h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
+                        <ul class="flex items-center space-x-1">
+                          <li v-for="speaker of meetupSpeakers(meetup)" :key="speaker.name" class="flex text-zinc-600">
+                            {{ speaker.name }}{{ ', ' }}
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <ul class="flex space-x-1">
+                          <li v-for="company of meetupCompanies(meetup)" :key="company" class="flex text-zinc-600">
+                            <div class="block justify-center md:m-auto md:flex md:w-3/5">
+                              <img v-if="'/images/companies/' + company + '.webp'" class="center mx-auto h-12 object-contain" :alt="'logo ' + company" :src="'/images/companies/' + company + '.webp'">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
+                        <p>Tagi: </p>
+                        <ul class="flex space-x-1">
+                          <li v-for="tag of meetupTags(meetup)" :key="tag" class="text-zinc-400">
+                            {{ tag }}{{ ',' }}
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </Transition>
                 </div>
@@ -263,35 +263,25 @@ const meetupTags = ( meetup ) => {
 </template>
 
 <style scoped>
-.list-enter-active, 
+.list-enter-active,
 .list-leave-active {
-  transition: all 3.3s ease;
+	transition: all 0.3s ease-in-out;
 }
 
 .list-enter-from,
 .list-leave-to {
-transform: translateX(30px);
-  opacity: 0;
-}
-.nested-enter-active,
-.nested-leave-active {
-	transition: all 0.3s ease-in-out;
-}
-
-.nested-enter-from,
-.nested-leave-to {
   transform: translateY(20px);
   opacity: 0;
 }
-.nested-enter-active .inner,
-.nested-leave-active .inner { 
+.list-enter-active .inner,
+.list-leave-active .inner { 
   transition: all 0.3s ease-in-out;
 }
-.nested-enter-active .inner {
+.list-enter-active .inner {
 	transition-delay: 0.25s;
 }
-.nested-enter-from .inner,
-.nested-leave-to .inner {
+.list-enter-from .inner,
+.list-leave-to .inner {
   transform: translateX(30px);
   opacity: 0.001;
 }
