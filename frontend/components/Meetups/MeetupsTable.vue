@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, defineProps } from 'vue'
-import { CalendarIcon, ChevronRightIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon, UsersIcon  } from '@heroicons/vue/24/outline'
+import { CalendarIcon, ChevronRightIcon, ChevronDoubleLeftIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon, UsersIcon  } from '@heroicons/vue/24/outline'
+import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
 
 const props = defineProps({
   meetups: {
@@ -13,6 +14,9 @@ const searchMeetup = ref('')
 const searchCompany = ref('')
 const searchSpeaker = ref('')
 const searchPresentation = ref('')
+const showDetails = ref(null)
+const { nextMeetup } = useFindNextMeetup()
+let filteredMeetups = {}
 
 const searchMeetupProperties = ( meetups ) => {
   return meetups.filter(meetup => 
@@ -49,19 +53,35 @@ const searchPresentations = ( meetups ) => {
   )  
 }
    
-const filteredMeetups = computed (() => {
-  return searchMeetupProperties(searchCompanies(searchSpeakers(searchPresentations(props.meetups))))
+filteredMeetups = computed (() => {
+  let filtered = searchMeetupProperties(searchCompanies(searchSpeakers(searchPresentations(props.meetups))))
+
+  function compare( a, b ) {
+    if ( a.date > b.date ){
+      return -1
+    }
+    if ( a.date < b.date ){
+      return 1
+    }
+    return 0
+  }
+  
+  filtered.sort(compare)
+
+  return filtered
 })
 
 const meetupCompanies = ( meetup ) => {
   let setCompanies = new Set()
-  meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ company }) => setCompanies.add(company.toLowerCase())))
+  meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ company }) => 
+    company &&
+    setCompanies.add(company.toLowerCase())))
   return setCompanies
 }
 
 const meetupSpeakers = ( meetup ) => {
   let setSpeakers = new Set()
-  meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ name, avatar }) => 
+    meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ name, avatar }) => 
     setSpeakers.add({ name: name, avatar: avatar }),
   ))
   return setSpeakers
@@ -73,11 +93,6 @@ const meetupTags = ( meetup ) => {
   return setTags
 }
 
-let showDetails = ref(null)
-
-// const mouseOver = () => {
-//   this.showDetails = !this.showDetails
-// }
 </script>
 
 <template>
@@ -123,14 +138,27 @@ let showDetails = ref(null)
     <div class="overflow-hidden bg-white">
       <ul role="list" class="divide-y divide-zinc-200">
         <li v-for="meetup in filteredMeetups" :key="meetup.id" class="w-11/12 sm:w-full" @mouseenter="showDetails = meetup.id" @mouseleave="showDetails = null">
-          <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="block hover:bg-zinc-50">
+          <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
             <div class="flex items-center">
               <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
                 <div class="w-full space-y-2 truncate p-4 sm:px-6">
-                  <div class="flex text-xl">
-                    <p class="text-laravel truncate font-medium">
-                      {{ meetup.name }}
-                    </p>
+                  <div class="text-laravel flex space-x-4 text-xl font-medium">
+                    <div v-if="meetup.date < nextMeetup.date" class="flex text-red-800">
+                      <p class="truncate">
+                        {{ meetup.name }}
+                      </p>
+                    </div>
+                    <div v-if="meetup.date >= nextMeetup.date" class="flex">
+                      <p class="truncate">
+                        {{ meetup.name }}
+                      </p>
+                      <div v-if="nextMeetup.id === meetup.id" class="flex">
+                        <chevron-double-left-icon class="mx-3 inline-block h-5 w-5 self-center" aria-hidden="true"/>
+                        <p>
+                          Najbliższe wydarzenie
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <div class="mt-2 flex">
                     <div class="flex items-center gap-4 text-sm text-zinc-500">
@@ -144,7 +172,7 @@ let showDetails = ref(null)
                       </div>
                     </div>
                   </div>
-                  <div v-if="meetup.presentations.length" class="inner">
+                  <div v-if="meetup.presentations.length">
                     <ul class="text-md my-3 list-inside tracking-tight text-zinc-600">
                       <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1">
                         <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>{{ presentation.title }}
@@ -165,7 +193,6 @@ let showDetails = ref(null)
                       <ul class="flex items-center space-x-1">
                         <li v-for="speaker of meetupSpeakers(meetup)" :key="speaker.name" class="flex text-zinc-600">
                           {{ speaker.name }}{{ ', ' }}
-                          <!-- <img class="h-8 w-8 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name"> -->
                         </li>
                       </ul>
                     </div>
@@ -189,7 +216,7 @@ let showDetails = ref(null)
             </div>
           </router-link>
         </li>
-        <li v-if="!filteredMeetups.length" class="space-y-7 text-xl text-zinc-500">
+        <li v-show="!filteredMeetups.length" class="space-y-7 text-xl text-zinc-500">
           <p class="m-8 text-left md:text-center">
             Nie znaleźliśmy pasujących wyników.
           </p>
