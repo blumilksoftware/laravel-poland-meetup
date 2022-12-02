@@ -54,21 +54,43 @@ const searchPresentations = ( meetups ) => {
 }
    
 filteredMeetups = computed (() => {
-  let filtered = searchMeetupProperties(searchCompanies(searchSpeakers(searchPresentations(props.meetups))))
-
+  const oldMeetups = []
+  const futureMeetups = []
+  const today = new Date()
+  let returnMeetupList = []
+  
+  const filtered = searchMeetupProperties(searchCompanies(searchSpeakers(searchPresentations(props.meetups))))
+  
+  for(const meetup of filtered) {
+    if(new Date(meetup.date) >= today ) {
+      futureMeetups.push(meetup)
+    }
+    else 
+      oldMeetups.push(meetup)
+  }
+  
   function compare( a, b ) {
-    if ( a.date > b.date ){
+    if ( a.date < b.date ){
       return -1
     }
-    if ( a.date < b.date ){
+    if ( a.date > b.date ){
       return 1
     }
     return 0
   }
   
-  filtered.sort(compare)
+  futureMeetups.sort(compare)
+  oldMeetups.sort(compare)
+  
+  for(const item of futureMeetups) {
+    returnMeetupList.push(item)
+  }
 
-  return filtered
+  
+  for(const item of oldMeetups) {
+    returnMeetupList.push(item)
+  }
+  return returnMeetupList
 })
 
 const meetupCompanies = ( meetup ) => {
@@ -148,7 +170,7 @@ const meetupTags = ( meetup ) => {
                         {{ meetup.name }}
                       </p>
                     </div>
-                    <div v-if="meetup.date >= nextMeetup.date" class="flex">
+                    <div v-else-if="meetup.date >= nextMeetup.date" class="flex">
                       <p class="truncate">
                         {{ meetup.name }}
                       </p>
