@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { CalendarIcon, ChevronRightIcon, FunnelIcon, ChevronDownIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
-// import { useSortMeetups } from '@/components/Meetup/useSortMeetups'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
+import SortButton from '@/components/Meetups/SortButton.vue'
 
 const props = defineProps({
   meetups: {
@@ -27,6 +27,7 @@ const props = defineProps({
 const searchMeetup = ref('')
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
+const sortedMeetups = ref([])
 const { nextMeetup } = useFindNextMeetup()
 
 const updateCompaniesFilter = function(selectedFilters) {
@@ -75,47 +76,12 @@ const searchSpeaker = ( meetups ) => {
 }
 
 const filteredMeetups = computed (() => {
-  const oldMeetups = []
-  const futureMeetups = []
-  const today = new Date()
-  let returnMeetupList = []
-  const selected = searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))  
- 
-  // const { sortedMeetups } = useSortMeetups(selected)
-
-  //sort via date
-
-  for(const meetup of selected) {
-    if(new Date(meetup.date) >= today ) {
-      futureMeetups.push(meetup)
-    }
-    else 
-      oldMeetups.push(meetup)
-  }
-  
-  function compare( a, b ) {
-    if ( a.date < b.date ) {
-      return -1
-    }
-    if ( a.date > b.date ) {
-      return 1
-    }
-    return 0
-  }
-  
-  futureMeetups.sort(compare)
-  oldMeetups.sort(compare).reverse()
-  
-  for(const item of futureMeetups) {
-    returnMeetupList.push(item)
-  }
-  
-  for(const item of oldMeetups) {
-    returnMeetupList.push(item)
-  }
- console.log('returnMeetupList', returnMeetupList)
-  return returnMeetupList
+  return searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))
 })
+
+const updateSortedMeetups = (meetups) => {
+  sortedMeetups.value  = meetups
+}
 
 // const meetupSpeakers = ( meetup ) => {
 //   let setSpeakers = new Set()
@@ -134,38 +100,32 @@ const meetupTags = ( meetup ) => {
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
-    <div class="my-4 flex space-x-6 text-zinc-700">
+  <div class="mx-auto max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
+    <div class="my-1 block py-4 text-zinc-700">
       <form class="block min-w-[270px] justify-start sm:flex">
         <div class="my-4 w-full md:mx-4 md:my-0">
           <label for="meetup" class="ml-px block pl-4 text-sm font-medium">Meetupy</label>
-          <div class="relative mt-1">
+          <div class="relative mt-1 border-b-2 border-zinc-200 bg-white">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
-            <input v-model="searchMeetup" type="text" name="meetup" class="block w-full rounded-full border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
+            <input v-model="searchMeetup" type="text" name="meetup" class="block w-full border-b-2 border-none border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
           </div>
         </div>
       </form>
-      <div class="mt-5 self-center md:invisible">
-        <funnel-icon class="mr-3 inline-block h-7 w-7 text-zinc-400" aria-hidden="true"/>
-      </div>
-      <div class="invisible mt-2 flex w-full justify-between md:visible">
-        <div class="flex space-x-6 self-center">
+      <div class="flex w-full justify-between">
+        <div class="flex self-center">
           <FilterButton id="companies" :data="companies" name="Firmy" @updated="updateCompaniesFilter"/>
-          <FilterButton id="speakers" :data="speakers" name="Osoby" @updated="updateSpeakersFilter"/>
+          <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
         </div>
-        <div class="flex space-x-3 self-center">
-          <span>Sortuj</span>
-          <span class="self-center">
-            <chevron-down-icon class="h-5 w-5 items-center text-zinc-400" aria-hidden="true"/>
-          </span>
+        <div class="flex">
+          <SortButton id="sorters" :data="filteredMeetups" name="Sortuj" @updated="updateSortedMeetups"/>
         </div>
       </div>
     </div>
     <div class="overflow-hidden bg-white">
       <ul role="list" class="divide-y divide-zinc-200">
-        <li v-for="meetup in filteredMeetups" :key="meetup.id" class="w-11/12 sm:w-full">
+        <li v-for="meetup in sortedMeetups" :key="meetup.id" class="w-full sm:w-11/12">
           <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
             <div class="flex items-center">
               <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
