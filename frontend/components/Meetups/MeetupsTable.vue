@@ -100,32 +100,32 @@ const meetupTags = ( meetup ) => {
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
+  <div class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
-      <form class="block min-w-[270px] justify-start sm:flex">
+      <form class="block justify-start sm:flex">
         <div class="my-4 w-full md:mx-4 md:my-0">
           <label for="meetup" class="ml-px block pl-4 text-sm font-medium">Meetupy</label>
-          <div class="relative mt-1 border-b-2 border-zinc-200 bg-white">
+          <div class="relative mt-1 bg-white">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
-            <input v-model="searchMeetup" type="text" name="meetup" class="block w-full border-b-2 border-none border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
+            <input v-model="searchMeetup" type="text" name="meetup" class="border-1 block w-full rounded-md border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
           </div>
         </div>
       </form>
-      <div class="flex w-full justify-between">
-        <div class="flex self-center">
+      <div class="my-3 flex w-full justify-between sm:mx-2">
+        <div class="flex self-center sm:mx-3 md:mx-0">
           <FilterButton id="companies" :data="companies" name="Firmy" @updated="updateCompaniesFilter"/>
           <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
         </div>
-        <div class="flex">
+        <div class="flex sm:mx-3">
           <SortButton id="sorters" :data="filteredMeetups" name="Sortuj" @updated="updateSortedMeetups"/>
         </div>
       </div>
     </div>
     <div class="overflow-hidden bg-white">
       <ul role="list" class="divide-y divide-zinc-200">
-        <li v-for="meetup in sortedMeetups" :key="meetup.id" class="w-full sm:w-11/12">
+        <li v-for="meetup in sortedMeetups" :key="meetup.id" class="w-full ">
           <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
             <div class="flex items-center">
               <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">

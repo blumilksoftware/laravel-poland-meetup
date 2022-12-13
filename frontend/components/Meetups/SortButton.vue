@@ -1,5 +1,6 @@
 <script setup>
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+import { BarsArrowDownIcon } from '@heroicons/vue/24/outline'
 import { ref, computed } from 'vue'
 import { useSortMeetups } from '@/components/Meetups/useSortMeetups.js'
 
@@ -31,31 +32,35 @@ const emit = defineEmits(['updated'])
 const onChange = computed (() => {
   const { sortedMeetups } = useSortMeetups(props.data, sortBy.value)
   emit('updated', sortedMeetups)
-  
   return sortedMeetups
 })
 
 </script>
 
 <template>
-  <div class="flex items-center justify-center p-12">
+  <div class="justify-cente flex items-center px-3">
     <div class="min-w-56 mx-auto">
       <Listbox v-slot="{ open }" v-model="sortBy" as="div" class="space-y-1">
         <div class="relative">
-          <span class="inline-block w-full rounded-md shadow-sm">
-            <ListboxButton @change="onChange" class="focus:shadow-outline-zinc relative w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5">
-              <span class="block truncate">
-                {{ sortBy }}
-              </span>
-              <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                <svg class="h-5 w-5 text-zinc-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                  <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
+          <span class="inline-block w-full ">
+            <ListboxButton @change="onChange">
+              <div class="flex md:hidden">
+                <bars-arrow-down-icon class="h-9 w-9"/>
+              </div>
+              <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
+                <span class="block truncate">
+                  {{ sortBy }}
+                </span>
+                <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                  <svg class="h-5 w-5 text-zinc-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </div>
             </ListboxButton>
           </span>
-          <transition leave-active-class="transition ease-in duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
-            <div v-if="open" class="absolute z-10 mt-1 w-full rounded-md bg-white shadow-lg">
+          <transition leave-active-class="transition ease-in-out duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
+            <div v-if="open" class="absolute right-1 z-50 mt-1 w-60 rounded-md bg-white shadow-lg">
               <ListboxOptions static class="shadow-xs max-h-60 overflow-auto rounded-md py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
                 <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option.value">
                   <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">

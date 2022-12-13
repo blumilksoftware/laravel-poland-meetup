@@ -40,13 +40,13 @@
           <strong>Dołącz do nas!</strong><br>
         </p>
       </div>
-      <div class="bg-white">
-        <h3 class="text-laravel -mb-8 block text-center text-lg font-semibold">
+      <div class="mb-20 bg-white">
+        <h3 class="text-laravel mb-10 block text-center text-lg font-semibold">
           Organizatorzy
         </h3>
-        <div class="block justify-center md:m-auto md:flex md:w-3/5">
-          <img class="center mx-auto h-48" alt="logo Blumilk" src="/images/companies/blumilk.webp">
-          <img class="center scale-140 mx-auto h-48 object-cover" alt="logo HighSolutions" src="/images/companies/highsolutions.webp">
+        <div class="block justify-center space-y-12 md:m-auto md:flex md:w-4/5 md:space-y-0">
+          <img class="center mx-auto h-14 sm:h-16" alt="logo Blumilk" src="/images/companies/blumilk.webp">
+          <img class="center mx-auto h-14 sm:h-16" alt="logo HighSolutions" src="/images/companies/highsolutions.webp">
         </div>
       </div>
     </div>
