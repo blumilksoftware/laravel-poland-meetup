@@ -31,7 +31,7 @@ const selectedFilters = ref([])
 <template>
   <Disclosure v-slot="{ open }" as="div" class="relative pr-8">
     <h3 class="inline-block w-full rounded-md shadow-sm">
-      <DisclosureButton class="focus:shadow-outline-zinc relative flex w-full cursor-default truncate rounded-md border border-zinc-300 bg-white py-2 px-4 text-left transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5">
+      <DisclosureButton class="focus:shadow-outline-zinc relative flex w-full cursor-default truncate rounded-md border border-zinc-300 bg-white py-1 px-4 text-left transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5">
         <span class="mr-1 truncate text-base text-gray-700">{{ name }}</span>
         <span class="m-1 flex w-4 items-center">
           <ChevronDownIcon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform']" aria-hidden="true"/>

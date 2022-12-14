@@ -4,6 +4,7 @@ import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, Chat
 import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
+// import MeetupsList from '@/components/Meetups/MeetupsList.vue'
 
 const props = defineProps({
   meetups: {
@@ -30,12 +31,17 @@ const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
 const { nextMeetup } = useFindNextMeetup()
 
+
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
 }
 
 const updateSpeakersFilter = function(selectedFilters) {
   checkedSpeakers.value = selectedFilters
+}
+
+const updateSortedMeetups = (meetups) => {
+  sortedMeetups.value  = meetups
 }
 
 const searchMeetupAndPresentation = ( meetups ) => {
@@ -79,18 +85,6 @@ const filteredMeetups = computed (() => {
   return searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))
 })
 
-const updateSortedMeetups = (meetups) => {
-  sortedMeetups.value  = meetups
-}
-
-// const meetupSpeakers = ( meetup ) => {
-//   let setSpeakers = new Set()
-//     meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ name, avatar }) => 
-//     setSpeakers.add({ name: name, avatar: avatar }),
-//   ))
-//   return setSpeakers
-// }
-
 const meetupTags = ( meetup ) => {
   let setTags = new Set()
   meetup.presentations.forEach(({ tags }) => tags.forEach(tag => setTags.add(tag)))
@@ -102,14 +96,14 @@ const meetupTags = ( meetup ) => {
 <template>
   <div class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
-      <form class="block justify-start sm:flex">
-        <div class="my-4 w-full md:mx-4 md:my-0">
+      <form class="block justify-center sm:flex">
+        <div class="my-4 w-2/5 md:mx-4 md:my-0">
           <label for="meetup" class="ml-px block pl-4 text-sm font-medium">Meetupy</label>
-          <div class="relative mt-1 bg-white">
+          <div class="relative mt-1 h-12 bg-white">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
-            <input v-model="searchMeetup" type="text" name="meetup" class="border-1 block w-full rounded-md border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
+            <input v-model="searchMeetup" type="text" name="meetup" class="border-1 block h-full w-full rounded-md border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
           </div>
         </div>
       </form>
@@ -119,7 +113,7 @@ const meetupTags = ( meetup ) => {
           <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
         </div>
         <div class="flex sm:mx-3">
-          <SortButton id="sorters" :data="filteredMeetups" name="Sortuj" @updated="updateSortedMeetups"/>
+          <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>
         </div>
       </div>
     </div>
@@ -205,6 +199,7 @@ const meetupTags = ( meetup ) => {
           </div>
         </li>
       </ul>
+      <!-- <MeetupsList id="meetupsList" :data="meetups"/> -->
     </div>
   </div>
 </template>

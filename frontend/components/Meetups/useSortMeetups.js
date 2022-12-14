@@ -1,9 +1,8 @@
-
 export function useSortMeetups (selectedMeetups, sortType) {
   const oldMeetups = []
   const futureMeetups = []
   const today = new Date()
-  let sortedMeetups = []
+  let sortMeetups = []
 
 
   function sort() {
@@ -28,25 +27,30 @@ export function useSortMeetups (selectedMeetups, sortType) {
     futureMeetups.sort(compare)
     oldMeetups.sort(compare).reverse()
 
-
-    if(sortType === 'Sortuj domyślnie') {
+    if(sortType === 'default') {
       for(const item of futureMeetups) {
-        sortedMeetups.push(item)
+        sortMeetups.push(item)
       }
       for(const item of oldMeetups) {
-        sortedMeetups.push(item)
+        sortMeetups.push(item)
       }
-    }
+    } else if(sortType === 'newestFirst') {
+      selectedMeetups.sort(compare).reverse()
 
-    else if(sortType === 'Sortuj według daty malejąco') {
-      sortedMeetups = selectedMeetups.sort(compare).reverse()
-    }
-    
-    else if(sortType === 'Sortuj według daty rosnąco') {
-      sortedMeetups = selectedMeetups.sort(compare)
+      for(const item of selectedMeetups) {
+        sortMeetups.push(item)
+      }
+    } else if(sortType === 'oldestFirst') {
+      selectedMeetups.sort(compare)
+
+      for(const item of selectedMeetups) {
+        sortMeetups.push(item)
+      }
+
     }  
   }
+  
   sort()
 
-  return { sortedMeetups }
+  return { sortMeetups }
 }
