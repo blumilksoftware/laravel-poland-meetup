@@ -1,7 +1,7 @@
 <script setup>
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
 import { BarsArrowDownIcon } from '@heroicons/vue/24/outline'
-import { ref, computed } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useSortMeetups } from '@/components/Meetups/useSortMeetups.js'
 
 const props = defineProps({
@@ -17,39 +17,55 @@ const sortOptions = [
     value: 'Sortuj domyślnie',
   },
   { 
-    name: 'oldestFirst', 
-    value: 'Sortuj według daty malejąco',
+    name: 'newestFirst', 
+    value: 'Sortuj od najnowszych',
   },
   { 
-    name: 'newestFirst', 
-    value: 'Sortuj według daty rosnąco',
+    name: 'oldestFirst', 
+    value: 'Sortuj od najstarszych',
   },
 ]
 
-const sortBy = ref(sortOptions[0].value)
+const sortBy = ref(sortOptions[0])
+
 const emit = defineEmits(['updated'])
 
-const onChange = computed (() => {
-  const { sortedMeetups } = useSortMeetups(props.data, sortBy.value)
-  emit('updated', sortedMeetups)
-  return sortedMeetups
+// const onChange = computed (() => {
+//   const { sortMeetups } = useSortMeetups(props.data, sortBy)
+//   emit('updated', sortMeetups)
+//   return sortMeetups
+// })
+
+
+watch(() => props.data, () => {
+  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
+  emit('updated', sortMeetups)
 })
 
+watch(sortBy, () => {
+  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
+  emit('updated', sortMeetups)
+})
+
+onMounted(() => { 
+  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
+  emit('updated', sortMeetups)
+})
 </script>
 
 <template>
-  <div class="justify-cente flex items-center px-3">
+  <div class="flex items-center justify-center ">
     <div class="min-w-56 mx-auto">
-      <Listbox v-slot="{ open }" v-model="sortBy" as="div" class="space-y-1">
+      <Listbox v-slot="{ open }" v-model="sortBy" as="div">
         <div class="relative">
           <span class="inline-block w-full ">
-            <ListboxButton @change="onChange">
+            <ListboxButton>
               <div class="flex md:hidden">
                 <bars-arrow-down-icon class="h-9 w-9"/>
               </div>
               <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
                 <span class="block truncate">
-                  {{ sortBy }}
+                  {{ sortBy.value }}
                 </span>
                 <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                   <svg class="h-5 w-5 text-zinc-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -62,7 +78,7 @@ const onChange = computed (() => {
           <transition leave-active-class="transition ease-in-out duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
             <div v-if="open" class="absolute right-1 z-50 mt-1 w-60 rounded-md bg-white shadow-lg">
               <ListboxOptions static class="shadow-xs max-h-60 overflow-auto rounded-md py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
-                <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option.value">
+                <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
                   <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
                     <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
                       {{ option.value }}
