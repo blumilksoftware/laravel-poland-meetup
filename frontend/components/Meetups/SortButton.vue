@@ -60,7 +60,7 @@ onMounted(() => {
         <div class="relative">
           <span class="inline-block w-full ">
             <ListboxButton>
-              <div class="flex md:hidden">
+              <div class="flex mr-3 md:hidden">
                 <bars-arrow-down-icon class="h-9 w-9"/>
               </div>
               <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
