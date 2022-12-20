@@ -18,18 +18,17 @@ const props = defineProps({
   },
 })
 
+const selectedFilters = ref([])
 const emit = defineEmits(['updated'])
 
 function onChange() {
   emit('updated', selectedFilters.value)
 }
 
-const selectedFilters = ref([])
-
 </script>
 
 <template>
-  <Disclosure v-slot="{ open }" as="div" class="relative pr-8">
+  <Disclosure v-slot="{ open }" class="relative pr-8" as="div">
     <h3 class="inline-block w-full">
       <DisclosureButton class="focus:shadow-outline-zinc mx-2 flex w-full shrink-0 cursor-default items-center justify-between truncate rounded-md border border-zinc-300 bg-white py-1 px-4 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5">
         <span class="truncate text-base text-zinc-700">{{ name }}</span>

@@ -1,9 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
-// CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon, 
-// import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
+import PopoverMobileFilters from '@/components/Meetups/PopoverMobileFilters.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
 
@@ -30,8 +29,6 @@ const searchMeetup = ref('')
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
-// const { nextMeetup } = useFindNextMeetup()
-
 
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
@@ -92,7 +89,7 @@ const filteredMeetups = computed(() => {
   <div class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
       <form class="block justify-center sm:flex">
-        <div class="my-4 w-2/5 md:mx-4 md:my-0">
+        <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">
           <label for="meetup" class="ml-px block pl-4 text-sm font-medium">Meetupy</label>
           <div class="relative mt-1 h-12 bg-white">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -103,9 +100,12 @@ const filteredMeetups = computed(() => {
         </div>
       </form>
       <div class="my-3 flex w-full justify-between sm:mx-2">
-        <div class="flex self-center sm:mx-3 md:mx-0">
+        <div class="hidden self-center sm:mx-3 sm:flex md:mx-0">
           <FilterButton id="companies" :data="companies" name="Firmy" @updated="updateCompaniesFilter"/>
           <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
+        </div>
+        <div class="sm:hidden">
+          <PopoverMobileFilters :companies="companies" :speakers="speakers" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
         </div>
         <div class="flex sm:mx-3">
           <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>
