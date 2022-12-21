@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
-import PopoverMobileFilters from '@/components/Meetups/PopoverMobileFilters.vue'
+import MobileFilterButton from '@/components/Meetups/MobileFilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
 
@@ -29,6 +29,7 @@ const searchMeetup = ref('')
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
+
 
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
@@ -105,7 +106,7 @@ const filteredMeetups = computed(() => {
           <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
         </div>
         <div class="sm:hidden">
-          <PopoverMobileFilters :companies="companies" :speakers="speakers" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
+          <MobileFilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
         </div>
         <div class="flex sm:mx-3">
           <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>

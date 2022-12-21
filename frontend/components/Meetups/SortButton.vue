@@ -30,13 +30,6 @@ const sortBy = ref(sortOptions[0])
 
 const emit = defineEmits(['updated'])
 
-// const onChange = computed (() => {
-//   const { sortMeetups } = useSortMeetups(props.data, sortBy)
-//   emit('updated', sortMeetups)
-//   return sortMeetups
-// })
-
-
 watch(() => props.data, () => {
   const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
   emit('updated', sortMeetups)

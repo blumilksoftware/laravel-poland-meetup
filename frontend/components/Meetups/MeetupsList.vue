@@ -49,7 +49,7 @@ const meetupTags = ( meetup ) => {
                       {{ meetup.name }}
                     </p>
                     <div v-if="nextMeetup.id === meetup.id" class="flex">
-                      <exclamation-circle-icon class="mr-3 inline-block h-5 w-5 self-center md:mx-3" aria-hidden="true"/>
+                      <exclamation-circle-icon class="mr-3 inline-block h-5 w-5 self-center sm:mx-3" aria-hidden="true"/>
                       <p class="text-lg">
                         Najbliższe wydarzenie
                       </p>
