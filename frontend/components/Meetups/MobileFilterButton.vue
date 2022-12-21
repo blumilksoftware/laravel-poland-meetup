@@ -1,6 +1,6 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-import MobileFiltersList from '@/components/Meetups/MobileFiltersListList.vue'
+import MobileFiltersList from '@/components/Meetups/MobileFiltersList.vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
 
@@ -47,7 +47,7 @@ const updateSelectedSpeakers = function(selectedFilters) {
         <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline justify-center text-sm tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
       </DisclosureButton>
       <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100" leave-active-class="transition duration-75 ease-out" leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
-        <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white shadow-xl">
+        <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white shadow-xl sm:w-1/2 md:w-1/3 l ">
           <div class="mx-5 divide-y divide-zinc-100 ">
             <div class="flex justify-end">
               <DisclosureButton class="active:scale-120 my-2 flex justify-end">

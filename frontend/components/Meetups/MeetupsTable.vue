@@ -92,7 +92,7 @@ const filteredMeetups = computed(() => {
       <form class="block justify-center sm:flex">
         <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">
           <label for="meetup" class="ml-px block pl-4 text-sm font-medium">Meetupy</label>
-          <div class="relative mt-1 h-12 bg-white">
+          <div class="relative mt-1 h-12">
             <span class="absolute inset-y-0 left-0 flex items-center pl-2">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
@@ -101,11 +101,11 @@ const filteredMeetups = computed(() => {
         </div>
       </form>
       <div class="my-3 flex w-full justify-between sm:mx-2">
-        <div class="hidden self-center sm:mx-3 sm:flex md:mx-0">
+        <!-- <div class="hidden self-center sm:mx-3 sm:flex md:mx-0">
           <FilterButton id="companies" :data="companies" name="Firmy" @updated="updateCompaniesFilter"/>
           <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
-        </div>
-        <div class="sm:hidden">
+        </div> -->
+        <div class="">
           <MobileFilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
         </div>
         <div class="flex sm:mx-3">
