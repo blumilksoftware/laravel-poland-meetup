@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #8",
+  "date": "2018-12-06 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "Laravel dokumentacja Restful API - swagger (OA)",
+      "speakers": [
+        {
+          "person": "@kamilkielczewski",
+          "company": null
+        }
+      ]
+    },
+    {
+      "title": "Laravel czy Lumen, o to jest pytanie",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Laravel Telescope - niezastąpione narzędzie do debugowania",
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

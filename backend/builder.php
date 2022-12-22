@@ -34,7 +34,6 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
 {
     $people = $people->map(fn(array $person): Person => new Person(
         name: $person["name"],
-        role: $person["role"] ?? "",
         image: $person["image"] ?? "",
         bio: $person["bio"] ?? "",
         linkedin: $person["linkedin"] ?? "",

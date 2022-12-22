@@ -1,175 +1,192 @@
 {
   "@mateuszantkowiak": {
     "name": "Mateusz Antkowiak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@krzysztofczechowski": {
     "name": "Krzysztof Czechowski",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@andrzejfenzel": {
+    "name": "Andrzej Fenzel",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
-    "role": null,
     "image": "/images/speakers/mateuszgarbarczyk.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
   },
   "@robertkabat": {
     "name": "Robert Kabat",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@kamilkielczewski": {
+    "name": "Kamil Kiełczewski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@amadeuszkozlowski": {
+    "name": "Amadeusz Kozłowski",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@mateuszlencki": {
     "name": "Mateusz Lencki",
-    "role": null,
     "image": null,
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/mateusz-lencki"
   },
   "@adammatysiak": {
     "name": "Adam Matysiak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@pawelnuckowski": {
     "name": "Paweł Nuckowski",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@piotrnowak": {
     "name": "Piotr Nowak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@kamilpiech": {
     "name": "Kamil Piech",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/kamil-piech-9ab65619b/"
+  },
+  "@kamilpietka": {
+    "name": "Kamil Piętka",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@joannarewak": {
     "name": "Joanna Rewak",
-    "role": null,
     "image": null,
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/joanna-rewak-745ba9133"
   },
   "@krzysztofrewak": {
     "name": "Krzysztof Rewak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
   },
   "@mateuszrusyn": {
     "name": "Mateusz Rusyn",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrrybak": {
+    "name": "Piotr Rybak",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@jaceksawoszczuk": {
     "name": "Jacek Sawoszczuk",
-    "role": null,
     "image": null,
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/jacek-sawoszczuk-535058114"
   },
   "@hubertsitarski": {
     "name": "Hubert Sitarski",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@pawelspychalski": {
     "name": "Paweł Spychalski",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrsuchanek": {
+    "name": "Piotr Suchanek",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@przemekszustak": {
     "name": "Przemek Szustak",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@marektenus": {
     "name": "Marek Tenus",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@marcintracz": {
     "name": "Marcin Tracz",
-    "role": null,
     "image": "/images/speakers/marcintracz.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
   },
   "@filipzdunek": {
     "name": "Filip Zdunek",
-    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@andrzejzielinski": {
+    "name": "Andrzej Zieliński",
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@tomekzmudzinski": {
     "name": "Tomek Żmudziński",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null
   },
   "@katarzynazurek": {
     "name": "Katarzyna Żurek",
-    "role": null,
     "image": null,
     "bio": null,
     "linkedin": null

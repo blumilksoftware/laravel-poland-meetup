@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #4",
+  "date": "2018-05-24 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions", "@devpark"],
+  "presentations": [
+    {
+      "title": "Pułapki i często popełniane błędy w Laravelu",
+      "speakers": [
+        {
+          "person": "@piotrsuchanek",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "OWASP zabezpieczenia aplikacji - Top ten ASR",
+      "speakers": [
+        {
+          "person": "@kamilpietka",
+          "company": "@devpark"
+        }
+      ]
+    },
+    {
+      "title": "Vue.js - Zastosowanie i budowa komponentów",
+      "speakers": [
+        {
+          "person": "@amadeuszkozlowski",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

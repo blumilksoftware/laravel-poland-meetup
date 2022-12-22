@@ -15,6 +15,11 @@
     "logo": null,
     "location": "Poznań"
   },
+  "@devpark": {
+    "name": "Devpark",
+    "logo": null,
+    "location": "Poznań"
+  },
   "@expansja": {
     "name": "Expansja",
     "logo": null,
@@ -28,6 +33,11 @@
   },
   "@przeswietlpl": {
     "name": "Prześwietl.pl",
+    "logo": null,
+    "location": "Poznań"
+  },
+  "@mtadigital": {
+    "name": "MTA Digital",
     "logo": null,
     "location": "Poznań"
   },

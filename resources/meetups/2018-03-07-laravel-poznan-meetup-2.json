@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #2",
+  "date": "2018-03-07 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "Wykorzystanie Form Request przy implementacji API w Laravelu",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Koniec CSS? Jest Tailwind!",
+      "speakers": [
+        {
+          "person": "@amadeuszkozlowski",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Tworzenie chatbotów z wykorzystaniem BotMan",
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

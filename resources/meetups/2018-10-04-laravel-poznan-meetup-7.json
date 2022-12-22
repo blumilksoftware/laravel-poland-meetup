@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #7",
+  "date": "2018-10-04 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "PWA - Progressive Web App",
+      "speakers": [
+        {
+          "person": "@amadeuszkozlowski",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Praktyczne wykorzystanie Repository Pattern z Laravel",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Laravel Nova - Czy to się w ogóle opłaca?",
+      "speakers": [
+        {
+          "person": "@piotrnowak",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

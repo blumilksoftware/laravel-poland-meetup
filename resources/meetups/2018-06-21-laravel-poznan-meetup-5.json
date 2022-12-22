@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #5",
+  "date": "2018-06-21 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions", "@devpark"],
+  "presentations": [
+    {
+      "title": "Vue.js - Zastosowanie i budowa komponentów",
+      "speakers": [
+        {
+          "person": "@amadeuszkozlowski",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Wstęp do profilowania aplikacji",
+      "speakers": [
+        {
+          "person": "@piotrrybak",
+          "company": "@devpark"
+        }
+      ]
+    },
+    {
+      "title": "Obalmy mity o wydajności frameworka Laravel",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}
