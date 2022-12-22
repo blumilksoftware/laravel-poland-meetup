@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poznań Meetup #11",
+  "date": "2019-06-06 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "Przetwarzanie Asynchroniczne i Promises w Laravel",
+      "speakers": [
+        {
+          "person": "@krzysztofczechowski",
+          "company": "@bmind"
+        }
+      ]
+    },
+    {
+      "title": "KPI w projektach IT",
+      "speakers": [
+        {
+          "person": "@katarzynazurek",
+          "company": "@bmind"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poznań Meetup #13",
+  "date": "2019-11-07 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "AOP w Laravel",
+      "speakers": [
+        {
+          "person": "@mateuszantkowiak",
+          "company": "@przeswietlpl"
+        }
+      ]
+    },
+    {
+      "title": "Dobre praktyki w Laravel - live coding",
+      "speakers": [
+        {
+          "person": "@piotrnowak",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

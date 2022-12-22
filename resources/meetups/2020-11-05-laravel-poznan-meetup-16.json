@@ -1,0 +1,35 @@
+{
+  "name": "Laravel Poznań Meetup #16",
+  "date": "2020-11-05 18:00:00",
+  "location": "online",
+  "organizers": ["@highsolutions", "@trui"],
+  "presentations": [
+    {
+      "title": "Action-based Laravel",
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Laravel/PHP - zderzenie z PDF-ami",
+      "speakers": [
+        {
+          "person": "@pawelspychalski",
+          "company": null
+        }
+      ]
+    },
+    {
+      "title": "Automatyzacja i utrzymanie jakości kodu",
+      "speakers": [
+        {
+          "person": "@krzysztofrewak",
+          "company": "@blumilk"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poland Meetup #17",
+  "date": "2021-03-29 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions"],
+  "presentations": [
+    {
+      "title": "Wszystko o Laravel Livewire",
+      "speakers": [
+        {
+          "person": "@mateuszlencki",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Laravel Jobs i PHP8 - ulepszony cykl życia i automatyczne wstrzykiwanie zależności",
+      "speakers": [
+        {
+          "person": "@robertkabat",
+          "company": null
+        }
+      ]
+    }
+  ]
+}

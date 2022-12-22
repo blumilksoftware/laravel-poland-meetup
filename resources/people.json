@@ -1,86 +1,177 @@
 {
+  "@mateuszantkowiak": {
+    "name": "Mateusz Antkowiak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",  
+    "role": null,
+    "image": null,
+    "bio": null,
     "linkedin": null
   },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@krzysztofczechowski": {
+    "name": "Krzysztof Czechowski",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@kamilpiech": {
-    "name": "Kamil Piech",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@joannarewak": {
-    "name": "Joanna Rewak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@krzysztofrewak": {
-    "name": "Krzysztof Rewak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
-  },
-  "@przemekszustak": {
-    "name": "Przemek Szustak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@filipzdunek": {
-    "name": "Filip Zdunek",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@tomekzmudzinski": {
-    "name": "Tomek Żmudziński",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@marcintracz": {
-    "name": "Marcin Tracz",
-    "role": "#",
-    "image": "../public/images/speakers/marcintracz.webp", 
-    "bio": "#",
-    "linkedin":  "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
-    "role": "#",
-    "image": "../public/images/speakers/mateuszgarbarczyk.webp", 
-    "bio": "#",
-    "linkedin":  "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
+    "role": null,
+    "image": "/images/speakers/mateuszgarbarczyk.webp",
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
+  },
+  "@robertkabat": {
+    "name": "Robert Kabat",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@mateuszlencki": {
+    "name": "Mateusz Lencki",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@adammatysiak": {
+    "name": "Adam Matysiak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@pawelnuckowski": {
+    "name": "Paweł Nuckowski",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrnowak": {
+    "name": "Piotr Nowak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@kamilpiech": {
+    "name": "Kamil Piech",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@joannarewak": {
+    "name": "Joanna Rewak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@krzysztofrewak": {
+    "name": "Krzysztof Rewak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
+  },
+  "@mateuszrusyn": {
+    "name": "Mateusz Rusyn",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@jaceksawoszczuk": {
+    "name": "Jacek Sawoszczuk",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@hubertsitarski": {
+    "name": "Hubert Sitarski",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@pawelspychalski": {
+    "name": "Paweł Spychalski",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@przemekszustak": {
+    "name": "Przemek Szustak",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@marektenus": {
+    "name": "Marek Tenus",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@marcintracz": {
+    "name": "Marcin Tracz",
+    "role": null,
+    "image": "/images/speakers/marcintracz.webp",
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
+  },
+  "@filipzdunek": {
+    "name": "Filip Zdunek",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@tomekzmudzinski": {
+    "name": "Tomek Żmudziński",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@katarzynazurek": {
+    "name": "Katarzyna Żurek",
+    "role": null,
+    "image": null,
+    "bio": null,
+    "linkedin": null
   }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poland Meetup #18",
+  "date": "2021-05-27 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions"],
+  "presentations": [
+    {
+      "title": "Laravel Octane, czy na pewno taki szybki?",
+      "speakers": [
+        {
+          "person": "@marcintracz",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Laravel Dusk - prosty przepis na testy E2E",
+      "speakers": [
+        {
+          "person": "@mateuszrusyn",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

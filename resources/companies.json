@@ -1,13 +1,23 @@
 {
+  "@allegro": {
+    "name": "Allegro",
+    "logo": null,
+    "location": "Warszawa"
+  },
   "@blumilk": {
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.png",
     "location": "Legnica",
     "organizer": true
   },
+  "@bmind": {
+    "name": "B-MIND",
+    "logo": null,
+    "location": "Poznań"
+  },
   "@expansja": {
     "name": "Expansja",
-    "logo": "/images/companies/expansja.png",
+    "logo": null,
     "location": "Poznań"
   },
   "@highsolutions": {
@@ -16,19 +26,24 @@
     "location": "Poznań",
     "organizer": true
   },
-  "@tidio": {
-    "name": "Tidio",
-    "logo": "/images/companies/tidio.png",
-    "location": "Poznań"
-  },
-  "@trui": {
-    "name": "Trui",
-    "logo": "/images/companies/trui.png",
+  "@przeswietlpl": {
+    "name": "Prześwietl.pl",
+    "logo": null,
     "location": "Poznań"
   },
   "@mirit": {
     "name": "MirIT",
-    "logo": "#",
+    "logo": null,
     "location": "Pleszew"
+  },
+  "@tidio": {
+    "name": "Tidio",
+    "logo": null,
+    "location": "Poznań"
+  },
+  "@trui": {
+    "name": "Trui",
+    "logo": null,
+    "location": "Poznań"
   }
 }

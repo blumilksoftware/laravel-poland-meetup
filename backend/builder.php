@@ -32,7 +32,13 @@ function retrieveData(): array
 
 function mapData(Collection $people, Collection $companies, Collection $meetups): array
 {
-    $people = $people->map(fn(array $person): Person => new Person($person["name"], $person["role"], $person["image"], $person["bio"], $person["linkedin"]));
+    $people = $people->map(fn(array $person): Person => new Person(
+        name: $person["name"],
+        role: $person["role"] ?? "",
+        image: $person["image"] ?? "",
+        bio: $person["bio"] ?? "",
+        linkedin: $person["linkedin"] ?? "",
+    ));
     $companies = $companies->map(fn(array $company): Company => new Company(...$company));
 
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(

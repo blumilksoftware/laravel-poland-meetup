@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poznań Meetup #10",
+  "date": "2019-04-04 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "Jak stworzyliśmy system kudosów w Laravelu i Slacku?",
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@bmind"
+        }
+      ]
+    },
+    {
+      "title": "Mikrousługi w Allegro",
+      "speakers": [
+        {
+          "person": "@pawelnuckowski",
+          "company": "@allegro"
+        }
+      ]
+    }
+  ]
+}

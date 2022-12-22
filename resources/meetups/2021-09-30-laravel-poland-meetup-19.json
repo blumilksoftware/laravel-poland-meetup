@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poland Meetup #19",
+  "date": "2021-09-30 18:00:00",
+  "location": "online",
+  "organizers": ["@blumilk", "@highsolutions"],
+  "presentations": [
+    {
+      "title": "(prawie) Wszystko o Tinkerze",
+      "speakers": [
+        {
+          "person": "@jaceksawoszczuk",
+          "company": "@blumilk"
+        }
+      ]
+    },
+    {
+      "title": "Walidacja w Laravelu",
+      "speakers": [
+        {
+          "person": "@hubertsitarski",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}

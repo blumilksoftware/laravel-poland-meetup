@@ -1,0 +1,26 @@
+{
+  "name": "Laravel Poznań Meetup #12",
+  "date": "2019-09-05 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "presentations": [
+    {
+      "title": "Po premierze Laravela 6.0 - co nowego?",
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@highsolutions"
+        }
+      ]
+    },
+    {
+      "title": "Zwiększenie wydajności API z Laravel i Swoole z użyciem Docker",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ]
+    }
+  ]
+}
