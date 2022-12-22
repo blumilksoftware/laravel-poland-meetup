@@ -38,7 +38,14 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
         bio: $person["bio"] ?? "",
         linkedin: $person["linkedin"] ?? "",
     ));
-    $companies = $companies->map(fn(array $company): Company => new Company(...$company));
+    $companies = $companies->map(fn(array $company): Company => new Company(
+        name: $company["name"],
+        location: $company["location"],
+        logo: $company["logo"] ?? "",
+        website: $company["website"] ?? "",
+        linkedin: $company["linkedin"] ?? "",
+        organizer: $company["organizer"],
+    ));
 
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(
         $meetup["name"],

@@ -2,58 +2,89 @@
   "@allegro": {
     "name": "Allegro",
     "logo": null,
-    "location": "Warszawa"
+    "location": "Warszawa",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@blumilk": {
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.png",
     "location": "Legnica",
+    "website": "https://blumilk.pl/",
+    "linkedin": "https://www.linkedin.com/company/blumilksoftware",
     "organizer": true
   },
   "@bmind": {
     "name": "B-MIND",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@devpark": {
     "name": "Devpark",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@expansja": {
     "name": "Expansja",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@highsolutions": {
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.png",
     "location": "Poznań",
+    "website": null,
+    "linkedin": null,
     "organizer": true
   },
   "@przeswietlpl": {
     "name": "Prześwietl.pl",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@mtadigital": {
     "name": "MTA Digital",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@mirit": {
     "name": "MirIT",
     "logo": null,
-    "location": "Pleszew"
+    "location": "Pleszew",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@tidio": {
     "name": "Tidio",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@trui": {
     "name": "Trui",
     "logo": null,
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   }
 }
