@@ -3,6 +3,7 @@
   "date": "2018-06-21 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions", "@devpark"],
+  "facebook": "https://www.facebook.com/events/174689643229583",
   "presentations": [
     {
       "title": "Vue.js - Zastosowanie i budowa komponentów",

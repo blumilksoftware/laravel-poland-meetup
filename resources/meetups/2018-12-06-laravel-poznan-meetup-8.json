@@ -3,6 +3,7 @@
   "date": "2018-12-06 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/2212203175664770",
   "presentations": [
     {
       "title": "Laravel dokumentacja Restful API - swagger (OA)",

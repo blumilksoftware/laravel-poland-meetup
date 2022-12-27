@@ -3,6 +3,7 @@
   "date": "2018-05-24 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions", "@devpark"],
+  "facebook": "https://www.facebook.com/events/1677647968984860",
   "presentations": [
     {
       "title": "Pułapki i często popełniane błędy w Laravelu",

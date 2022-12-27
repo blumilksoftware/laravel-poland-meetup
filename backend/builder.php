@@ -48,10 +48,11 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
     ));
 
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(
-        $meetup["name"],
-        $meetup["location"],
-        Carbon::parse($meetup["date"])->locale("pl_PL"),
-        Collection::make($meetup["presentations"])->map(
+        name: $meetup["name"],
+        location: $meetup["location"] ?? "",
+        date: isset($meetup["date"]) ? Carbon::parse($meetup["date"])->locale("pl_PL") : null,
+        facebook: $meetup["facebook"] ?? null,
+        presentations: Collection::make($meetup["presentations"])->map(
             fn(array $presentation): Presentation => new Presentation(
                 title: $presentation["title"],
                 speakers: Collection::make($presentation["speakers"])->map(

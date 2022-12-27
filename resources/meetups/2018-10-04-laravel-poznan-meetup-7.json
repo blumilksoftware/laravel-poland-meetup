@@ -3,6 +3,7 @@
   "date": "2018-10-04 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/1848791531871428",
   "presentations": [
     {
       "title": "PWA - Progressive Web App",

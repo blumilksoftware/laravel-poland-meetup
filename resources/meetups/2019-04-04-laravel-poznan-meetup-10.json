@@ -3,6 +3,7 @@
   "date": "2019-04-04 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/291362435056567/291362441723233",
   "presentations": [
     {
       "title": "Jak stworzyliśmy system kudosów w Laravelu i Slacku?",

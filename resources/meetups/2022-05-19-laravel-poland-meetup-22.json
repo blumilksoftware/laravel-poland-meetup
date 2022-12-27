@@ -3,6 +3,7 @@
   "date": "2022-05-19 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions", "@tidio"],
+  "facebook": "https://www.facebook.com/events/1100045874169921",
   "presentations": [
     {
       "title": "Kilka słów o castowaniu atrybutów w Eloquent",

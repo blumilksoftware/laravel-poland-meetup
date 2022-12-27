@@ -3,6 +3,7 @@
   "date": "2018-03-07 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/157980111662447",
   "presentations": [
     {
       "title": "Wykorzystanie Form Request przy implementacji API w Laravelu",

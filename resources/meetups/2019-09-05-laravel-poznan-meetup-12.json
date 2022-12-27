@@ -3,6 +3,7 @@
   "date": "2019-09-05 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/291362435056567/355357785323698",
   "presentations": [
     {
       "title": "Po premierze Laravela 6.0 - co nowego?",

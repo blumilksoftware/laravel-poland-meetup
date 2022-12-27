@@ -3,6 +3,7 @@
   "date": "2019-06-06 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/291362435056567/291362438389900",
   "presentations": [
     {
       "title": "Przetwarzanie Asynchroniczne i Promises w Laravel",

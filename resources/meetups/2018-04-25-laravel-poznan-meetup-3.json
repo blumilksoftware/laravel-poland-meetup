@@ -3,6 +3,7 @@
   "date": "2018-04-25 18:00:00",
   "location": "Poznań, Plus Jeden",
   "organizers": ["@highsolutions", "@devpark"],
+  "facebook": "https://www.facebook.com/events/497429970702566",
   "presentations": [
     {
       "title": "Praca z Legacy Code",
