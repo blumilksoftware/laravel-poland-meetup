@@ -1,0 +1,44 @@
+{
+  "name": "Laravel Poznań Meetup #3",
+  "date": "2018-04-25 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions", "@devpark"],
+  "facebook": "https://www.facebook.com/events/497429970702566",
+  "presentations": [
+    {
+      "title": "Praca z Legacy Code",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@andrzejfenzel",
+          "company": "@devpark"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Testy dymne, integracyjne i jednostkowe w Laravel",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@kamilpietka",
+          "company": "@devpark"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Uruchomienie i praca z Laravel w wirtualnym kontenerze Dockera",
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    }
+  ]
+}

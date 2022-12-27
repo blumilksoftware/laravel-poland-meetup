@@ -13,6 +13,7 @@ class Company
         public readonly string $location,
         public readonly ?string $logo = null,
         public readonly ?string $website = null,
+        public readonly ?string $linkedin = null,
         public readonly ?bool $organizer = false,
         public readonly Collection $meetups = new Collection(),
     ) {}
@@ -24,6 +25,7 @@ class Company
             "location" => $this->location,
             "logo" => $this->logo,
             "website" => $this->website,
+            "linkedin" => $this->linkedin,
             "organizer" => $this->organizer,
         ];
     }

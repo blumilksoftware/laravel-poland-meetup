@@ -10,7 +10,6 @@ class Person
 {
     public function __construct(
         public readonly string $name,
-        public readonly string $role,
         public readonly string $image,
         public readonly string $bio,
         public readonly ?string $linkedin,
@@ -21,7 +20,6 @@ class Person
     {
         return [
             "name" => $this->name,
-            "role" => $this->role,
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,
@@ -32,7 +30,6 @@ class Person
     {
         return [
             "name" => $this->name,
-            "role" => $this->role,
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,
