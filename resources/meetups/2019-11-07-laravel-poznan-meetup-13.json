@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "AOP w Laravel",
+      "blurb": null,
       "speakers": [
         {
           "person": "@mateuszantkowiak",
           "company": "@przeswietlpl"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Dobre praktyki w Laravel - live coding",
+      "blurb": null,
       "speakers": [
         {
           "person": "@piotrnowak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

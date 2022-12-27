@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Wszystko o Laravel Livewire",
+      "blurb": null,
       "speakers": [
         {
           "person": "@mateuszlencki",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Laravel Jobs i PHP8 - ulepszony cykl życia i automatyczne wstrzykiwanie zależności",
+      "blurb": null,
       "speakers": [
         {
           "person": "@robertkabat",
           "company": null
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

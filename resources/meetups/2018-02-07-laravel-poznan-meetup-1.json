@@ -7,12 +7,10 @@
   "presentations": [
     {
       "title": "Laracon Online 2018",
-      "speakers": [
-        {
-          "person": "@adammatysiak",
-          "company": "@highsolutions"
-        }
-      ]
+      "blurb": null,
+      "speakers": [],
+      "links": [],
+      "tags": []
     }
   ]
 }

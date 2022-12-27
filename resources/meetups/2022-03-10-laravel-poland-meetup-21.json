@@ -7,30 +7,39 @@
   "presentations": [
     {
       "title": "Cykl życia zapytania HTTP (pod maską)",
+      "blurb": null,
       "speakers": [
         {
           "person": "@krzysztofrewak",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Jak przemycić Shape Up do Scruma",
+      "blurb": null,
       "speakers": [
         {
           "person": "@przemekszustak",
           "company": "@tidio"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Enumy w Laravelu - dlaczego warto stosować?",
+      "blurb": null,
       "speakers": [
         {
           "person": "@filipzdunek",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

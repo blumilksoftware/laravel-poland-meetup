@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Laravel Octane, czy na pewno taki szybki?",
+      "blurb": null,
       "speakers": [
         {
           "person": "@marcintracz",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Laravel Dusk - prosty przepis na testy E2E",
+      "blurb": null,
       "speakers": [
         {
           "person": "@mateuszrusyn",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

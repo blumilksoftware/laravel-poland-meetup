@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Przetwarzanie Asynchroniczne i Promises w Laravel",
+      "blurb": null,
       "speakers": [
         {
           "person": "@krzysztofczechowski",
           "company": "@bmind"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "KPI w projektach IT",
+      "blurb": null,
       "speakers": [
         {
           "person": "@katarzynazurek",
           "company": "@bmind"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

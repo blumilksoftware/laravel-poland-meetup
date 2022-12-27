@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Laravelowe paczki do uwierzytelniania",
+      "blurb": null,
       "speakers": [
         {
           "person": "@kamilpiech",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Przegląd najciekawszych wtyczek do Laravela",
+      "blurb": null,
       "speakers": [
         {
           "person": "@tomekzmudzinski",
           "company": "@trui"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

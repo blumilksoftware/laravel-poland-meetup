@@ -7,30 +7,39 @@
   "presentations": [
     {
       "title": "Tworzenie czatbotów w PHP z wykorzystaniem NLP",
+      "blurb": null,
       "speakers": [
         {
           "person": "@piotrnowak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "IoT - komunikacja TCP/IP w oparciu o Laravel",
+      "blurb": null,
       "speakers": [
         {
           "person": "@krzysztofczechowski",
           "company": "@bmind"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "9 elementów SEO, na które musisz zwrócić uwagę podczas tworzenia strony internetowej",
+      "blurb": null,
       "speakers": [
         {
           "person": "@andrzejzielinski",
           "company": "@mtadigital"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

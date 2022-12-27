@@ -7,30 +7,39 @@
   "presentations": [
     {
       "title": "PWA - Progressive Web App",
+      "blurb": null,
       "speakers": [
         {
           "person": "@amadeuszkozlowski",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Praktyczne wykorzystanie Repository Pattern z Laravel",
+      "blurb": null,
       "speakers": [
         {
           "person": "@marektenus",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Laravel Nova - Czy to się w ogóle opłaca?",
+      "blurb": null,
       "speakers": [
         {
           "person": "@piotrnowak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

@@ -7,6 +7,7 @@
   "presentations": [
     {
       "title": "Błędy w kodzie podczas code review",
+      "blurb": null,
       "speakers": [
         {
           "person": "@marektenus",
@@ -16,16 +17,21 @@
           "person": "@piotrnowak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Autoryzacja operacji przy użyciu SMS, e-mail",
+      "blurb": null,
       "speakers": [
         {
           "person": "@tomekzmudzinski",
           "company": "@trui"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

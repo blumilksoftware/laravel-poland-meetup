@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "(prawie) Wszystko o Tinkerze",
+      "blurb": null,
       "speakers": [
         {
           "person": "@jaceksawoszczuk",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Walidacja w Laravelu",
+      "blurb": null,
       "speakers": [
         {
           "person": "@hubertsitarski",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

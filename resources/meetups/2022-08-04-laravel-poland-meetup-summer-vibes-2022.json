@@ -7,30 +7,39 @@
   "presentations": [
     {
       "title": "Co nas boli w Laravelu?",
+      "blurb": "Chciałem przedstawić kilka największych - a przynajmniej w moim odczuciu - bolączek Laravela i całego otaczającego go środowiska. Bo wiadomo, że jest fajnie, bo dokumentacja jest kolorowa i czytelna, aplikacje stawia się w oka mgnieniu, a każdy problem można załatać paczką. Będę trochę wytykać jakość kodu, opowiem jak wyglądały moje próby współtworzenia frameworka i ponarzekam na rozwiązania w stylu Laravel Pint. Może i Wy dorzucicie swoje trzy grosze? Ale żeby nie było aż tak negatywnie, zastanowimy się wspólnie czy i jak można temu wszystkiemu zaradzić.",
       "speakers": [
         {
           "person": "@krzysztofrewak",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": ["fasady", "open source", "Taylor Otwell"]
     },
     {
       "title": "Kalambury programistyczne",
+      "blurb": null,
       "speakers": [
         {
           "person": "@karolbarcki",
           "company": "@expansja"
         }
-      ]
+      ],
+      "links": [],
+      "tags": ["wstrzykiwanie zależności", "rollback migracji", "Taylor Otwell"]
     },
     {
       "title": "Admin panel dla Laravela - a komu to potrzebne?",
+      "blurb": "Czym są panele admina i kiedy warto ich używać. W ciągu 30 minut opowiemy również o tym, który z dostępnych paneli wybrać, tak, aby spełniał nasze potrzeby.",
       "speakers": [
         {
           "person": "@kamilbartczak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": ["Filament", "Backpack", "panel administracyjny"]
     }
   ]
 }

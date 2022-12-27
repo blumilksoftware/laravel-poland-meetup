@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Po premierze Laravela 6.0 - co nowego?",
+      "blurb": null,
       "speakers": [
         {
           "person": "@adammatysiak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Zwiększenie wydajności API z Laravel i Swoole z użyciem Docker",
+      "blurb": null,
       "speakers": [
         {
           "person": "@marektenus",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

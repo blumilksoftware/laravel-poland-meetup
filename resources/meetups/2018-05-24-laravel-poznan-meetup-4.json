@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Pułapki i często popełniane błędy w Laravelu",
+      "blurb": null,
       "speakers": [
         {
           "person": "@piotrsuchanek",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "OWASP zabezpieczenia aplikacji - Top ten ASR",
+      "blurb": null,
       "speakers": [
         {
           "person": "@kamilpietka",
           "company": "@devpark"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Vue.js - Zastosowanie i budowa komponentów",
@@ -30,7 +36,9 @@
           "person": "@amadeuszkozlowski",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

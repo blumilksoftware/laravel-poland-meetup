@@ -7,21 +7,27 @@
   "presentations": [
     {
       "title": "Jak stworzyliśmy system kudosów w Laravelu i Slacku?",
+      "blurb": null,
       "speakers": [
         {
           "person": "@adammatysiak",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Mikrousługi w Allegro",
+      "blurb": null,
       "speakers": [
         {
           "person": "@pawelnuckowski",
           "company": "@allegro"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }
