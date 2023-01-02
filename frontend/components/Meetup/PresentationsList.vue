@@ -50,9 +50,9 @@ defineProps({
                         </li>
                       </ul>
                       <div class="space-y-2">
-                        <a href="https://www.youtube.com/watch?v=l3BQJ9vxh2o" target="_blank" class="flex w-fit space-x-2 font-semibold text-zinc-700 transition hover:scale-105 hover:text-red-500">
+                        <a href="https://www.youtube.com/watch?v=l3BQJ9vxh2o" target="_blank" class="flex w-fit space-x-2 font-semibold text-zinc-700 transition hover:scale-105 hover:text-red-500 hover:fill-red-500">
                           <div class="h-5 w-5 self-center">
-                            <you-tube-icon class="hover:text-red-500" aria-hidden="true" href=""/>
+                            <you-tube-icon aria-hidden="true" href=""/>
                           </div>
                           <p>
                             Zobacz w serwisie YouTube
