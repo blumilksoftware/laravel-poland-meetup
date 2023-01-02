@@ -23,10 +23,14 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  selectedBefore: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const query = ref('')
-const selectedElements = ref([])
+const selectedElements = ref(props.selectedBefore)
 const filteredElements = computed(() =>
   query.value === ''
     ? props.data
@@ -38,7 +42,6 @@ const filteredElements = computed(() =>
 const emit = defineEmits(['updated'])
 
 watch(selectedElements, () => {
-  console.log('selectedElements', selectedElements.value)
   emit('updated', selectedElements)
 })
 

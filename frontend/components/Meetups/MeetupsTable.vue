@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
-import FilterButton from '@/components/Meetups/FilterButton.vue'
 import MobileFilterButton from '@/components/Meetups/MobileFilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
@@ -101,10 +100,6 @@ const filteredMeetups = computed(() => {
         </div>
       </form>
       <div class="my-3 flex w-full justify-between sm:mx-2">
-        <!-- <div class="hidden self-center sm:mx-3 sm:flex md:mx-0">
-          <FilterButton id="companies" :data="companies" name="Firmy" @updated="updateCompaniesFilter"/>
-          <FilterButton id="speakers" :data="speakers" name="Prelegenci" @updated="updateSpeakersFilter"/>
-        </div> -->
         <div class="">
           <MobileFilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
         </div>

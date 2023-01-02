@@ -12,7 +12,7 @@ const props = defineProps ({
     default: true,
   },
 })
-console.log('props.data', props.data)
+
 const { nextMeetup } = useFindNextMeetup()
 
 const meetupSpeakers = ( meetup ) => {
