@@ -1,6 +1,6 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-import MobileFiltersList from '@/components/Meetups/MobileFiltersList.vue'
+import FilterCategoryButton from '@/components/Meetups/FilterCategoryButton.vue'
 import { XMarkIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { ref, watch } from 'vue'
 
@@ -75,8 +75,8 @@ watch(selectedSpeakers, () => {
               </button>
             </div>  
             <div class="block divide-y divide-zinc-100">
-              <MobileFiltersList id="companies" name="Firmy" :data="props.companies" :selected-before="selectedCompanies" @updated="updateSelectedCompanies"/>
-              <MobileFiltersList id="speakers" name="Prelegenci" :data="props.speakers" :selected-before="selectedSpeakers" @updated="updateSelectedSpeakers"/>
+              <FilterCategoryButton id="companies" name="Firmy" :data="props.companies" :selected-before="selectedCompanies" @updated="updateSelectedCompanies"/>
+              <FilterCategoryButton id="speakers" name="Prelegenci" :data="props.speakers" :selected-before="selectedSpeakers" @updated="updateSelectedSpeakers"/>
             </div>
             <div class="flex justify-center">
               <DisclosureButton class="my-12 mx-7 flex w-full justify-center rounded-sm bg-zinc-300 text-center shadow-lg focus:bg-zinc-300 active:bg-zinc-300" @click="close">

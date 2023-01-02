@@ -2,12 +2,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { CheckIcon } from '@heroicons/vue/24/outline'
-import {
-  Combobox,
-  ComboboxInput,
-  ComboboxOption,
-  ComboboxOptions,
-} from '@headlessui/vue'
+import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/vue'
 
 
 const props = defineProps({
