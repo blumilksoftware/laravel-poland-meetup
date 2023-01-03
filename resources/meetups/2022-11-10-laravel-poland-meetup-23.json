@@ -6,6 +6,8 @@
   "presentations": [
     {
       "title": "xD bug - jak debugować PHP-owe aplikacje",
+      "youtube": "https://www.youtube.com/watch?v=l3BQJ9vxh2o",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/xd-bug-jak-debugowa-phpowe-aplikacje-xdebug",
       "speakers": [
         {
           "person": "@marcintracz",
@@ -15,6 +17,8 @@
     },
     {
       "title": "WebRTC+Websockety - Jak stworzyłem aplikację do kamerek internetowych w Laravelu",
+      "youtube": "https://www.youtube.com/watch?v=l3BQJ9vxh2o",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/webrtcwebsockety-jak-stworzyem-aplikacj-do-kamerek-internetowych-w-laravelu",
       "speakers": [
         {
           "person": "@mateuszgarbarczyk",

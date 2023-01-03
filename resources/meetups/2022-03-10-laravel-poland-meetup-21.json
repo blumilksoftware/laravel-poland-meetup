@@ -6,6 +6,8 @@
   "presentations": [
     {
       "title": "Cykl życia zapytania HTTP (pod maską)",
+      "youtube": "https://www.youtube.com/watch?v=mFphzk_eaww",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/cykl-ycia-zapytania-http-pod-mask",
       "speakers": [
         {
           "person": "@krzysztofrewak",
@@ -15,6 +17,8 @@
     },
     {
       "title": "Jak przemycić Shape Up do Scruma",
+      "youtube": "https://www.youtube.com/watch?v=ZX4hHbLCigk",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/jak-przemyci-shape-up-do-scruma",
       "speakers": [
         {
           "person": "@przemekszustak",
@@ -24,6 +28,8 @@
     },
     {
       "title": "Enumy w Laravelu - dlaczego warto stosować?",
+      "youtube": "https://www.youtube.com/watch?v=IsIL0h4vmow",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/enumy-w-laravelu-dlaczego-warto-stosowa",
       "speakers": [
         {
           "person": "@filipzdunek",

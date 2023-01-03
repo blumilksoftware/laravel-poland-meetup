@@ -6,6 +6,8 @@
   "presentations": [
     {
       "title": "Kilka słów o castowaniu atrybutów w Eloquent",
+      "youtube": "https://www.youtube.com/watch?v=xtqrRu1RK88",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/kilka-slajdw-o-castowaniu-atrybutw-w-eloquent",
       "speakers": [
         {
           "person": "@miloszdziurzynski",
@@ -15,6 +17,8 @@
     },
     {
       "title": "Licencje otwartego oprogramowania",
+      "youtube": "https://www.youtube.com/watch?v=SbZ46ZnJSFA",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/licencje-otwartego-oprogramowania",
       "speakers": [
         {
           "person": "@joannarewak",
@@ -24,6 +28,8 @@
     },
     {
       "title": "Jak przyspieszyłem aplikację produkcyjną o ponad 40%",
+      "youtube": "https://www.youtube.com/watch?v=ARclLwEsqa0",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/jak-przyspieszyem-aplikacj-produkcyjn-o-ponad-40",
       "speakers": [
         {
           "person": "@patrykfilipiak",

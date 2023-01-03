@@ -6,6 +6,8 @@
   "presentations": [
     {
       "title": "Co nas boli w Laravelu?",
+      "youtube": null,
+      "slideshare": null,
       "speakers": [
         {
           "person": "@krzysztofrewak",
@@ -15,6 +17,8 @@
     },
     {
       "title": "Kalambury programistyczne",
+      "youtube": null,
+      "slideshare": null,
       "speakers": [
         {
           "person": "@karolbarcki",
@@ -24,6 +28,8 @@
     },
     {
       "title": "Admin panel dla Laravela - a komu to potrzebne?",
+      "youtube": null,
+      "slideshare": null,
       "speakers": [
         {
           "person": "@kamilbartczak",
