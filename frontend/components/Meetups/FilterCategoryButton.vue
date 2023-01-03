@@ -38,9 +38,9 @@ watch(selectedFilters, () => {
 <template>
   <Disclosure v-slot="{ open }" as="div" class="group relative w-full min-w-0 overflow-hidden bg-white text-center text-sm font-medium text-zinc-900">
     <h3 class="my-3 inline-block w-full sm:my-1 md:my-1">
-      <DisclosureButton class="focus:shadow-outline-zinc m-2 flex w-full shrink-0 cursor-default items-center justify-between truncate py-1 px-4 text-left transition duration-150 ease-in-out">
+      <DisclosureButton class="focus:shadow-outline-zinc m-2 flex w-full shrink-0 cursor-default items-center justify-between truncate p-1 text-left transition duration-150 ease-in-out">
         <div class="flex space-x-2 text-zinc-700">
-          <span class="truncate text-base uppercase">{{ props.name }}</span>
+          <span class="truncate text-base">{{ props.name }}</span>
           <span v-if="selectedBefore.length" class="truncate text-base tracking-widest">({{ selectedBefore.length }})</span>
         </div>
         <span class="mx-3 w-4 items-center md:flex">

@@ -99,7 +99,7 @@ const filteredMeetups = computed(() => {
           </div>
         </div>
       </form>
-      <div class="my-3 flex w-full justify-between sm:mx-2">
+      <div class="my-1 flex w-full justify-between sm:mx-2">
         <div class="">
           <FilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
         </div>
