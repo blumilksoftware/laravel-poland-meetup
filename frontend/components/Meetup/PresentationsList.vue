@@ -24,7 +24,7 @@ defineProps({
       <li v-for="(presentation, id) in presentations" :key="id">
         <div class="my-6 mx-3 block hover:bg-zinc-50">
           <div class="block items-center sm:px-6">
-            <div class="flex text-lg font-medium my-6">
+            <div class="my-6 flex text-lg font-medium">
               <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
               {{ presentation.title }}
             </div>
@@ -37,8 +37,8 @@ defineProps({
                       <img v-else class="mx-auto rounded-full shadow-xl" src="/images/speakers/placeholder.webp" alt="">
                     </div>
                   </div>
-                  <div class="my-auto mx-3 md:mx-6">
-                    <p class="text-sm -mb-3 text-zinc-500">
+                  <div class="my-auto ml-6 md:mx-6">
+                    <p class="-mb-3 text-sm text-zinc-500">
                       Prelegent:
                     </p>
                     <div class="text-laravel my-3 text-lg font-medium leading-6">
@@ -75,7 +75,7 @@ defineProps({
                   </div>
                 </div>
               </div>
-              <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 md:flex">
+              <!-- <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 md:flex">
                 <div class="relative hidden lg:block">
                   <div role="status" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
                     <svg class="mr-2 inline h-8 w-8 animate-spin fill-zinc-600 text-zinc-200 dark:fill-zinc-300 dark:text-zinc-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@ defineProps({
                   </div>
                   <iframe class="relative" src="//www.slideshare.net/slideshow/embed_code/key/o9jxGUln7m5Vat" width="595" height="340" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
