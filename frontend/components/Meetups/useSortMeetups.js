@@ -46,7 +46,6 @@ export function useSortMeetups (selectedMeetups, sortType) {
       for(const item of selectedMeetups) {
         sortMeetups.push(item)
       }
-
     }  
   }
   

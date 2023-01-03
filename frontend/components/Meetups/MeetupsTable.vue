@@ -109,7 +109,7 @@ const filteredMeetups = computed(() => {
       </div>
     </div>
     <div class="overflow-hidden bg-white">
-      <MeetupsList id="meetupsList" :data="sortedMeetups"/>
+      <MeetupsList id="meetupsList" :loading="loading" :data="sortedMeetups"/>
     </div>
   </div>
 </template>

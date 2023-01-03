@@ -1,6 +1,6 @@
 <script setup>
 import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/outline'
-import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup'
+import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup.js'
 
 const props = defineProps ({
   data: {
