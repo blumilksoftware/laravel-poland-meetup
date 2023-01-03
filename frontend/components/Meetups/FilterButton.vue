@@ -50,7 +50,7 @@ watch(selectedSpeakers, () => {
 <template>
   <div>
     <Disclosure as="div" class="relative block">
-      <DisclosureButton class="flex w-full cursor-default space-x-3 rounded-md border border-zinc-300 bg-white py-2 px-4 text-center tracking-wider shadow-sm focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5">
+      <DisclosureButton class="flex w-full cursor-default space-x-3 rounded-md border border-zinc-300 bg-white py-2 px-4 text-center shadow-sm focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5">
         <div class="flex space-x-1">
           <p>Filtry</p>
           <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline self-center text-sm font-semibold tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
