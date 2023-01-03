@@ -32,8 +32,10 @@ defineProps({
                 <div v-for="speaker in presentation.speakers" :key="speaker.id" class="text-md align-start mt-2 block gap-3">
                   <transition enter-active-class="transition ease-in-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
                     <div>
-                      <img v-if="speaker.image.length > 2" class="my-5 h-40 w-40 items-start rounded-full shadow-xl xl:h-56 xl:w-56" :src="speaker.image" alt="">
-                      <img v-else class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" src="/images/speakers/placeholder.webp" alt="">
+                      <div class="my-8 h-40 w-40 justify-center flex">
+                        <img v-if="speaker.image.length > 2" class="sm:items-start rounded-full shadow-xl xl:h-56 xl:w-56" :src="speaker.image" alt="">
+                        <img v-else class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" src="/images/speakers/placeholder.webp" alt="">
+                      </div>
                       <div class="text-laravel my-3 text-lg font-medium leading-6">
                         <router-link :to="{ name: 'people' }">
                           <h3>{{ speaker.name }}</h3>
@@ -50,7 +52,7 @@ defineProps({
                         </li>
                       </ul>
                       <div class="space-y-2">
-                        <a href="https://www.youtube.com/watch?v=l3BQJ9vxh2o" target="_blank" class="flex w-fit space-x-2 font-semibold text-zinc-700 transition hover:scale-105 hover:text-red-500 hover:fill-red-500">
+                        <a href="https://www.youtube.com/watch?v=l3BQJ9vxh2o" target="_blank" class="flex w-fit space-x-2 font-semibold text-zinc-700 transition hover:scale-105 hover:text-red-500 fill-laravel hover:fill-red-500">
                           <div class="h-5 w-5 self-center">
                             <you-tube-icon aria-hidden="true" href=""/>
                           </div>
