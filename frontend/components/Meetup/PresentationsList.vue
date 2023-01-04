@@ -22,13 +22,13 @@ defineProps({
       </h3>
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
-      <li v-for="(presentation, id) in presentations" :key="id">
-        <div class="m-6 block hover:bg-zinc-50">
+      <li v-for="(presentation, id) in presentations" :key="id" class="hover:bg-zinc-50">
+        <div class="m-6 block">
           <div class="mt-6 mb-10 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
             {{ presentation.title }}
           </div>
-          <div class="flex">
+          <div class="flex w-full">
             <div class="block">
               <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
@@ -42,25 +42,25 @@ defineProps({
                   </li>
                 </ul>
               </div>
-              <div class="mx-9 flex space-x-16 text-base">
-                <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="fill-laravel flex w-fit items-center space-x-2 font-semibold transition hover:scale-105 hover:fill-red-500 hover:text-red-500 md:space-x-3">
-                  <div class="h-6 w-6 ">
-                    <you-tube-icon aria-hidden="true" href=""/>
-                  </div>
-                  <p>
-                    Zobacz prezentację
-                  </p>
-                </a>
-                <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="flex w-fit items-center space-x-2 font-semibold transition hover:scale-105 hover:text-red-500 md:space-x-3">
-                  <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600 hover:fill-red-500"/>
-                  <p>
-                    Pobierz prezentację
-                  </p>
-                </a> 
-              </div>
-              <div v-for="speaker in presentation.speakers" :key="speaker.id" class="my-5 ml-9 flex min-w-0 flex-1">
-                <div class="w-full">
-                  <div class="text-md m-auto flex">
+              <div class="w-full flex-col">
+                <div class="mx-9 block items-center space-y-4 text-base sm:flex sm:space-y-0 sm:space-x-16">
+                  <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="fill-laravel flex w-fit space-x-2 font-semibold transition hover:scale-105 hover:fill-red-500 hover:text-red-500 md:space-x-3">
+                    <div class="h-6 w-6 ">
+                      <you-tube-icon aria-hidden="true" href=""/>
+                    </div>
+                    <p>
+                      Zobacz prezentację
+                    </p>
+                  </a>
+                  <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="flex w-fit space-x-2 font-semibold transition hover:scale-105 hover:text-red-500 md:space-x-3">
+                    <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600 hover:fill-red-500"/>
+                    <p>
+                      Pobierz prezentację
+                    </p>
+                  </a> 
+                </div>
+                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="my-5 ml-9 flex min-w-0 flex-1">
+                  <div class="text-md m-auto flex w-full">
                     <div class="block w-fit md:ml-0">
                       <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
