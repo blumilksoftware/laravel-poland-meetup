@@ -30,7 +30,7 @@ defineProps({
           </div>
           <div class="flex">
             <div class="block place-content-evenly">
-              <div v-if="presentation.tags.length" class="-mt-5 mx-9 mb-5 flex">
+              <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
                   Tagi:
                 </p>
