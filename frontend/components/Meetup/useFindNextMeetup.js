@@ -24,7 +24,7 @@ export function useFindNextMeetup() {
     }
     
     futureMeetups.sort(( a, b ) => {
-      return new Date(a.date).getTime()  -  new Date(b.date).getTime()
+      return new Date(a.date).getTime() - new Date(b.date).getTime()
     })
 
     nextMeetup.value = futureMeetups[0]
