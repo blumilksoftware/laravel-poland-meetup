@@ -29,7 +29,7 @@ defineProps({
             {{ presentation.title }}
           </div>
           <div class="flex">
-            <div class="block place-content-evenly">
+            <div class="block">
               <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
                   Tagi:
@@ -58,14 +58,14 @@ defineProps({
                   </p>
                 </a> 
               </div>
-              <div v-for="speaker in presentation.speakers" :key="speaker.id" class="my-4 ml-9 flex min-w-0 flex-1">
+              <div v-for="speaker in presentation.speakers" :key="speaker.id" class="my-5 ml-9 flex min-w-0 flex-1">
                 <div class="w-full">
                   <div class="text-md m-auto flex">
                     <div class="block w-fit md:ml-0">
-                      <div class="my-8 flex h-32 w-32 justify-center">
+                      <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
                         <img v-else class="mx-auto rounded-full shadow-xl" src="/images/speakers/placeholder.webp" alt="">
-                      </div>
+                      </router-link>
                     </div>
                     <div class="my-auto ml-6 md:mx-6">
                       <p class="-mb-3 text-sm text-zinc-500">
