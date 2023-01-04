@@ -23,7 +23,7 @@ export function useFindNextMeetup() {
       }
     }
     
-    futureMeetups.sort(( a, b ) => {
+    futureMeetups.sort((a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime()
     })
 
