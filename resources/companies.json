@@ -1,34 +1,34 @@
 {
   "@blumilk": {
     "name": "Blumilk",
-    "logo": "/images/companies/blumilk.png",
+    "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
     "organizer": true
   },
   "@expansja": {
     "name": "Expansja",
-    "logo": "/images/companies/expansja.png",
+    "logo": "/images/companies/expansja.webp",
     "location": "Poznań"
   },
   "@highsolutions": {
     "name": "HighSolutions",
-    "logo": "/images/companies/highsolutions.png",
+    "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
     "organizer": true
   },
   "@tidio": {
     "name": "Tidio",
-    "logo": "/images/companies/tidio.png",
+    "logo": "/images/companies/tidio.webp",
     "location": "Poznań"
   },
   "@trui": {
     "name": "Trui",
-    "logo": "/images/companies/trui.png",
+    "logo": "/images/companies/trui.webp",
     "location": "Poznań"
   },
   "@mirit": {
     "name": "MirIT",
-    "logo": "#",
+    "logo": "/images/companies/mirit.webp",
     "location": "Pleszew"
   }
 }

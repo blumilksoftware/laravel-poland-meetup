@@ -1,8 +1,18 @@
 <script setup>
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
-import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup.js'
+import { computed } from 'vue'
 
-const { nextMeetup } = useFindNextMeetup()
+const props = defineProps({
+  nextMeetup: {
+    type: Object,
+    default: () => {},
+  },
+})
+
+const computedNextMeetup = computed(() => {
+  if(props.nextMeetup == 0) return {}
+  return props.nextMeetup.value
+})
 
 </script>
 
@@ -29,16 +39,16 @@ const { nextMeetup } = useFindNextMeetup()
       </div>
     </div>
     <div class="relative mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 lg:py-12">
-      <div v-if="nextMeetup" class="m-8 block">
+      <div v-if="computedNextMeetup" class="m-8 block">
         <div class="mb-14 text-center">
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
             Tematy prezentacji <br>
-            <span class="text-laravel">{{ nextMeetup.dateFull }}</span>
+            <span class="text-laravel">{{ computedNextMeetup.dateFull }}</span>
           </h2>
         </div>
         <div>
-          <ul v-if="nextMeetup.presentations.length !== 0" role="list" class="flex flex-wrap justify-center font-bold">
-            <li v-for="presentation of nextMeetup.presentations" :key="presentation.id" class="m-6 w-full md:w-1/4 xl:w-1/4">
+          <ul v-if="computedNextMeetup.presentations" role="list" class="flex flex-wrap justify-center font-bold">
+            <li v-for="presentation of computedNextMeetup.presentations" :key="presentation.id" class="m-6 w-full md:w-1/4 xl:w-1/4">
               <div v-for="speaker in presentation.speakers" :key="speaker.id" class="block flex-row">
                 <img v-if="speaker.image.length > 2" class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" :src="speaker.image" alt="">
                 <img v-else class="mx-auto h-40 w-40 rounded-full shadow-xl xl:h-56 xl:w-56" src="/images/speakers/placeholder.webp" alt="">
@@ -70,12 +80,12 @@ const { nextMeetup } = useFindNextMeetup()
           </ul>
         </div>
       </div>
-      <div v-if="!nextMeetup || nextMeetup.presentations.length === 0" class="m-8 block">
+      <div v-if="!computedNextMeetup || !computedNextMeetup.presentations" class="m-8 block">
         <div class="mb-14 text-center">
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
             Tutaj już niedługo pojawią się nowi prelegenci!
           </h2>
-          <ul v-if="!nextMeetup || nextMeetup.presentations.length === 0" role="list" class="mt-14 flex flex-wrap justify-center font-bold">
+          <ul v-if="!computedNextMeetup || !computedNextMeetup.presentations" role="list" class="mt-14 flex flex-wrap justify-center font-bold">
             <li v-for="i in 2" :key="i" class="mt-6 w-full md:w-1/3 xl:w-1/4">
               <img class="brightness- mx-auto h-40 w-40 animate-pulse rounded-full shadow-xl xl:h-40 xl:w-40" src="/images/speakers/placeholder.webp" alt="">
               <div class="my-3 h-4 w-1/3 animate-pulse rounded-xl bg-red-200"/>

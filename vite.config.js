@@ -1,18 +1,17 @@
-import { fileURLToPath, URL } from 'url';
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   resolve: {
     alias: {
-      '@': '/frontend'
+      '@': '/frontend',
     },
   },
   plugins: [vue()],
   server: {
     watch: {
-      usePolling: true
+      usePolling: true,
     },
     port: 9088,
-  }
+  },
 })

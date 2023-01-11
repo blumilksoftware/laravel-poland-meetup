@@ -72,14 +72,14 @@
   "@marcintracz": {
     "name": "Marcin Tracz",
     "role": "#",
-    "image": "../public/images/speakers/marcintracz.webp", 
+    "image": "/images/speakers/marcintracz.webp", 
     "bio": "#",
     "linkedin":  "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
     "role": "#",
-    "image": "../public/images/speakers/mateuszgarbarczyk.webp", 
+    "image": "/images/speakers/mateuszgarbarczyk.webp", 
     "bio": "#",
     "linkedin":  "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
   }
