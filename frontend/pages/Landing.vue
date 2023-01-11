@@ -11,7 +11,7 @@ import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 const meetups = ref([])
 
 const findNextMeetup = computed(() => {
-  if (meetups.value.length == 0) return {}
+  if (meetups.value.length === 0) return {}
   const { nextMeetup } = useFindNextMeetup(meetups.value) 
   return nextMeetup.value
 })
