@@ -1,19 +1,28 @@
 <script setup>
+import { computed } from 'vue'
 import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/outline'
-import { useFindNextMeetup } from '@/components/Meetup/useFindNextMeetup.js'
+import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 
 const props = defineProps ({
   data: {
-    type: Object,
-    default: null,
+    type: Array,
+    default: () => [],
   },
   loading: {
     type: Boolean,
     default: true,
   },
+  allMeetups: {
+    type: Array,
+    default: () => [],
+  },
 })
 
-const { nextMeetup } = useFindNextMeetup()
+const findNextMeetup = computed(() => {
+  if (props.allMeetups.length == 0) return {}
+  const { nextMeetup } = useFindNextMeetup(props.allMeetups) 
+  return nextMeetup.value
+})
 
 const meetupSpeakers = ( meetup ) => {
   let setSpeakers = new Set()
@@ -39,16 +48,16 @@ const meetupTags = ( meetup ) => {
             <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div class="w-full space-y-2 truncate p-4 sm:px-6">
                 <div class="text-laravel flex space-x-4 text-xl font-medium">
-                  <div v-if="meetup.date < nextMeetup.date" class="flex text-red-800">
+                  <div v-if="!findNextMeetup || meetup.date < findNextMeetup.date" class="flex text-red-800">
                     <p class="truncate">
                       {{ meetup.name }}
                     </p>
                   </div>
-                  <div v-else-if="meetup.date >= nextMeetup.date" class="block sm:flex">
+                  <div v-else-if="meetup.date >= findNextMeetup.date" class="block sm:flex">
                     <p class="truncate">
                       {{ meetup.name }}
                     </p>
-                    <div v-if="nextMeetup.id === meetup.id" class="flex">
+                    <div v-if="findNextMeetup.id === meetup.id" class="flex">
                       <exclamation-circle-icon class="mr-3 inline-block h-5 w-5 self-center sm:mx-3" aria-hidden="true"/>
                       <p class="text-lg">
                         Najbliższe wydarzenie

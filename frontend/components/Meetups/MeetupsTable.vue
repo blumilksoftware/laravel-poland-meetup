@@ -29,7 +29,6 @@ const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
 
-
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
 }
@@ -42,7 +41,7 @@ const updateSortedMeetups = (meetups) => {
   sortedMeetups.value  = meetups
 }
 
-const searchMeetupAndPresentation = ( meetups ) => {
+const searchMeetupAndPresentation = (meetups) => {
   
   return meetups.filter(meetup => 
     Object.values(meetup).some(elem =>
@@ -60,7 +59,7 @@ const searchMeetupAndPresentation = ( meetups ) => {
 
 const searchCompany = ( meetups ) => {
   if (checkedCompanies.value.length === 0) {
-  return meetups }
+    return meetups }
   return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
     speakers.some(({ company }) => {
       return checkedCompanies.value.includes(company)
@@ -70,7 +69,7 @@ const searchCompany = ( meetups ) => {
 
 const searchSpeaker = ( meetups ) => {
   if (checkedSpeakers.value.length === 0) 
-  return meetups
+    return meetups
 
   return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
     speakers.some(({ name }) => {
@@ -109,7 +108,7 @@ const filteredMeetups = computed(() => {
       </div>
     </div>
     <div class="overflow-hidden bg-white">
-      <MeetupsList id="meetupsList" :loading="loading" :data="sortedMeetups"/>
+      <MeetupsList id="meetupsList" :loading="loading" :data="sortedMeetups" :all-meetups="meetups"/>
     </div>
   </div>
 </template>
