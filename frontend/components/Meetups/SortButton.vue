@@ -2,7 +2,7 @@
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
 import { BarsArrowDownIcon } from '@heroicons/vue/24/outline'
 import { ref, onMounted, watch } from 'vue'
-import { useSortMeetups } from '@/components/Meetups/useSortMeetups.js'
+import { useSortedMeetups } from '@/composables/useSortedMeetups.js'
 
 const props = defineProps({
   data: {
@@ -31,18 +31,18 @@ const sortBy = ref(sortOptions[0])
 const emit = defineEmits(['updated'])
 
 watch(() => props.data, () => {
-  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
-  emit('updated', sortMeetups)
+  const { sortedMeetups } = useSortedMeetups(props.data, sortBy.value.name)
+  emit('updated', sortedMeetups)
 })
 
 watch(sortBy, () => {
-  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
-  emit('updated', sortMeetups)
+  const { sortedMeetups } = useSortedMeetups(props.data, sortBy.value.name)
+  emit('updated', sortedMeetups)
 })
 
 onMounted(() => { 
-  const { sortMeetups } = useSortMeetups(props.data, sortBy.value.name)
-  emit('updated', sortMeetups)
+  const { sortedMeetups } = useSortedMeetups(props.data, sortBy.value.name)
+  emit('updated', sortedMeetups)
 })
 </script>
 
