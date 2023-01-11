@@ -7,8 +7,8 @@ export function useFindNextMeetup(meetups) {
 
   const findMeetup = () => {
     for(let meetup of meetups) {
-      if(new Date( meetup.date ) > today) {
-        futureMeetups.push( meetup )
+      if(new Date(meetup.date) > today) {
+        futureMeetups.push(meetup)
       }
     }
     
