@@ -17,7 +17,7 @@ const findNextMeetup = computed(() => {
 })
 
 onMounted(async() => {
-    await fetch('/api/meetups.json').then((response) => response.json()).then((data) => {
+  await fetch('/api/meetups.json').then((response) => response.json()).then((data) => {
     meetups.value = data
   })
 })
