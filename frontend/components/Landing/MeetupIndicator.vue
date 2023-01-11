@@ -24,7 +24,7 @@ const computedNextMeetup = computed(() => {
     </div>
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div v-if="nextMeetup" class="md:ml-auto md:w-1/2 md:pl-10">
-        <count-down :date="computedNextMeetup.date"/> 
+        <count-down v-if="nextMeetup.date" :date="computedNextMeetup.date"/> 
         <div v-if="nextMeetup && computedNextMeetup.name" class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           {{ computedNextMeetup.name }}
         </div>
