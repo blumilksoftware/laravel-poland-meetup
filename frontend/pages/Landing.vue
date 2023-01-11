@@ -9,12 +9,15 @@ import { onMounted, ref, computed } from 'vue'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 
 const meetups = ref([])
+let nextMeetup = ref()
 
 const findNextMeetup = computed(() => {
   if (meetups.value.length === 0) return {}
   const { nextMeetup } = useFindNextMeetup(meetups.value) 
   return nextMeetup.value
 })
+
+nextMeetup.value = findNextMeetup
 
 onMounted(async() => {
   await fetch('/api/meetups.json').then((response) => response.json()).then((data) => {
@@ -26,8 +29,8 @@ onMounted(async() => {
 
 <template>
   <hero-section/>
-  <meetup-indicator :next-meetup="findNextMeetup"/>
-  <meetup-speakers :next-meetup="findNextMeetup"/>
+  <meetup-indicator :next-meetup="nextMeetup"/>
+  <meetup-speakers :next-meetup="nextMeetup"/>
   <about-meetup/>
   <join-us/>
   <counters/>

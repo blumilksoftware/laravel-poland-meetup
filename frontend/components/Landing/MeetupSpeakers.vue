@@ -11,7 +11,7 @@ const props = defineProps({
 
 const computedNextMeetup = computed(() => {
   if(props.nextMeetup == 0) return {}
-  return props.nextMeetup
+  return props.nextMeetup.value
 })
 
 </script>
