@@ -19,7 +19,7 @@ const props = defineProps ({
 })
 
 const findNextMeetup = computed(() => {
-  if (props.allMeetups.length == 0) return {}
+  if (props.allMeetups.length === 0) return {}
   const { nextMeetup } = useFindNextMeetup(props.allMeetups) 
   return nextMeetup.value
 })
