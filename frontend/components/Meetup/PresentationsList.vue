@@ -5,12 +5,14 @@ import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
 
 
-defineProps({
+const props = defineProps({
   presentations: {
     type: Array,
     default: () => [],
   },
 })
+
+
 
 </script>
 
@@ -28,7 +30,7 @@ defineProps({
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
             {{ presentation.title }}
           </div>
-          <div class="flex w-full">
+          <div class="flex w-full justify-center">
             <div class="block">
               <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
@@ -59,7 +61,7 @@ defineProps({
                     </p>
                   </a> 
                 </div>
-                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="my-5 ml-9 flex min-w-0 flex-1">
+                <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 ml-9 flex min-w-0 flex-1">
                   <div class="text-md m-auto flex w-full">
                     <div class="block w-fit md:ml-0">
                       <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
@@ -81,7 +83,7 @@ defineProps({
                           </p>
                         </router-link>
                       </div>
-                      <div v-if="speaker.linkedin.length > 3" class="my-4 flex space-x-3">
+                      <div v-if="speaker.linkedin" class="my-4 flex space-x-3">
                         <linkedin-icon :href="speaker.linkedin"/>
                       </div>
                     </div>
@@ -89,7 +91,7 @@ defineProps({
                 </div>
               </div>
             </div>
-            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 md:flex">
+            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex">
               <div class="relative hidden lg:block">
                 <div role="status" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
                   <svg class="mr-2 inline h-8 w-8 animate-spin fill-zinc-600 text-zinc-200 dark:fill-zinc-300 dark:text-zinc-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
