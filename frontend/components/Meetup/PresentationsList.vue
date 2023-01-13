@@ -22,8 +22,8 @@ const props = defineProps({
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in props.presentations" :key="presentation.id" class="hover:bg-zinc-50">
-        <div class="m-6 block">
-          <div class="mt-6 mb-10 flex text-lg font-medium">
+        <div class="block p-6">
+          <div class="mb-10 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
             {{ presentation.title }}
           </div>
