@@ -4,15 +4,12 @@ import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
 
-
 const props = defineProps({
   presentations: {
     type: Array,
     default: () => [],
   },
 })
-
-
 
 </script>
 
@@ -24,7 +21,7 @@ const props = defineProps({
       </h3>
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
-      <li v-for="(presentation, id) in presentations" :key="id" class="hover:bg-zinc-50">
+      <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="m-6 block">
           <div class="mt-6 mb-10 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
@@ -51,13 +48,13 @@ const props = defineProps({
                       <you-tube-icon aria-hidden="true" href=""/>
                     </div>
                     <p>
-                      Zobacz prezentację
+                      Zobacz na YouTube
                     </p>
                   </a>
                   <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="flex w-fit space-x-2 font-semibold transition hover:scale-105 hover:text-red-500 md:space-x-3">
                     <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600 hover:fill-red-500"/>
                     <p>
-                      Pobierz prezentację
+                      Zobacz na SlideShare
                     </p>
                   </a> 
                 </div>
