@@ -3,6 +3,7 @@
   "date": "2022-08-04 18:00:00",
   "location": "Wrocław, Hala Świebodzki",
   "organizers": ["@blumilk", "@highsolutions"],
+  "facebookevent": "https://fb.me/e/auqL5AXX4",
   "presentations": [
     {
       "title": "Co nas boli w Laravelu?",

@@ -1,5 +1,6 @@
 <script setup>
-import { CalendarDaysIcon } from '@heroicons/vue/24/outline'
+import { CalendarDaysIcon, SignalIcon } from '@heroicons/vue/24/outline'
+import FacebookIcon from '@/components/icons/FacebookIcon.vue'
 
 defineProps({
   meetup: {
@@ -36,9 +37,22 @@ defineProps({
       <h2 v-if="meetup" class="text-laravel text-4xl font-bold tracking-tight sm:text-5xl">
         {{ meetup.name }}
       </h2>
-      <div class="align-center flex justify-center text-xl text-gray-500 sm:text-2xl">
-        <calendar-days-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
-        <p>{{ meetup.dateFull }}</p>
+      <div class="space-y-2 text-xl text-gray-500 sm:text-2xl">
+        <div class="flex items-center justify-center">
+          <calendar-days-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
+          <p>{{ meetup.dateFull }}</p>
+        </div>
+        <div class="flex items-center justify-center">
+          <signal-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
+          <p>
+            {{ meetup.location }}
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <a :href="meetup.facebookevent">
+          <facebook-icon class="h-6 w-6"/>
+        </a>
       </div>
     </div>
   </div>

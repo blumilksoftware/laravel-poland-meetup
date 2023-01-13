@@ -19,6 +19,7 @@ class Meetup
         public readonly string $name,
         public readonly string $location,
         public readonly Carbon $date,
+        public readonly string $facebookevent,
         public readonly Collection $presentations = new Collection(),
     ) {
         $this->id = Str::slug($this->date->format("Y-m-d") . " " . $this->name);
@@ -32,6 +33,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
+            "facebookevent" => $this->facebookevent,
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
         ];
     }
@@ -44,6 +46,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
+            "facebookevent" => $this->facebookevent,
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
         ];
     }

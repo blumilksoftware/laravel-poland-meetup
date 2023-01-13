@@ -39,6 +39,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
         $meetup["name"],
         $meetup["location"],
         Carbon::parse($meetup["date"])->locale("pl_PL"),
+        $meetup["facebookevent"],
         Collection::make($meetup["presentations"])->map(
             fn(array $presentation): Presentation => new Presentation(
                 title: $presentation["title"],

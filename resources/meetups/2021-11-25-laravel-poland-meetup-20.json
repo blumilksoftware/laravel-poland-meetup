@@ -3,6 +3,7 @@
   "date": "2021-11-25-10 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions", "@trui"],
+  "facebookevent": "https://fb.me/e/3bNrPHOuU",
   "presentations": [
     {
       "title": "Laravelowe paczki do uwierzytelniania",
