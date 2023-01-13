@@ -28,7 +28,7 @@ const props = defineProps({
             {{ presentation.title }}
           </div>
           <div class="flex w-full justify-center">
-            <div class="block">
+            <div class="block self-center">
               <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
                   Tagi:
@@ -59,7 +59,7 @@ const props = defineProps({
                   </a> 
                 </div>
                 <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 ml-9 flex min-w-0 flex-1">
-                  <div class="text-md m-auto flex w-full">
+                  <div class="text-md m-auto flex w-full justify-center">
                     <div class="block w-fit md:ml-0">
                       <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
