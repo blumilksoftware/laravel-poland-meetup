@@ -31,7 +31,7 @@ const resizeImage = (i) => {
       {{ meetup.name }}
     </h2>
     <div class="relative">
-      <ul role="list" class="grid grid-col gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+      <ul role="list" class="grid-col grid gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
         <li v-for="(image, i) of props.meetup.images" :key="image" class="cursor-zoom-in" :class="getImageClass(i)" @click="resizeImage(i)">
           <div class="expanded-image-background"/>
           <div class="aspect-w-10 aspect-h-7 group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
