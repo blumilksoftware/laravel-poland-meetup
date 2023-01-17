@@ -50,7 +50,7 @@ defineProps({
         </div>
       </div>
       <div class="flex justify-center text-gray-500 sm:text-2xl">
-        <a :href="meetup.facebookevent" class="flex justify-center space-x-5">
+        <a :href="meetup.facebookEvent" class="flex justify-center space-x-5">
           <span>
             Zapisz się na wydarzenie! 
           </span>

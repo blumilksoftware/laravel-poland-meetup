@@ -33,7 +33,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
-            "facebookevent" => $this->facebookevent,
+            "facebookEvent" => $this->facebookEvent,
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
         ];
     }
@@ -46,7 +46,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
-            "facebookevent" => $this->facebookevent,
+            "facebookEvent" => $this->facebookEvent,
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
         ];
     }
