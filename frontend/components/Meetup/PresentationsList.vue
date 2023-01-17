@@ -63,7 +63,7 @@ const props = defineProps({
                     <div class="block w-fit md:ml-0">
                       <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
-                        <img v-else class="mx-auto rounded-full shadow-xl" src="/images/speakers/placeholder.webp" alt="">
+                        <img v-else class="mx-auto rounded-full shadow-xl" src="/images/placeholders/person.webp" alt="">
                       </router-link>
                     </div>
                     <div class="my-auto ml-6 md:mx-6">
