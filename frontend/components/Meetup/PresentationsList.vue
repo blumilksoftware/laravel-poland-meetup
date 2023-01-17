@@ -14,8 +14,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="overflow-hidden bg-white text-zinc-700">
-    <div class="border-b border-zinc-200 bg-white px-4 py-5 sm:px-6">
+  <div class="mt-12 overflow-hidden bg-white text-zinc-700">
+    <div class="border-b border-zinc-200 px-4 py-5 sm:px-6">
       <h3 class="pl-4 text-xl font-medium leading-8">
         Prezentacje
       </h3>
