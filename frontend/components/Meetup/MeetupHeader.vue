@@ -1,6 +1,6 @@
 <script setup>
 import { CalendarDaysIcon, SignalIcon } from '@heroicons/vue/24/outline'
-import FacebookIcon from '@/components/icons/FacebookIcon.vue'
+import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 
 defineProps({
   meetup: {
@@ -49,9 +49,12 @@ defineProps({
           </p>
         </div>
       </div>
-      <div class="flex justify-center">
-        <a :href="meetup.facebookevent">
-          <facebook-icon class="h-6 w-6"/>
+      <div class="flex justify-center text-gray-500 sm:text-2xl">
+        <a :href="meetup.facebookevent" class="flex justify-center space-x-5">
+          <span>
+            Zapisz się na wydarzenie! 
+          </span>
+          <facebook-icon class="h-6 w-6 self-center"/>
         </a>
       </div>
     </div>
