@@ -24,5 +24,5 @@ onMounted(() => {
 <template>
   <meetup-header :meetup="meetup"/>
   <presentations-list class="mt-12" :presentations="meetup.presentations"/>
-  <Gallery v-if="meetup.images" :meetup="meetup"/>
+  <gallery v-if="meetup.images" :meetup="meetup"/>
 </template>
