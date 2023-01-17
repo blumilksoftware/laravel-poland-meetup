@@ -19,7 +19,7 @@ class Meetup
         public readonly string $name,
         public readonly string $location,
         public readonly Carbon $date,
-        public readonly string $facebookevent,
+        public readonly string $facebookEvent,
         public readonly Collection $presentations = new Collection(),
     ) {
         $this->id = Str::slug($this->date->format("Y-m-d") . " " . $this->name);
