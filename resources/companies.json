@@ -1,34 +1,98 @@
 {
+  "@allegro": {
+    "name": "Allegro",
+    "logo": null,
+    "location": "Warszawa",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@amsterdamstandard": {
+    "name": "Amsterdam Standard",
+    "logo": null,
+    "location": "Kraków",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
   "@blumilk": {
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
+    "website": "https://blumilk.pl/",
+    "linkedin": "https://www.linkedin.com/company/blumilksoftware",
     "organizer": true
+  },
+  "@bmind": {
+    "name": "B-MIND",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@devpark": {
+    "name": "Devpark",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@expansja": {
     "name": "Expansja",
     "logo": "/images/companies/expansja.webp",
-    "location": "Poznań"
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@highsolutions": {
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
-    "organizer": true
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
-  "@tidio": {
-    "name": "Tidio",
-    "logo": "/images/companies/tidio.webp",
-    "location": "Poznań"
+  "@przeswietlpl": {
+    "name": "Prześwietl.pl",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
-  "@trui": {
-    "name": "Trui",
-    "logo": "/images/companies/trui.webp",
-    "location": "Poznań"
+  "@mtadigital": {
+    "name": "MTA Digital",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@mirit": {
     "name": "MirIT",
     "logo": "/images/companies/mirit.webp",
-    "location": "Pleszew"
+    "location": "Pleszew",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@tidio": {
+    "name": "Tidio",
+    "logo": "/images/companies/tidio.webp",
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@trui": {
+    "name": "Trui",
+    "logo": "/images/companies/trui.webp",
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   }
 }

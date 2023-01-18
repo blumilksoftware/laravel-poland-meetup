@@ -3,24 +3,35 @@
   "date": "2022-11-10 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions"],
+  "facebook": "https://www.facebook.com/events/4964390930348445",
   "presentations": [
     {
       "title": "xD bug - jak debugować PHP-owe aplikacje",
+      "blurb": "Tutaj otrzymacie od Marcina garść praktycznych informacji o debuggowaniu aplikacji przy użyciu Xdebuga.",
       "speakers": [
         {
           "person": "@marcintracz",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [
+        "https://www.youtube.com/watch?v=l3BQJ9vxh2o"
+      ],
+      "tags": ["xDebug", "debugowanie", "konfiguracja", "Docker"]
     },
     {
-      "title": "WebRTC+Websockety - Jak stworzyłem aplikację do kamerek internetowych w Laravelu",
+      "title": "WebRTC + Websockety",
+      "blurb": "Mateusz podczas swojej prelekcji opowie w jaki sposób można zrealizować połączenie WebRTC w aplikacji opartej o Laravel+Vue przy pomocy websocketów.",
       "speakers": [
         {
           "person": "@mateuszgarbarczyk",
           "company": "@mirit"
         }
-      ]
+      ],
+      "links": [
+        "https://www.youtube.com/watch?v=275ruKRWrRo"
+      ],
+      "tags": ["WebRTC", "websockety", "case study"]
     }
   ]
 }

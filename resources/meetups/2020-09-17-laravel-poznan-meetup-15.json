@@ -1,0 +1,44 @@
+{
+  "name": "Laravel Poznań Meetup #15",
+  "date": "2020-09-17 18:00:00",
+  "location": "online",
+  "organizers": ["@highsolutions", "@trui"],
+  "facebook": "https://www.facebook.com/events/2674650809454230/2674650812787563",
+  "presentations": [
+    {
+      "title": "Laravel 8 - co nowego?",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Laravel Collection - czyli tablice na sterydach",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@kamilbartczak",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Wstęp do CI/CD w aplikacjach stworzonych w Laravel",
+      "speakers": [
+        {
+          "person": "@tomekzmudzinski",
+          "company": "@trui"
+        }
+      ],
+      "links": [],
+      "tags": []
+    }
+  ]
+}
