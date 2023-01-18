@@ -3,29 +3,39 @@
   "date": "2022-11-10 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions"],
-  "facebookEvent": "https://fb.me/e/5EoV00pMv",
+  "facebook": "https://www.facebook.com/events/4964390930348445",
   "presentations": [
     {
       "title": "xD bug - jak debugować PHP-owe aplikacje",
       "youtube": "https://www.youtube.com/watch?v=l3BQJ9vxh2o",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/xd-bug-jak-debugowa-phpowe-aplikacje-xdebug",
+      "blurb": "Tutaj otrzymacie od Marcina garść praktycznych informacji o debuggowaniu aplikacji przy użyciu Xdebuga.",
       "speakers": [
         {
           "person": "@marcintracz",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [
+        "https://www.youtube.com/watch?v=l3BQJ9vxh2o"
+      ],
+      "tags": ["xDebug", "debugowanie", "konfiguracja", "Docker"]
     },
     {
-      "title": "WebRTC+Websockety - Jak stworzyłem aplikację do kamerek internetowych w Laravelu",
+      "title": "WebRTC + Websockety",
       "youtube": "https://www.youtube.com/watch?v=l3BQJ9vxh2o",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/webrtcwebsockety-jak-stworzyem-aplikacj-do-kamerek-internetowych-w-laravelu",
+      "blurb": "Mateusz podczas swojej prelekcji opowie w jaki sposób można zrealizować połączenie WebRTC w aplikacji opartej o Laravel+Vue przy pomocy websocketów.",
       "speakers": [
         {
           "person": "@mateuszgarbarczyk",
           "company": "@mirit"
         }
-      ]
+      ],
+      "links": [
+        "https://www.youtube.com/watch?v=275ruKRWrRo"
+      ],
+      "tags": ["WebRTC", "websockety", "case study"]
     }
   ]
 }

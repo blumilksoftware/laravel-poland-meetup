@@ -32,15 +32,27 @@ function retrieveData(): array
 
 function mapData(Collection $people, Collection $companies, Collection $meetups): array
 {
-    $people = $people->map(fn(array $person): Person => new Person($person["name"], $person["role"], $person["image"], $person["bio"], $person["linkedin"]));
-    $companies = $companies->map(fn(array $company): Company => new Company(...$company));
+    $people = $people->map(fn(array $person): Person => new Person(
+        name: $person["name"],
+        image: $person["image"] ?? "",
+        bio: $person["bio"] ?? "",
+        linkedin: $person["linkedin"] ?? "",
+    ));
+    $companies = $companies->map(fn(array $company): Company => new Company(
+        name: $company["name"],
+        location: $company["location"],
+        logo: $company["logo"] ?? "",
+        website: $company["website"] ?? "",
+        linkedin: $company["linkedin"] ?? "",
+        organizer: $company["organizer"],
+    ));
 
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(
-        $meetup["name"],
-        $meetup["location"],
-        Carbon::parse($meetup["date"])->locale("pl_PL"),
-        $meetup["facebookEvent"],
-        Collection::make($meetup["presentations"])->map(
+        name: $meetup["name"],
+        location: $meetup["location"] ?? "",
+        date: isset($meetup["date"]) ? Carbon::parse($meetup["date"])->locale("pl_PL") : null,
+        facebook: $meetup["facebook"] ?? null,
+        presentations: Collection::make($meetup["presentations"])->map(
             fn(array $presentation): Presentation => new Presentation(
                 title: $presentation["title"],
                 youtube: $presentation["youtube"],

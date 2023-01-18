@@ -1,31 +1,37 @@
 {
   "name": "Laravel Poland Meetup #20",
-  "date": "2021-11-25-10 18:00:00",
+  "date": "2021-11-25 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions", "@trui"],
-  "facebookEvent": "https://fb.me/e/3bNrPHOuU",
+  "facebook": "https://www.facebook.com/events/250767353363028/282389676867462",
   "presentations": [
     {
       "title": "Laravelowe paczki do uwierzytelniania",
       "youtube": "https://www.youtube.com/watch?v=LHIO7jC5pVo",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravelowe-paczki-do-uwierzytelniania",
+      "blurb": null,
       "speakers": [
         {
           "person": "@kamilpiech",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Przegląd najciekawszych wtyczek do Laravela",
       "youtube": "https://www.youtube.com/watch?v=0STo9h8dAxs",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/przegld-najciekawszych-wtyczek-do-laravela",
+      "blurb": null,
       "speakers": [
         {
           "person": "@tomekzmudzinski",
           "company": "@trui"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

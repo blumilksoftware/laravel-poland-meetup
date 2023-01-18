@@ -1,0 +1,45 @@
+{
+  "name": "Laravel Poznań Meetup #6",
+  "date": "2018-09-06 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions", "@devpark"],
+  "facebook": "https://www.facebook.com/events/252067692111324",
+  "presentations": [
+    {
+      "title": "Nowości w Laravel 5.7",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@adammatysiak",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Standardy kodowania, czyli co poza PSR-x",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@andrzejfenzel",
+          "company": "@devpark"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Obalmy mity o wydajności frameworka Laravel, część 2",
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    }
+  ]
+}
