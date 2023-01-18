@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Laravel 8 - co nowego?",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Laravel Collection - czyli tablice na sterydach",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "Wstęp do CI/CD w aplikacjach stworzonych w Laravel",
+      "youtube": null,
+      "slideshare": null,
       "speakers": [
         {
           "person": "@tomekzmudzinski",

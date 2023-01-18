@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Po premierze Laravela 6.0 - co nowego?",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Zwiększenie wydajności API z Laravel i Swoole z użyciem Docker",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {

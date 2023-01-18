@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Action-based Laravel",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Laravel/PHP - zderzenie z PDF-ami",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "Automatyzacja i utrzymanie jakości kodu",
+      "youtube": null,
+      "slideshare": null,
       "speakers": [
         {
           "person": "@krzysztofrewak",

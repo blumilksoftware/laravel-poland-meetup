@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Wykorzystanie Form Request przy implementacji API w Laravelu",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Koniec CSS? Jest Tailwind!",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "Tworzenie chatbotów z wykorzystaniem BotMan",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
