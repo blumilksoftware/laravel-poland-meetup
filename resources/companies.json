@@ -3,32 +3,38 @@
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
+    "bio": "Projektujemy, programujemy, wdrażamy i utrzymujemy najwyższej klasy oprogramowanie szyte na miarę. Specjalizujemy się w technologiach webowych oraz projektach badawczo-rozwojowych. Wykorzystujemy rozległe doświadczenie, aby nasze aplikacje były wygodne w używaniu na każdym urządzeniu, szybkie, łatwo rozszerzalne oraz bezpieczne. Nasz zespół potrafi zgłębić domenę produktu, aby jak najlepiej zrealizować postawione zadania; bez względu czy to branża ubezpieczeniowa, edukacyjna, administracyjna, finansowa czy jeszcze inna.",
     "organizer": true
   },
   "@expansja": {
     "name": "Expansja",
     "logo": "/images/companies/expansja.webp",
-    "location": "Poznań"
+    "location": "Poznań",
+    "bio": "Jesteśmy agencją reklamową z ponad 20-letnim doświadczeniem. Jesteśmy poznańską firmą, co zgodnie z tradycją naszego miasta zobowiązuje do solidności i rzetelności. Zarówno ze strony kreatywnej jak i wykonawczej najważniejsze są dla nas - skuteczność i efektywność. Zebrane kompetencje to konglomerat wiedzy, doświadczenia i odrobiny szaleństwa w interpretacji rzeczywistości."
   },
   "@highsolutions": {
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
+    "bio": "Jesteśmy zespołem pasjonatów nowych technologii. Naszym celem jest dostarczanie realizacji najwyższej jakości. Wierzymy, że sukces naszych klientów to również nasz sukces. Pragniemy nie tylko dostarczać funkcjonalne systemy, serwisy internetowe i aplikacje mobilne, ale przede wszystkim sprawiać by nowoczesna technologia służyła ludziom w ich codziennym życiu i pomagała realizować cele biznesowe.",
     "organizer": true
   },
   "@tidio": {
     "name": "Tidio",
     "logo": "/images/companies/tidio.webp",
-    "location": "Poznań"
+    "location": "Poznań",
+    "bio": "Jesteśmy szybko rozwijającą się firmą zajmującą się produktami cyfrowymi. Tworzymy Customer Experience, którego misją jest pomaganie mikro firmom z całego świata w rozwoju i efektywnej obsłudze klientów. Nasz live chat jest obsługiwany przez unikalne chatboty i używany przez ponad 510 milionów unikalnych użytkowników na całym świecie. Obecnie zatrudniamy ponad 180 osób i każdego dnia stale się rozwijamy."
   },
   "@trui": {
     "name": "Trui",
     "logo": "/images/companies/trui.webp",
-    "location": "Poznań"
+    "location": "Poznań",
+    "bio": "TRUI to efektywnie i efektownie działający zespół z wieloletnim doświadczeniem w projektowaniu graficznym i programowaniu. Specjalizujemy się w tworzeniu dedykowanego oprogramowania („pod klucz”), stron internetowych, aplikacji mobilnych oraz gier. Zapewniamy wsparcie przy pracach nad specyfikacją systemów. Doradzamy przy tworzeniu architektury/logiki oprogramowania."
   },
   "@mirit": {
     "name": "MirIT",
     "logo": "/images/companies/mirit.webp",
-    "location": "Pleszew"
+    "location": "Pleszew",
+    "bio": "Jesteśmy pasjonatami tego co robimy, nikt nigdy do niczego nas nie zmuszał. Wszystko robimy z pasji dla idei dążenia do pomagania innym w rozwoju ich pomysłów. Pomysły klientów które wdrażamy już od 3 lat oraz reklamy, które kreujemy stają się częścią wspólnej historii, którą tworzymy wraz naszymi klientami. Jako, że nikt nie jest doskonały wiemy o tym, aby udoskonalać nasze umiejętności z biegiem czasu i trendów jakie panują na obecnym rynku."
   }
 }
