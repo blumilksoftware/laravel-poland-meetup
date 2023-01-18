@@ -7,9 +7,17 @@
     "linkedin": null,
     "organizer": false
   },
+  "@amsterdamstandard": {
+    "name": "Amsterdam Standard",
+    "logo": null,
+    "location": "Kraków",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
   "@blumilk": {
     "name": "Blumilk",
-    "logo": "/images/companies/blumilk.png",
+    "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
     "website": "https://blumilk.pl/",
     "linkedin": "https://www.linkedin.com/company/blumilksoftware",
@@ -33,7 +41,7 @@
   },
   "@expansja": {
     "name": "Expansja",
-    "logo": null,
+    "logo": "/images/companies/expansja.webp",
     "location": "Poznań",
     "website": null,
     "linkedin": null,
@@ -41,11 +49,11 @@
   },
   "@highsolutions": {
     "name": "HighSolutions",
-    "logo": "/images/companies/highsolutions.png",
+    "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
     "website": null,
     "linkedin": null,
-    "organizer": true
+    "organizer": false
   },
   "@przeswietlpl": {
     "name": "Prześwietl.pl",
@@ -65,7 +73,7 @@
   },
   "@mirit": {
     "name": "MirIT",
-    "logo": null,
+    "logo": "/images/companies/mirit.webp",
     "location": "Pleszew",
     "website": null,
     "linkedin": null,
@@ -73,7 +81,7 @@
   },
   "@tidio": {
     "name": "Tidio",
-    "logo": null,
+    "logo": "/images/companies/tidio.webp",
     "location": "Poznań",
     "website": null,
     "linkedin": null,
@@ -81,7 +89,7 @@
   },
   "@trui": {
     "name": "Trui",
-    "logo": null,
+    "logo": "/images/companies/trui.webp",
     "location": "Poznań",
     "website": null,
     "linkedin": null,
