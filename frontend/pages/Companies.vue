@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import CompaniesGrid from '@/components/Companies/CompaniesGrid.vue'
+import CompaniesTable from '@/components/Companies/CompaniesTable.vue'
 import CompaniesHeader from '@/components/Companies/CompaniesHeader.vue'
 
 const companies = ref([])
@@ -14,5 +14,5 @@ onMounted(() => {
 
 <template>
   <companies-header/>
-  <companies-grid class="mt-12" :companies="companies"/>
+  <companies-table class="mt-12" :companies="companies"/>
 </template>

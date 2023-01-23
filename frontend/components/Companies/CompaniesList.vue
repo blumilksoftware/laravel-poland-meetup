@@ -9,7 +9,7 @@ const props = defineProps({
   },
   name: {
     type: String,
-    default: () => [],
+    default: () => '',
   },
 })
 
@@ -23,13 +23,13 @@ const props = defineProps({
         <ul v-auto-animate role="list" class="gap-y-12 space-y-16 divide-y divide-zinc-200 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:space-y-0 lg:divide-y-0">
           <li v-for="(company, id) in companies" :key="id">
             <div class="grid grid-cols-2 sm:gap-6 sm:space-y-0 md:space-x-4 lg:gap-8">
-              <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="relative">
-                <div class="self-center h-20 w-auto">
-                  <building-office-2-icon v-if="!company.logo" class="h-7 w-7 text-zinc-500" :alt="company.name"/>
-                  <img v-else class="object-contain" :src="company.logo" :alt="company.name">
+              <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="relative m-auto">
+                <div>
+                  <building-office-2-icon v-if="!company.logo" class="h-20 w-20 text-zinc-400" :alt="company.name"/>
+                  <img v-else class="max-h-16 w-auto object-contain" :src="company.logo" :alt="company.name">
                 </div>
               </router-link>
-              <div class="self-center space-y-4 text-lg font-medium leading-6">
+              <div class="space-y-4 self-center text-lg font-medium leading-6">
                 <div v-if="company.organizer" class="text-laravel flex items-center text-xl">
                   <hashtag-icon class="h-6 w-6"/>
                   <span>organizator</span>
@@ -37,7 +37,7 @@ const props = defineProps({
                 <div class="space-y-4 text-lg font-medium leading-6">
                   <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="flex space-x-2 transition duration-200 hover:translate-x-1">
                     <link-icon class="h-6 w-6"/>
-                    <span>
+                    <span class="text-xl font-bold tracking-wide text-zinc-600">
                       {{ company.name }}
                     </span>
                   </router-link>
