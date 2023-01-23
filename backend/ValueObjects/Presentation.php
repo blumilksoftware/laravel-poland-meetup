@@ -14,6 +14,8 @@ class Presentation
 {
     public function __construct(
         public readonly string $title,
+        public readonly ?string $youtube = null,
+        public readonly ?string $slideshare = null,
         public readonly Collection $speakers = new Collection(),
         public readonly Collection $tags = new Collection(),
     ) {}
@@ -22,6 +24,8 @@ class Presentation
     {
         return [
             "title" => $this->title,
+            "youtube" => $this->youtube,
+            "slideshare" => $this->slideshare,
             "speakers" => $this->speakers->map(
                 fn(Speaker $speaker): array => $speaker->toMeetupDetailsEntry(),
             ),

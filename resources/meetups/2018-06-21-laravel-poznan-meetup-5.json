@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Vue.js - Zastosowanie i budowa komponentów",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Wstęp do profilowania aplikacji",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "Obalmy mity o wydajności frameworka Laravel",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {

@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Tworzenie czatbotów w PHP z wykorzystaniem NLP",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "IoT - komunikacja TCP/IP w oparciu o Laravel",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "9 elementów SEO, na które musisz zwrócić uwagę podczas tworzenia strony internetowej",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {

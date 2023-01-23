@@ -1,42 +1,96 @@
 <script setup>
-defineProps({
+import { PresentationChartLineIcon } from '@heroicons/vue/24/outline'
+import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
+import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
+import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
+
+const props = defineProps({
   presentations: {
     type: Array,
     default: () => [],
   },
 })
+
 </script>
 
 <template>
-  <div class="overflow-hidden bg-white">
-    <div class="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
-      <h3 class="pl-4 text-xl font-medium leading-8 text-gray-900">
+  <div class="mt-12 overflow-hidden bg-white text-zinc-700">
+    <div class="border-b border-zinc-200 px-4 py-5 sm:px-6">
+      <h3 class="pl-4 text-xl font-medium leading-8">
         Prezentacje
       </h3>
     </div>
-    <ul role="list" class="divide-y divide-gray-200">
-      <li v-for="(presentation, id) in presentations" :key="id">
-        <div class="block hover:bg-gray-50">
-          <div class="flex items-center p-4 sm:px-6">
-            <div class="flex min-w-0 flex-1 items-center">
-              <div class="w-[36em] pl-4">
-                <div class="truncate text-lg font-medium">
-                  {{ presentation.title }}
+    <ul role="list" class="divide-y divide-zinc-200">
+      <li v-for="presentation in props.presentations" :key="presentation.id" class="hover:bg-zinc-50">
+        <div class="block p-6">
+          <div class="mb-10 flex text-lg font-medium">
+            <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
+            {{ presentation.title }}
+          </div>
+          <div class="flex w-full justify-center">
+            <div class="block self-center lg:w-1/3">
+              <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
+                <p class="mr-3 text-zinc-500 ">
+                  Tagi:
+                </p>
+                <ul class="flex w-full space-x-2 text-zinc-400">
+                  <li v-for="tag of presentation.tags" :key="tag">
+                    <a href="#" class="underline">
+                      {{ tag }}{{ ',' }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full flex-col">
+                <div class="mx-9 block items-center space-y-4 text-base sm:flex sm:space-y-0 sm:space-x-16">
+                  <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="fill-laravel flex w-fit space-x-2 font-semibold transition hover:scale-105 hover:fill-red-500 hover:text-red-500 md:space-x-3">
+                    <div class="h-6 w-6 ">
+                      <you-tube-icon aria-hidden="true" href=""/>
+                    </div>
+                    <p>
+                      Zobacz na YouTube
+                    </p>
+                  </a>
+                  <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="flex w-fit space-x-2 font-semibold transition hover:scale-105 hover:text-red-500 md:space-x-3">
+                    <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600 hover:fill-red-500"/>
+                    <p>
+                      Zobacz na SlideShare
+                    </p>
+                  </a> 
                 </div>
-                <div v-for="speaker in presentation.speakers" :key="speaker.id" class="mt-2 flex items-center gap-3 text-sm">
-                  <img class="h-6 w-6 rounded-full shadow-lg" :src="speaker.avatar" :alt="speaker.name">
-                  <span v-if="speaker.company">{{ speaker.name }}, {{ speaker.company }}</span>
-                  <span v-else>{{ speaker.name }}</span>
+                <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 ml-9 flex min-w-0 flex-1">
+                  <div class="text-md m-auto flex w-full justify-center">
+                    <div class="block w-fit md:ml-0">
+                      <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
+                        <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
+                        <img v-else class="mx-auto rounded-full shadow-xl" src="/images/placeholders/person.webp" alt="">
+                      </router-link>
+                    </div>
+                    <div class="my-auto ml-6 md:mx-6">
+                      <p class="-mb-3 text-sm text-zinc-500">
+                        Prelegent:
+                      </p>
+                      <div class="text-laravel my-3 text-lg font-medium leading-6 sm:shrink-0">
+                        <router-link :to="{ name: 'people' }">
+                          <h3>{{ speaker.name }}</h3>
+                        </router-link>
+                        <router-link :to="{ name: 'companies' }">
+                          <p class="text-zinc-600">
+                            {{ speaker.company }}
+                          </p>
+                        </router-link>
+                      </div>
+                      <div v-if="speaker.linkedin" class="my-4 flex space-x-3">
+                        <linkedin-icon :href="speaker.linkedin"/>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-1 md:gap-4">
-                <div class="hidden md:block">
-                  <p class="flex items-center text-sm text-gray-500">
-                    Jakie są zasady działania licencji otwartego oprogramowania?
-                    Na to pytanie podczas jednej z prelekcji Laravel Poland MeetUp #22 odpowie Joanna Rewak - Radca Prawny, pasjonatka zagadnień z zakresu prawa nowych technologii, prawa autorskiego oraz ochrony danych osobowych, która współpracuje z Blumilk.
-                    ✅ Joanna podczas swojej prelekcji opowie o zasadach działania licencji na przykładzie licencji MIT (X11), która pozwala udostępniać kod źródłowy Laravela.
-                  </p>
-                </div>
+            </div>
+            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
+              <div class="relative hidden lg:block">
+                <iframe class="relative" src="//www.slideshare.net/slideshow/embed_code/key/o9jxGUln7m5Vat" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
               </div>
             </div>
           </div>

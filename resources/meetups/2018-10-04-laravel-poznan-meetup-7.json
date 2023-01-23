@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "PWA - Progressive Web App",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Praktyczne wykorzystanie Repository Pattern z Laravel",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {
@@ -31,6 +35,8 @@
     },
     {
       "title": "Laravel Nova - Czy to się w ogóle opłaca?",
+      "youtube": null,
+      "slideshare": null,
       "blurb": null,
       "speakers": [
         {

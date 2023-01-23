@@ -7,6 +7,8 @@
   "presentations": [
     {
       "title": "Laravelowe paczki do uwierzytelniania",
+      "youtube": "https://www.youtube.com/watch?v=LHIO7jC5pVo",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravelowe-paczki-do-uwierzytelniania",
       "blurb": null,
       "speakers": [
         {
@@ -19,6 +21,8 @@
     },
     {
       "title": "Przegląd najciekawszych wtyczek do Laravela",
+      "youtube": "https://www.youtube.com/watch?v=0STo9h8dAxs",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/przegld-najciekawszych-wtyczek-do-laravela",
       "blurb": null,
       "speakers": [
         {

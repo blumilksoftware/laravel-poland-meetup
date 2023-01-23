@@ -10,15 +10,16 @@ export function useFindNextMeetup(meetups) {
       futureMeetups.push(meetup)
     }
   }
-  
+
   if(futureMeetups.length > 0) {
     futureMeetups.sort((a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime()
     })
   }
-  else if(futureMeetups == 0) 
-    return null 
-  
+  else if(futureMeetups.length === 0) {
+    return {}
+  }
+
   nextMeetup.value = futureMeetups[0]
 
   return { nextMeetup }
