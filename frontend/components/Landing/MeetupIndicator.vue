@@ -22,7 +22,7 @@ const computedNextMeetup = computed(() => {
       <img class="h-full w-full object-cover" src="/images/lpm_22/lpm22-img2.webp" alt="">
     </div>
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div v-if="computedNextMeetup.length" class="md:ml-auto md:w-1/2 md:pl-10">
+      <div v-if="computedNextMeetup" class="md:ml-auto md:w-1/2 md:pl-10">
         <count-down v-if="computedNextMeetup.date" :date="computedNextMeetup.date"/> 
         <div v-if="computedNextMeetup && computedNextMeetup.name" class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           {{ computedNextMeetup.name }}
@@ -43,7 +43,7 @@ const computedNextMeetup = computed(() => {
           </div>
         </div>
       </div>
-      <div v-else-if="!computedNextMeetup.length" class="md:ml-auto md:w-1/2 md:pl-10">
+      <div v-else-if="!computedNextMeetup" class="md:ml-auto md:w-1/2 md:pl-10">
         <div class="mt-3 space-y-3 text-white sm:tracking-wider">
           <h1 class="text-3xl font-semibold sm:text-4xl">
             Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span>

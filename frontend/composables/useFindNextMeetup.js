@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 export function useFindNextMeetup(meetups) {
-  let nextMeetup = ref()
+  let nextMeetup = ref(null)
   const today = new Date()
   const futureMeetups = []
 
@@ -15,12 +15,8 @@ export function useFindNextMeetup(meetups) {
     futureMeetups.sort((a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime()
     })
+    nextMeetup.value = futureMeetups[0]
   }
-  else if(futureMeetups.length === 0) {
-    return {}
-  }
-
-  nextMeetup.value = futureMeetups[0]
 
   return { nextMeetup }
 }
