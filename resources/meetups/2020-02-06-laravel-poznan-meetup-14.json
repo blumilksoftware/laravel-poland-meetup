@@ -1,0 +1,41 @@
+{
+  "name": "Laravel Poznań Meetup #14",
+  "date": "2020-02-06 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/1004554123243647",
+  "presentations": [
+    {
+      "title": "Błędy w kodzie podczas code review",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@marektenus",
+          "company": "@highsolutions"
+        },
+        {
+          "person": "@piotrnowak",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "Autoryzacja operacji przy użyciu SMS, e-mail",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@tomekzmudzinski",
+          "company": "@trui"
+        }
+      ],
+      "links": [],
+      "tags": []
+    }
+  ]
+}

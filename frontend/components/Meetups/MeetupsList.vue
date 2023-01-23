@@ -21,7 +21,7 @@ const props = defineProps ({
 const findNextMeetup = computed(() => {
   if (props.allMeetups.length === 0) return {}
   const { nextMeetup } = useFindNextMeetup(props.allMeetups) 
-  return nextMeetup.value
+  return nextMeetup
 })
 
 const meetupSpeakers = ( meetup ) => {
@@ -99,7 +99,7 @@ const meetupTags = ( meetup ) => {
             <div class="hidden md:flex">
               <ul class="flex -space-x-2 overflow-hidden">
                 <li v-for="speaker in meetupSpeakers(meetup)" :key="speaker.name" class="inline-block w-10">
-                  <img v-if="speaker.image === '#'" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
+                  <img v-if="speaker.image === ''" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
                   <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md ring-1 ring-zinc-100">
                 </li>
               </ul>

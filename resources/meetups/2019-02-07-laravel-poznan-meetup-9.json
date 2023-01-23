@@ -1,0 +1,51 @@
+{
+  "name": "Laravel Poznań Meetup #9",
+  "date": "2019-02-07 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "facebook": "https://www.facebook.com/events/291362435056567/291362445056566",
+  "presentations": [
+    {
+      "title": "Tworzenie czatbotów w PHP z wykorzystaniem NLP",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@piotrnowak",
+          "company": "@highsolutions"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "IoT - komunikacja TCP/IP w oparciu o Laravel",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@krzysztofczechowski",
+          "company": "@bmind"
+        }
+      ],
+      "links": [],
+      "tags": []
+    },
+    {
+      "title": "9 elementów SEO, na które musisz zwrócić uwagę podczas tworzenia strony internetowej",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [
+        {
+          "person": "@andrzejzielinski",
+          "company": "@mtadigital"
+        }
+      ],
+      "links": [],
+      "tags": []
+    }
+  ]
+}

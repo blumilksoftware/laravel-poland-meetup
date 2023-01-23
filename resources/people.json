@@ -1,86 +1,194 @@
 {
+  "@mateuszantkowiak": {
+    "name": "Mateusz Antkowiak",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",  
+    "image": null,
+    "bio": null,
     "linkedin": null
   },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@krzysztofczechowski": {
+    "name": "Krzysztof Czechowski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@andrzejfenzel": {
+    "name": "Andrzej Fenzel",
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@kamilpiech": {
-    "name": "Kamil Piech",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@joannarewak": {
-    "name": "Joanna Rewak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@krzysztofrewak": {
-    "name": "Krzysztof Rewak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
-  },
-  "@przemekszustak": {
-    "name": "Przemek Szustak",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@filipzdunek": {
-    "name": "Filip Zdunek",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@tomekzmudzinski": {
-    "name": "Tomek Żmudziński",
-    "role": "#",
-    "image": "#", 
-    "bio": "#",
-    "linkedin":  null
-  },
-  "@marcintracz": {
-    "name": "Marcin Tracz",
-    "role": "#",
-    "image": "/images/speakers/marcintracz.webp", 
-    "bio": "#",
-    "linkedin":  "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
+    "image": null,
+    "bio": null,
+    "linkedin": null
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
-    "role": "#",
-    "image": "/images/speakers/mateuszgarbarczyk.webp", 
-    "bio": "#",
-    "linkedin":  "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
+    "image": "/images/speakers/mateuszgarbarczyk.webp",
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
+  },
+  "@robertkabat": {
+    "name": "Robert Kabat",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@kamilkielczewski": {
+    "name": "Kamil Kiełczewski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@amadeuszkozlowski": {
+    "name": "Amadeusz Kozłowski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@mateuszlencki": {
+    "name": "Mateusz Lencki",
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/mateusz-lencki"
+  },
+  "@adammatysiak": {
+    "name": "Adam Matysiak",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@pawelnuckowski": {
+    "name": "Paweł Nuckowski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrnowak": {
+    "name": "Piotr Nowak",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@kamilpiech": {
+    "name": "Kamil Piech",
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/kamil-piech-9ab65619b/"
+  },
+  "@kamilpietka": {
+    "name": "Kamil Piętka",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@joannarewak": {
+    "name": "Joanna Rewak",
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/joanna-rewak-745ba9133"
+  },
+  "@krzysztofrewak": {
+    "name": "Krzysztof Rewak",
+    "image": null,
+    "bio": "Współzałożyciel i współwłaściciel Blumilka, dyrektor ds. technologii w tymże, inżynier oprogramowania, nauczyciel akademicki, piwowar domowy. W Laravelu programuje od 2014 roku, Laravel Poland Meetup współorganizuje od 2020. Lubi mapy, nieoczywiste scrapowanie danych i łączenie ze sobą systemów informatycznych.",
+    "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
+  },
+  "@mateuszrusyn": {
+    "name": "Mateusz Rusyn",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrrybak": {
+    "name": "Piotr Rybak",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@jaceksawoszczuk": {
+    "name": "Jacek Sawoszczuk",
+    "image": null,
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/jacek-sawoszczuk-535058114"
+  },
+  "@hubertsitarski": {
+    "name": "Hubert Sitarski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@pawelspychalski": {
+    "name": "Paweł Spychalski",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@piotrsuchanek": {
+    "name": "Piotr Suchanek",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@przemekszustak": {
+    "name": "Przemek Szustak",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@marektenus": {
+    "name": "Marek Tenus",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@marcintracz": {
+    "name": "Marcin Tracz",
+    "image": "/images/speakers/marcintracz.webp",
+    "bio": null,
+    "linkedin": "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
+  },
+  "@filipzdunek": {
+    "name": "Filip Zdunek",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@andrzejzielinski": {
+    "name": "Andrzej Zieliński",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@tomekzmudzinski": {
+    "name": "Tomek Żmudziński",
+    "image": null,
+    "bio": null,
+    "linkedin": null
+  },
+  "@katarzynazurek": {
+    "name": "Katarzyna Żurek",
+    "image": null,
+    "bio": null,
+    "linkedin": null
   }
 }

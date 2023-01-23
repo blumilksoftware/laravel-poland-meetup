@@ -1,29 +1,87 @@
 {
+  "@allegro": {
+    "name": "Allegro",
+    "logo": null,
+    "location": "Warszawa",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@amsterdamstandard": {
+    "name": "Amsterdam Standard",
+    "logo": null,
+    "location": "Kraków",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
   "@blumilk": {
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
     "bio": "Projektujemy, programujemy, wdrażamy i utrzymujemy najwyższej klasy oprogramowanie szyte na miarę. Specjalizujemy się w technologiach webowych oraz projektach badawczo-rozwojowych. Wykorzystujemy rozległe doświadczenie, aby nasze aplikacje były wygodne w używaniu na każdym urządzeniu, szybkie, łatwo rozszerzalne oraz bezpieczne. Nasz zespół potrafi zgłębić domenę produktu, aby jak najlepiej zrealizować postawione zadania; bez względu czy to branża ubezpieczeniowa, edukacyjna, administracyjna, finansowa czy jeszcze inna.",
+    "website": "https://blumilk.pl/",
+    "linkedin": "https://www.linkedin.com/company/blumilksoftware",
     "organizer": true
+  },
+  "@bmind": {
+    "name": "B-MIND",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@devpark": {
+    "name": "Devpark",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@expansja": {
     "name": "Expansja",
     "logo": "/images/companies/expansja.webp",
     "location": "Poznań",
-    "bio": "Jesteśmy agencją reklamową z ponad 20-letnim doświadczeniem. Jesteśmy poznańską firmą, co zgodnie z tradycją naszego miasta zobowiązuje do solidności i rzetelności. Zarówno ze strony kreatywnej jak i wykonawczej najważniejsze są dla nas - skuteczność i efektywność. Zebrane kompetencje to konglomerat wiedzy, doświadczenia i odrobiny szaleństwa w interpretacji rzeczywistości."
+    "bio": "Jesteśmy agencją reklamową z ponad 20-letnim doświadczeniem. Jesteśmy poznańską firmą, co zgodnie z tradycją naszego miasta zobowiązuje do solidności i rzetelności. Zarówno ze strony kreatywnej jak i wykonawczej najważniejsze są dla nas - skuteczność i efektywność. Zebrane kompetencje to konglomerat wiedzy, doświadczenia i odrobiny szaleństwa w interpretacji rzeczywistości.",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@highsolutions": {
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
     "bio": "Jesteśmy zespołem pasjonatów nowych technologii. Naszym celem jest dostarczanie realizacji najwyższej jakości. Wierzymy, że sukces naszych klientów to również nasz sukces. Pragniemy nie tylko dostarczać funkcjonalne systemy, serwisy internetowe i aplikacje mobilne, ale przede wszystkim sprawiać by nowoczesna technologia służyła ludziom w ich codziennym życiu i pomagała realizować cele biznesowe.",
-    "organizer": true
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@przeswietlpl": {
+    "name": "Prześwietl.pl",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
+  },
+  "@mtadigital": {
+    "name": "MTA Digital",
+    "logo": null,
+    "location": "Poznań",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@tidio": {
     "name": "Tidio",
     "logo": "/images/companies/tidio.webp",
     "location": "Poznań",
-    "bio": "Jesteśmy szybko rozwijającą się firmą zajmującą się produktami cyfrowymi. Tworzymy Customer Experience, którego misją jest pomaganie mikro firmom z całego świata w rozwoju i efektywnej obsłudze klientów. Nasz live chat jest obsługiwany przez unikalne chatboty i używany przez ponad 510 milionów unikalnych użytkowników na całym świecie. Obecnie zatrudniamy ponad 180 osób i każdego dnia stale się rozwijamy."
+    "bio": "Jesteśmy szybko rozwijającą się firmą zajmującą się produktami cyfrowymi. Tworzymy Customer Experience, którego misją jest pomaganie mikro firmom z całego świata w rozwoju i efektywnej obsłudze klientów. Nasz live chat jest obsługiwany przez unikalne chatboty i używany przez ponad 510 milionów unikalnych użytkowników na całym świecie. Obecnie zatrudniamy ponad 180 osób i każdego dnia stale się rozwijamy.",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@trui": {
     "name": "Trui",
@@ -35,6 +93,9 @@
     "name": "MirIT",
     "logo": "/images/companies/mirit.webp",
     "location": "Pleszew",
-    "bio": "Jesteśmy pasjonatami tego co robimy, nikt nigdy do niczego nas nie zmuszał. Wszystko robimy z pasji dla idei dążenia do pomagania innym w rozwoju ich pomysłów. Pomysły klientów które wdrażamy już od 3 lat oraz reklamy, które kreujemy stają się częścią wspólnej historii, którą tworzymy wraz naszymi klientami. Jako, że nikt nie jest doskonały wiemy o tym, aby udoskonalać nasze umiejętności z biegiem czasu i trendów jakie panują na obecnym rynku."
+    "bio": "Jesteśmy pasjonatami tego co robimy, nikt nigdy do niczego nas nie zmuszał. Wszystko robimy z pasji dla idei dążenia do pomagania innym w rozwoju ich pomysłów. Pomysły klientów które wdrażamy już od 3 lat oraz reklamy, które kreujemy stają się częścią wspólnej historii, którą tworzymy wraz naszymi klientami. Jako, że nikt nie jest doskonały wiemy o tym, aby udoskonalać nasze umiejętności z biegiem czasu i trendów jakie panują na obecnym rynku.",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   }
 }

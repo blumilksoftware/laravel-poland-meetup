@@ -3,33 +3,49 @@
   "date": "2022-03-10 18:00:00",
   "location": "online",
   "organizers": ["@blumilk", "@highsolutions", "@tidio"],
+  "facebook": "https://www.facebook.com/events/474078257538745",
   "presentations": [
     {
       "title": "Cykl życia zapytania HTTP (pod maską)",
+      "youtube": "https://www.youtube.com/watch?v=mFphzk_eaww",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/cykl-ycia-zapytania-http-pod-mask",
+      "blurb": null,
       "speakers": [
         {
           "person": "@krzysztofrewak",
           "company": "@blumilk"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Jak przemycić Shape Up do Scruma",
+      "youtube": "https://www.youtube.com/watch?v=ZX4hHbLCigk",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/jak-przemyci-shape-up-do-scruma",
+      "blurb": null,
       "speakers": [
         {
           "person": "@przemekszustak",
           "company": "@tidio"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     },
     {
       "title": "Enumy w Laravelu - dlaczego warto stosować?",
+      "youtube": "https://www.youtube.com/watch?v=IsIL0h4vmow",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/enumy-w-laravelu-dlaczego-warto-stosowa",
+      "blurb": null,
       "speakers": [
         {
           "person": "@filipzdunek",
           "company": "@highsolutions"
         }
-      ]
+      ],
+      "links": [],
+      "tags": []
     }
   ]
 }

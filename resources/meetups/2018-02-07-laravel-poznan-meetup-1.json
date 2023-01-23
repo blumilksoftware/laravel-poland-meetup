@@ -1,0 +1,18 @@
+{
+  "name": "Laravel Poznań Meetup #1",
+  "date": "2018-02-07 18:00:00",
+  "location": "Poznań, Plus Jeden",
+  "organizers": ["@highsolutions"],
+  "facebook": null,
+  "presentations": [
+    {
+      "title": "Laracon Online 2018",
+      "youtube": null,
+      "slideshare": null,
+      "blurb": null,
+      "speakers": [],
+      "links": [],
+      "tags": []
+    }
+  ]
+}

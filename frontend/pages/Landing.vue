@@ -13,7 +13,7 @@ let nextMeetup = ref()
 
 const findNextMeetup = computed(() => {
   if (meetups.value.length === 0) return {}
-  const { nextMeetup } = useFindNextMeetup(meetups.value) 
+  const { nextMeetup } = useFindNextMeetup(meetups.value)
   return nextMeetup.value
 })
 
