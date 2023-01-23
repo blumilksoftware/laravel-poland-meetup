@@ -28,7 +28,7 @@ const props = defineProps({
             {{ presentation.title }}
           </div>
           <div class="flex w-full justify-center">
-            <div class="block self-center">
+            <div class="block self-center lg:w-1/3">
               <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
                 <p class="mr-3 text-zinc-500 ">
                   Tagi:
@@ -88,7 +88,7 @@ const props = defineProps({
                 </div>
               </div>
             </div>
-            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex">
+            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
               <div class="relative hidden lg:block">
                 <div role="status" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
                   <svg class="mr-2 inline h-8 w-8 animate-spin fill-zinc-600 text-zinc-200 dark:fill-zinc-300 dark:text-zinc-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
