@@ -30,9 +30,6 @@ watch(() => props.companies, () => {
   <div>
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12">
-        <!-- <h2 class="text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
-          Organizatorzy
-        </h2> -->
         <ul role="list" class="block space-y-12 divide-y divide-zinc-200 md:flex md:space-x-12 lg:space-y-0 lg:divide-y-0">
           <li v-for="(company, id) in organizers" :key="id">
             <div class="grid grid-cols-2 sm:gap-6 sm:space-y-0 md:space-x-4 lg:gap-8">
