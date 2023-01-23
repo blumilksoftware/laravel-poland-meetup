@@ -33,9 +33,9 @@ watch(() => props.companies, () => {
         <!-- <h2 class="text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
           Organizatorzy
         </h2> -->
-        <ul role="list" class="block md:space-x-12 space-y-12 divide-y divide-zinc-200 md:flex lg:space-y-0 lg:divide-y-0">
+        <ul role="list" class="block space-y-12 divide-y divide-zinc-200 md:flex md:space-x-12 lg:space-y-0 lg:divide-y-0">
           <li v-for="(company, id) in organizers" :key="id">
-            <div class="grid grid-cols-2 md:space-x-4 sm:gap-6 sm:space-y-0 lg:gap-8">
+            <div class="grid grid-cols-2 sm:gap-6 sm:space-y-0 md:space-x-4 lg:gap-8">
               <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="relative">
                 <div class="aspect-w-2 aspect-h-1 sm:aspect-w-5 sm:aspect-h-2 mx-auto h-0">
                   <img class="object-contain" :src="company.logo" :alt="company.name">
@@ -75,7 +75,8 @@ watch(() => props.companies, () => {
           <h2>Partnerzy</h2>
           <ul role="list" class="space-y-12 divide-y divide-zinc-200 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0 lg:divide-y-0">
             <li v-for="(company, id) in others" :key="id">
-              </li>
+              {{ id }}
+            </li>
           </ul>
         </div>
       </div>
