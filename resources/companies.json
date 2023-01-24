@@ -1,18 +1,18 @@
 {
   "@allegro": {
     "name": "Allegro",
-    "logo": null,
+    "logo": "/images/companies/allegro.webp",
     "location": "Warszawa",
-    "website": null,
-    "linkedin": null,
+    "website": "https://allegro.pl/",
+    "linkedin": "https://www.linkedin.com/company/allegro-pl/",
     "organizer": false
   },
   "@amsterdamstandard": {
     "name": "Amsterdam Standard",
-    "logo": null,
+    "logo": "/images/companies/amsterdamstandard.webp",
     "location": "Kraków",
-    "website": null,
-    "linkedin": null,
+    "website": "https://amsterdamstandard.com/",
+    "linkedin": "https://www.linkedin.com/company/amsterdam-standard/",
     "organizer": false
   },
   "@blumilk": {
@@ -25,74 +25,74 @@
   },
   "@bmind": {
     "name": "B-MIND",
-    "logo": null,
+    "logo": "/images/companies/bmind.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://b-mind.co/pl/",
+    "linkedin": "https://www.linkedin.com/company/b-mind/",
     "organizer": false
   },
   "@devpark": {
     "name": "Devpark",
-    "logo": null,
+    "logo": "/images/companies/devpark.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://devpark.pl/pl/",
+    "linkedin": "https://www.linkedin.com/company/devpark-sp.-z-o.o./",
     "organizer": false
   },
   "@expansja": {
     "name": "Expansja",
     "logo": "/images/companies/expansja.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://expansja.pl/",
+    "linkedin": "https://www.linkedin.com/company/expansja-advertising/",
     "organizer": false
   },
   "@highsolutions": {
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://highsolutions.pl/",
+    "linkedin": "https://www.linkedin.com/company/highsolutions/",
     "organizer": false
   },
-  "@przeswietlpl": {
-    "name": "Prześwietl.pl",
-    "logo": null,
+  "@transparentdata": {
+    "name": "Transparent Data",
+    "logo": "/images/companies/transparentdata.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://transparentdata.pl/",
+    "linkedin": "https://www.linkedin.com/company/transparent-data/",
     "organizer": false
   },
   "@mtadigital": {
     "name": "MTA Digital",
-    "logo": null,
+    "logo": "/images/companies/mtadigital.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://mta.digital/",
+    "linkedin": "https://www.linkedin.com/company/mta-digital-sp--z-o-o-/",
     "organizer": false
   },
   "@mirit": {
     "name": "MirIT",
     "logo": "/images/companies/mirit.webp",
     "location": "Pleszew",
-    "website": null,
-    "linkedin": null,
+    "website": "https://mirit.pl/",
+    "linkedin": "https://www.linkedin.com/company/mirit/",
     "organizer": false
   },
   "@tidio": {
     "name": "Tidio",
     "logo": "/images/companies/tidio.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://www.tidio.com/",
+    "linkedin": "https://www.linkedin.com/company/tidio-ltd/",
     "organizer": false
   },
   "@trui": {
     "name": "Trui",
     "logo": "/images/companies/trui.webp",
     "location": "Poznań",
-    "website": null,
-    "linkedin": null,
+    "website": "https://trui.pl/",
+    "linkedin": "https://www.linkedin.com/company/truipl/",
     "organizer": false
   }
 }
