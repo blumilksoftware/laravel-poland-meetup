@@ -27,7 +27,7 @@ watch(() => props.companies, () => {
 </script>
 
 <template>
-  <div class="bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+  <div>
     <companies-list :companies="organizers" name="Organizatorzy"/>
     <companies-list :companies="others" name="Partnerzy"/>
   </div>

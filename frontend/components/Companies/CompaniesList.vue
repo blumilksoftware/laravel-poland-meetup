@@ -16,9 +16,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
+  <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
-      <div class="space-y-12">
+      <div class="space-y-12 text-zinc-700">
         <h2>{{ name }}</h2>
         <ul v-auto-animate role="list" class="gap-y-12 space-y-16 divide-y divide-zinc-200 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:space-y-0 lg:divide-y-0">
           <li v-for="(company, id) in companies" :key="id">
