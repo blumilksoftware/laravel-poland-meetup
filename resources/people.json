@@ -3,43 +3,43 @@
     "name": "Mateusz Antkowiak",
     "image": null,
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/mateusz-antkowiak-696357109/"
   },
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "image": null,
+    "image": "../public/images/speakers/karolbarcki.webp", 
     "bio": null,
-    "linkedin": null
-  },
+    "linkedin": "https://www.linkedin.com/in/karol-barcki/"
+    },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "image": null,
+    "image": "../public/images/speakers/kamilbartczak.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin":  "https://www.linkedin.com/in/kamil-bartczak/"
   },
   "@krzysztofczechowski": {
     "name": "Krzysztof Czechowski",
-    "image": null,
+    "image": "/images/speakers/krzysztofczechowski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/krzysztof-czechowski-39bb73a3/"
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "image": null,
+    "image": "../public/images/speakers/miloszdziurzynski.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin":  "https://www.linkedin.com/in/mdziurzynski/"
   },
   "@andrzejfenzel": {
     "name": "Andrzej Fenzel",
-    "image": null,
+    "image": "/images/speakers/andrzejfenzel.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/andrzej-fenzel-58403082/"
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "image": null,
+    "image": "../public/images/speakers/patrykfilipiak.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin":  "https://www.linkedin.com/in/filipiak-patryk/"
   },
   "@mateuszgarbarczyk": {
     "name": "Mateusz Garbarczyk",
@@ -49,117 +49,117 @@
   },
   "@robertkabat": {
     "name": "Robert Kabat",
-    "image": null,
+    "image": "/images/speakers/robertkabat.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/robert-kabat-70436bab/"
   },
   "@kamilkielczewski": {
     "name": "Kamil Kiełczewski",
-    "image": null,
+    "image": "/images/speakers/kamilkielczewski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/kamilkkielczewski/"
   },
   "@amadeuszkozlowski": {
     "name": "Amadeusz Kozłowski",
-    "image": null,
+    "image": "/images/speakers/amadeuszkozlowski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/vuefrontenddeveloper/"
   },
   "@mateuszlencki": {
     "name": "Mateusz Lencki",
-    "image": null,
+    "image": "/images/speakers/mateuszlencki.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateusz-lencki"
   },
   "@adammatysiak": {
     "name": "Adam Matysiak",
-    "image": null,
+    "image": "/images/speakers/adammatysiak.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/adammatysiak/"
   },
   "@pawelnuckowski": {
     "name": "Paweł Nuckowski",
-    "image": null,
+    "image": "/images/speakers/pawelnuckowski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/pawe%C5%82-nuckowski-06905a5b/"
   },
   "@piotrnowak": {
     "name": "Piotr Nowak",
-    "image": null,
+    "image": "/images/speakers/piotrnowak.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/nowakjestem/"
   },
   "@kamilpiech": {
     "name": "Kamil Piech",
-    "image": null,
+    "image": "/images/speakers/kamilpiech.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/kamil-piech-9ab65619b/"
   },
   "@kamilpietka": {
     "name": "Kamil Piętka",
-    "image": null,
+    "image": "/images/speakers/kamilpietka.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/kamil-pi%C4%99tka-531b3470/"
   },
   "@joannarewak": {
     "name": "Joanna Rewak",
-    "image": null,
+    "image": "../public/images/speakers/joannarewak.webp", 
     "bio": null,
-    "linkedin": "https://www.linkedin.com/in/joanna-rewak-745ba9133"
+    "linkedin":  "https://pl.linkedin.com/in/joanna-rewak-745ba9133"
   },
   "@krzysztofrewak": {
     "name": "Krzysztof Rewak",
-    "image": null,
+    "image": "../public/images/speakers/krzysztofrewak.webp", 
     "bio": "Współzałożyciel i współwłaściciel Blumilka, dyrektor ds. technologii w tymże, inżynier oprogramowania, nauczyciel akademicki, piwowar domowy. W Laravelu programuje od 2014 roku, Laravel Poland Meetup współorganizuje od 2020. Lubi mapy, nieoczywiste scrapowanie danych i łączenie ze sobą systemów informatycznych.",
     "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
   },
   "@mateuszrusyn": {
     "name": "Mateusz Rusyn",
-    "image": null,
+    "image": "/images/speakers/mateuszrusyn.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/mateuszrusyn/"
   },
   "@piotrrybak": {
     "name": "Piotr Rybak",
-    "image": null,
+    "image": "/images/speakers/piotrrybak.webp",
     "bio": null,
     "linkedin": null
   },
   "@jaceksawoszczuk": {
     "name": "Jacek Sawoszczuk",
-    "image": null,
+    "image": "/images/speakers/jaceksawoszczuk.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/jacek-sawoszczuk-535058114"
   },
   "@hubertsitarski": {
     "name": "Hubert Sitarski",
-    "image": null,
+    "image": "/images/speakers/hubertsitarski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/hubert-sitarski/"
   },
   "@pawelspychalski": {
     "name": "Paweł Spychalski",
-    "image": null,
+    "image": "/images/speakers/pawelspychalski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/pawsp/"
   },
   "@piotrsuchanek": {
     "name": "Piotr Suchanek",
-    "image": null,
+    "image": "/images/speakers/piotrsuchanek.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/piotr-suchanek-1572a978/"
   },
   "@przemekszustak": {
     "name": "Przemek Szustak",
-    "image": null,
+    "image": "../public/images/speakers/przemekszustak.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin":  "https://www.linkedin.com/in/przemek-szustak/"
   },
   "@marektenus": {
     "name": "Marek Tenus",
-    "image": null,
+    "image": "/images/speakers/marektenus.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/marektenus/"
   },
   "@marcintracz": {
     "name": "Marcin Tracz",
@@ -169,26 +169,26 @@
   },
   "@filipzdunek": {
     "name": "Filip Zdunek",
-    "image": null,
+    "image": "../public/images/speakers/filipzdunek.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin":  "https://www.linkedin.com/in/filipzdunek/"
   },
   "@andrzejzielinski": {
     "name": "Andrzej Zieliński",
-    "image": null,
+    "image": "/images/speakers/andrzejzielinski.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/zielinskiandrzej/"
   },
   "@tomekzmudzinski": {
     "name": "Tomek Żmudziński",
-    "image": null,
+    "image": "../public/images/speakers/tomekzmudzinski.webp", 
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/tzmudzinski/"
   },
   "@katarzynazurek": {
     "name": "Katarzyna Żurek",
-    "image": null,
+    "image": "/images/speakers/katarzynazurek.webp",
     "bio": null,
-    "linkedin": null
+    "linkedin": "https://www.linkedin.com/in/katarzyna-zurek/"
   }
 }

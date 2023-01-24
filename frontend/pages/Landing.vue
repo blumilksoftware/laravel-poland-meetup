@@ -9,7 +9,7 @@ import { onMounted, ref, computed } from 'vue'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 
 const meetups = ref([])
-let nextMeetup = ref()
+let nextMeetup = ref(null)
 
 const findNextMeetup = computed(() => {
   if (meetups.value.length === 0) return {}
