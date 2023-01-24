@@ -87,7 +87,10 @@
     "name": "Trui",
     "logo": "/images/companies/trui.webp",
     "location": "Poznań",
-    "bio": "TRUI to efektywnie i efektownie działający zespół z wieloletnim doświadczeniem w projektowaniu graficznym i programowaniu. Specjalizujemy się w tworzeniu dedykowanego oprogramowania („pod klucz”), stron internetowych, aplikacji mobilnych oraz gier. Zapewniamy wsparcie przy pracach nad specyfikacją systemów. Doradzamy przy tworzeniu architektury/logiki oprogramowania."
+    "bio": "TRUI to efektywnie i efektownie działający zespół z wieloletnim doświadczeniem w projektowaniu graficznym i programowaniu. Specjalizujemy się w tworzeniu dedykowanego oprogramowania („pod klucz”), stron internetowych, aplikacji mobilnych oraz gier. Zapewniamy wsparcie przy pracach nad specyfikacją systemów. Doradzamy przy tworzeniu architektury/logiki oprogramowania.",
+    "website": null,
+    "linkedin": null,
+    "organizer": false
   },
   "@mirit": {
     "name": "MirIT",

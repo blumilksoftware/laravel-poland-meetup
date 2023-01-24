@@ -45,6 +45,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
         website: $company["website"] ?? "",
         linkedin: $company["linkedin"] ?? "",
         organizer: $company["organizer"],
+        bio: $company["bio"] ?? "",
     ));
 
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(

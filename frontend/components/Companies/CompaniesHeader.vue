@@ -30,8 +30,12 @@ defineProps({
       </div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl space-y-5 py-16 px-4 text-center sm:py-24 sm:px-6 lg:block lg:justify-center lg:px-8">
-      <h1 class="text-laravel text-4xl font-bold uppercase tracking-tight sm:text-5xl">
-        Firmy
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+        <span class="block xl:inline">Organizatorzy</span>
+        {{ ' ' }}
+        <span class="text-laravel block xl:inline">i</span>
+        {{ ' ' }}
+        <span class="block xl:inline">Partnerzy</span>
       </h1>
       <p class="text-laravel text-xl font-bold italic tracking-tight sm:text-xl">
         Dołącz do nas i promuj swoją firmę!
