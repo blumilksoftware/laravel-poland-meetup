@@ -39,7 +39,7 @@ const computedNextMeetup = computed(() => {
       </div>
     </div>
     <div class="relative mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 lg:py-12">
-      <div v-if="computedNextMeetup.presentations" class="m-8 block">
+      <div v-if="computedNextMeetup && computedNextMeetup.presentations" class="m-8 block">
         <div class="mb-14 text-center">
           <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
             Tematy prezentacji <br>
