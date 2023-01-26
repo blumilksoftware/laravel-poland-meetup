@@ -30,7 +30,7 @@ defineProps({
               <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="relative m-auto">
                 <div class="my-5 sm:my-0">
                   <building-office-2-icon v-if="!company.logo" class="h-20 w-20 text-zinc-400" :alt="company.name"/>
-                  <img v-else class="mx-auto max-h-12 w-auto object-contain" :src="company.logo" :alt="company.name">
+                  <img v-else class="mx-auto max-h-16 w-auto object-contain" :src="company.logo" :alt="company.name">
                 </div>
               </router-link>
               <div class="space-y-2 whitespace-pre-wrap text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
@@ -41,7 +41,7 @@ defineProps({
                 <div class="space-y-2 font-medium leading-6 sm:space-y-4">
                   <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="flex space-x-2 transition duration-200 hover:translate-x-1">
                     <bookmark-icon class="h-7 w-7 shrink-0 sm:h-8 sm:w-8"/>
-                    <span class="block font-bold  tracking-wide">
+                    <span class="block font-bold tracking-wide">
                       {{ company.name }}
                     </span>
                   </router-link>
