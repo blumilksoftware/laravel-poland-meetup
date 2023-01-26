@@ -1,12 +1,20 @@
+<script setup>
+defineProps({
+  href: {
+    type: String,
+    default: '',
+  },
+})
+</script>
+
 <template>
-  <div>
-    <span class="sr-only">Facebook</span>
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000">
+  <a :href="href" class="transition duration-200 hover:scale-110 hover:text-[#4267B2]">
+    <svg id="Icons" fill="currentColor" height="35px" width="35px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
       <g id="SVGRepo_bgCarrier" stroke-width="0"/>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-      <g id="SVGRepo_iconCarrier">
-        <path fill="#3B5998" fill-rule="evenodd" d="M18.8961111,0 L1.10388889,0 C0.494166667,0 0,0.494166667 0,1.10388889 L0,18.8963889 C0,19.5058333 0.494166667,20 1.10388889,20 L10.6825,20 L10.6825,12.255 L8.07611111,12.255 L8.07611111,9.23666667 L10.6825,9.23666667 L10.6825,7.01055556 C10.6825,4.42722222 12.2602778,3.02083333 14.5647222,3.02083333 C15.6686111,3.02083333 16.6172222,3.10277778 16.8938889,3.13972222 L16.8938889,5.83944444 L15.2955556,5.84027778 C14.0422222,5.84027778 13.7997222,6.43583333 13.7997222,7.30972222 L13.7997222,9.23694444 L16.7886111,9.23694444 L16.3994444,12.2552778 L13.7997222,12.2552778 L13.7997222,20 L18.8963889,20 C19.5058333,20 20,19.5058333 20,18.8961111 L20,1.10388889 C20,0.494166667 19.5058333,0 18.8961111,0 L18.8961111,0 Z"/>
+      <g id="SVGRepo_iconCarrier"> 
+        <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h7V20h-4c-0.6,0-1-0.4-1-1v-3c0-0.6,0.4-1,1-1h4v-3c0-3.3,1.7-6,5-6h4c0.6,0,1,0.4,1,1v3 c0,0.6-0.4,1-1,1h-3.8c-0.1,0-0.2,0.1-0.2,0.2V15h5c0.3,0,0.6,0.2,0.8,0.4s0.2,0.6,0.1,0.9l-2,3C24.8,19.8,24.4,20,24,20h-3v12h2 c5,0,9-4,9-9V9C32,4,28,0,23,0z"/>
       </g>
     </svg>
-  </div>
+  </a>
 </template>
