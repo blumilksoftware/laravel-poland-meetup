@@ -31,7 +31,7 @@ defineProps({
     </div>
     <div class="relative z-10 mx-auto max-w-7xl space-y-5 py-16 px-4 text-center sm:py-24 sm:px-6 lg:block lg:justify-center lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-        <span class="block xl:inline">organizatorzy</span>
+        <span class="block xl:inline">Organizatorzy</span>
         {{ ' ' }}
         <span class="text-laravel block xl:inline">i</span>
         {{ ' ' }}
