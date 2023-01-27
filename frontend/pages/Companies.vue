@@ -17,8 +17,8 @@ onMounted(() => {
 
 <template>
   <companies-header/>
-  <invitation-to-join/>
   <!-- <page-header text1="organizatorzy" text2="i" text3="partnerzy" sentence="Dołącz do nas i promoj swoją firmę!"/> -->
   <companies-table class="mt-12" :companies="companies"/>
   <!-- <companies-map/> -->
+  <invitation-to-join/>
 </template>
