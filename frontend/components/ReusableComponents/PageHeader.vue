@@ -2,10 +2,6 @@
 import PulseBackgroundAnimation from '@/components/ReusableComponents/PulseBackgroundAnimation.vue'
 
 defineProps({
-  // meetup: {
-  //   type: Object,
-  //   default: () => {},
-  // },
   text1: {
     type: String,
     default: () => '',
