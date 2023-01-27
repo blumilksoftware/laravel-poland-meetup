@@ -8,7 +8,6 @@ import Counters from '@/components/Landing/Counters.vue'
 import { onMounted, ref, computed } from 'vue'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 
-
 const meetups = ref([])
 let nextMeetup = ref(null)
 
