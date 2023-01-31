@@ -16,7 +16,7 @@ class Company
         public readonly ?string $linkedin = null,
         public readonly ?bool $organizer = false,
         public readonly ?string $bio = null,
-        public readonly Collection $meetups = new Collection(),
+        public readonly ?array $coordinates = null,
     ) {}
 
     public function toListedEntry(): array
@@ -29,6 +29,7 @@ class Company
             "linkedin" => $this->linkedin,
             "organizer" => $this->organizer,
             "bio" => $this->bio,
+            "coordinates" => $this->coordinates,
         ];
     }
 }
