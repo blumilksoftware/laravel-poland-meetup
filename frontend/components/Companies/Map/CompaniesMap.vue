@@ -2,7 +2,7 @@
 import { onMounted, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import addNavigation from '@/components/Companies/Map/navigation.js'
-import addMarkersandPopups from '@/components/Companies/Map/markerAndPopup.js'
+import addMarkers from '@/components/Companies/Map/marker.js'
 
 const props = defineProps({
   companies: {
@@ -27,9 +27,9 @@ onMounted(() => {
   })
 
   addNavigation(map, center)
-  addMarkersandPopups(map, props.companies)
+  addMarkers(map, props.companies)
   watch(() => props.companies, () => {
-    addMarkersandPopups(map, props.companies)
+    addMarkers(map, props.companies)
   })
 })
 
