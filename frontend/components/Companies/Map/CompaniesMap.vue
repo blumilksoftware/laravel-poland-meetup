@@ -11,9 +11,9 @@ const props = defineProps({
   },
 })
 
-const zoom = 7
+const zoom = 5
 const center = {
-  center: [19, 52],
+  center: [18, 52],
   zoom,
 }
 
