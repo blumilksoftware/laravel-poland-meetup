@@ -18,7 +18,7 @@ const center = {
 }
 
 onMounted(() => {
-  mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN'
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZXdlbGluYWxhc293eSIsImEiOiJjbGRlN2xvd2EwNjVyM3JvNXJpeXVtOTllIn0.v3IilVIFZvi_zwibVUVXhg'
 
   const map = new mapboxgl.Map({
     container: 'map',

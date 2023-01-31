@@ -28,7 +28,7 @@ onMounted(async() => {
 </script>
 
 <template>
-  <page-header text1="Laravel" text2="Poland" text3="Meetup" sentence="It is literally true that you can succeed best and quickest by helping others to succeed. - Napolean Hill"/>
+  <page-header word1="Laravel" word2="Poland" word3="Meetup" sentence="It is literally true that you can succeed best and quickest by helping others to succeed. - Napolean Hill"/>
   <meetup-indicator :next-meetup="nextMeetup"/>
   <meetup-speakers :next-meetup="nextMeetup"/>
   <about-meetup/>
