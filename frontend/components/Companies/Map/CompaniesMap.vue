@@ -18,7 +18,7 @@ const center = {
 }
 
 onMounted(() => {
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZXdlbGluYWxhc293eSIsImEiOiJjbGRlN2xvd2EwNjVyM3JvNXJpeXVtOTllIn0.v3IilVIFZvi_zwibVUVXhg'
+  mapboxgl.accessToken = import.meta.env.VITE_VUE_APP_MAPBOX_TOKEN
 
   const map = new mapboxgl.Map({
     container: 'map',
