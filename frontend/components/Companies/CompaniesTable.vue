@@ -7,6 +7,10 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  meetups: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const organizers = ref([])
@@ -28,7 +32,7 @@ watch(() => props.companies, () => {
 
 <template>
   <div>
-    <companies-list :companies="organizers" name="Organizatorzy"/>
-    <companies-list :companies="others" name="Partnerzy"/>
+    <companies-list :meetups="meetups" :companies="organizers" name="Organizatorzy"/>
+    <companies-list :meetups="meetups" :companies="others" name="Partnerzy"/>
   </div>
 </template>

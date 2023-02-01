@@ -3,10 +3,15 @@ import { HashtagIcon, MapPinIcon, AtSymbolIcon, BuildingOffice2Icon, BookmarkIco
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
+import Counter from '@/components/Companies/Counters.vue'
 
 defineProps({
   companies: {
     type: Array,
+    default: () => [],
+  },
+    meetups: {
+    type: Array, 
     default: () => [],
   },
   name: {
@@ -41,16 +46,17 @@ defineProps({
           </li>
           <li v-for="(company, id) in companies" :key="id" :class="['hover:shadow-lg py-7', companies.length === 1 ? 'hover:shadow-none' : '']">
             <div class="mx-3 block truncate text-base text-zinc-500 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 md:space-y-10 lg:gap-8">
-              <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="m-auto">
-                <div class="my-5 sm:my-0">
+              <div class="m-auto">
+                <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="my-5 sm:my-0">
                   <building-office-2-icon v-if="!company.logo" class="h-20 w-20 text-zinc-400" :alt="company.name"/>
                   <img v-else class="mx-auto max-h-16 w-auto shrink object-contain" :src="company.logo" :alt="company.name">
-                </div>
-              </router-link>
+                </router-link>
+                <counter v-if="meetups" :meetups="meetups" :company="company.name"/>
+              </div>
               <div class="space-y-2 whitespace-pre-wrap px-5 text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
                 <div v-if="company.organizer" class="text-laravel flex space-x-3 text-xl">
                   <hashtag-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
-                  <span class="col-span-11">organizator</span>
+                  <span class="col-span-11 text-2xl">organizator</span>
                 </div>
                 <div class="space-y-2 font-medium leading-6 sm:space-y-4">
                   <router-link :to="{ name: 'companies.details', params: { id: company.name } }" class="flex space-x-3 transition duration-200 hover:translate-x-1">
