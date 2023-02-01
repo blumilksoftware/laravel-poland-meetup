@@ -37,7 +37,7 @@ watch(() => props.meetups, () => {
 
 </script>
 <template>
-  <div class="grid grid-cols-3">
+  <div class="my-5 grid grid-cols-3">
     <div v-if="meetups.size > 0">
       <p class="text-laravel border-laravel text-3xl hover:scale-110">
         {{ meetups.size }}
