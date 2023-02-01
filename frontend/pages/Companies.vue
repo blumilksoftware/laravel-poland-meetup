@@ -21,7 +21,7 @@ onMounted(async () => {
 
 <template>
   <page-header word1="Organizatorzy" word2="i" word3="partnerzy" sentence="Dołącz do nas i promój swoją firmę!"/>
+  <invitation-to-join/>
   <companies-table class="mt-12" :companies="companies" :meetups="meetups"/>
   <companies-map :companies="companies"/>
-  <invitation-to-join/>
 </template>
