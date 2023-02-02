@@ -7,10 +7,7 @@ export default function (map, companies) {
   }
 
   for (let company of companies) {
-    if(!company.coordinates) {
-      console.error(company.name + ' has no coordinates!')
-    }
-    else {
+    if(company.coordinates) {
     const lat = company.coordinates.lat
     const lng = company.coordinates.lng
     const el = document.createElement('img')

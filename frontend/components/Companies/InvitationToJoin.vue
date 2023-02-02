@@ -7,12 +7,22 @@
     <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl py-8 px-4 text-center sm:px-6 lg:py-10 lg:px-8">
         <h2 class="tracking-tight text-white">
-          <span class="mb-7 block text-3xl">Wypromuj swoją firmę!</span>
-          <span class="block text-2xl">
-            Chciałbyś, aby Twoja firma brała udział w brandowych spotkaniach? <br>A może chcesz na stałe dołączyć do zespołu 
-            <span class="font-bold tracking-tight">Laravel <span class="text-laravel">Poland</span> Meetup</span> 
-            jako współorganizator? Daj nam znać!
-          </span>
+          <p class="mb-7 block text-3xl">
+            Wypromuj swoją firmę!
+          </p>
+          <div class="block text-2xl">
+            <p>
+              Chcesz, aby Twoja firma brała udział w brandowych spotkaniach? 
+            </p>
+            <p>
+              A może masz chęć na stałe dołączyć do zespołu
+              <span class="font-bold tracking-tight">Laravel <span class="text-laravel">Poland</span> Meetup</span> 
+              jako współorganizator? 
+            </p> 
+            <p>
+              Daj nam znać!
+            </p>
+          </div>
         </h2>
       </div>
       <div class="mt-8 justify-center md:flex ">
