@@ -1,18 +1,27 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
+import CompanyDetails from '@/components/Company/CompanyDetails.vue'
+
 
 let companies = ref({})
 const route = useRoute()
 
 onMounted (() => {
-  fetch('api/companies.json').then((response) => response.json()).then((data) => {
-  companies.value = data
+  async function fetchCompanies () {
+    const response = await fetch('/api/companies.json')
+    companies.value = await response.json()
+    return companies
+  }
+  fetchCompanies().then(companies => {
+    companies
   })
 })
 
 </script>
 
 <template>
-  <page-header :text1="company.name"/>
+  <page-header :word1="route.params.id" :companies="companies"/>
+  <company-details :companies="companies"/>
 </template>
