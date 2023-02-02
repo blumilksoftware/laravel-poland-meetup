@@ -35,7 +35,7 @@ defineProps({
             {{ ' ' }}
             <span class="block xl:inline">{{ word3 }}</span>
           </h1>
-          <blockquote class="mx-auto mt-3 max-w-md text-base italic text-laravel font-semibold sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+          <blockquote class="text-laravel mx-auto mt-3 max-w-md text-base font-semibold italic sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
             {{ sentence }}
           </blockquote>
         </div>

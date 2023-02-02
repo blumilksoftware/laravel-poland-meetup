@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace LaravelPolandMeetup\ValueObjects;
 
-use Illuminate\Support\Collection;
-
 class Company
 {
     public function __construct(
