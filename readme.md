@@ -22,7 +22,7 @@ Or you can just run:
 make setup
 ```
 
-Copy .env.example file and change it name to ".env":
+Copy `.env.example` file and change it name to `.env`:
 ```bash
 cp .env.example .env
 ```
