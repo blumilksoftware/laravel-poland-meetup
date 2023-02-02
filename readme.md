@@ -22,6 +22,12 @@ Or you can just run:
 make setup
 ```
 
+Copy .env.example file and change it name to ".env":
+```bash
+cp .env.example .env
+```
+Add your token to VITE_VUE_APP_MAPBOX_TOKEN in .env
+
 #### Codestyle
 Linters for backend and frontend are available:
 ```bash
