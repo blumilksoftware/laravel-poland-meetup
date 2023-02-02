@@ -7,6 +7,10 @@ export default function (map, companies) {
   }
 
   for (let company of companies) {
+    if(!company.coordinates) {
+      console.error(company.name + ' has no coordinates!')
+    }
+    else {
     const lat = company.coordinates.lat
     const lng = company.coordinates.lng
     const el = document.createElement('img')
@@ -26,5 +30,6 @@ export default function (map, companies) {
       .setPopup(new mapboxgl.Popup(popupOptions).setHTML(popupHTML))
       .togglePopup()
       .addTo(map)
+    }
   }
 }
