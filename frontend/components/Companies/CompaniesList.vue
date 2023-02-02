@@ -53,7 +53,7 @@ defineProps({
                 </router-link>
                 <counter v-if="meetups" :meetups="meetups" :company="company.name"/>
               </div>
-              <div class="space-y-2 whitespace-pre-wrap px-5 text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
+              <div class="space-y-2 whitespace-pre-wrap py-2 px-5 text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
                 <div v-if="company.organizer" class="text-laravel flex space-x-3 text-xl">
                   <hashtag-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
                   <span class="col-span-11 text-2xl">organizator</span>
