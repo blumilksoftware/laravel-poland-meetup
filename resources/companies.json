@@ -2,10 +2,14 @@
   "@allegro": {
     "name": "Allegro",
     "logo": "/images/companies/allegro.webp",
-    "location": "Warszawa",
+    "location": "Poznań",
     "website": "https://allegro.pl/",
     "linkedin": "https://www.linkedin.com/company/allegro-pl/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.400243,
+      "lng": 16.920823
+    }
   },
   "@amsterdamstandard": {
     "name": "Amsterdam Standard",
@@ -13,7 +17,11 @@
     "location": "Kraków",
     "website": "https://amsterdamstandard.com/",
     "linkedin": "https://www.linkedin.com/company/amsterdam-standard/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 50.04933215459913,
+      "lng": 19.93108322684493
+    }
   },
   "@blumilk": {
     "name": "Blumilk",
@@ -22,7 +30,11 @@
     "bio": "Projektujemy, programujemy, wdrażamy i utrzymujemy najwyższej klasy oprogramowanie szyte na miarę. Specjalizujemy się w technologiach webowych oraz projektach badawczo-rozwojowych. Wykorzystujemy rozległe doświadczenie, aby nasze aplikacje były wygodne w używaniu na każdym urządzeniu, szybkie, łatwo rozszerzalne oraz bezpieczne. Nasz zespół potrafi zgłębić domenę produktu, aby jak najlepiej zrealizować postawione zadania; bez względu czy to branża ubezpieczeniowa, edukacyjna, administracyjna, finansowa czy jeszcze inna.",
     "website": "https://blumilk.pl/",
     "linkedin": "https://www.linkedin.com/company/blumilksoftware",
-    "organizer": true
+    "organizer": true,
+    "coordinates": {
+      "lat": 51.20886130850713,
+      "lng": 16.163714369220372
+    }
   },
   "@bmind": {
     "name": "B-MIND",
@@ -30,7 +42,11 @@
     "location": "Poznań",
     "website": "https://b-mind.co/pl/",
     "linkedin": "https://www.linkedin.com/company/b-mind/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.397665242436844,
+      "lng": 16.9027106962549
+    }
   },
   "@devpark": {
     "name": "Devpark",
@@ -38,7 +54,11 @@
     "location": "Poznań",
     "website": "https://devpark.pl/pl/",
     "linkedin": "https://www.linkedin.com/company/devpark-sp.-z-o.o./",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.33098233841238,
+      "lng": 16.81975072693794
+    }
   },
   "@expansja": {
     "name": "Expansja",
@@ -47,7 +67,11 @@
     "bio": "Jesteśmy agencją reklamową z ponad 20-letnim doświadczeniem. Jesteśmy poznańską firmą, co zgodnie z tradycją naszego miasta zobowiązuje do solidności i rzetelności. Zarówno ze strony kreatywnej jak i wykonawczej najważniejsze są dla nas - skuteczność i efektywność. Zebrane kompetencje to konglomerat wiedzy, doświadczenia i odrobiny szaleństwa w interpretacji rzeczywistości.",
     "website": "https://expansja.pl/",
     "linkedin": "https://www.linkedin.com/company/expansja-advertising/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.38357763495611,
+      "lng": 16.876231153925737
+    }
   },
   "@highsolutions": {
     "name": "HighSolutions",
@@ -56,7 +80,11 @@
     "bio": "Jesteśmy zespołem pasjonatów nowych technologii. Naszym celem jest dostarczanie realizacji najwyższej jakości. Wierzymy, że sukces naszych klientów to również nasz sukces. Pragniemy nie tylko dostarczać funkcjonalne systemy, serwisy internetowe i aplikacje mobilne, ale przede wszystkim sprawiać by nowoczesna technologia służyła ludziom w ich codziennym życiu i pomagała realizować cele biznesowe.",
     "website": "https://highsolutions.pl/",
     "linkedin": "https://www.linkedin.com/company/highsolutions/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.38613809228,
+      "lng": 16.91509171529742
+    }
   },
   "@transparentdata": {
     "name": "Transparent Data",
@@ -64,7 +92,11 @@
     "location": "Poznań",
     "website": "https://transparentdata.pl/",
     "linkedin": "https://www.linkedin.com/company/transparent-data/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.410430571982374,
+      "lng": 16.910676798105477
+    }
   },
   "@mtadigital": {
     "name": "MTA Digital",
@@ -72,7 +104,11 @@
     "location": "Poznań",
     "website": "https://mta.digital/",
     "linkedin": "https://www.linkedin.com/company/mta-digital-sp--z-o-o-/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.419969700470915,
+      "lng": 16.89967376927016
+    }
   },
   "@mirit": {
     "name": "MirIT",
@@ -81,16 +117,24 @@
     "bio": "Jesteśmy pasjonatami tego co robimy, nikt nigdy do niczego nas nie zmuszał. Wszystko robimy z pasji dla idei dążenia do pomagania innym w rozwoju ich pomysłów. Pomysły klientów które wdrażamy już od 3 lat oraz reklamy, które kreujemy stają się częścią wspólnej historii, którą tworzymy wraz naszymi klientami. Jako, że nikt nie jest doskonały wiemy o tym, aby udoskonalać nasze umiejętności z biegiem czasu i trendów jakie panują na obecnym rynku.",
     "website": "https://mirit.pl/",
     "linkedin": "https://www.linkedin.com/company/mirit/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 51.89483931749381,
+      "lng": 17.797655098084185
+    }
   },
   "@tidio": {
     "name": "Tidio",
     "logo": "/images/companies/tidio.webp",
-    "location": "Poznań",
+    "location": "Szczecin",
     "bio": "Jesteśmy szybko rozwijającą się firmą zajmującą się produktami cyfrowymi. Tworzymy Customer Experience, którego misją jest pomaganie mikro firmom z całego świata w rozwoju i efektywnej obsłudze klientów. Nasz live chat jest obsługiwany przez unikalne chatboty i używany przez ponad 510 milionów unikalnych użytkowników na całym świecie. Obecnie zatrudniamy ponad 180 osób i każdego dnia stale się rozwijamy.",
     "website": "https://www.tidio.com/",
     "linkedin": "https://www.linkedin.com/company/tidio-ltd/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 53.43697480497122,
+      "lng": 14.538064269312592
+    }
   },
   "@trui": {
     "name": "Trui",
@@ -99,6 +143,10 @@
     "bio": "TRUI to efektywnie i efektownie działający zespół z wieloletnim doświadczeniem w projektowaniu graficznym i programowaniu. Specjalizujemy się w tworzeniu dedykowanego oprogramowania („pod klucz”), stron internetowych, aplikacji mobilnych oraz gier. Zapewniamy wsparcie przy pracach nad specyfikacją systemów. Doradzamy przy tworzeniu architektury/logiki oprogramowania.",
     "website": "https://trui.pl/",
     "linkedin": "https://www.linkedin.com/company/truipl/",
-    "organizer": false
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.40578020316559,
+      "lng": 16.925787449461488
+    }
   }
 }

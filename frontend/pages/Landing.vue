@@ -1,5 +1,5 @@
 <script setup>
-import HeroSection from '@/components/Landing/HeroSection.vue'
+import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import MeetupIndicator from '@/components/Landing/MeetupIndicator.vue'
 import MeetupSpeakers from '@/components/Landing/MeetupSpeakers.vue'
 import AboutMeetup from '@/components/Landing/AboutMeetup.vue'
@@ -28,7 +28,7 @@ onMounted(async() => {
 </script>
 
 <template>
-  <hero-section/>
+  <page-header word1="Laravel" word2="Poland" word3="Meetup" sentence="It is literally true that you can succeed best and quickest by helping others to succeed. - Napolean Hill"/>
   <meetup-indicator :next-meetup="nextMeetup"/>
   <meetup-speakers :next-meetup="nextMeetup"/>
   <about-meetup/>
