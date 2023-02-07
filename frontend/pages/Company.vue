@@ -36,7 +36,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <page-header :word1="route.params.id" :company="company"/>
-  <company-header :name="route.params.id" :company="company"/>
-  <company-details :name="route.params.id" :company="company"/>
+  <!-- <page-header :word1="route.params.id" :company="company.value"/> -->
+  <company-header :name="route.params.id" :company="company.value"/>
+  <company-details :name="route.params.id" :company="company.value"/>
 </template>
