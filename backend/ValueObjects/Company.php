@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace LaravelPolandMeetup\ValueObjects;
 
-use Illuminate\Support\Collection;
-
 class Company
 {
     public function __construct(
@@ -15,7 +13,8 @@ class Company
         public readonly ?string $website = null,
         public readonly ?string $linkedin = null,
         public readonly ?bool $organizer = false,
-        public readonly Collection $meetups = new Collection(),
+        public readonly ?string $bio = null,
+        public readonly ?array $coordinates = null,
     ) {}
 
     public function toListedEntry(): array
@@ -27,6 +26,8 @@ class Company
             "website" => $this->website,
             "linkedin" => $this->linkedin,
             "organizer" => $this->organizer,
+            "bio" => $this->bio,
+            "coordinates" => $this->coordinates,
         ];
     }
 }
