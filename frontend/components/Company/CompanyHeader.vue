@@ -22,7 +22,7 @@ defineProps({
     <div class="relative py-10 sm:pb-14">
       <main class="mx-auto max-w-7xl px-4 sm:mt-20">
         <div class="block text-center">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl hover:text-laravel hover:scale-110 transition duration-200 md:text-6xl">
+          <h1 class="hover:text-laravel text-3xl font-bold tracking-tight text-gray-900 transition duration-200 hover:scale-110 sm:text-5xl md:text-6xl">
             {{ company.name }}
           </h1>
           <div class="my-3 mx-auto flex justify-center space-x-5 sm:my-10">
