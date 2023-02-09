@@ -1,11 +1,11 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
 
 const route = useRoute()
+let meetups = ref([])
 let companies = ref([])
 let company = ref({})
 
@@ -31,12 +31,20 @@ onMounted (() => {
   fetchCompanies().then(companies => {
     companies
   })
+  async function fetchMeetups () {
+    const response = await fetch('/api/meetups.json')
+    meetups.value = await response.json()
+    return meetups
+  }
+  fetchMeetups().then(meetups => {
+    meetups
+  })
+
 })
 
 </script>
 
 <template>
-  <!-- <page-header :word1="route.params.id" :company="company.value"/> -->
   <company-header :name="route.params.id" :company="company.value"/>
-  <company-details :name="route.params.id" :company="company.value"/>
+  <company-details :name="route.params.id" :company="company.value" :meetups="meetups"/>
 </template>
