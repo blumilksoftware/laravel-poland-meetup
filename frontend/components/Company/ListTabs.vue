@@ -54,7 +54,7 @@ const buildLists = computed(() => {
           <TabPanels class="mt-2">
             <TabPanel v-for="(list, id) in Object.values(buildLists)" :key="id" class="max-h-96 overflow-auto rounded-xl bg-white p-3 ring-zinc-800 ring-opacity-60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 lg:max-h-[600px]">
               <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-                <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between rounded-md p-3 hover:bg-gray-100">
+                <li v-for="(elem, idx) in list.data" :key="idx" class="flex mx-5 justify-between rounded-md p-3 hover:bg-gray-100">
                   <div class="relative items-center">
                     <h3 v-if="elem.title" class="text-left font-medium leading-5">
                       {{ elem.title }}
