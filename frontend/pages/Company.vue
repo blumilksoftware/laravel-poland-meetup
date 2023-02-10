@@ -3,6 +3,8 @@ import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
+import ListTabs from '@/components/Company/ListTabs.vue'
+import CompanyMap from '@/components/Company/CompanyMap.vue'
 
 const route = useRoute()
 let meetups = ref([])
@@ -47,4 +49,6 @@ onMounted (() => {
 <template>
   <company-header :name="route.params.id" :company="company.value"/>
   <company-details :name="route.params.id" :company="company.value" :meetups="meetups"/>
+  <list-tabs :name="route.params.id" :meetups="meetups"/>
+  <company-map :name="route.params.id" :company="company.value"/>
 </template>
