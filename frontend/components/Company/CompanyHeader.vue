@@ -31,8 +31,8 @@ defineProps({
           </p>
           <div class="my-3 mx-auto flex items-center justify-center space-x-5 sm:my-10">
             <linkedin-icon v-if="company.linkedin" :href="company.linkedin" class="h-9 w-9 pr-2 text-zinc-600"/>
-            <facebook-icon  :href="company.facebook" class="h-9 w-9 pr-2 text-zinc-600"/>
-            <twitter-icon  :href="company.twitter" class="h-9 w-9 pr-2 text-zinc-600"/>
+            <facebook-icon v-if="company.facebook" :href="company.facebook" class="h-9 w-9 pr-2 text-zinc-600"/>
+            <twitter-icon v-if="company.twitter" :href="company.twitter" class="h-9 w-9 pr-2 text-zinc-600"/>
             <a v-if="company.website" :href="company.website" target="_blank" class="h-10 w-10 pr-2 font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="website"><arrow-top-right-on-square-icon/></a>
             <a v-if="company.location" href="#map" class="h-10 w-10 pr-2 font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="location"><map-pin-icon/></a>
           </div>
