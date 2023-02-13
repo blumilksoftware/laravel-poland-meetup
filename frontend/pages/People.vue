@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import PeopleTable from '@/components/People/PeopleTable.vue'
+import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 
 const people = ref([])
 
@@ -18,5 +19,6 @@ onMounted(() => {
 </script>
 
 <template>
+  <page-header word1="Prelegenci"/>
   <people-table class="mt-12" :speakers="people"/>
 </template>

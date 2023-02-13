@@ -29,7 +29,8 @@ defineProps({
       <main class="mx-auto max-w-7xl px-4 sm:mt-20">
         <div class="text-center">
           <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">{{ word1 }}</span>
+            <span v-if="!word2 && !word3" class="first-letter:text-laravel block xl:inline">{{ word1 }}</span>
+            <span v-if="word2 && word3" class="block xl:inline">{{ word1 }}</span>
             {{ ' ' }}
             <span class="text-laravel block xl:inline">{{ word2 }}</span>
             {{ ' ' }}
