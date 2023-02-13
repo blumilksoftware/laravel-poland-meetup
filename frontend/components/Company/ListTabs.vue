@@ -40,18 +40,19 @@ const buildLists = computed(() => {
             <Tab v-for="category in buildLists" :key="category" v-slot="{ selected }" as="template">
               <button :class="[
                 'w-full rounded-lg py-2.5 text-base font-medium leading-5 text-zinc-700',
-                'ring-zinc-780 ring-opacity-60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2',
+                'ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2',
                 selected
                   ? 'bg-white shadow'
-                  : 'text-zinc-100 hover:bg-white/[0.12] hover:text-white',
-              ]">
+                  : 'text-zinc-100 hover:bg-white/[0.12] hover:text-white'
+              ]"
+              >
                 {{ category.name }}
               </button>
             </Tab>
           </TabList>
 
           <TabPanels class="mt-2">
-            <TabPanel v-for="(list, id) in Object.values(buildLists)" :key="id" class="max-h-96 overflow-auto rounded-xl bg-white p-3 ring-zinc-800 ring-opacity-60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 lg:max-h-[600px]">
+            <TabPanel v-for="(list, id) in Object.values(buildLists)" :key="id" class="max-h-96 overflow-auto rounded-xl bg-white p-3 ring-zinc-800/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 lg:max-h-[600px]">
               <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
                 <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between rounded-md p-3 hover:bg-gray-100 md:mr-5 md:ml-2">
                   <div class="relative items-center">
@@ -66,10 +67,18 @@ const buildLists = computed(() => {
                     </div>
 
                     <ul class="mt-1 flex space-x-1 text-sm font-normal leading-5 text-gray-500 md:space-x-3">
-                      <li v-if="elem[1].location">{{ elem[1].location }}</li>
-                      <li v-if="elem[1].location && elem[1].dateFull">&middot;</li>
-                      <li v-if="elem[1].dateFull">{{ elem[1].dateFull }}</li>
-                      <li v-if="elem[1].dateFull && elem[1].linkedin">&middot;</li>
+                      <li v-if="elem[1].location">
+                        {{ elem[1].location }}
+                      </li>
+                      <li v-if="elem[1].location && elem[1].dateFull">
+                        &middot;
+                      </li>
+                      <li v-if="elem[1].dateFull">
+                        {{ elem[1].dateFull }}
+                      </li>
+                      <li v-if="elem[1].dateFull && elem[1].linkedin">
+                        &middot;
+                      </li>
                       <li v-if="elem[1].speakers">
                         <ul v-for="speaker in elem[1].speakers" :key="speaker.name">
                           <li>
