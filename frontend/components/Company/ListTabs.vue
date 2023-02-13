@@ -9,7 +9,6 @@ import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
 
-
 const props = defineProps({
   name: {
     type: String,
@@ -27,7 +26,6 @@ const buildLists = computed(() => {
   return lists.value
 })
 
-console.log('buildLists', buildLists)
 </script>
 
 <template>
