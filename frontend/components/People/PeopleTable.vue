@@ -1,5 +1,5 @@
 <script setup>
-import { ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
+import { PresentationChartBarIcon, ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
@@ -20,14 +20,21 @@ const props = defineProps({
         <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
           Nasi prelegenci
         </h2>
-        <div class="mx-4 mt-8 overflow-hidden shadow ring-1 ring-black sm:-mx-6 md:mx-0 md:rounded-lg">
+        <div class="mx-4 mt-8 overflow-hidden rounded-lg shadow ring-1 ring-black sm:-mx-6 md:mx-0">
           <table class="min-w-full divide-y divide-zinc-800">
             <thead class="bg-zinc-800">
               <tr>
                 <th scope="col" class="w-1/6 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6"/>
-                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white"/>
-                <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700 ring-opacity-60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">Kontakt</th>
-                <th scope="col" class="py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700 ring-opacity-60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">Meetupy</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">
+                  Imię i nazwisko
+                </th>
+                <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">Kontakt</th>
+                <th scope="col" class="py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
+                  <span class="hidden sm:table-cell">
+                    Prezentacje
+                  </span>
+                  <presentation-chart-bar-icon class="h-6 w-6 sm:hidden"/>
+                </th>
                 <th scope="col" class="py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Zobacz profil</span>
                 </th>
@@ -39,7 +46,9 @@ const props = defineProps({
                   <img v-if="!speaker.image" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
-                <td class="sm:text-md whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500">{{ speaker.name }}</td>
+                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 sm:text-base">
+                  {{ speaker.name }}
+                </td>
                 <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-zinc-500 md:table-cell">
                   <div class="mx-auto flex items-center space-x-2 md:space-x-5">
                     <linkedin-icon v-if="speaker.linkedin" :href="speaker.linkedin" class="h-8 w-8 pr-2 text-zinc-600"/>
@@ -48,11 +57,7 @@ const props = defineProps({
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">X</td>
-                <td class="whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-                  <a href="#" class="text-zinc-600 hover:text-zinc-900">
-                    <chevron-double-right-icon class="h-5 w-5 text-right"/>
-                  </a>
-                </td>
+                <td class="whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6"/>
               </tr>
             </tbody>
           </table>
