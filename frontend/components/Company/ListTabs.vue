@@ -64,7 +64,6 @@ const buildLists = computed(() => {
                         {{ elem[1].name }}
                       </h3>
                     </div>
-
                     <ul class="mt-1 flex space-x-1 text-sm font-normal leading-5 text-gray-500 md:space-x-3">
                       <li v-if="elem[1].location">
                         {{ elem[1].location }}
@@ -86,7 +85,6 @@ const buildLists = computed(() => {
                         </ul>
                       </li>
                     </ul>
-
                     <router-link v-if="list.id === 'meetups'" :to="{ name: 'meetups.details', params: { id: elem[1].id } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
                     <router-link v-if="list.id === 'speakers'" :to="{ name: 'people.details', params: { id: elem[1].name } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
                   </div>
