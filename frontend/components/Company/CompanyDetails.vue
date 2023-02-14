@@ -26,7 +26,7 @@ defineProps({
           <div class="my-10 w-full self-center md:w-1/3">
             <img class="mx-auto h-14 md:h-20" :src="company.logo">
           </div>
-          <div class="text-md mx-4 my-7 text-center italic leading-8 text-zinc-600 md:w-2/3 md:text-lg md:font-normal md:tracking-wide lg:font-semibold">
+          <div class="text-md mx-4 my-7 text-left italic leading-8 text-zinc-600 md:w-2/3 md:text-lg md:font-normal md:tracking-wide lg:font-semibold">
             {{ company.bio }}
           </div>
         </div>

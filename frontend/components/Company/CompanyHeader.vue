@@ -3,7 +3,7 @@ import PulseBackgroundAnimation from '@/components/ReusableComponents/PulseBackg
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
-import { ArrowTopRightOnSquareIcon, MapPinIcon } from '@heroicons/vue/24/outline'
+import { LinkIcon, MapPinIcon } from '@heroicons/vue/24/outline'
 
 defineProps({
   company: {
@@ -33,8 +33,8 @@ defineProps({
             <linkedin-icon v-if="company.linkedin" :href="company.linkedin" class="h-9 w-9 pr-2 text-zinc-600"/>
             <facebook-icon v-if="company.facebook" :href="company.facebook" class="h-9 w-9 pr-2 text-zinc-600"/>
             <twitter-icon v-if="company.twitter" :href="company.twitter" class="h-9 w-9 pr-2 text-zinc-600"/>
-            <a v-if="company.website" :href="company.website" target="_blank" class="h-10 w-10 pr-2 font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="website"><arrow-top-right-on-square-icon/></a>
-            <a v-if="company.location" href="#map" class="h-10 w-10 pr-2 font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="location"><map-pin-icon/></a>
+            <a v-if="company.website" :href="company.website" target="_blank" class="align-center flex font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="website"><link-icon class="h-[40px] w-[40px]"/></a>
+            <a v-if="company.location" href="#map" class="flex h-12 w-12 justify-center font-bold text-zinc-600 transition duration-200 hover:scale-110" alt="location"><map-pin-icon class="h-[43px] w-[43px]"/></a>
           </div>
         </div>
       </main>
