@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full" aria-hidden="true">
+  <div class="block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
     <div class="relative mx-auto h-full max-w-7xl">
       <svg class="absolute right-full translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
         <defs>

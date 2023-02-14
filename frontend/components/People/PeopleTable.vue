@@ -1,11 +1,15 @@
 <script setup>
-import { PresentationChartBarIcon, ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
+import { PresentationChartBarIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 
 const props = defineProps({
   speakers: {
+    type: Array,
+    default: () => [],
+  },
+  meetups: {
     type: Array,
     default: () => [],
   },
@@ -20,7 +24,7 @@ const props = defineProps({
         <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
           Nasi prelegenci
         </h2>
-        <div class="mx-4 mt-8 overflow-hidden rounded-lg shadow ring-1 ring-black sm:-mx-6 md:mx-0">
+        <div class="mt-8 overflow-hidden rounded-lg shadow md:mx-0">
           <table class="min-w-full divide-y divide-zinc-800">
             <thead class="bg-zinc-800">
               <tr>
@@ -42,11 +46,11 @@ const props = defineProps({
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
               <tr v-for="speaker in speakers" :key="speaker.name">
-                <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-4 sm:pl-6">
+                <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
                   <img v-if="!speaker.image" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
-                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 sm:text-base">
+                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">
                   {{ speaker.name }}
                 </td>
                 <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-zinc-500 md:table-cell">

@@ -21,7 +21,7 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
                 Firmy
               </router-link>
               <router-link :to="{ name: 'people' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
-                Prowadzący
+                Prelegenci
               </router-link>
               <router-link :to="{ name: 'contact' }" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-zinc-700 hover:text-white">
                 Kontakt

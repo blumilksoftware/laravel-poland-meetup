@@ -14,11 +14,19 @@ onMounted(() => {
   fetchPeople().then(people => {
     people
   })
+  async function fetchMeetups () {
+    const response = await fetch('/api/meetups.json')
+    meetups.value = await response.json()
+    return meetups
+  }
+  fetchMeetups().then(meetups => {
+    meetups
+  })
 })
 
 </script>
 
 <template>
   <page-header word1="Prelegenci"/>
-  <people-table class="mt-12" :speakers="people"/>
+  <people-table class="mt-12" :meetups="meetups" :speakers="people"/>
 </template>
