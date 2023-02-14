@@ -54,15 +54,18 @@ const buildLists = computed(() => {
           <TabPanels class="mt-2">
             <TabPanel v-for="(list, id) in Object.values(buildLists)" :key="id" class="max-h-96 overflow-auto rounded-xl bg-white p-3 ring-zinc-800/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 lg:max-h-[600px]">
               <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-                <li v-if="!list.data.length" class="block w-full animate-pulse justify-between space-y-2 rounded-md p-3 md:mr-5 md:ml-2">
-                  <div class="h-5 w-full rounded-full bg-zinc-100"/>
+                <li v-if="!list.data.size" class="block w-full justify-between space-y-2 border-b border-zinc-200 p-3 md:mr-5 md:ml-2">
+                  <p>Już niedługo podzielimy się tutaj efektem naszego zaangażowania!</p>
+                  <img class="center mx-auto h-72" src="/images/placeholders/workingon.webp" alt="brak wyników">
+                  
+                  <!-- <div class="h-5 w-full rounded-full bg-zinc-100"/>
                   <div class="h-3 w-2/3 rounded-full bg-zinc-50"/>
                   <div class="h-3 w-1/3 rounded-full bg-zinc-50"/>
                 </li>
-                <li v-if="!list.data.length" class="block w-full animate-pulse justify-between space-y-2 rounded-md p-3 md:mr-5 md:ml-2">
+                <li v-if="!list.data.size" class="block w-full animate-pulse justify-between space-y-2 rounded-md p-3 md:mr-5 md:ml-2">
                   <div class="h-5 w-full rounded-full bg-zinc-100"/>
                   <div class="h-3 w-2/3 rounded-full bg-zinc-50"/>
-                  <div class="h-3 w-1/3 rounded-full bg-zinc-50"/>
+                  <div class="h-3 w-1/3 rounded-full bg-zinc-50"/> -->
                 </li>
                 <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between rounded-md p-3 hover:bg-gray-100 md:mr-5 md:ml-2">
                   <div class="relative items-center">
