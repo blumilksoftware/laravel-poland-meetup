@@ -4,7 +4,7 @@ import CompaniesMap from '@/components/Companies/Map/CompaniesMap.vue'
 defineProps({
   company: {
     type: Object,
-    default: () => { },
+    default: () => {},
   },
   name: {
     type: String,
