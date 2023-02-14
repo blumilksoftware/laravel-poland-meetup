@@ -8,6 +8,7 @@ import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
+import { SignalIcon } from '@heroicons/vue/24/outline'
 
 const props = defineProps({
   name: {
@@ -32,7 +33,7 @@ const buildLists = computed(() => {
   <div class="my-10 bg-white text-center text-lg font-bold tracking-tight text-zinc-700 shadow-lg md:text-2xl">
     <div class="lg:py-18 mx-auto block w-full max-w-7xl p-4 sm:px-6 lg:px-8">
       <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-6 px-7 text-left text-2xl font-bold sm:px-6 md:text-4xl lg:px-8"> 
-        Meetup'owe statystyki
+        Meetupowy wkład
       </h2>
       <div id="tabs" class="w-full px-2 py-16 sm:px-0">
         <TabGroup>
@@ -65,18 +66,15 @@ const buildLists = computed(() => {
                       </h3>
                     </div>
                     <ul class="mt-1 flex space-x-1 text-sm font-normal leading-5 text-gray-500 md:space-x-3">
-                      <li v-if="elem[1].location">
-                        {{ elem[1].location }}
-                      </li>
-                      <li v-if="elem[1].location && elem[1].dateFull">
-                        &middot;
-                      </li>
-                      <li v-if="elem[1].dateFull">
-                        {{ elem[1].dateFull }}
-                      </li>
-                      <li v-if="elem[1].dateFull && elem[1].linkedin">
-                        &middot;
-                      </li>
+                      <div class="block">
+                        <li v-if="elem[1].dateFull" class="px-3 text-left">
+                          {{ elem[1].dateFull }}
+                        </li>
+                        <li v-if="elem[1].location" class="w-fit flex rounded-full bg-zinc-100 px-3">
+                          <signal-icon v-if="elem[1].location === 'online'" class="w-4 h-4 self-center mr-1"/>
+                          {{ elem[1].location }}
+                        </li>
+                      </div>
                       <li v-if="elem[1].speakers">
                         <ul v-for="speaker in elem[1].speakers" :key="speaker.name">
                           <li>
