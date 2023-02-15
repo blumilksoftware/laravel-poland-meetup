@@ -32,14 +32,14 @@ jobs:
 
       - name: Install backend dependencies & build static API
         run: |
-          composer install
+          composer install --no-dev --optimize-autoloader
           composer build
 
       - name: Install frontend dependencies & build
         env:
           VITE_GITHUB_ALIAS_ENABLED: true
         run: |
-          npm install
+          npm clean-install
           npm run build
           touch dist/.nojekyll
 
