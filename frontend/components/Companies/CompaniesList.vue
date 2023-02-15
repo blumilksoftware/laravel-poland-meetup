@@ -10,7 +10,7 @@ defineProps({
     type: Array,
     default: () => [],
   },
-    meetups: {
+  meetups: {
     type: Array, 
     default: () => [],
   },
@@ -67,9 +67,9 @@ defineProps({
                   </router-link>
                   <div class="flex space-x-3 transition duration-200 hover:translate-x-1">
                     <map-pin-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
-                    <span class="col-span-11">
+                    <a href="#map" class="col-span-11">
                       {{ company.location }}
-                    </span>
+                    </a>
                   </div>
                   <div class="flex space-x-2 transition duration-200 hover:translate-x-1">
                     <a class="flex space-x-3" :href="company.website">
