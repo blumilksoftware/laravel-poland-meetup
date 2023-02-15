@@ -48,7 +48,7 @@ const meetupTags = ( meetup ) => {
             <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div class="w-full space-y-2 truncate p-4 sm:px-6">
                 <div class="text-laravel flex space-x-4 text-xl font-medium">
-                  <div v-if="!findNextMeetup.length || meetup.date < findNextMeetup.date" class="flex text-red-800">
+                  <div v-if="!Object.keys(findNextMeetup).length || meetup.date < findNextMeetup.date" class="flex text-red-800">
                     <p class="truncate">
                       {{ meetup.name }}
                     </p>
@@ -100,7 +100,7 @@ const meetupTags = ( meetup ) => {
               <ul class="flex -space-x-2 overflow-hidden">
                 <li v-for="speaker in meetupSpeakers(meetup)" :key="speaker.name" class="inline-block w-10">
                   <img v-if="speaker.image === ''" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
-                  <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md ring-1 ring-zinc-100">
+                  <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md">
                 </li>
               </ul>
             </div>
