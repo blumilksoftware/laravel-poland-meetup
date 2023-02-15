@@ -2,7 +2,7 @@ name: Deploying website to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "test" ]
 
 jobs:
   deploy:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Install frontend dependencies & build
         env:
-          VITE_GITHUB_ALIAS_ENABLED: true
+          VITE_GITHUB_ALIAS_ENABLED: "true"
         run: |
           npm clean-install
           npm run build
