@@ -5,7 +5,6 @@ defineProps({
     default: '',
   },
 })
-
 </script>
 
 <template>
