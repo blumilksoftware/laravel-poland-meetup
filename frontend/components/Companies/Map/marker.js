@@ -1,12 +1,21 @@
 import mapboxgl from 'mapbox-gl'
 
-export default function (map, companies) {
+export default function (map, data) {
   const popupOptions = {
     closeButton: false,
     closeOnClick: true,
   }
 
-  for (let company of companies) {
+  if(data.length > 1) {
+    for (let company of data) {
+      buildMarker(company)
+    }
+  }
+  else { 
+    buildMarker(data)
+  }
+
+  function buildMarker (company) {
     if(company.coordinates) {
     const lat = company.coordinates.lat
     const lng = company.coordinates.lng

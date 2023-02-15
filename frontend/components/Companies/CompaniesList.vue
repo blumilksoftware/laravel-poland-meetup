@@ -10,7 +10,7 @@ defineProps({
     type: Array,
     default: () => [],
   },
-    meetups: {
+  meetups: {
     type: Array, 
     default: () => [],
   },
@@ -26,7 +26,7 @@ defineProps({
   <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12 text-zinc-700">
-        <h2 class="h-16 w-auto border-b border-zinc-200 text-center sm:h-20">
+        <h2 class="first-letter:text-laravel h-16 w-auto border-b border-zinc-200 text-center sm:h-20">
           {{ name }}
         </h2>
         <ul v-auto-animate role="list" :class="['gap-y-7 space-y-0 divide-y divide-zinc-200 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:divide-y-0', companies.length === 1 ? 'lg:grid-cols-1' : '']">
@@ -67,9 +67,9 @@ defineProps({
                   </router-link>
                   <div class="flex space-x-3 transition duration-200 hover:translate-x-1">
                     <map-pin-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
-                    <span class="col-span-11">
+                    <a href="#map" class="col-span-11">
                       {{ company.location }}
-                    </span>
+                    </a>
                   </div>
                   <div class="flex space-x-2 transition duration-200 hover:translate-x-1">
                     <a class="flex space-x-3" :href="company.website">
