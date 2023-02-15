@@ -37,7 +37,7 @@ jobs:
 
       - name: Install frontend dependencies & build
         env:
-          VITE_GITHUB_ALIAS_ENABLED: "true"
+          VITE_VUE_APP_MAPBOX_TOKEN: "${{ secrets.VITE_VUE_APP_MAPBOX_TOKEN }}"
         run: |
           npm clean-install
           npm run build
