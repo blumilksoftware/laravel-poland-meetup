@@ -1,0 +1,1 @@
+import{j as o}from"./index.7821fc39.js";const p="/laravel-poland-meetup/images/speakers/placeholder.webp";function l(n){let a=o(null);const r=new Date,e=[];for(let t of n)new Date(t.date)>r&&e.push(t);return e.length>0&&(e.sort((t,u)=>new Date(t.date).getTime()-new Date(u.date).getTime()),a.value=e[0]),{nextMeetup:a}}export{p as _,l as u};
