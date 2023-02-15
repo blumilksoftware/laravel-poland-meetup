@@ -35,7 +35,7 @@ defineProps({
           <span>
             Zapisz się na wydarzenie! 
           </span>
-          <facebook-icon class="h-6 w-6 self-center"/>
+          <facebook-icon :href="meetup.facebook" class="h-6 w-6 self-center"/>
         </a>
       </div>
     </div>

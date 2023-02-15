@@ -34,7 +34,6 @@ export function useBuildLists(meetupsList, companyName) {
             presentations.value.set(presentation.title, presentation)
             speakers.value.set(speaker.name, speaker)
           }
-
         })
       })
     })
