@@ -42,6 +42,7 @@ jobs:
           npm clean-install
           npm run build
           touch dist/.nojekyll
+          cp -R public/api dist/api
 
       - name: Handle 404 for GitHub Pages
         run: cp index.html 404.html
