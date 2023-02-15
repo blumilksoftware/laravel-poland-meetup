@@ -1,0 +1,56 @@
+name: Deploying website to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    name: Deploying website to GitHub Pages
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          coverage: none
+
+      - name: Install backend dependencies & build static API
+        run: |
+          composer install
+          composer build
+
+      - name: Install frontend dependencies & build
+        env:
+          VITE_GITHUB_ALIAS_ENABLED: true
+        run: |
+          npm install
+          npm run build
+          touch out/.nojekyll
+
+      - name: Handle 404 for GitHub Pages
+        run: cp index.html 404.html
+        working-directory: public
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: public
+          folder: out
+          clean: true
