@@ -1,5 +1,5 @@
 <script setup>
-import { PresentationChartBarIcon } from '@heroicons/vue/24/outline'
+import { PresentationChartBarIcon, ChevronRightIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
@@ -51,7 +51,9 @@ const props = defineProps({
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">
-                  {{ speaker.name }}
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" :class="['w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']">
+                    {{ speaker.name }}
+                  </router-link>
                 </td>
                 <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-zinc-500 md:table-cell">
                   <div class="mx-auto flex items-center space-x-2 md:space-x-5">
@@ -61,7 +63,9 @@ const props = defineProps({
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">X</td>
-                <td class="whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6"/>
+                <td class="justify-end whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
+                  <chevron-right-icon class="flex h-5 w-5 justify-end"/>
+                </td>
               </tr>
             </tbody>
           </table>

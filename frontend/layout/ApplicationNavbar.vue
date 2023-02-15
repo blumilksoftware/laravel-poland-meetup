@@ -58,7 +58,7 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
         </router-link>
         <router-link :to="{ name: 'people' }">
           <disclosure-button as="a" href="#" class="block rounded-md px-3 py-2 text-2xl font-thin tracking-wide text-gray-300 hover:bg-zinc-700 hover:text-white">
-            Prowadzący
+            Prelegenci
           </disclosure-button>
         </router-link>
         <router-link :to="{ name: 'contact' }">
