@@ -41,7 +41,6 @@ onMounted (() => {
   fetchMeetups().then(meetups => {
     meetups
   })
-
 })
 
 </script>
