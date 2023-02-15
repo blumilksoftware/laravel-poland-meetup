@@ -6,6 +6,9 @@ export default defineConfig(({ mode }) => {
 
   console.log(process.env.VITE_GITHUB_ALIAS_ENABLED)
   console.log(process.env.VITE_GITHUB_ALIAS_ENABLED === "true")
+  console.log(process.env.VITE_GITHUB_ALIAS_ENABLED === "true"
+    ? '/laravel-poland-meetup/'
+    : '/')
 
   return {
     base: process.env.VITE_GITHUB_ALIAS_ENABLED === "true"
