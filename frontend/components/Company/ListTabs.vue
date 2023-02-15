@@ -55,7 +55,9 @@ const buildLists = computed(() => {
             <TabPanel v-for="(list, id) in Object.values(buildLists)" :key="id" class="max-h-96 overflow-auto rounded-xl bg-white p-3 ring-zinc-800/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 lg:max-h-[600px]">
               <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
                 <li v-if="!list.data.size" class="block w-full justify-between space-y-2 border-b border-zinc-200 p-3 md:mr-5 md:ml-2">
-                  <p class="text-wrap">Już niedługo podzielimy się naszymi efektami!</p>
+                  <p class="text-wrap">
+                    Już niedługo podzielimy się naszymi efektami!
+                  </p>
                   <img class="center  mx-auto max-h-72" src="/images/placeholders/workingon.webp" alt="brak wyników">
                 </li>
                 <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between rounded-md p-3 hover:bg-gray-100 md:mr-5 md:ml-2">
