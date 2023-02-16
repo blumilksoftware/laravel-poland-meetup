@@ -4,6 +4,7 @@ import PeopleTable from '@/components/People/PeopleTable.vue'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 
 const people = ref([])
+const meetups = ref([])
 
 onMounted(() => {
   async function fetchPeople () {

@@ -3,8 +3,9 @@ import { PresentationChartBarIcon, ChevronRightIcon } from '@heroicons/vue/24/ou
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
+import PresentationsCounter from '@/components/People/PresentationsCounter.vue'
 
-const props = defineProps({
+defineProps({
   speakers: {
     type: Array,
     default: () => [],
@@ -45,12 +46,12 @@ const props = defineProps({
               </tr>
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
-              <tr v-for="speaker in speakers" :key="speaker.name">
+              <tr v-for="speaker in speakers" :key="speaker.name" class="group hover:bg-zinc-50">
                 <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
                   <img v-if="!speaker.image" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
-                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">
+                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 transition duration-200 group-hover:scale-110 sm:text-base md:text-lg">
                   <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" :class="['w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']">
                     {{ speaker.name }}
                   </router-link>
@@ -62,9 +63,11 @@ const props = defineProps({
                     <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-8 w-8 pr-2 text-zinc-600"/>
                   </div>
                 </td>
-                <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">X</td>
+                <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500 transition duration-200 group-hover:font-bold">
+                  <PresentationsCounter :meetups="meetups" :speaker-name="speaker.name"/>
+                </td>
                 <td class="justify-end whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-                  <chevron-right-icon class="flex h-5 w-5 justify-end"/>
+                  <chevron-right-icon class="flex h-5 w-5 justify-end transition duration-200 group-hover:translate-x-2"/>
                 </td>
               </tr>
             </tbody>
