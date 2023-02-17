@@ -5,11 +5,15 @@ import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
 import ListTabs from '@/components/Company/ListTabs.vue'
 import CompanyMap from '@/components/Company/CompanyMap.vue'
+import ServerError from '@/components/Errors/ServerError.vue'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const route = useRoute()
 let meetups = ref([])
 let companies = ref([])
 let company = ref({})
+let loading = ref(true)
+let error = ref(false)
 
 const findCompany = computed(() => {
   if (companies.value.length === 0) return {}
@@ -41,13 +45,23 @@ onMounted (() => {
   fetchMeetups().then(meetups => {
     meetups
   })
+  .catch((e) => {
+    error.value = true
+    console.log(e)
+  })
+
+  loading.value = false
 })
 
 </script>
 
 <template>
-  <company-header :name="route.params.id" :company="company.value"/>
-  <company-details :name="route.params.id" :company="company.value" :meetups="meetups"/>
-  <list-tabs :name="route.params.id" :meetups="meetups"/>
-  <company-map :name="route.params.id" :company="company.value"/>
+  <ServerError :error="error"/>
+  <LoadingSpinner v-if="loading"/>
+  <div v-if="!error && !loading">
+    <company-header :name="route.params.id" :company="company.value"/>
+    <company-details :name="route.params.id" :company="company.value" :meetups="meetups"/>
+    <list-tabs :name="route.params.id" :meetups="meetups"/>
+    <company-map :name="route.params.id" :company="company.value"/>
+  </div>
 </template>

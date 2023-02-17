@@ -4,6 +4,8 @@ import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
+import ServerError from '@/components/Errors/ServerError.vue'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const props = defineProps({
   meetups: {
@@ -21,6 +23,10 @@ const props = defineProps({
   loading: {
     type: Boolean,
     default: true,
+  },
+  error: {
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -83,9 +89,10 @@ const filteredMeetups = computed(() => {
 }) 
 
 </script>
-
 <template>
-  <div class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
+  <ServerError :error="error"/>
+  <LoadingSpinner v-if="loading"/>
+  <div v-if="!error && !loading" class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
       <form class="block justify-center sm:flex">
         <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">
@@ -108,7 +115,7 @@ const filteredMeetups = computed(() => {
       </div>
     </div>
     <div class="overflow-hidden bg-white">
-      <MeetupsList id="meetupsList" :loading="loading" :data="sortedMeetups" :all-meetups="meetups"/>
+      <MeetupsList id="meetupsList" :error="error" :loading="loading" :data="sortedMeetups" :all-meetups="meetups"/>
     </div>
   </div>
 </template>

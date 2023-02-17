@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/outline'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const props = defineProps ({
   data: {
@@ -15,6 +16,10 @@ const props = defineProps ({
   allMeetups: {
     type: Array,
     default: () => [],
+  },
+  error: {
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -41,7 +46,10 @@ const meetupTags = ( meetup ) => {
 </script>
 <template>
   <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-    <li v-for="meetup in props.data" :key="meetup.id" class="w-full ">
+    <li v-if="loading" class="flex w-full justify-center bg-zinc-100">
+      <LoadingSpinner/>
+    </li>
+    <li v-for="meetup in data" :key="meetup.id" class="w-full">
       <transition enter-active-class="transition ease-in-out duration-500" enter-from-class="transform opacity-0 translate-y-64" enter-to-class="transform opacity-100 translate-y-0" leave-active-class="transition ease-in duration-700" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
         <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
           <div class="flex items-center">
@@ -111,7 +119,7 @@ const meetupTags = ( meetup ) => {
         </router-link>
       </transition>
     </li>
-    <li v-show="(!data.length && !loading)" class="space-y-7 text-xl text-zinc-500">
+    <li v-if="(!data.length && !loading && !error)" class="space-y-7 text-xl text-zinc-500">
       <p class="m-8 text-left md:text-center">
         Nie znaleźliśmy pasujących wyników.
       </p>

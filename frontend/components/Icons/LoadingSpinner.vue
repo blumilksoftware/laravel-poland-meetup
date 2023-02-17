@@ -1,5 +1,5 @@
 <template>
-  <div class="loadingio-spinner-spinner-8ug9vg1oq0h">
+  <div class="loadingio-spinner-spinner-8ug9vg1oq0h mx-auto align-center">
     <div class="ldio-5mh5u5buhot mt-56">
       <div/>
       <div/>
@@ -28,8 +28,8 @@
 }
 
 .ldio-5mh5u5buhot div {
-  left: 94px;
-  top: 48px;
+  left: 10px;
+  top: 10px;
   position: absolute;
   animation: ldio-5mh5u5buhot linear 1s infinite;
   background: #a1a1aa;
@@ -112,15 +112,17 @@
 }
 
 .loadingio-spinner-spinner-8ug9vg1oq0h {
-  width: 200px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: inline-block;
   overflow: hidden;
   background: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .ldio-5mh5u5buhot {
-  width: 100%;
+  width: 1%;
   height: 100%;
   position: relative;
   transform: translateZ(0) scale(1);
