@@ -91,7 +91,7 @@ const filteredMeetups = computed(() => {
 </script>
 <template>
   <ServerError :error="error"/>
-  <div v-if="!error" class="mx-auto mt-2 max-w-7xl divide-y divide-zinc-200 px-2 sm:px-4 lg:px-8">
+  <div v-if="!error" class="mx-auto mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
       <form class="block justify-center sm:flex">
         <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">

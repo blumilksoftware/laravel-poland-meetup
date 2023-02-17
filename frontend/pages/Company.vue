@@ -37,6 +37,10 @@ onMounted (() => {
   fetchCompanies().then(companies => {
     companies
   })
+  .catch((e) => {
+    error.value = true
+    console.log(e)
+  })
   async function fetchMeetups () {
     const response = await fetch('/api/meetups.json')
     meetups.value = await response.json()

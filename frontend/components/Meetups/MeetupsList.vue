@@ -17,10 +17,6 @@ const props = defineProps ({
     type: Array,
     default: () => [],
   },
-  error: {
-    type: Boolean,
-    default: false,
-  },
 })
 
 const findNextMeetup = computed(() => {
@@ -45,10 +41,8 @@ const meetupTags = ( meetup ) => {
 
 </script>
 <template>
-  <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-    <li>
-      <LoadingSpinner v-if="loading"/>
-    </li>
+  <LoadingSpinner v-if="loading" class="bg-zinc-100"/>
+  <ul v-if="!loading" v-auto-animate role="list" class="divide-y divide-zinc-200 bg-white">
     <li v-for="meetup in data" :key="meetup.id" class="w-full">
       <transition enter-active-class="transition ease-in-out duration-500" enter-from-class="transform opacity-0 translate-y-64" enter-to-class="transform opacity-100 translate-y-0" leave-active-class="transition ease-in duration-700" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
         <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
