@@ -1,11 +1,13 @@
 <script setup>
-import { PresentationChartBarIcon, ChevronRightIcon } from '@heroicons/vue/24/outline'
+import { ref, computed } from 'vue'
+import { PresentationChartBarIcon, ChevronRightIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import PresentationsCounter from '@/components/People/PresentationsCounter.vue'
+import SortButton from '@/components/People/SortButton.vue'
 
-defineProps({
+const props = defineProps({
   speakers: {
     type: Array,
     default: () => [],
@@ -15,6 +17,27 @@ defineProps({
     default: () => [],
   },
 })
+// co zrobić , żeby posortować ludzi po ilości prezentacji:
+// 1. trzeba wiedzieć kto ile zrobił prezentacji
+//     klikam na przycisk, do przycisku wysyłam tam imię speakera i listą meetapów
+//     liczy prezentacje i zwraca obiekt speakera powiększony o liczbę prezentacji 
+// 2. zapisuję wszystkie obiekty z 1. do tablicy.
+// 3. wysyłam do people table
+// 4. ponownie renderuje listę speakerów na nowej liście
+
+
+let sortedSpeakers = ref(props.speakers)
+let updatedSpeakers = ref([])
+
+const updatedSpeaker = function(updatedSpeaker){ 
+  updatedSpeakers.value.push(updatedSpeaker)
+console.log('sortedSpeakers', sortedSpeakers.value)
+console.log('updatedSpeaker', updatedSpeaker)
+}
+
+const sortedUpdatedSpeakers = function(speakers) {
+  sortedSpeakers.value = speakers.value
+}
 
 </script>
 
@@ -34,11 +57,8 @@ defineProps({
                   Imię i nazwisko
                 </th>
                 <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">Kontakt</th>
-                <th scope="col" class="py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
-                  <span class="hidden sm:table-cell">
-                    Prezentacje
-                  </span>
-                  <presentation-chart-bar-icon class="h-6 w-6 sm:hidden"/>
+                <th scope="col" class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
+                  <SortButton :speakers="sortedSpeakers" @sorted-speakers="sortedUpdatedSpeakers"/>
                 </th>
                 <th scope="col" class="py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Zobacz profil</span>
@@ -46,13 +66,14 @@ defineProps({
               </tr>
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
-              <tr v-for="speaker in speakers" :key="speaker.name" class="group hover:bg-zinc-50">
+              <!-- <tr v-for="speaker in speakers" :key="speaker.name" class="group hover:bg-zinc-50"> -->
+              <tr v-for="speaker in sortedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
                 <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
-                  <img v-if="!speaker.image" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
+                  <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 transition duration-200 group-hover:scale-110 sm:text-base md:text-lg">
-                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" :class="['w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']">
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:font-bold ">
                     {{ speaker.name }}
                   </router-link>
                 </td>
@@ -64,10 +85,12 @@ defineProps({
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500 transition duration-200 group-hover:font-bold">
-                  <PresentationsCounter :meetups="meetups" :speaker-name="speaker.name"/>
+                  <PresentationsCounter :meetups="meetups" :speaker="speaker" @counted="updatedSpeaker"/>
                 </td>
                 <td class="justify-end whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-                  <chevron-right-icon class="flex h-5 w-5 justify-end transition duration-200 group-hover:translate-x-2"/>
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:outline-none">
+                    <chevron-right-icon class="flex h-5 w-5 justify-end transition duration-200 group-hover:translate-x-2"/>
+                  </router-link>
                 </td>
               </tr>
             </tbody>
