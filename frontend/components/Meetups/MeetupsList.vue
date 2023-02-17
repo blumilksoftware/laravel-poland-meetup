@@ -46,8 +46,8 @@ const meetupTags = ( meetup ) => {
 </script>
 <template>
   <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-    <li v-if="loading" class="flex w-full justify-center bg-zinc-100">
-      <LoadingSpinner/>
+    <li>
+      <LoadingSpinner v-if="loading"/>
     </li>
     <li v-for="meetup in data" :key="meetup.id" class="w-full">
       <transition enter-active-class="transition ease-in-out duration-500" enter-from-class="transform opacity-0 translate-y-64" enter-to-class="transform opacity-100 translate-y-0" leave-active-class="transition ease-in duration-700" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
