@@ -41,7 +41,7 @@
         </p>
       </div>
       <div class="mb-20 bg-white">
-        <h3 class="text-laravel mb-10 block text-cenamsterdamstandardter text-lg font-semibold">
+        <h3 class="text-laravel text-cenamsterdamstandardter mb-10 block text-lg font-semibold">
           Organizatorzy
         </h3>
         <div class="block justify-center space-y-12 md:m-auto md:flex md:w-4/5 md:space-y-0">
