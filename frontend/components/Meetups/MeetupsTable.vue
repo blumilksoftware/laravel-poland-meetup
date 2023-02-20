@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
-import ServerError from '@/components/EmptyStates/ServerError.vue'
+import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 
 const props = defineProps({
   meetups: {
@@ -89,7 +89,7 @@ const filteredMeetups = computed(() => {
 
 </script>
 <template>
-  <ServerError :error="error"/>
+  <NoDataError :error="error" text="Brak meetupów"/>
   <div v-if="!error" class="mx-auto mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
       <form class="block justify-center sm:flex">

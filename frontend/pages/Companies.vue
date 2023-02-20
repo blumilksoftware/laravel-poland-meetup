@@ -4,7 +4,7 @@ import CompaniesTable from '@/components/Companies/CompaniesTable.vue'
 import InvitationToJoin from '@/components/Companies/InvitationToJoin.vue'
 import CompaniesMap from '@/components/Companies/Map/CompaniesMap.vue'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
-import ServerError from '@/components/EmptyStates/ServerError.vue'
+import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const companies = ref([])
@@ -33,7 +33,7 @@ onMounted(async () => {
 
 </script>
 <template>
-  <ServerError :error="error"/>
+  <NoDataError :error="error" text="Brak firm"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
     <page-header word1="Organizatorzy" word2="i" word3="partnerzy" sentence="Dołącz do nas i promuj swoją firmę!"/>

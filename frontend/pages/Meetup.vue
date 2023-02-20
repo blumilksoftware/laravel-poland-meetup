@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import MeetupHeader from '@/components/Meetup/MeetupHeader.vue'
 import PresentationsList from '@/components/Meetup/PresentationsList.vue'
-import ServerError from '@/components/EmptyStates/ServerError.vue'
+import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 let meetup = ref([])
@@ -31,7 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <ServerError :error="error"/>
+  <NoDataError :error="error" text="Brak meetupów"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
     <meetup-header :meetup="meetup"/>

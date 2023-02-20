@@ -5,7 +5,7 @@ import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
 import ListTabs from '@/components/Company/ListTabs.vue'
 import CompanyMap from '@/components/Company/CompanyMap.vue'
-import ServerError from '@/components/EmptyStates/ServerError.vue'
+import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const route = useRoute()
@@ -60,7 +60,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <ServerError :error="error"/>
+  <NoDataError :error="error" text="Nie ma takiej firmy"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
     <company-header :name="route.params.id" :company="company.value"/>
