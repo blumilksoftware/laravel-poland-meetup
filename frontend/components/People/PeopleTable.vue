@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-import { PresentationChartBarIcon, ChevronRightIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { ref, watch } from 'vue'
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
-import PresentationsCounter from '@/components/People/PresentationsCounter.vue'
 import SortButton from '@/components/People/SortButton.vue'
+import { useCountedPresentations } from '@/composables/useCountedPresentations.js'
 
 const props = defineProps({
   speakers: {
@@ -17,30 +17,20 @@ const props = defineProps({
     default: () => [],
   },
 })
-// sortowanie ludzi po ilości prezentacji:
-// 1. trzeba wiedzieć kto ile zrobił prezentacji
-//     klikam na przycisk, do przycisku wysyłam tam imię speakera i listą meetapów
-//     liczy prezentacje i zwraca obiekt speakera powiększony o liczbę prezentacji 
-// 2. zapisuję wszystkie obiekty z 1. do tablicy.
-// 3. wysyłam do people table
-// 4. ponownie renderuje listę speakerów na nowej liście
 
-
-let sortedSpeakers = ref(props.speakers)
+let sortedSpeakers = ref([])
 let updatedSpeakers = ref([])
 
-const updatedSpeaker = function(updatedSpeaker){ 
-  updatedSpeakers.value.push(updatedSpeaker)
-console.log('sortedSpeakers', sortedSpeakers.value)
-console.log('updatedSpeaker', updatedSpeaker)
-}
+watch(() => props.meetups, () => {
+  const { newArrayOfSpeakers } = useCountedPresentations(props.meetups, props.speakers)
+  updatedSpeakers.value = newArrayOfSpeakers
+})
 
-const sortedUpdatedSpeakers = function(speakers) {
+const sortedUpdatedSpeakers = (speakers) => {
   sortedSpeakers.value = speakers.value
 }
 
 </script>
-
 <template>
   <div class="my-10 bg-white tracking-tight text-zinc-700 shadow-lg">
     <div class="lg:py-18 mx-auto max-w-7xl p-4 sm:px-6 lg:px-8">
@@ -58,7 +48,7 @@ const sortedUpdatedSpeakers = function(speakers) {
                 </th>
                 <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">Kontakt</th>
                 <th scope="col" class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
-                  <SortButton :speakers="sortedSpeakers" @sorted-speakers="sortedUpdatedSpeakers"/>
+                  <SortButton :speakers="updatedSpeakers" @sorted-speakers="sortedUpdatedSpeakers"/>
                 </th>
                 <th scope="col" class="py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Zobacz profil</span>
@@ -66,8 +56,7 @@ const sortedUpdatedSpeakers = function(speakers) {
               </tr>
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
-              <!-- <tr v-for="speaker in speakers" :key="speaker.name" class="group hover:bg-zinc-50"> -->
-              <tr v-for="speaker in sortedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
+              <tr v-for="speaker in updatedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
                 <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
                   <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
@@ -85,7 +74,7 @@ const sortedUpdatedSpeakers = function(speakers) {
                   </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500 transition duration-200 group-hover:font-bold">
-                  <PresentationsCounter :meetups="meetups" :speaker="speaker" @counted="updatedSpeaker"/>
+                  {{ speaker.presentations }}
                 </td>
                 <td class="justify-end whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
                   <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:outline-none">

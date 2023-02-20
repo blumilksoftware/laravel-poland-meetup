@@ -28,21 +28,21 @@ const sortOptions = [
 
 const sorted = ref(sortOptions[0].name)
 
-const emit = defineEmits(['sorted-presentations'])
+const emit = defineEmits(['sorted-speakers'])
 
 watch(() => props.speakers, () => {
-  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value)
-  emit('sorted-presentations', sortedSpeakers)
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
+  emit('sorted-speakers', sortedSpeakers)
 })
 
 watch(sorted, () => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
-  emit('sorted-presentations', sortedSpeakers)
+  emit('sorted-speakers', sortedSpeakers)
 })
 
 onMounted(() => { 
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
-  emit('sorted-presentations', sortedSpeakers)
+  emit('sorted-speakers', sortedSpeakers)
 })
 
 </script>

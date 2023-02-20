@@ -5,11 +5,11 @@ export function useSortedSpeakers (speakers, sortType) {
 
   function compare(a, b) {
     if (a.presentations < b.presentations) {
-      console.log('a.presentations', a.presentations)
+      // console.log('a.presentations', a.presentations)
       return -1
     }
     if (a.presentations > b.presentations) {
-      console.log('a.presentations', a.presentations)
+      // console.log('a.presentations', a.presentations)
       return 1
     }
     return 0
@@ -21,29 +21,29 @@ export function useSortedSpeakers (speakers, sortType) {
   if(sortType === 'default') {
     for(const item of ascendingPresentations) {
       sortedSpeakers.push(item)
-      console.log('działa dla domyślnego')
+      // console.log('działa dla domyślnego')
     }
     for(const item of descendingPresentations) {
       sortedSpeakers.push(item)
     }
   } else if(sortType === 'ascending') {
     speakers.sort(compare).reverse()
-    console.log('działa dla rosnącego')
+    // console.log('działa dla rosnącego')
     
     for(const item of speakers) {
       sortedSpeakers.push(item)
     }
   } else if(sortType === 'descending') {
     speakers.sort(compare)
-    console.log('działa dla malejącego')
+    // console.log('działa dla malejącego')
 
     for(const item of speakers) {
       sortedSpeakers.push(item)
     }
   }  
 
-  console.log('ascendingPresentations', ascendingPresentations)
-  console.log('descendingPresentations', descendingPresentations)
+  // console.log('ascendingPresentations', ascendingPresentations)
+  // console.log('descendingPresentations', descendingPresentations)
   console.log('sortedSpeakers', sortedSpeakers)
   return { sortedSpeakers }
 }
