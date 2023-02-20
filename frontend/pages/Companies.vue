@@ -16,13 +16,13 @@ onMounted(async () => {
   await fetch('/api/companies.json').then((response) => response.json()).then((data) => {
     companies.value = data
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
   })
   await fetch('/api/meetups.json').then((response) => response.json()).then((data) => {
     meetups.value = data
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
   })
 
