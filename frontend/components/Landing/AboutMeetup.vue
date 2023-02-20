@@ -29,12 +29,12 @@
           </span>
         </h1>
         <p class="mt-8 text-2xl leading-9 text-gray-500">
-          <strong>Laravel Poland MeetUp</strong> powstał w 2018 roku z inicjatywy <strong>HIGHSolutions</strong>, do którego w roku 2021 dołączyła firma <strong>Blumilk</strong>. 
+          <strong>Laravel Poland MeetUp</strong> powstał w 2018 roku z inicjatywy <strong>HIGHSolutions</strong>, do którego w 2021 roku dołączyła firma <strong>Blumilk</strong>, a w 2023 <strong>Amsterdam Standard</strong>.<br> 
           Razem organizujemy eventy dla ludzi, którzy nie chcą stać w miejscu. Są to ciekawe, cykliczne spotkania <strong>non profit</strong>, które poszerzą Twoje kwalifikacje.<br>
         </p>          
         <p class="mt-8 text-2xl leading-9 text-gray-500">
           Spotkania są poświęcone szeroko pojętej tematyce <span class="text-laravel font-bold">Laravela</span> i z roku na rok cieszą się coraz większym gronem uczestników i prezenterów.
-          Spotykamy się, aby promować nowinki, utrwalać dobre praktyki, a przede wszystkim <strong>inspirować się wzajemnie.</strong>
+          Spotykamy się, aby promować nowinki, utrwalać dobre praktyki, a przede wszystkim <strong>inspirować się wzajemnie.</strong><br>
           Chętnie gościmy pasjonatów z różnych środowisk! Jeśli chcesz, aby <strong>Twoja firma</strong> zaistniała na naszym meetupie, zgłoś prezentację na nasze kolejne spotkanie!<br><br>
           Zachęcamy do udziału w spotkaniach, które odbywają się zarówno w formie zdalnej, jak i stacjonarnej. <br><br>
           <strong>Dołącz do nas!</strong><br>
@@ -44,9 +44,9 @@
         <h3 class="text-laravel mb-10 block text-center text-lg font-semibold">
           Organizatorzy
         </h3>
-        <div class="block justify-center space-y-12 md:m-auto md:flex md:w-4/5 md:space-y-0">
+        <div class="block justify-center space-y-12 md:m-auto lg:flex lg:w-4/5 lg:space-y-0">
           <img class="center mx-auto h-14 sm:h-16" alt="logo Blumilk" src="/images/companies/blumilk.webp">
-          <img class="center mx-auto h-14 sm:h-16" alt="logo HighSolutions" src="/images/companies/highsolutions.webp">
+          <img class="center mx-auto h-14 sm:h-16" alt="logo AmsterdamStandard" src="/images/companies/amsterdamstandard.webp">
         </div>
       </div>
     </div>
