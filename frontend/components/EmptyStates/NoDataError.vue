@@ -22,7 +22,7 @@ defineProps({
           Spróbuj odświeżyć stronę.
         </li>
         <li class="text-md mx-8 my-5 text-left sm:my-6 sm:mx-20 sm:text-xl">
-          Jeśli po odświeżeniu nadal występuje ten komunikat to wróć do nas ponownie później.
+          Jeśli po odświeżeniu nadal występuje ten komunikat, to wróć do nas ponownie później.
         </li>
       </ul>
     </div>
