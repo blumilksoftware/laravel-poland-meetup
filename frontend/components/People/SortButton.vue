@@ -1,7 +1,7 @@
 <script setup>
 import { Disclosure, DisclosureButton, Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
 import { PresentationChartBarIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
-import { watch, ref } from 'vue'
+import { watch, ref, onMounted  } from 'vue'
 import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
 
 const props = defineProps({
@@ -28,10 +28,20 @@ const sortOptions = [
 
 const sorted = ref(sortOptions[0].name)
 
-const emit = defineEmits(['sorted-presentations', 'updated'])
+const emit = defineEmits(['sorted-presentations'])
 
 watch(() => props.speakers, () => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value)
+  emit('sorted-presentations', sortedSpeakers)
+})
+
+watch(sorted, () => {
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
+  emit('sorted-presentations', sortedSpeakers)
+})
+
+onMounted(() => { 
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
   emit('sorted-presentations', sortedSpeakers)
 })
 

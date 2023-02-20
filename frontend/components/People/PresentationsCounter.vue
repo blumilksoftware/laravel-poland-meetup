@@ -13,6 +13,9 @@ const props = defineProps({
 })
 
 const countPresentations = ref(0)
+console.log(props.meetups)
+console.log(props.speaker)
+
 
 function count () { 
   return props.meetups.filter(function(meetup) {

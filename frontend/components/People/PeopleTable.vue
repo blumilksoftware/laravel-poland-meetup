@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { PresentationChartBarIcon, ChevronRightIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
@@ -17,7 +17,7 @@ const props = defineProps({
     default: () => [],
   },
 })
-// co zrobić , żeby posortować ludzi po ilości prezentacji:
+// sortowanie ludzi po ilości prezentacji:
 // 1. trzeba wiedzieć kto ile zrobił prezentacji
 //     klikam na przycisk, do przycisku wysyłam tam imię speakera i listą meetapów
 //     liczy prezentacje i zwraca obiekt speakera powiększony o liczbę prezentacji 
