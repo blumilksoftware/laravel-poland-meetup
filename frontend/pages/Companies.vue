@@ -18,14 +18,12 @@ onMounted(async () => {
   })
   .catch((e) => {
     error.value = true
-    console.log(e)
   })
   await fetch('/api/meetups.json').then((response) => response.json()).then((data) => {
     meetups.value = data
   })
   .catch((e) => {
     error.value = true
-    console.log(e)
   })
 
   loading.value = false
