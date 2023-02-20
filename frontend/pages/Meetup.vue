@@ -20,9 +20,8 @@ onMounted(() => {
   fetchMeetup().then(meetup => {
     meetup
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
-    console.log(e)
   })
 
   loading.value = false

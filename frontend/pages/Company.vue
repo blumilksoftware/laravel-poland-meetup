@@ -37,9 +37,8 @@ onMounted (() => {
   fetchCompanies().then(companies => {
     companies
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
-    console.log(e)
   })
   async function fetchMeetups () {
     const response = await fetch('/api/meetups.json')
@@ -49,9 +48,8 @@ onMounted (() => {
   fetchMeetups().then(meetups => {
     meetups
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
-    console.log(e)
   })
 
   loading.value = false
