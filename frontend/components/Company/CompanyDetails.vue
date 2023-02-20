@@ -1,5 +1,6 @@
 <script setup>
 import QuoteIcon from '../ReusableComponents/QuoteIcon.vue'
+
 defineProps({
   company: {
     type: Object,

@@ -60,7 +60,7 @@ const buildLists = computed(() => {
                   </p>
                   <img class="center  mx-auto max-h-72" src="/images/placeholders/workingon.webp" alt="brak wyników">
                 </li>
-                <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between rounded-md p-3 hover:bg-gray-100 md:mr-5 md:ml-2">
+                <li v-for="(elem, idx) in list.data" :key="idx" class="flex justify-between p-3 hover:bg-gray-100 md:mr-5 md:ml-2">
                   <div class="relative items-center">
                     <h3 v-if="elem[1].title" class="text-left font-medium leading-5">
                       {{ elem[1].title }}
