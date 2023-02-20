@@ -41,10 +41,10 @@
         </p>
       </div>
       <div class="mb-20 bg-white">
-        <h3 class="text-laravel text-cenamsterdamstandardter mb-10 block text-lg font-semibold">
+        <h3 class="text-laravel mb-10 block text-center text-lg font-semibold">
           Organizatorzy
         </h3>
-        <div class="block justify-center space-y-12 md:m-auto md:flex md:w-4/5 md:space-y-0">
+        <div class="block justify-center space-y-12 md:m-auto lg:flex lg:w-4/5 lg:space-y-0">
           <img class="center mx-auto h-14 sm:h-16" alt="logo Blumilk" src="/images/companies/blumilk.webp">
           <img class="center mx-auto h-14 sm:h-16" alt="logo AmsterdamStandard" src="/images/companies/amsterdamstandard.webp">
         </div>
