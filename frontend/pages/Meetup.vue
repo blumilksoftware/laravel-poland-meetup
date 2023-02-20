@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import MeetupHeader from '@/components/Meetup/MeetupHeader.vue'
 import PresentationsList from '@/components/Meetup/PresentationsList.vue'
-import ServerError from '@/components/Errors/ServerError.vue'
+import ServerError from '@/components/EmptyStates/ServerError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 let meetup = ref([])

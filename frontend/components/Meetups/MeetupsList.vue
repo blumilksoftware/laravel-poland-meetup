@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/outline'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import NoResults from '@/components/EmptyStates/NoResults.vue'
 
 const props = defineProps ({
   data: {
@@ -114,7 +115,8 @@ const meetupTags = ( meetup ) => {
       </transition>
     </li>
     <li v-if="(!data.length && !loading && !error)" class="space-y-7 text-xl text-zinc-500">
-      <p class="m-8 text-left md:text-center">
+      <NoResults/>
+      <!-- <p class="m-8 text-left md:text-center">
         Nie znaleźliśmy pasujących wyników.
       </p>
       <ul class="m-9 w-fit list-disc md:m-auto md:text-left">
@@ -130,7 +132,7 @@ const meetupTags = ( meetup ) => {
       </ul>
       <div class="block justify-center md:m-auto md:flex md:w-3/5">
         <img class="center h-50 mx-auto" src="/images/placeholders/noresults.webp" alt="brak wyników wyszukiwania">
-      </div>
+      </div> -->
     </li>
   </ul>
 </template>

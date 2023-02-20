@@ -4,7 +4,7 @@ import CompaniesTable from '@/components/Companies/CompaniesTable.vue'
 import InvitationToJoin from '@/components/Companies/InvitationToJoin.vue'
 import CompaniesMap from '@/components/Companies/Map/CompaniesMap.vue'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
-import ServerError from '@/components/Errors/ServerError.vue'
+import ServerError from '@/components/EmptyStates/ServerError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const companies = ref([])

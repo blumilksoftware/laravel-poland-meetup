@@ -4,8 +4,7 @@ import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
-import ServerError from '@/components/Errors/ServerError.vue'
-import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import ServerError from '@/components/EmptyStates/ServerError.vue'
 
 const props = defineProps({
   meetups: {

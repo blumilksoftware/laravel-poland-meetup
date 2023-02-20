@@ -5,7 +5,7 @@ import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
 import ListTabs from '@/components/Company/ListTabs.vue'
 import CompanyMap from '@/components/Company/CompanyMap.vue'
-import ServerError from '@/components/Errors/ServerError.vue'
+import ServerError from '@/components/EmptyStates/ServerError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const route = useRoute()
