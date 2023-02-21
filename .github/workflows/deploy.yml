@@ -47,8 +47,8 @@ jobs:
         run: cp index.html 404.html
         working-directory: dist
 
-      - name: ls
-        run: ls api -al
+      - name: Handle built API .gitignore
+        run: rm api/.gitignore
         working-directory: dist
 
       - name: Deploy
