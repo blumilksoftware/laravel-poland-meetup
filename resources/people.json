@@ -7,13 +7,13 @@
   },
   "@karolbarcki": {
     "name": "Karol Barcki",
-    "image": "../public/images/speakers/karolbarcki.webp", 
+    "image": "/images/speakers/karolbarcki.webp", 
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/karol-barcki/"
     },
   "@kamilbartczak": {
     "name": "Kamil Bartczak",
-    "image": "../public/images/speakers/kamilbartczak.webp", 
+    "image": "/images/speakers/kamilbartczak.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/kamil-bartczak/"
   },
@@ -25,7 +25,7 @@
   },
   "@miloszdziurzynski": {
     "name": "Miłosz Dziurzyński",
-    "image": "../public/images/speakers/miloszdziurzynski.webp", 
+    "image": "/images/speakers/miloszdziurzynski.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/mdziurzynski/"
   },
@@ -37,7 +37,7 @@
   },
   "@patrykfilipiak": {
     "name": "Patryk Filipiak",
-    "image": "../public/images/speakers/patrykfilipiak.webp", 
+    "image": "/images/speakers/patrykfilipiak.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/filipiak-patryk/"
   },
@@ -103,13 +103,13 @@
   },
   "@joannarewak": {
     "name": "Joanna Rewak",
-    "image": "../public/images/speakers/joannarewak.webp", 
+    "image": "/images/speakers/joannarewak.webp", 
     "bio": null,
     "linkedin":  "https://pl.linkedin.com/in/joanna-rewak-745ba9133"
   },
   "@krzysztofrewak": {
     "name": "Krzysztof Rewak",
-    "image": "../public/images/speakers/krzysztofrewak.webp", 
+    "image": "/images/speakers/krzysztofrewak.webp", 
     "bio": "Współzałożyciel i współwłaściciel Blumilka, dyrektor ds. technologii w tymże, inżynier oprogramowania, nauczyciel akademicki, piwowar domowy. W Laravelu programuje od 2014 roku, Laravel Poland Meetup współorganizuje od 2020. Lubi mapy, nieoczywiste scrapowanie danych i łączenie ze sobą systemów informatycznych.",
     "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
   },
@@ -121,7 +121,7 @@
   },
   "@piotrrybak": {
     "name": "Piotr Rybak",
-    "image": "/images/speakers/piotrrybak.webp",
+    "image": null,
     "bio": null,
     "linkedin": null
   },
@@ -151,7 +151,7 @@
   },
   "@przemekszustak": {
     "name": "Przemek Szustak",
-    "image": "../public/images/speakers/przemekszustak.webp", 
+    "image": "/images/speakers/przemekszustak.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/przemek-szustak/"
   },
@@ -169,7 +169,7 @@
   },
   "@filipzdunek": {
     "name": "Filip Zdunek",
-    "image": "../public/images/speakers/filipzdunek.webp", 
+    "image": "/images/speakers/filipzdunek.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/filipzdunek/"
   },
@@ -181,7 +181,7 @@
   },
   "@tomekzmudzinski": {
     "name": "Tomek Żmudziński",
-    "image": "../public/images/speakers/tomekzmudzinski.webp", 
+    "image": "/images/speakers/tomekzmudzinski.webp", 
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/tzmudzinski/"
   },

@@ -4,6 +4,7 @@ import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import Counter from '@/components/Companies/Counters.vue'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 defineProps({
   companies: {
@@ -18,6 +19,10 @@ defineProps({
     type: String,
     default: () => '',
   },
+  loading: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 </script>
@@ -26,10 +31,13 @@ defineProps({
   <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12 text-zinc-700">
-        <h2 class="h-16 w-auto border-b border-zinc-200 text-center sm:h-20">
+        <h2 class="first-letter:text-laravel h-16 w-auto border-b border-zinc-200 text-center sm:h-20">
           {{ name }}
         </h2>
         <ul v-auto-animate role="list" :class="['gap-y-7 space-y-0 divide-y divide-zinc-200 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:divide-y-0', companies.length === 1 ? 'lg:grid-cols-1' : '']">
+          <li v-if="loading">
+            <LoadingSpinner/>
+          </li>
           <li v-if="companies.length === 0" class="col-span-2">
             <div class="mx-3 block animate-pulse sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 md:space-x-4 lg:gap-8">
               <div class="relative m-auto">
