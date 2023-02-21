@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 export function useFindNextMeetup(meetups) {
-  let nextMeetup = ref(null)
+  let nextMeetup = ref({})
   const today = new Date()
   const futureMeetups = []
 

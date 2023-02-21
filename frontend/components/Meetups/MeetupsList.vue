@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { CalendarIcon, ChevronRightIcon, ExclamationCircleIcon, MapPinIcon, ChatBubbleLeftIcon } from '@heroicons/vue/24/outline'
 import { useFindNextMeetup } from '@/composables/useFindNextMeetup.js'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import NoResults from '@/components/EmptyStates/NoResults.vue'
 
 const props = defineProps ({
   data: {
@@ -40,15 +42,16 @@ const meetupTags = ( meetup ) => {
 
 </script>
 <template>
-  <ul v-auto-animate role="list" class="divide-y divide-zinc-200">
-    <li v-for="meetup in props.data" :key="meetup.id" class="w-full ">
+  <LoadingSpinner v-if="loading" class="bg-zinc-100"/>
+  <ul v-if="!loading" v-auto-animate role="list" class="divide-y divide-zinc-200 bg-white">
+    <li v-for="meetup in data" :key="meetup.id" class="w-full">
       <transition enter-active-class="transition ease-in-out duration-500" enter-from-class="transform opacity-0 translate-y-64" enter-to-class="transform opacity-100 translate-y-0" leave-active-class="transition ease-in duration-700" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
         <router-link :to="{ name: 'meetups.details', params: { id: meetup.id } }" class="relative block hover:bg-zinc-50">
           <div class="flex items-center">
             <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div class="w-full space-y-2 truncate p-4 sm:px-6">
                 <div class="text-laravel flex space-x-4 text-xl font-medium">
-                  <div v-if="!findNextMeetup || meetup.date < findNextMeetup.date" class="flex text-red-800">
+                  <div v-if="!Object.keys(findNextMeetup).length || meetup.date < findNextMeetup.date" class="flex text-red-800">
                     <p class="truncate">
                       {{ meetup.name }}
                     </p>
@@ -100,7 +103,7 @@ const meetupTags = ( meetup ) => {
               <ul class="flex -space-x-2 overflow-hidden">
                 <li v-for="speaker in meetupSpeakers(meetup)" :key="speaker.name" class="inline-block w-10">
                   <img v-if="speaker.image === ''" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
-                  <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md ring-1 ring-zinc-100">
+                  <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md">
                 </li>
               </ul>
             </div>
@@ -111,24 +114,8 @@ const meetupTags = ( meetup ) => {
         </router-link>
       </transition>
     </li>
-    <li v-show="(!data.length && !loading)" class="space-y-7 text-xl text-zinc-500">
-      <p class="m-8 text-left md:text-center">
-        Nie znaleźliśmy pasujących wyników.
-      </p>
-      <ul class="m-9 w-fit list-disc md:m-auto md:text-left">
-        <li>
-          Sprawdź, czy szukana fraza nie zawiera błędów.
-        </li>
-        <li>
-          Spróbuj użyć innych słów kluczowych.
-        </li>
-        <li>
-          Spróbuj użyć bardziej ogólnych słów kluczowych.
-        </li>
-      </ul>
-      <div class="block justify-center md:m-auto md:flex md:w-3/5">
-        <img class="center h-50 mx-auto" src="/images/placeholders/noresults.webp" alt="brak wyników wyszukiwania">
-      </div>
+    <li v-if="(!data.length && !loading && !error)" class="space-y-7 text-xl text-zinc-500">
+      <NoResults/>
     </li>
   </ul>
 </template>
