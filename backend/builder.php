@@ -136,3 +136,5 @@ function saveData(Collection $people, Collection $companies, Collection $meetups
 saveData($people, $companies, $meetups);
 
 echo "Static database has been created." . PHP_EOL;
+var_dump(realpath(__DIR__ . "/../public/api"));
+var_dump(scandir(realpath(__DIR__ . "/../public/api")));
