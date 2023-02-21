@@ -6,6 +6,7 @@ import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import SortButton from '@/components/People/SortButton.vue'
 import { useCountedPresentations } from '@/composables/useCountedPresentations.js'
+import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const props = defineProps({
   speakers: {
@@ -39,6 +40,7 @@ const sortedUpdatedSpeakers = (speakers) => {
           Nasi prelegenci
         </h2>
         <div class="mt-8 overflow-hidden rounded-lg shadow md:mx-0">
+          <LoadingSpinner v-if="!sortedSpeakers.length"/>
           <table class="min-w-full">
             <thead class="bg-zinc-800">
               <tr>
@@ -52,7 +54,7 @@ const sortedUpdatedSpeakers = (speakers) => {
                 <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">
                   Kontakt
                 </th>
-                <th scope="col" class="py-3.5 pl-3 pr-4 sm:pr-6">
+                <th scope="col" class="w-1/6 py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Zobacz profil</span>
                 </th>
               </tr>
@@ -63,7 +65,7 @@ const sortedUpdatedSpeakers = (speakers) => {
                   <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
-                <td class="mx-3 my-4 whitespace-nowrap text-left text-sm font-semibold text-zinc-500 hover:font-bold sm:text-base md:text-lg">
+                <td class="whitespace-nowrap py-3.5 pl-4 pr-1 text-left text-sm font-semibold text-zinc-500 hover:font-bold sm:text-base md:text-lg">
                   <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:font-bold ">
                     {{ speaker.name }}
                   </router-link>
@@ -78,9 +80,9 @@ const sortedUpdatedSpeakers = (speakers) => {
                     <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-8 w-8 pr-2 text-zinc-600"/>
                   </div>
                 </td>
-                <td class="textright w-20 whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="focus:z-10 focus:outline-none">
-                    <chevron-right-icon class="flex h-5 w-5 transition duration-200 group-hover:translate-x-2"/>
+                <td class="w-20 whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="grid focus:z-10 focus:outline-none">
+                    <chevron-right-icon class="h-5 w-5 justify-self-end transition duration-200 text-zinc-500 group-hover:translate-x-2"/>
                   </router-link>
                 </td>
               </tr>

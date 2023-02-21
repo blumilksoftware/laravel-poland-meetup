@@ -52,7 +52,7 @@ onMounted(() => {
                   Prezentacje
                 </span>
                 <presentation-chart-bar-icon class="h-7 w-7 md:hidden"/>
-                <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5  self-center transform ml-3']" aria-hidden="true"/>
+                <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5  self-center transform ml-1 md:ml-3']" aria-hidden="true"/>
               </div>
             </ListboxButton>
           </span>
