@@ -1,6 +1,6 @@
 <script setup>
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
-import { ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { ChevronDownIcon, PresentationChartBarIcon } from '@heroicons/vue/24/outline'
 import { watch, ref, onMounted  } from 'vue'
 import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
 
@@ -10,7 +10,6 @@ const props = defineProps({
     default: () => [],
   },
 })
-
 const sortOptions = [
   { 
     name: 'ascending', 
@@ -23,7 +22,6 @@ const sortOptions = [
 ]
 
 const sortBy = ref(sortOptions[0])
-
 const emit = defineEmits(['sorted-speakers'])
 
 watch(() => props.speakers, () => {
@@ -49,22 +47,20 @@ onMounted(() => {
         <div class="relative">
           <span class="inline-block w-full ">
             <ListboxButton>
-              <!-- <div class="mr-3 flex md:hidden">
-                <bars-arrow-down-icon class="h-9 w-9"/>
-              </div> -->
-              <div class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:flex">
-                <span class="block truncate">
+              <div class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
+                <span class="hidden truncate md:block">
                   Prezentacje
                 </span>
-                <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform ml-3']" aria-hidden="true"/>
+                <presentation-chart-bar-icon class="h-7 w-7 md:hidden"/>
+                <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5  self-center transform ml-3']" aria-hidden="true"/>
               </div>
             </ListboxButton>
           </span>
           <transition leave-active-class="transition ease-in-out duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
-            <div v-if="open" class="absolute right-1 z-50 mt-1 w-60 rounded-md bg-white shadow-lg">
+            <div v-if="open" class="absolute right-1 z-50 mt-1 w-40 rounded-md bg-white shadow-lg">
               <ListboxOptions static class="shadow-xs max-h-60 overflow-auto rounded-md py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
                 <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
-                  <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
+                  <div :class="`${ active ? 'bg-zinc-800' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
                     <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
                       {{ option.value }}
                     </span>

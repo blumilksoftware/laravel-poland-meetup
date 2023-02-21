@@ -14,6 +14,6 @@ export function useCountedPresentations(meetups, speakers) {
     }
   }
   count()
-  console.log('newArrayOfSpeakers', newArrayOfSpeakers)
+
   return { newArrayOfSpeakers }
 }
