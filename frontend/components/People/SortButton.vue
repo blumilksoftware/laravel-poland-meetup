@@ -1,5 +1,5 @@
 <script setup>
-import { Disclosure, DisclosureButton, Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
 import { PresentationChartBarIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 import { watch, ref, onMounted  } from 'vue'
 import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
@@ -13,35 +13,31 @@ const props = defineProps({
 
 const sortOptions = [
   { 
-    name: 'default', 
-    value: 'domyślnie',
-  },
-  { 
     name: 'ascending', 
     value: 'rosnąco',
   },
   { 
-    name: 'descdending', 
+    name: 'descending', 
     value: 'malejąco',
   },
 ]
 
-const sorted = ref(sortOptions[0].name)
+const sortBy = ref(sortOptions[0])
 
 const emit = defineEmits(['sorted-speakers'])
 
 watch(() => props.speakers, () => {
-  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
   emit('sorted-speakers', sortedSpeakers)
 })
 
-watch(sorted, () => {
-  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
+watch(sortBy, () => {
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
   emit('sorted-speakers', sortedSpeakers)
 })
 
 onMounted(() => { 
-  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sorted.value.name)
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
   emit('sorted-speakers', sortedSpeakers)
 })
 
@@ -62,9 +58,9 @@ onMounted(() => {
   </Disclosure> -->
 
 
-  <div class="flex items-center justify-center ">
+  <div class="flex items-center justify-center text-zinc-700">
     <div class="min-w-56 mx-auto">
-      <Listbox v-slot="{ open }" v-model="sorted" as="div">
+      <Listbox v-slot="{ open }" v-model="sortBy" as="div">
         <div class="relative">
           <span class="inline-block w-full ">
             <ListboxButton>
@@ -73,7 +69,7 @@ onMounted(() => {
               </div> -->
               <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
                 <span class="block truncate">
-                  {{ sorted }}
+                  {{ sortBy.value }}
                 </span>
                 <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform ml-3']" aria-hidden="true"/>
               </div>

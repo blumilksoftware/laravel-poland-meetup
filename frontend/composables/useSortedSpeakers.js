@@ -1,49 +1,43 @@
-export function useSortedSpeakers (speakers, sortType) {
-  console.log('speakers, sortType', speakers, sortType)
-  
+export function useSortedSpeakers (speakers, sortType) {  
   let sortedSpeakers = []
 
-  function compare(a, b) {
-    if (a.presentations < b.presentations) {
-      // console.log('a.presentations', a.presentations)
+  function sortAlphabetic(a, b) {
+    function getSurname(speaker) {
+      speaker.name.split(' ')[1]
+    }
+
+    if (getSurname(a) < getSurname(b)) {
       return -1
     }
-    if (a.presentations > b.presentations) {
-      // console.log('a.presentations', a.presentations)
+    if (getSurname(a) > getSurname(b)) {
       return 1
     }
     return 0
   }
-  
-  const ascendingPresentations = speakers.sort(compare)
-  const descendingPresentations = speakers.sort(compare).reverse()
 
-  if(sortType === 'default') {
-    for(const item of ascendingPresentations) {
-      sortedSpeakers.push(item)
-      // console.log('działa dla domyślnego')
+  function compare(a, b) {
+    if (a.presentations < b.presentations) {
+      return -1
     }
-    for(const item of descendingPresentations) {
-      sortedSpeakers.push(item)
+    if (a.presentations > b.presentations) {
+      return 1
     }
-  } else if(sortType === 'ascending') {
-    speakers.sort(compare).reverse()
-    // console.log('działa dla rosnącego')
+    return 0
+  }  
+
+  if(sortType === 'ascending') {
+    speakers.sort(compare).sort(sortAlphabetic).reverse()
     
     for(const item of speakers) {
       sortedSpeakers.push(item)
     }
   } else if(sortType === 'descending') {
-    speakers.sort(compare)
-    // console.log('działa dla malejącego')
+    speakers.sort(compare).sort(sortAlphabetic)
 
     for(const item of speakers) {
       sortedSpeakers.push(item)
     }
   }  
 
-  // console.log('ascendingPresentations', ascendingPresentations)
-  // console.log('descendingPresentations', descendingPresentations)
-  console.log('sortedSpeakers', sortedSpeakers)
   return { sortedSpeakers }
 }
