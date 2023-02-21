@@ -1,6 +1,6 @@
 <script setup>
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
-import { PresentationChartBarIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 import { watch, ref, onMounted  } from 'vue'
 import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
 
@@ -28,37 +28,22 @@ const emit = defineEmits(['sorted-speakers'])
 
 watch(() => props.speakers, () => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
-  emit('sorted-speakers', sortedSpeakers)
+  emit('sorted-speakers', sortedSpeakers.value)
 })
 
 watch(sortBy, () => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
-  emit('sorted-speakers', sortedSpeakers)
+  emit('sorted-speakers', sortedSpeakers.value)
 })
 
 onMounted(() => { 
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value.name)
-  emit('sorted-speakers', sortedSpeakers)
+  emit('sorted-speakers', sortedSpeakers.value)
 })
 
 </script>
 <template>
-  <!-- <Disclosure v-slot="{ open }" v-model="sorted" as="div" class="">
-    <DisclosureButton>
-      <div class="flex">
-        <span class="hidden sm:table-cell">
-          Prezentacje
-        </span>
-        <presentation-chart-bar-icon class="h-6 w-6 sm:hidden"/>
-        <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform ml-3']" aria-hidden="true"/>
-      </div>
-    </DisclosureButton>
-  <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-x-72 opacity-0" enter-to-class="transform translate-x-0 opacity-100" leave-active-class="transition duration-100 ease-out" leave-from-class="transform translate-x-0 opacity-100" leave-to-class="transform -translate-x-72 opacity-0">
-  </transition>
-  </Disclosure> -->
-
-
-  <div class="flex items-center justify-center text-zinc-700">
+  <div class="flex items-center justify-center">
     <div class="min-w-56 mx-auto">
       <Listbox v-slot="{ open }" v-model="sortBy" as="div">
         <div class="relative">
@@ -67,9 +52,9 @@ onMounted(() => {
               <!-- <div class="mr-3 flex md:hidden">
                 <bars-arrow-down-icon class="h-9 w-9"/>
               </div> -->
-              <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
+              <div class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:flex">
                 <span class="block truncate">
-                  {{ sortBy.value }}
+                  Prezentacje
                 </span>
                 <chevron-down-icon :class="[open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform ml-3']" aria-hidden="true"/>
               </div>
@@ -97,5 +82,4 @@ onMounted(() => {
       </Listbox>
     </div>
   </div>
-
 </template>

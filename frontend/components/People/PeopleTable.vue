@@ -18,8 +18,8 @@ const props = defineProps({
   },
 })
 
-let sortedSpeakers = ref([])
 let updatedSpeakers = ref([])
+let sortedSpeakers = ref([])
 
 watch(() => props.meetups, () => {
   const { newArrayOfSpeakers } = useCountedPresentations(props.meetups, props.speakers)
@@ -27,7 +27,7 @@ watch(() => props.meetups, () => {
 })
 
 const sortedUpdatedSpeakers = (speakers) => {
-  sortedSpeakers.value = speakers.value
+  sortedSpeakers.value = speakers
 }
 
 </script>
@@ -39,16 +39,18 @@ const sortedUpdatedSpeakers = (speakers) => {
           Nasi prelegenci
         </h2>
         <div class="mt-8 overflow-hidden rounded-lg shadow md:mx-0">
-          <table class="min-w-full divide-y divide-zinc-800">
+          <table class="min-w-full">
             <thead class="bg-zinc-800">
               <tr>
-                <th scope="col" class="w-1/6 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6"/>
+                <th scope="col" class="w-1/6 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:py-3 sm:pl-6"/>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">
                   Imię i nazwisko
                 </th>
-                <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">Kontakt</th>
                 <th scope="col" class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
                   <SortButton :speakers="updatedSpeakers" @sorted-speakers="sortedUpdatedSpeakers"/>
+                </th>
+                <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">
+                  Kontakt
                 </th>
                 <th scope="col" class="py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Zobacz profil</span>
@@ -56,15 +58,18 @@ const sortedUpdatedSpeakers = (speakers) => {
               </tr>
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
-              <tr v-for="speaker in updatedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
-                <td class="justify-fit whitespace-nowrap py-2 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
+              <tr v-for="speaker in sortedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
+                <td class="justify-fit whitespace-nowrap py-3.5 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
                   <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                   <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
                 </td>
-                <td class="whitespace-nowrap px-3 py-4 text-left text-sm font-semibold text-zinc-500 transition duration-200 group-hover:scale-110 sm:text-base md:text-lg">
+                <td class="mx-3 my-4 whitespace-nowrap text-left text-sm font-semibold text-zinc-500 hover:font-bold sm:text-base md:text-lg">
                   <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:font-bold ">
                     {{ speaker.name }}
                   </router-link>
+                </td>
+                <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500 group-hover:font-bold">
+                  {{ speaker.presentations }}
                 </td>
                 <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-zinc-500 md:table-cell">
                   <div class="mx-auto flex items-center space-x-2 md:space-x-5">
@@ -73,12 +78,9 @@ const sortedUpdatedSpeakers = (speakers) => {
                     <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-8 w-8 pr-2 text-zinc-600"/>
                   </div>
                 </td>
-                <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500 transition duration-200 group-hover:font-bold">
-                  {{ speaker.presentations }}
-                </td>
-                <td class="justify-end whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:outline-none">
-                    <chevron-right-icon class="flex h-5 w-5 justify-end transition duration-200 group-hover:translate-x-2"/>
+                <td class="textright w-20 whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="focus:z-10 focus:outline-none">
+                    <chevron-right-icon class="flex h-5 w-5 transition duration-200 group-hover:translate-x-2"/>
                   </router-link>
                 </td>
               </tr>

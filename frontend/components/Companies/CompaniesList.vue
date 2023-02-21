@@ -86,9 +86,9 @@ defineProps({
                     </a>
                   </div>
                   <div class="my-1 mx-auto flex space-x-5 sm:my-3 sm:gap-3">
-                    <linkedin-icon v-if="company.linkedin" :href="company.linkedin" class="pr-2 text-zinc-600"/>
-                    <facebook-icon v-if="company.facebook" :href="company.facebook" class="pr-2 text-zinc-600"/>
-                    <twitter-icon v-if="company.twitter" :href="company.twitter" class="pr`-2 text-zinc-600"/>
+                    <linkedin-icon v-if="company.linkedin" :href="company.linkedin" class="h-10 w-10 pr-2 text-zinc-600"/>
+                    <facebook-icon v-if="company.facebook" :href="company.facebook" class="h-10 w-10 pr-2 text-zinc-600"/>
+                    <twitter-icon v-if="company.twitter" :href="company.twitter" class="h-10 w-10 pr-2 text-zinc-600"/>
                   </div>
                 </div>
               </div>
