@@ -48,7 +48,7 @@ jobs:
         working-directory: dist
 
       - name: ls
-        run: ls
+        run: ls api
         working-directory: dist
 
       - name: Deploy
