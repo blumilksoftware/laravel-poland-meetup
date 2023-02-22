@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
@@ -7,6 +7,7 @@ import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import SortButton from '@/components/People/SortButton.vue'
 import { useCountedPresentations } from '@/composables/useCountedPresentations.js'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
 
 const props = defineProps({
   speakers: {
@@ -20,7 +21,7 @@ const props = defineProps({
 })
 
 let updatedSpeakers = ref([])
-let sortedSpeakers = ref([])
+let speakersToRender = ref([])
 
 watch(() => props.meetups, () => {
   const { newArrayOfSpeakers } = useCountedPresentations(props.meetups, props.speakers)
@@ -28,8 +29,13 @@ watch(() => props.meetups, () => {
 })
 
 const sortedUpdatedSpeakers = (speakers) => {
-  sortedSpeakers.value = speakers
+  speakersToRender.value = speakers
 }
+
+watch(() => props.meetups, () => { 
+  const { sortedSpeakers } = useSortedSpeakers(props.speakers, 'ascending')
+  sortedSpeakers.value = speakersToRender.value
+})
 
 </script>
 <template>
@@ -39,8 +45,8 @@ const sortedUpdatedSpeakers = (speakers) => {
         <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
           Nasi prelegenci
         </h2>
+        <!-- <LoadingSpinner /> -->
         <div class="mt-8 overflow-hidden rounded-lg shadow md:mx-0">
-          <LoadingSpinner v-if="!sortedSpeakers.length"/>
           <table class="min-w-full">
             <thead class="bg-zinc-800">
               <tr>
@@ -60,13 +66,15 @@ const sortedUpdatedSpeakers = (speakers) => {
               </tr>
             </thead>
             <tbody class="divide-y divide-zinc-200 bg-white">
-              <tr v-for="speaker in sortedSpeakers" :key="speaker.name" class="group hover:bg-zinc-50">
+              <tr v-for="speaker in speakersToRender" :key="speaker.name" class="group hover:bg-zinc-100">
                 <td class="justify-fit whitespace-nowrap py-3.5 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
-                  <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
-                  <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10">
+                    <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
+                    <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
+                  </router-link>
                 </td>
-                <td class="whitespace-nowrap py-3.5 pl-4 pr-1 text-left text-sm font-semibold text-zinc-500 hover:font-bold sm:text-base md:text-lg">
-                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 focus:font-bold ">
+                <td class="whitespace-nowrap py-3.5 pl-4 pr-1 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">
+                  <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="w-full focus:z-10 ">
                     {{ speaker.name }}
                   </router-link>
                 </td>
@@ -82,7 +90,7 @@ const sortedUpdatedSpeakers = (speakers) => {
                 </td>
                 <td class="w-20 whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
                   <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="grid focus:z-10 focus:outline-none">
-                    <chevron-right-icon class="h-5 w-5 justify-self-end transition duration-200 text-zinc-500 group-hover:translate-x-2"/>
+                    <chevron-right-icon class="h-5 w-5 justify-self-end text-zinc-500 transition duration-200 group-hover:translate-x-2"/>
                   </router-link>
                 </td>
               </tr>
