@@ -13,6 +13,10 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  loading: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 let updatedSpeakers = ref([])
@@ -29,7 +33,7 @@ onMounted(() => {
 
 </script>
 <template>
-  <div class="my-10 bg-white tracking-tight text-zinc-700 shadow-lg">
+  <div :loading="!loading" class="my-10 bg-white tracking-tight text-zinc-700 shadow-lg">
     <div class="mx-auto max-w-7xl p-4 sm:px-6 lg:py-24 lg:px-8">
       <div class="space-y-12">
         <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">

@@ -67,6 +67,9 @@ const sortedUpdatedSpeakers = (speakers) => {
         </td>
         <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-zinc-500 md:table-cell">
           <div class="mx-auto flex items-center space-x-2 md:space-x-5">
+            <div v-if="!speaker.linkedin && !speaker.twitter && !speaker.facebook" class="ml-2 text-2xl">
+              {{ '-' }}
+            </div>
             <linkedin-icon v-if="speaker.linkedin" :href="speaker.linkedin" class="h-8 w-8 pr-2 text-zinc-600"/>
             <facebook-icon v-if="speaker.facebook" :href="speaker.facebook" class="h-8 w-8 pr-2 text-zinc-600"/>
             <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-8 w-8 pr-2 text-zinc-600"/>
