@@ -1,6 +1,6 @@
 <script setup>
 import { ChevronDownIcon, PresentationChartBarIcon } from '@heroicons/vue/24/outline'
-import { watch, ref, onMounted  } from 'vue'
+import { watch, ref, onMounted } from 'vue'
 import { useSortedSpeakers } from '@/composables/useSortedSpeakers.js'
 
 const props = defineProps({
@@ -15,14 +15,11 @@ const sortBy = ref(sortOptions[0])
 const emit = defineEmits(['sorted-speakers'])
 
 function changeSort() {
-  
   if (sortBy.value === sortOptions[0]) {
     sortBy.value = sortOptions[1]
-    console.log('if sortBy.value', sortBy.value)
   }
   else {
     sortBy.value = sortOptions[0]
-    console.log('else sortBy.value', sortBy.value)
   }
 }
 
@@ -34,10 +31,9 @@ watch(() => props.speakers, () => {
 watch(sortBy, () => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value)
   emit('sorted-speakers', sortedSpeakers.value)
-  console.log('watch')
 })
 
-onMounted(() => { 
+onMounted(() => {
   const { sortedSpeakers } = useSortedSpeakers(props.speakers, sortBy.value)
   emit('sorted-speakers', sortedSpeakers.value)
 })
@@ -48,7 +44,7 @@ onMounted(() => {
     <div class="min-w-56 mx-auto">
       <div class="relative">
         <span class="inline-block w-full ">
-          <div class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
+          <div class="flex cursor-pointer py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
             <span class="hidden truncate md:block">
               Prezentacje
             </span>
