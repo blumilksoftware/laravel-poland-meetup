@@ -42,7 +42,7 @@ function buildSlug(name) {
         <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">
           <SortButton label="Imię i nazwisko" sort-by="names" :speakers="speakers" @sorted-speakers="sortedUpdatedSpeakers"/>
         </th>
-        <th scope="col" class="flex py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
+        <th scope="col" class="py-3.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2">
           <SortButton label="Prezentacje" sort-by="presentations" :speakers="speakers" @sorted-speakers="sortedUpdatedSpeakers"/>
         </th>
         <th scope="col" class="hidden py-2.5 text-left text-base font-medium leading-5 text-white ring-zinc-700/60 ring-offset-2 ring-offset-zinc-800 focus:outline-none focus:ring-2 md:table-cell">
