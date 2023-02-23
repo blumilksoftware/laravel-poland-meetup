@@ -11,6 +11,10 @@ const props = defineProps({
   },
 })
 
+function buildSlug(name) {
+  return name.toLowerCase().replaceAll(' ', '-')
+}
+
 </script>
 
 <template>
@@ -74,7 +78,7 @@ const props = defineProps({
                         <router-link :to="{ name: 'people' }">
                           <h3>{{ speaker.name }}</h3>
                         </router-link>
-                        <router-link :to="{ name: 'companies' }">
+                        <router-link :to="{ name: 'companies.details', params: {id: buildSlug(speaker.company) } }">
                           <p class="text-zinc-600">
                             {{ speaker.company }}
                           </p>

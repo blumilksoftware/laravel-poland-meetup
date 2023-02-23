@@ -1,9 +1,10 @@
 import { ref, computed } from 'vue'
 
-export function useBuildLists(meetupsList, companyName) {
+export function useBuildLists(meetupsList, company) {
   const meetups = ref(new Map())
   const presentations = ref(new Map()) 
   const speakers = ref(new Map())
+  const companyName = company.toLowerCase().replaceAll(' ', '-')
 
   const lists = computed (() => { 
     return {
@@ -29,7 +30,13 @@ export function useBuildLists(meetupsList, companyName) {
     return meetupsList.filter(function(meetup) {
       meetup.presentations.filter(function(presentation) {
         presentation.speakers.filter(function(speaker) {
-          if(speaker.company === companyName) {
+          let speakerCompany = ''
+
+          if (speaker.company) {
+            speakerCompany = speaker.company.toLowerCase().replaceAll(' ', '-')
+          }
+
+          if(speakerCompany === companyName) {
             meetups.value.set(meetup.name, meetup)
             presentations.value.set(presentation.title, presentation)
             speakers.value.set(speaker.name, speaker)
