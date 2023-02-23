@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-export function useSortedSpeakers (speakers, sortType) {  
+export function useSortedSpeakers (speakers, sortType, sortBy) {  
   let sortedSpeakers = ref([])
 
   function sortAlphabetic(a, b) {
@@ -25,19 +25,28 @@ export function useSortedSpeakers (speakers, sortType) {
       return 1
     }
     return 0
-  }  
+  }
 
-  if(sortType === 'ascending') {
-    speakers.sort(sortAlphabetic).reverse().sort(compare).reverse()
-    
-    for(const item of speakers) {
-      sortedSpeakers.value.push(item)
+  if(sortBy === 'presentations'){
+
+    if(sortType === 'ascending') {
+      speakers.sort(sortAlphabetic).reverse().sort(compare).reverse()
+      sortedSpeakers.value = speakers
+    } 
+    else if(sortType === 'descending') {
+      speakers.sort(sortAlphabetic).sort(compare)
+      sortedSpeakers.value = speakers
     }
-  } else if(sortType === 'descending') {
-    speakers.sort(sortAlphabetic).sort(compare)
+  } 
+  else if (sortBy ==='names') {
 
-    for(const item of speakers) {
-      sortedSpeakers.value.push(item)
+    if(sortType === 'ascending') {
+      speakers.sort(sortAlphabetic).reverse()
+      sortedSpeakers.value = speakers
+    } 
+    else if(sortType === 'descending') {
+      speakers.sort(sortAlphabetic)
+      sortedSpeakers.value = speakers
     }
   }
 
