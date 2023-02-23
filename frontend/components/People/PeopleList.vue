@@ -29,6 +29,10 @@ const sortedUpdatedSpeakers = (speakers) => {
   speakersToRender.value = speakers
 }
 
+function buildSlug(name) {
+  return name.toLowerCase().replaceAll(' ', '-')
+}
+
 </script>
 <template>
   <table class="min-w-full">
@@ -52,13 +56,13 @@ const sortedUpdatedSpeakers = (speakers) => {
     <tbody class="divide-y divide-zinc-200 bg-white">
       <tr v-for="speaker in speakersToRender" :key="speaker.id" class="group hover:bg-zinc-100">
         <td class="justify-fit whitespace-nowrap py-3.5 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
-          <router-link :to="{ name: 'people.details', params: { id: speaker.id } }" class="w-full focus:z-10">
+          <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }" class="w-full focus:z-10">
             <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12">
             <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12">
           </router-link>
         </td>
         <td class="whitespace-nowrap py-3.5 pl-4 pr-1 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">
-          <router-link :to="{ name: 'people.details', params: { id: speaker.id } }" class="w-full focus:z-10 ">
+          <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }" class="w-full focus:z-10 ">
             {{ speaker.name }}
           </router-link>
         </td>
@@ -76,7 +80,7 @@ const sortedUpdatedSpeakers = (speakers) => {
           </div>
         </td>
         <td class="w-20 whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-6">
-          <router-link :to="{ name: 'people.details', params: { id: speaker.name } }" class="grid focus:z-10 focus:outline-none">
+          <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }" class="grid focus:z-10 focus:outline-none">
             <chevron-right-icon class="h-5 w-5 justify-self-end text-zinc-500 transition duration-200 group-hover:translate-x-2"/>
           </router-link>
         </td>
