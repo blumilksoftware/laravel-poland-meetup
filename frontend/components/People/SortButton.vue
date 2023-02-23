@@ -65,7 +65,7 @@ onMounted(() => {
               {{ label }}
             </span>
             <presentation-chart-bar-icon v-if="label === 'Prezentacje'" class="h-7 w-7 md:hidden"/>
-            <user-group-icon v-if="label === 'Imię i nazwisko'" class="h-7 w-7 md:hidden"/>
+            <user-group-icon v-if="label === 'Imię i nazwisko'" class="ml-2 h-7 w-7 md:hidden"/>
             <chevron-down-icon :class="[ascending ? '-rotate-180' : 'rotate-0', 'h-4 w-4 md:h-5 md:w-5  self-center transform md:ml-3']" aria-hidden="true"/>
           </div>
         </span>
