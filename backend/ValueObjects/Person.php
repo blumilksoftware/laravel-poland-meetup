@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 class Person
 {
     public function __construct(
+        public readonly string $id,
         public readonly string $name,
         public readonly ?string $image = null,
         public readonly string $bio,
@@ -19,6 +20,7 @@ class Person
     public function toListedEntry(): array
     {
         return [
+            "id" => $this->id,
             "name" => $this->name,
             "image" => $this->image,
             "bio" => $this->bio,
@@ -30,6 +32,7 @@ class Person
     public function toMeetupListEntry()
     {
         return [
+            "id" => $this->id,
             "name" => $this->name,
             "image" => $this->image,
             "bio" => $this->bio,
