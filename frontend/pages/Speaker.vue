@@ -1,19 +1,25 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { useRoute } from 'vue-router'
+// import { useRoute } from 'vue-router'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import SpeakerTable from '@/components/Speaker/SpeakerTable.vue'
 import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
-let meetups = ref([])
-let people = ref([])
-const route = useRoute()
+const meetups = ref([])
+const people = ref([])
+// const route = useRoute()
 let loading = ref(true)
 let error = ref(false)
+// const speaker = ref({})
+// const slug = route.params.id
 
-const getSpeaker = route.params.id.replace('-', ' ').toUpperCase()
-console.log(getSpeaker)
+// for(let item of people.value) {
+//   if(item.slug === slug) {
+//     speaker.value = item
+//   }
+// }
+
 
 onMounted(() => {
   async function fetchMeetups () {
@@ -24,9 +30,8 @@ onMounted(() => {
   fetchMeetups().then(meetups => {
     meetups
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
-    console.log(e)
   })
   async function fetchPeople () {
     const response = await fetch('/api/people.json')
@@ -36,23 +41,19 @@ onMounted(() => {
   fetchPeople().then(people => {
     people
   })
-  .catch((e) => {
+  .catch(() => {
     error.value = true
-    console.log(e)
   })
 
   loading.value = false
 })
 
 </script>
-
-
-
 <template>
   <NoDataError :error="error" text="Brak prelegenta"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
-    <PageHeader word="Imię"/>
-    <SpeakerTable :error="error" :loading="loading" :meetups="meetups" :speakers="people"/>
+    <PageHeader word1="Imię"/>
+    <SpeakerTable :loading="loading" :meetups="meetups" :speaker="speaker"/>
   </div>
 </template>
