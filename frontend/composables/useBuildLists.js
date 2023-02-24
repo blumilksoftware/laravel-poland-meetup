@@ -35,7 +35,6 @@ export function useBuildLists(meetupsList, company) {
           if (speaker.company) {
             speakerCompany = speaker.company.toLowerCase().replaceAll(' ', '-')
           }
-
           if(speakerCompany === companyName) {
             meetups.value.set(meetup.name, meetup)
             presentations.value.set(presentation.title, presentation)
