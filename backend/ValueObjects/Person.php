@@ -12,7 +12,7 @@ class Person
         public readonly string $id,
         public readonly string $name,
         public readonly ?string $image = null,
-        public readonly string $bio,
+        public readonly ?string $bio = null,
         public readonly ?string $linkedin = null,
         public readonly Collection $meetups = new Collection(),
     ) {}
