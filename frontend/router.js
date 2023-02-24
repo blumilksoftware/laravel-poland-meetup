@@ -8,7 +8,7 @@ const routes = [
     { path: '/companies/:id', name: 'companies.details', component: () => import('@/pages/Company.vue') },
     { path: '/companies/:id/:tabs', name: 'companies.details.list', component: () => import('@/pages/Company.vue') },
     { path: '/people', name: 'people', component: () => import('@/pages/People.vue') },
-    { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Landing.vue') },
+    { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Speaker.vue') },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
 ]
 
