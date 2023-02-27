@@ -5,6 +5,7 @@ import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
 import NoDataError from '@/components/EmptyStates/NoDataError.vue'
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
   meetups: {
@@ -29,10 +30,12 @@ const props = defineProps({
   },
 })
 
-const searchMeetup = ref('')
+const route = useRoute()
+const searchMeetup = ref(route.params.id)
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
+
 
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
@@ -85,7 +88,7 @@ const searchSpeaker = ( meetups ) => {
 
 const filteredMeetups = computed(() => {
   return searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))
-}) 
+})
 
 </script>
 <template>

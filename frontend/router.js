@@ -10,6 +10,7 @@ const routes = [
     { path: '/people', name: 'people', component: () => import('@/pages/People.vue') },
     { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Speaker.vue'), props: true },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
+    { path: '/results/:id', name: 'searching.results', component: () => import('@/pages/Meetups.vue') },
 ]
 
 export default createRouter({

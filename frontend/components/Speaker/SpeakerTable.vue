@@ -1,6 +1,7 @@
 <script setup>
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 import SpeakerCard from '@/components/Speaker/SpeakerCard.vue'
+import PresentationsList from '@/components/Speaker/PresentationsList.vue'
 
 const props = defineProps({
   meetups: {
@@ -25,6 +26,7 @@ const props = defineProps({
         <LoadingSpinner v-if="!meetups.length"/>
         <div v-else class="mt-8 overflow-hidden md:mx-0">
           <SpeakerCard :meetups="meetups" :speaker="speaker"/>
+          <PresentationsList :meetups="meetups" :speaker="speaker"/>
         </div>
       </div>
     </div>
