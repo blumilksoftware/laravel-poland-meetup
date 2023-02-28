@@ -1,28 +1,35 @@
 <script setup>
-import { onMounted, watch } from 'vue'
+import { onMounted, watch, ref, computed } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import addNavigation from '@/components/Companies/Map/navigation.js'
 import addMarkers from '@/components/Companies/Map/marker.js'
+import useFlyTo from '@/composables/useFlyTo.js'
 
 const props = defineProps({
   data: {
     type: [ Object, Array ],
     default: () => {},
   },
-  zoom: {
-    type: Number,
-    default: 5,
-  },
-  center: {
-    type: Array,
-    default: () => [18, 52],
-  },
 })
 
+const center = ref({
+  center: [18, 52], 
+  zoom:5,
+})
 
-const center = {
-  center: [18, 52],
-  zoom: props.zoom,
+const newLocation = computed(() => {
+  const { companyLocation } = useFlyTo()
+  return companyLocation.value
+})
+
+function updateView(map) {
+  watch(() => {
+    map.flyTo({
+      center: newLocation.value.center,
+      zoom: newLocation.value.zoom,
+      essential: true,
+    })
+  })
 }
 
 onMounted(() => {
@@ -31,8 +38,8 @@ onMounted(() => {
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: props.center,
-    zoom: props.zoom,
+    center: center.value.center,
+    zoom: center.value.zoom,
   })
 
   addNavigation(map, center)
@@ -40,10 +47,11 @@ onMounted(() => {
   watch(() => props.data, () => {
     addMarkers(map, props.data)
   })
+
+  updateView(map)
 })
 
 </script>
-
 <template>
   <div id="map" class="relative inset-y-0 h-[400px] w-full shrink lg:max-h-[600px]"/>
 </template>
