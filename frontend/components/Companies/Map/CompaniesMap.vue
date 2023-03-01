@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, watch, ref, computed } from 'vue'
+import { onMounted, watch, watchEffect, ref, computed } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import addNavigation from '@/components/Companies/Map/navigation.js'
 import addMarkers from '@/components/Companies/Map/marker.js'
@@ -22,16 +22,6 @@ const newLocation = computed(() => {
   return companyLocation.value
 })
 
-function updateView(map) {
-  watch(() => {
-    map.flyTo({
-      center: newLocation.value.center,
-      zoom: newLocation.value.zoom,
-      essential: true,
-    })
-  })
-}
-
 onMounted(() => {
   mapboxgl.accessToken = import.meta.env.VITE_VUE_APP_MAPBOX_TOKEN
 
@@ -48,7 +38,13 @@ onMounted(() => {
     addMarkers(map, props.data)
   })
 
-  updateView(map)
+  watchEffect(() => {
+    map.flyTo({
+      center: newLocation.value.center,
+      zoom: newLocation.value.zoom,
+      essential: true,
+    })
+  })
 })
 
 </script>
