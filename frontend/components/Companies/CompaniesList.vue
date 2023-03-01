@@ -27,7 +27,7 @@ defineProps({
   },
 })
 
-function showPin(coordinates) {
+function showLocation(coordinates) {
   const { setLocation } = useFlyTo()
   setLocation(coordinates, 15)
 }
@@ -81,7 +81,7 @@ function showPin(coordinates) {
                   </router-link>
                   <div class="flex space-x-3 transition duration-200 hover:translate-x-1">
                     <map-pin-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
-                    <a id="location" href="#map" class="col-span-11" @click="showPin(company.coordinates)">
+                    <a id="location" href="#map" class="col-span-11" @click="showLocation(company.coordinates)">
                       {{ company.location }}
                     </a>
                   </div>
