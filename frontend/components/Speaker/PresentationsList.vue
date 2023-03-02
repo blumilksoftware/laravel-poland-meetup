@@ -43,8 +43,7 @@ const presentations = [
 <template>
   <div class="mx-auto">
     <div class="justify-center">
-      <h2
-        class="first-letter:text-laravel lg:py-18 w-full border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
+      <h2 class="first-letter:text-laravel lg:py-18 w-full border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
         Meetupowy wkład
       </h2>
       <div class="m-10 block justify-center md:flex md:space-x-24">
