@@ -28,9 +28,9 @@ class Person
         return [
             "id" => $this->id,
             "name" => $this->name,
+            "slug" => $this->slug,
             "image" => $this->image,
             "bio" => $this->bio,
-            "slug" => $this->slug,
             "linkedin" => $this->linkedin,
             "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->name),
         ];
@@ -41,9 +41,9 @@ class Person
         return [
             "id" => $this->id,
             "name" => $this->name,
+            "slug" => $this->slug,
             "image" => $this->image,
             "bio" => $this->bio,
-            "slug" => $this->slug,
             "linkedin" => $this->linkedin,
             "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->name),
         ];
