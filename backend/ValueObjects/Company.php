@@ -7,6 +7,7 @@ namespace LaravelPolandMeetup\ValueObjects;
 class Company
 {
     public function __construct(
+        public readonly string $id,
         public readonly string $name,
         public readonly string $location,
         public readonly ?string $logo = null,
@@ -20,6 +21,7 @@ class Company
     public function toListedEntry(): array
     {
         return [
+            "id" => $this->id,
             "name" => $this->name,
             "location" => $this->location,
             "logo" => $this->logo,

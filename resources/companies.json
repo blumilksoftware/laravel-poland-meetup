@@ -1,5 +1,6 @@
 {
   "@allegro": {
+    "id": "0",
     "name": "Allegro",
     "logo": "/images/companies/allegro.webp",
     "location": "Poznań",
@@ -12,6 +13,7 @@
     }
   },
   "@amsterdamstandard": {
+    "id": "1",
     "name": "Amsterdam Standard",
     "logo": "/images/companies/amsterdamstandard.webp",
     "location": "Kraków",
@@ -24,6 +26,7 @@
     }
   },
   "@blumilk": {
+    "id": "2",
     "name": "Blumilk",
     "logo": "/images/companies/blumilk.webp",
     "location": "Legnica",
@@ -37,6 +40,7 @@
     }
   },
   "@bmind": {
+    "id": "3",
     "name": "B-MIND",
     "logo": "/images/companies/bmind.webp",
     "location": "Poznań",
@@ -49,6 +53,7 @@
     }
   },
   "@devpark": {
+    "id": "4",
     "name": "Devpark",
     "logo": "/images/companies/devpark.webp",
     "location": "Poznań",
@@ -61,6 +66,7 @@
     }
   },
   "@expansja": {
+    "id": "5",
     "name": "Expansja",
     "logo": "/images/companies/expansja.webp",
     "location": "Poznań",
@@ -74,6 +80,7 @@
     }
   },
   "@highsolutions": {
+    "id": "6",
     "name": "HighSolutions",
     "logo": "/images/companies/highsolutions.webp",
     "location": "Poznań",
@@ -87,6 +94,7 @@
     }
   },
   "@transparentdata": {
+    "id": "7",
     "name": "Transparent Data",
     "logo": "/images/companies/transparentdata.webp",
     "location": "Poznań",
@@ -99,6 +107,7 @@
     }
   },
   "@mtadigital": {
+    "id": "8",
     "name": "MTA Digital",
     "logo": "/images/companies/mtadigital.webp",
     "location": "Poznań",
@@ -111,6 +120,7 @@
     }
   },
   "@mirit": {
+    "id": "9",
     "name": "MirIT",
     "logo": "/images/companies/mirit.webp",
     "location": "Pleszew",
@@ -124,6 +134,7 @@
     }
   },
   "@tidio": {
+    "id": "10",
     "name": "Tidio",
     "logo": "/images/companies/tidio.webp",
     "location": "Szczecin",
@@ -137,6 +148,7 @@
     }
   },
   "@trui": {
+    "id": "11",
     "name": "Trui",
     "logo": "/images/companies/trui.webp",
     "location": "Poznań",

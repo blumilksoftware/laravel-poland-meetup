@@ -9,26 +9,30 @@ use Illuminate\Support\Collection;
 class Person
 {
     public function __construct(
+        public readonly string $id,
         public readonly string $name,
-        public readonly string $image,
-        public readonly string $bio,
-        public readonly ?string $linkedin,
+        public readonly ?string $image = null,
+        public readonly ?string $bio = null,
+        public readonly ?string $linkedin = null,
         public readonly Collection $meetups = new Collection(),
     ) {}
 
     public function toListedEntry(): array
     {
         return [
+            "id" => $this->id,
             "name" => $this->name,
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,
+            "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->name),
         ];
     }
 
     public function toMeetupListEntry()
     {
         return [
+            "id" => $this->id,
             "name" => $this->name,
             "image" => $this->image,
             "bio" => $this->bio,

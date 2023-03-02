@@ -4,12 +4,16 @@ import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
 
-const props = defineProps({
+defineProps({
   presentations: {
     type: Array,
     default: () => [],
   },
 })
+
+function buildSlug(name) {
+  return name.toLowerCase().replaceAll(' ', '-')
+}
 
 </script>
 
@@ -21,7 +25,7 @@ const props = defineProps({
       </h3>
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
-      <li v-for="presentation in props.presentations" :key="presentation.id" class="hover:bg-zinc-50">
+      <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="block p-6">
           <div class="mb-10 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
@@ -61,7 +65,7 @@ const props = defineProps({
                 <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 ml-9 flex min-w-0 flex-1">
                   <div class="text-md m-auto flex w-full justify-center">
                     <div class="block w-fit md:ml-0">
-                      <router-link :to="{ name: 'people' }" class="my-8 flex h-32 w-32 justify-center">
+                      <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
                         <img v-else class="mx-auto rounded-full shadow-xl" src="/images/placeholders/person.webp" alt="">
                       </router-link>
@@ -71,10 +75,10 @@ const props = defineProps({
                         Prelegent:
                       </p>
                       <div class="text-laravel my-3 text-lg font-medium leading-6 sm:shrink-0">
-                        <router-link :to="{ name: 'people' }">
+                        <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }">
                           <h3>{{ speaker.name }}</h3>
                         </router-link>
-                        <router-link :to="{ name: 'companies' }">
+                        <router-link :to="{ name: 'companies.details', params: { id: buildSlug(speaker.company) } }">
                           <p class="text-zinc-600">
                             {{ speaker.company }}
                           </p>
