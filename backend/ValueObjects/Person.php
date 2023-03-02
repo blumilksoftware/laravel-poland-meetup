@@ -22,7 +22,6 @@ class Person
         $this->slug = Str::slug($this->name);
     }
 
-
     public function toListedEntry(): array
     {
         return [
