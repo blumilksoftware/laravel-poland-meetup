@@ -26,7 +26,6 @@ defineProps({
 })
 
 </script>
-
 <template>
   <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
