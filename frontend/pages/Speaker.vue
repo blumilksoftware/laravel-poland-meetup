@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import SpeakerTable from '@/components/Speaker/SpeakerTable.vue'
@@ -9,17 +9,18 @@ import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 const meetups = ref([])
 const people = ref([])
 const route = useRoute()
+const slug = route.params.id
 let loading = ref(true)
 let error = ref(false)
 const speaker = ref({})
-const slug = route.params.id
 
-    for(let item of people.value) {
-      if(item.slug === slug) {
-        speaker.value = item
-      }
+function findSpeaker() {
+  for(let person of people.value) { 
+    if(person.slug === slug) {
+      speaker.value = person
     }
-
+  }
+}
 
 onMounted(() => {
   async function fetchMeetups () {
@@ -46,6 +47,12 @@ onMounted(() => {
   })
 
   loading.value = false
+
+  findSpeaker()
+})
+
+watch(people, () => {
+  findSpeaker()
 })
 
 </script>
@@ -53,7 +60,7 @@ onMounted(() => {
   <NoDataError :error="error" text="Brak prelegenta"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
-    <PageHeader word1="Marek Tenus"/>
+    <PageHeader :word1="speaker.name"/>
     <SpeakerTable :loading="loading" :meetups="meetups" :speaker="speaker"/>
   </div>
 </template>

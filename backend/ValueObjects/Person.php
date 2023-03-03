@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace LaravelPolandMeetup\ValueObjects;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Person
 {
+    public readonly string $slug;
+
     public function __construct(
         public readonly string $id,
         public readonly string $name,
@@ -15,13 +18,16 @@ class Person
         public readonly ?string $bio = null,
         public readonly ?string $linkedin = null,
         public readonly Collection $meetups = new Collection(),
-    ) {}
+    ) {
+        $this->slug = Str::slug($this->name);
+    }
 
     public function toListedEntry(): array
     {
         return [
             "id" => $this->id,
             "name" => $this->name,
+            "slug" => $this->slug,
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,
@@ -34,6 +40,7 @@ class Person
         return [
             "id" => $this->id,
             "name" => $this->name,
+            "slug" => $this->slug,
             "image" => $this->image,
             "bio" => $this->bio,
             "linkedin" => $this->linkedin,

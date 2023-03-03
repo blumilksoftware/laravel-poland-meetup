@@ -19,8 +19,7 @@ const findCompany = computed(() => {
   if (companies.value.length === 0) return {}
 
   for(let elem of companies.value) {
-    const name = elem.name.toLowerCase().replaceAll(' ', '-') 
-    if(name === route.params.id) {
+    if(elem.slug === route.params.id) {
       return elem
     }
   }

@@ -3,14 +3,14 @@ import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 import SpeakerCard from '@/components/Speaker/SpeakerCard.vue'
 import PresentationsList from '@/components/Speaker/PresentationsList.vue'
 
-const props = defineProps({
+defineProps({
   meetups: {
     type: Array,
     default: () => [],
   },
   speaker: {
-    type: Array,
-    default: () => [],
+    type: Object,
+    default: () => {},
   },
   loading: {
     type: Boolean,

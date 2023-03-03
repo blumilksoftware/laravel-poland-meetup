@@ -10,8 +10,8 @@ defineProps({
     default: () => [],
   },
   speaker: {
-    type: Array,
-    default: () => [],
+    type: Object,
+    default: () => {},
   },
   loading: {
     type: Boolean,
@@ -27,12 +27,12 @@ defineProps({
         Wizytówka
       </h2>
       <div class="my-12 flex items-center justify-center space-x-10 md:space-x-24">
-        <img src="/images/speakers/marektenus.webp" alt="zdjęcie prelegenta Marek Tenus" class="h-32 w-32 rounded-full shadow-lg md:h-56 md:w-56">
+        <img :src="speaker.image" :alt="'zdjęcie prelegenta' + speaker.name" class="h-32 w-32 rounded-full shadow-lg md:h-56 md:w-56">
         <div class="space-y-4">
           <div class="flex transition duration-200 hover:translate-x-1">
             <user-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-600" aria-hidden="true"/>
             <p class="text-laravel text-xl font-semibold">
-              Marek Tenus
+              {{ speaker.name }}
             </p>
           </div>
           <div class="flex transition duration-200 hover:translate-x-1">
@@ -42,12 +42,9 @@ defineProps({
             </p>
           </div>
           <div class="mx-auto flex items-center space-x-4 md:space-x-5">
-            <!-- <linkedin-icon v-if="speaker.linkedin" :href="speaker.linkedin" class="h-9 w-9 sm:h-10 sm:w-10 pr-2 text-zinc-600"/> -->
-            <linkedin-icon href="#" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
-            <!-- <facebook-icon v-if="speaker.facebook" :href="speaker.facebook" class="h-9 w-9 sm:h-10 sm:w-10 pr-2 text-zinc-600"/> -->
-            <facebook-icon href="#" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
-            <!-- <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-9 w-9 sm:h-10 sm:w-10 pr-2 text-zinc-600"/> -->
-            <twitter-icon href="#" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
+            <linkedin-icon v-if="speaker.linkedin" :href="speaker.linkedin" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
+            <facebook-icon v-if="speaker.facebook" :href="speaker.facebook" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
+            <twitter-icon v-if="speaker.twitter" :href="speaker.twitter" class="h-9 w-9 pr-2 text-zinc-600 sm:h-10 sm:w-10"/>
           </div>
         </div>
       </div>
