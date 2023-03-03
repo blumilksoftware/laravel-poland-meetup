@@ -7,7 +7,7 @@ import ApplicationFooter from '@/layout/ApplicationFooter.vue'
   <div class="flex flex-col">
     <application-navbar/>
     <div class="container mx-auto">
-      <router-view/>
+      <router-view :key="$route.fullPath"/>
     </div>
     <application-footer/>
   </div>
