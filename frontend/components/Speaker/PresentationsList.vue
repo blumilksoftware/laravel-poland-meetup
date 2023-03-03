@@ -34,7 +34,6 @@ function filterPresentations() {
           details: presentation,
         })
         }
-        console.log('speakerPresentationsArray', speakerPresentationsArray.value)
       })
     })
   })
@@ -72,7 +71,7 @@ watch(() => props.meetups, () => {
               <div class="my-1 flex w-fit rounded-full bg-zinc-100 px-3">
                 {{ presentation.meetup.name }}
               </div>
-              <div class="flex px-3 text-zinc-500">
+              <div v-if="presentation.details.tags.length" class="flex px-3 text-zinc-500">
                 <p>Tagi:</p>
                 <ul class="flex">
                   <li v-for="tag of presentation.tags" :key="tag" class="mx-1 underline">
