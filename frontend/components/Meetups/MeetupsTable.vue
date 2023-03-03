@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 import { useRoute } from 'vue-router'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
@@ -31,16 +31,22 @@ const props = defineProps({
 })
 
 const route = useRoute()
-const slug = ref(route.params.id)
-const searchMeetup = ref('')
+let searchMeetup = ref('')
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
 
-if(slug.value) {
-  searchMeetup.value = slug.value
-} else 
+function searchBySlug(){
+  if(route.params.id) {
+  searchMeetup.value = route.params.id
+} else
   searchMeetup.value = ''
+}
+searchBySlug()
+
+watch(route, () => 
+  searchBySlug(),
+)
 
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
