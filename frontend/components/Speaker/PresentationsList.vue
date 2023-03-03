@@ -1,16 +1,17 @@
 <script setup>
+import { ref, onMounted, watch } from 'vue'
 import { PresentationChartLineIcon } from '@heroicons/vue/24/outline'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
 
-defineProps({
+const props = defineProps({
   meetups: {
     type: Array,
     default: () => [],
   },
   speaker: {
-    type: Array,
-    default: () => [],
+    type: Object,
+    default: () => {},
   },
   loading: {
     type: Boolean,
@@ -18,26 +19,38 @@ defineProps({
   },
 })
 
-const presentations = [
-  {
-    name: 'Laravel 8 - co nowego?',
-    meetup: 'Laravel Poznań Meetup #15',
-    tags: ['laravel', 'php', 'meetup', 'firma', 'summer', 'sms'],
-  },
-  {
-    name: 'Laravel 8 - co nowego?',
-    meetup: 'Laravel Poznań Meetup #15',
-  },
-  {
-    name: 'Laravel 8 - co nowego?',
-    meetup: 'Laravel Poznań Meetup #15',
-  },
-  {
-    name: 'Laravel 8 - co nowego?',
-    meetup: 'Laravel Poznań Meetup #15',
+const speakerPresentationsArray = ref([])
 
-  },
-]
+function filterPresentations() {
+  props.meetups.filter(meetup => {
+    meetup.presentations.filter(presentation => {
+      presentation.speakers.filter(person => {
+        if(person.id === props.speaker.id){
+        speakerPresentationsArray.value.push({
+          meetup: {
+            name: meetup.name,
+            id: meetup.id,
+          },
+          details: presentation,
+        })
+        }
+        console.log('speakerPresentationsArray', speakerPresentationsArray.value)
+      })
+    })
+  })
+}
+
+onMounted(() => {
+  filterPresentations()
+})
+
+watch(() => props.speaker, () => {
+  filterPresentations()
+})
+
+watch(() => props.meetups, () => {
+  filterPresentations()
+})
 
 </script>
 <template>
@@ -48,16 +61,16 @@ const presentations = [
       </h2>
       <div class="m-10 block justify-center md:flex md:space-x-24">
         <ul class="block w-full divide-y divide-zinc-200">
-          <li v-for="presentation of presentations" :key="presentation.name" class="flex justify-between py-5">
+          <li v-for="presentation of speakerPresentationsArray" :key="presentation.details.title" class="flex justify-between py-5">
             <div class="block">
               <div class="flex">
                 <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-600" aria-hidden="true"/>
-                <router-link :to="{ name: 'meetups.details', params: { id: '2020-09-17-laravel-poznan-meetup-15' } }" class="flex justify-center text-lg font-medium transition duration-200 hover:translate-x-1">
-                  {{ presentation.name }}
+                <router-link :to="{ name: 'meetups.details', params: { id: presentation.meetup.id } }" class="flex justify-center text-lg font-medium transition duration-200 hover:translate-x-1">
+                  {{ presentation.details.title }}
                 </router-link>
               </div>
               <div class="my-1 flex w-fit rounded-full bg-zinc-100 px-3">
-                {{ presentation.meetup }}
+                {{ presentation.meetup.name }}
               </div>
               <div class="flex px-3 text-zinc-500">
                 <p>Tagi:</p>
@@ -71,14 +84,12 @@ const presentations = [
               </div>
             </div>
             <div class="mx-5 flex items-center sm:space-x-5">
-              <a href="#" target="_blank" class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
-                <div class="h-6 w-6 ">
-                  <you-tube-icon aria-hidden="true" href="#"/>
-                </div>
-              </a>
-              <a href="#" target="_blank" class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
-                <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600"/>
-              </a>
+              <div class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
+                <you-tube-icon class="h-7 w-7" :href="presentation.details.youtube"/>
+              </div>
+              <div class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
+                <slide-share-icon :href="presentation.details.slideshare" class="h-7 w-7 fill-zinc-600"/>
+              </div>
             </div>
           </li>
         </ul>

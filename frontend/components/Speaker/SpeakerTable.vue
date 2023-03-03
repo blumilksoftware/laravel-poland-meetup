@@ -9,8 +9,8 @@ defineProps({
     default: () => [],
   },
   speaker: {
-    type: Array,
-    default: () => [],
+    type: Object,
+    default: () => {},
   },
   loading: {
     type: Boolean,
