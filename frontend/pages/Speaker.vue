@@ -3,8 +3,10 @@ import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import SpeakerTable from '@/components/Speaker/SpeakerTable.vue'
+import PeopleSlider from '@/components/Speaker/PeopleSlider.vue'
 import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import router from '@/router'
 
 const meetups = ref([])
 const people = ref([])
@@ -55,12 +57,22 @@ watch(people, () => {
   findSpeaker()
 })
 
+watch(route, () => {
+  findSpeaker()
+  console.log(route.params.id)
+  router.push({ name: 'people.details', params: { id: 'error' } })
+  console.log(route.params.id)
+  router.push({ name: 'people.details', params: { id: speaker.value.slug } })
+  console.log(route.params.id)
+})
+
 </script>
-<template>
+<template :is="Component" :key="route.path">
   <NoDataError :error="error" text="Brak prelegenta"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
     <PageHeader :word1="speaker.name"/>
     <SpeakerTable :loading="loading" :meetups="meetups" :speaker="speaker"/>
+    <PeopleSlider :loading="loading" :meetups="meetups" :speakers="people"/>
   </div>
 </template>
