@@ -6,7 +6,7 @@ defineProps({
   },
   text: {
     type: String,
-    default: '',
+    default: 'Strona, której szukasz nie istnieje',
   },
 })
 </script>
