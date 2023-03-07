@@ -57,9 +57,6 @@ watch(props, () => {
 <template>
   <div class="mx-auto">
     <div class="justify-center">
-      <h2 class="first-letter:text-laravel lg:py-18 w-full border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
-        Meetupowy wkład
-      </h2>
       <div class="m-2 block justify-center sm:m-10 md:flex md:space-x-24">
         <ul class="block w-full divide-y divide-zinc-200">
           <li v-for="presentation of speakerPresentationsArray" :key="presentation.details.title" class="block justify-between py-5 sm:flex">
