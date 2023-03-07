@@ -14,4 +14,7 @@ export default defineConfig({
     },
     port: 9088,
   },
+  optimizeDeps: { 
+    exclude: ['swiper/element/bundle'],
+   },
 })
