@@ -12,10 +12,6 @@ defineProps({
     type: Object,
     default: () => {},
   },
-  loading: {
-    type: Boolean,
-    default: true,
-  },
 })
 
 </script>

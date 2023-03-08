@@ -6,22 +6,21 @@ import SpeakerTable from '@/components/Speaker/SpeakerTable.vue'
 import PeopleSlider from '@/components/Speaker/PeopleSlider.vue'
 import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
-import router from '@/router'
 
 const meetups = ref([])
 const people = ref([])
 const route = useRoute()
-const slug = route.params.id
 let loading = ref(true)
 let error = ref(false)
 const speaker = ref({})
 
 function findSpeaker() {
   for(let person of people.value) { 
-    if(person.slug === slug) {
+    if(person.slug === route.params.id) {
       speaker.value = person
     }
   }
+  loading.value = false
 }
 
 onMounted(() => {
@@ -48,8 +47,6 @@ onMounted(() => {
     error.value = true
   })
 
-  loading.value = false
-
   findSpeaker()
 })
 
@@ -59,20 +56,16 @@ watch(people, () => {
 
 watch(route, () => {
   findSpeaker()
-  console.log(route.params.id)
-  router.push({ name: 'people.details', params: { id: 'error' } })
-  console.log(route.params.id)
-  router.push({ name: 'people.details', params: { id: speaker.value.slug } })
-  console.log(route.params.id)
+  window.scrollTo(0,0)
 })
 
 </script>
-<template :is="Component" :key="route.path">
-  <NoDataError :error="error" text="Brak prelegenta"/>
+<template>
   <LoadingSpinner v-if="loading"/>
+  <NoDataError :error="error" text="Brak prelegenta"/>
   <div v-if="!error && !loading">
     <PageHeader :word1="speaker.name"/>
-    <SpeakerTable :loading="loading" :meetups="meetups" :speaker="speaker"/>
-    <PeopleSlider :loading="loading" :meetups="meetups" :speakers="people"/>
+    <SpeakerTable :meetups="meetups" :speaker="speaker"/>
+    <PeopleSlider :speaker="speaker" :meetups="meetups" :speakers="people"/>
   </div>
 </template>
