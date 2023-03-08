@@ -67,15 +67,16 @@ const randomizeElements = (speakers, count) => {
   return slideSpeakers
 }
 
-onMounted(() =>{
+watch(props, ()=> {
+  register()
+  randomSpeakers.value = randomizeElements(props.speakers, props.speakers.length)
+})
+
+onMounted(() => {
   register()
   const swiperEl = document.querySelector('swiper-container')
   Object.assign(swiperEl, swiperParams)
-})
-
-watch(props, ()=>{
   randomSpeakers.value = randomizeElements(props.speakers, props.speakers.length)
-  register()
 })
 
 </script>
@@ -84,7 +85,7 @@ watch(props, ()=>{
     <div class="mx-auto max-w-7xl p-4 sm:px-6 lg:px-8">
       <div class="space-y-12">
         <h2 class="first-letter:text-laravel lg:py-18 w-full border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
-          Poznaj naszych prelegentów
+          Poznaj wszystkich naszych prelegentów
         </h2>
         <swiper-container>
           <swiper-slide v-for="randomSpeaker in randomSpeakers" :key="randomSpeaker.slug">

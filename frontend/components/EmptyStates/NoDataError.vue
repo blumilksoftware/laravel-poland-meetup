@@ -2,7 +2,7 @@
 defineProps({
   error: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   text: {
     type: String,
