@@ -2,10 +2,12 @@
 import { ref, watch, onMounted } from 'vue'
 import { register } from 'swiper/element/bundle'
 import SpeakerSlide from '@/components/Speaker/SpeakerSlide.vue'
-import { useRoute } from 'vue-router'
-import router from '@/router'
 
 const props = defineProps({
+  speaker: {
+    type: Object,
+    default: () => {},
+  },
   speakers: {
     type: Array,
     default: () => [],
@@ -16,9 +18,7 @@ const props = defineProps({
   },
 })
 
-register()
 const spaceBetween = 5
-
 const swiperParams = {
   loop: true,
   slidesPerView: 1, 
@@ -38,34 +38,43 @@ const swiperParams = {
 const randomSpeakers = ref([])
 
 const randomizeIndex = (count) => {
-    return Math.floor(count * Math.random())
+  return Math.floor(count * Math.random())
 }
 
-const randomizeElemnts = (array, count) => {
-  if (count > array.length) {
-      throw new Error('Array size cannot be smaller than expected random numbers count.')
-  }
+const randomizeElements = (speakers, count) => {
   const result = []
-  const guardian = new Set()
+  const chceck = new Set()
+
   while (result.length < count) {
-      const index = randomizeIndex(count)
-      if (guardian.has(index)) {
-          continue
-      }
-      const element = array[index]
-      guardian.add(index)
-      result.push(element)
+    const index = randomizeIndex(count)
+
+    if (chceck.has(index)) {
+      continue
+    }
+    
+    const element = speakers[index]
+    chceck.add(index)
+    result.push(element) 
   }
-  return result
+  const slideSpeakers = []
+
+  for(let item of result) {
+    if (item.id != props.speaker.id) {
+      slideSpeakers.push(item)
+    }
+  }
+
+  return slideSpeakers
 }
 
 onMounted(() =>{
+  register()
   const swiperEl = document.querySelector('swiper-container')
   Object.assign(swiperEl, swiperParams)
 })
 
 watch(props, ()=>{
-  randomSpeakers.value = randomizeElemnts(props.speakers, props.speakers.length )
+  randomSpeakers.value = randomizeElements(props.speakers, props.speakers.length)
   register()
 })
 
@@ -78,9 +87,9 @@ watch(props, ()=>{
           Poznaj naszych prelegentów
         </h2>
         <swiper-container>
-          <swiper-slide v-for="speaker in randomSpeakers" :key="speaker.slug">
-            <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }" class="mx-auto h-full">
-              <SpeakerSlide :meetups="meetups" :speaker="speaker"/>
+          <swiper-slide v-for="randomSpeaker in randomSpeakers" :key="randomSpeaker.slug">
+            <router-link :to="{ name: 'people.details', params: { id: randomSpeaker.slug } }" class="mx-auto h-full">
+              <SpeakerSlide :meetups="meetups" :speaker="randomSpeaker"/>
             </router-link>
           </swiper-slide>
           <swiper-button-prev/>
