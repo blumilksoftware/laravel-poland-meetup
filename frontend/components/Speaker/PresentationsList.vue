@@ -26,19 +26,23 @@ function filterPresentations() {
     meetup.presentations.filter(presentation => {
       presentation.speakers.filter(person => {
         if(person.id === props.speaker.id){
-        speakerPresentationsArray.value.push({
-          meetup: {
-            name: meetup.name,
-            id: meetup.id,
-            date: meetup.date,
-            dateFull: meetup.dateFull,
-          },
-          details: presentation,
-        })
+          speakerPresentationsArray.value.push({
+            meetup: {
+              name: meetup.name,
+              id: meetup.id,
+              date: meetup.date,
+              dateFull: meetup.dateFull,
+            },
+            details: presentation,
+          })
         }
       })
     })
   })
+}
+
+function clean() {
+  speakerPresentationsArray.value = []
 }
 
 const getDate = (date) => {
@@ -50,6 +54,7 @@ onMounted(() => {
 })
 
 watch(props, () => {
+  clean() 
   filterPresentations()
 })
 

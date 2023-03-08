@@ -29,11 +29,16 @@ function count() {
   })
 }
 
+function clean() {
+  presentationsCount.value = 0
+}
+
 onMounted(() =>{
   count()
 })
 
 watch(props, () => {
+  clean()
   count()
 })
 
