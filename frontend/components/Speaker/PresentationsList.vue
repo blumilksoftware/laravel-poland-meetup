@@ -72,10 +72,12 @@ watch(props, () => {
                   {{ presentation.details.title }}
                 </div>
               </div>
-              <router-link :to="{ name: 'meetups.details', params: { id: presentation.meetup.id } }" class="my-2 ml-7 flex w-fit rounded-full bg-zinc-100 px-3 transition duration-200 hover:translate-x-1">
-                {{ presentation.meetup.name }}
+              <time class="my-1 ml-8 flex w-fit px-1" :datetime="presentation.meetup.date"> {{ getDate(presentation.meetup.dateFull) }}</time>
+              <router-link :to="{ name: 'meetups.details', params: { id: presentation.meetup.id } }" class="my-2 ml-7 flex w-fit rounded-full bg-zinc-100 transition duration-200 hover:translate-x-1">
+                <p class="px-2 py-1 text-center">
+                  {{ presentation.meetup.name }}
+                </p>
               </router-link>
-              <time class="y-1 ml-8 flex w-fit px-2" :datetime="presentation.meetup.date"> {{ getDate(presentation.meetup.dateFull) }}</time>
               <div v-if="presentation.details.tags.length" class="flex px-3 text-zinc-500">
                 <p>Tagi:</p>
                 <ul class="flex">
@@ -88,10 +90,10 @@ watch(props, () => {
               </div>
             </div>
             <div class="my-5 mx-9 flex items-center justify-center space-x-9 sm:justify-end sm:space-x-5">
-              <div class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
+              <div class="group flex w-fit space-x-2 font-semibold md:space-x-3">
                 <you-tube-icon class="h-8 w-8 sm:h-7 sm:w-7" :href="presentation.details.youtube"/>
               </div>
-              <div class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
+              <div class="group flex w-fit space-x-2 font-semibold md:space-x-3">
                 <slide-share-icon :href="presentation.details.slideshare" class="h-8 w-8 fill-zinc-600 sm:h-7 sm:w-7"/>
               </div>
             </div>

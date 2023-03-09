@@ -19,6 +19,8 @@ const props = defineProps({
 })
 
 const spaceBetween = 5
+const randomSpeakers = ref([])
+
 const swiperParams = {
   loop: true,
   slidesPerView: 1, 
@@ -30,12 +32,10 @@ const swiperParams = {
   },
   breakpoints: { 
     768: { 
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
   },
 }
-
-const randomSpeakers = ref([])
 
 const randomizeIndex = (count) => {
   return Math.floor(count * Math.random())
@@ -87,14 +87,12 @@ onMounted(() => {
         <h2 class="first-letter:text-laravel lg:py-18 w-full border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
           Poznaj wszystkich naszych prelegentów
         </h2>
-        <swiper-container>
+        <swiper-container class="px-10">
           <swiper-slide v-for="randomSpeaker in randomSpeakers" :key="randomSpeaker.slug">
             <router-link :to="{ name: 'people.details', params: { id: randomSpeaker.slug } }" class="mx-auto h-full">
               <SpeakerSlide :meetups="meetups" :speaker="randomSpeaker"/>
             </router-link>
           </swiper-slide>
-          <swiper-button-prev/>
-          <swiper-button-next/>
         </swiper-container>
       </div>
     </div>
