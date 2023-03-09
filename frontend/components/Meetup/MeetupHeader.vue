@@ -30,7 +30,7 @@ defineProps({
           </p>
         </div>
       </div>
-      <div v-if="meetup.facebookEvent" class="flex justify-center text-gray-500 sm:text-2xl">
+      <div class="flex justify-center text-gray-500 sm:text-2xl">
         <a :href="meetup.facebookEvent" class="flex justify-center space-x-5">
           <span>
             Sprawdź wydarzenie na Facebooku! 
