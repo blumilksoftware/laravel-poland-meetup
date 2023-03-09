@@ -90,10 +90,10 @@ watch(props, () => {
               </div>
             </div>
             <div class="my-5 mx-9 flex items-center justify-center space-x-9 sm:justify-end sm:space-x-5">
-              <div class="group flex w-fit space-x-2 font-semibold md:space-x-3">
+              <div v-if="presentation.details.youtube" class="group flex w-fit space-x-2 font-semibold md:space-x-3">
                 <you-tube-icon class="h-8 w-8 sm:h-7 sm:w-7" :href="presentation.details.youtube"/>
               </div>
-              <div class="group flex w-fit space-x-2 font-semibold md:space-x-3">
+              <div v-if="presentation.details.slideshare" class="group flex w-fit space-x-2 font-semibold md:space-x-3">
                 <slide-share-icon :href="presentation.details.slideshare" class="h-8 w-8 fill-zinc-600 sm:h-7 sm:w-7"/>
               </div>
             </div>
