@@ -3,7 +3,7 @@ import { HashtagIcon, MapPinIcon, AtSymbolIcon, BuildingOffice2Icon, BookmarkIco
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
-import Counter from '@/components/Companies/Counters.vue'
+import Counters from '@/components/Companies/Counters.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 defineProps({
@@ -58,7 +58,7 @@ defineProps({
                   <building-office-2-icon v-if="!company.logo" class="h-20 w-20 text-zinc-400" :alt="company.name"/>
                   <img v-else class="mx-auto max-h-16 w-auto shrink object-contain" :src="company.logo" :alt="company.name">
                 </router-link>
-                <counter v-if="meetups" :meetups="meetups" :company="company.name"/>
+                <Counters v-if="meetups" :meetups="meetups" :company="company"/>
               </div>
               <div class="space-y-2 whitespace-pre-wrap py-2 px-5 text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
                 <div v-if="company.organizer" class="text-laravel flex space-x-3 text-xl">
