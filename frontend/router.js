@@ -10,6 +10,9 @@ const routes = [
     { path: '/people', name: 'people', component: () => import('@/pages/People.vue') },
     { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Landing.vue') },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
+    { path: '/:page-not-found', name: 'NotFound', component: () => import('@/pages/NotFound.vue') },
+    { path: '/:pathMatch(.*)*', name: 'Not', redirect: '/page-not-found' },
+
 ]
 
 export default createRouter({
