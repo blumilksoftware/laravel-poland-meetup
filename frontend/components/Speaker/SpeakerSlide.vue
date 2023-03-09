@@ -36,7 +36,7 @@ watch(props, () => {
 
 </script>
 <template>
-  <div class="mx-auto flex h-full">
+  <div class="mx-auto flex h-full rounded-xl hover:bg-zinc-50">
     <div class="my-6 mx-auto block space-y-6 md:my-16">
       <img v-if="!speaker.image" :src="speaker.avatar" :alt="'avatar prelegenta' + speaker.name" class="mx-auto h-32 w-32 rounded-full shadow-lg md:h-40 md:w-40">
       <img v-else :src="speaker.image" :alt="'zdjęcie prelegenta' + speaker.name" class="mx-auto h-32 w-32 rounded-full shadow-lg md:h-40 md:w-40">
