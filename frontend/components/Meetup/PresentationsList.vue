@@ -49,14 +49,14 @@ function buildSlug(name) {
                 <div class="mx-9 block items-center space-y-4 text-base sm:flex sm:space-y-0 sm:space-x-16">
                   <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
                     <div class="h-6 w-6 ">
-                      <you-tube-icon aria-hidden="true" href=""/>
+                      <you-tube-icon aria-hidden="true" :href="presentation.youtube"/>
                     </div>
                     <p class="group-hover:text-laravel">
                       Zobacz na YouTube
                     </p>
                   </a>
                   <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
-                    <slide-share-icon aria-hidden="true" class="h-6 w-6 fill-zinc-600"/>
+                    <slide-share-icon aria-hidden="true" :href="presentation.slideshare" class="h-6 w-6 fill-zinc-600"/>
                     <p class="group-hover:text-laravel">
                       Zobacz na SlideShare
                     </p>
