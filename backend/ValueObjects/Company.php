@@ -29,7 +29,7 @@ class Company
         return [
             "id" => $this->id,
             "name" => $this->name,
-            "slug" => Str::slug(sprintf("%s-%s", $this->id, $this->name)),
+            "slug" => $this->slug,
             "location" => $this->location,
             "logo" => $this->logo,
             "website" => $this->website,
