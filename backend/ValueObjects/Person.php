@@ -19,7 +19,7 @@ class Person
         public readonly ?string $linkedin = null,
         public readonly Collection $meetups = new Collection(),
     ) {
-        $this->slug = Str::slug($this->name);
+        $this->slug = Str::slug(sprintf("%s-%s", $this->id, $this->name));
     }
 
     public function toListedEntry(): array

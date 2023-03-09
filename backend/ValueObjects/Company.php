@@ -21,7 +21,7 @@ class Company
         public readonly ?string $bio = null,
         public readonly ?array $coordinates = null,
     ) {
-        $this->slug = Str::slug($this->name);
+        $this->slug = Str::slug(sprintf("%s-%s", $this->id, $this->name));
     }
 
     public function toListedEntry(): array
@@ -29,7 +29,7 @@ class Company
         return [
             "id" => $this->id,
             "name" => $this->name,
-            "slug" => $this->slug,
+            "slug" => Str::slug(sprintf("%s-%s", $this->id, $this->name)),
             "location" => $this->location,
             "logo" => $this->logo,
             "website" => $this->website,
