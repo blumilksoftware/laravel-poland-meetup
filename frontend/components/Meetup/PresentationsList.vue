@@ -11,10 +11,6 @@ defineProps({
   },
 })
 
-function buildSlug(name) {
-  return name.toLowerCase().replaceAll(' ', '-')
-}
-
 </script>
 
 <template>
@@ -65,7 +61,7 @@ function buildSlug(name) {
                 <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 ml-9 flex min-w-0 flex-1">
                   <div class="text-md m-auto flex w-full justify-center">
                     <div class="block w-fit md:ml-0">
-                      <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }" class="my-8 flex h-32 w-32 justify-center">
+                      <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }" class="my-8 flex h-32 w-32 justify-center">
                         <img v-if="speaker.image.length > 2" class="rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
                         <img v-else class="mx-auto rounded-full shadow-xl" src="/images/placeholders/person.webp" alt="">
                       </router-link>
@@ -75,10 +71,10 @@ function buildSlug(name) {
                         Prelegent:
                       </p>
                       <div class="text-laravel my-3 text-lg font-medium leading-6 sm:shrink-0">
-                        <router-link :to="{ name: 'people.details', params: { id: buildSlug(speaker.name) } }">
+                        <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }">
                           <h3>{{ speaker.name }}</h3>
                         </router-link>
-                        <router-link :to="{ name: 'companies.details', params: { id: buildSlug(speaker.company) } }">
+                        <router-link :to="{ name: 'companies.details', params: { id: speaker.slug } }">
                           <p class="text-zinc-600">
                             {{ speaker.company }}
                           </p>
