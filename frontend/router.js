@@ -11,7 +11,6 @@ const routes = [
     { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Speaker.vue') },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
     { path: '/meetups/results/:id', name: 'searching.results', component: () => import('@/pages/Meetups.vue') },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/components/EmptyStates/NoDataError.vue') },
 ]
 
 export default createRouter({
