@@ -17,7 +17,7 @@ import { ArrowUturnLeftIcon, ExclamationCircleIcon } from '@heroicons/vue/24/out
         </div>
         <router-link :to="{ name: 'landing' }" class="flex items-center space-x-3">
           <arrow-uturn-left-icon class="h-5 w-5"/>
-          <p class="text-md underline mx-8 text-left hover:underline sm:my-3 sm:mx-20 sm:text-xl">
+          <p class="text-md mx-8 text-left underline hover:underline sm:my-3 sm:mx-20 sm:text-xl">
             Wróć na stronę główną
           </p>
         </router-link>
