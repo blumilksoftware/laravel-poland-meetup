@@ -2,11 +2,11 @@
 defineProps({
   error: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   text: {
     type: String,
-    default: '',
+    default: 'Strona, której szukasz nie istnieje',
   },
 })
 </script>

@@ -7,11 +7,20 @@ export default defineConfig({
       '@': '/frontend',
     },
   },
-  plugins: [vue()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
+      },
+    },
+  })],
   server: {
     watch: {
       usePolling: true,
     },
     port: 9088,
   },
+  optimizeDeps: { 
+    exclude: ['swiper/element/bundle'],
+   },
 })

@@ -3,7 +3,7 @@ import { HashtagIcon, MapPinIcon, AtSymbolIcon, BuildingOffice2Icon, BookmarkIco
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
-import Counter from '@/components/Companies/Counters.vue'
+import Counters from '@/components/Companies/Counters.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 defineProps({
@@ -25,12 +25,7 @@ defineProps({
   },
 })
 
-function buildSlug(name) {
-  return name.toLowerCase().replaceAll(' ', '-')
-}
-
 </script>
-
 <template>
   <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
     <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
@@ -59,11 +54,11 @@ function buildSlug(name) {
           <li v-for="company in companies" :key="company.id" :class="['hover:shadow-lg py-7', companies.length === 1 ? 'hover:shadow-none' : '']">
             <div class="mx-3 block truncate text-base text-zinc-500 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 md:space-y-10 lg:gap-8">
               <div class="m-auto">
-                <router-link :to="{ name: 'companies.details', params: { id: buildSlug(company.name) } }" class="my-5 sm:my-0">
+                <router-link :to="{ name: 'companies.details', params: { id: company.slug } }" class="my-5 sm:my-0">
                   <building-office-2-icon v-if="!company.logo" class="h-20 w-20 text-zinc-400" :alt="company.name"/>
                   <img v-else class="mx-auto max-h-16 w-auto shrink object-contain" :src="company.logo" :alt="company.name">
                 </router-link>
-                <counter v-if="meetups" :meetups="meetups" :company="company.name"/>
+                <Counters v-if="meetups" :meetups="meetups" :company="company"/>
               </div>
               <div class="space-y-2 whitespace-pre-wrap py-2 px-5 text-left text-lg font-medium leading-6 text-zinc-600 sm:space-y-4 sm:text-2xl">
                 <div v-if="company.organizer" class="text-laravel flex space-x-3 text-xl">
@@ -71,7 +66,7 @@ function buildSlug(name) {
                   <span class="col-span-11 text-2xl">organizator</span>
                 </div>
                 <div class="space-y-2 font-medium leading-6 sm:space-y-4">
-                  <router-link :to="{ name: 'companies.details', params: { id: buildSlug(company.name) } }" class="flex space-x-3 transition duration-200 hover:translate-x-1">
+                  <router-link :to="{ name: 'companies.details', params: { id: company.slug } }" class="flex space-x-3 transition duration-200 hover:translate-x-1">
                     <bookmark-icon class="h-7 w-7 shrink-0 sm:h-8 sm:w-8"/>
                     <span class="col-span-11 block font-bold tracking-wide">
                       {{ company.name }}
