@@ -41,13 +41,13 @@ watch(props, () => {
       <img v-if="!speaker.image" :src="speaker.avatar" :alt="'avatar prelegenta' + speaker.name" class="mx-auto h-32 w-32 rounded-full shadow-lg md:h-40 md:w-40">
       <img v-else :src="speaker.image" :alt="'zdjęcie prelegenta' + speaker.name" class="mx-auto h-32 w-32 rounded-full shadow-lg md:h-40 md:w-40">
       <div class="block space-y-4">
-        <div class="flex justify-center">
+        <div class="flex items-center">
           <user-icon class="mr-1 h-5 w-5 shrink-0 text-zinc-600 sm:h-7 sm:w-7 lg:mr-3" aria-hidden="true"/>
           <p class="text-laravel text-md font-semibold sm:text-lg">
             {{ speaker.name }}
           </p>
         </div>
-        <div class="flex justify-center">
+        <div class="flex items-center">
           <presentation-chart-line-icon class="mr-1 h-4 w-4 shrink-0 text-zinc-600 sm:h-7 sm:w-7 lg:mr-3" aria-hidden="true"/>
           <p class="text-md sm:text-md sm:font-medium">
             Prezentacje: {{ presentationsCount }}
