@@ -33,5 +33,5 @@ onMounted(async () => {
 
 </script>
 <template>
-  <meetups-table class="mt-12" :error="error" :loading="loading" :meetups="meetups" :companies="companies" :speakers="people"/>
+  <meetups-table :error="error" :loading="loading" :meetups="meetups" :companies="companies" :speakers="people"/>
 </template>

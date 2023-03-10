@@ -1,6 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+import { useRoute } from 'vue-router'
 import FilterButton from '@/components/Meetups/FilterButton.vue'
 import SortButton from '@/components/Meetups/SortButton.vue'
 import MeetupsList from '@/components/Meetups/MeetupsList.vue'
@@ -29,10 +30,23 @@ const props = defineProps({
   },
 })
 
-const searchMeetup = ref('')
+const route = useRoute()
+let searchMeetup = ref('')
 const checkedCompanies = ref([])
 const checkedSpeakers = ref([])
 const sortedMeetups = ref([])
+
+function searchBySlug(){
+  if(route.params.id) {
+  searchMeetup.value = route.params.id
+} else
+  searchMeetup.value = ''
+}
+searchBySlug()
+
+watch(route, () => 
+  searchBySlug(),
+)
 
 const updateCompaniesFilter = function(selectedFilters) {
   checkedCompanies.value = selectedFilters
@@ -85,12 +99,12 @@ const searchSpeaker = ( meetups ) => {
 
 const filteredMeetups = computed(() => {
   return searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))
-}) 
+})
 
 </script>
 <template>
   <NoDataError :error="error" text="Brak meetupów"/>
-  <div v-if="!error" class="mx-auto mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
+  <div v-if="!error" class="mx-auto my-12 mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="my-1 block py-4 text-zinc-700">
       <form class="block justify-center sm:flex">
         <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">
@@ -113,7 +127,7 @@ const filteredMeetups = computed(() => {
       </div>
     </div>
     <div class="overflow-hidden bg-white">
-      <MeetupsList id="meetupsList" :loading="loading" :data="sortedMeetups" :all-meetups="meetups"/>
+      <MeetupsList :loading="loading" :data="sortedMeetups" :all-meetups="meetups"/>
     </div>
   </div>
 </template>

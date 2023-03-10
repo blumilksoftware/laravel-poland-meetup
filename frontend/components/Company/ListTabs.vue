@@ -72,15 +72,15 @@ const buildLists = computed(() => {
                       </h3>
                     </div>
                     <ul class="mt-1 flex space-x-1 text-sm font-normal leading-5 text-gray-500 md:space-x-3">
-                      <div class="block">
-                        <li v-if="elem[1].dateFull" class="px-3 text-left">
+                      <li class="block">
+                        <p v-if="elem[1].dateFull" class="px-3 text-left">
                           {{ elem[1].dateFull }}
-                        </li>
-                        <li v-if="elem[1].location" class="flex w-fit rounded-full bg-zinc-100 px-3">
+                        </p>
+                        <p v-if="elem[1].location" class="flex w-fit rounded-full bg-zinc-100 px-3">
                           <signal-icon v-if="elem[1].location === 'online'" class="mr-1 h-4 w-4 self-center"/>
                           {{ elem[1].location }}
-                        </li>
-                      </div>
+                        </p>
+                      </li>
                       <li v-if="elem[1].speakers">
                         <ul v-for="speaker in elem[1].speakers" :key="speaker.name">
                           <li>
@@ -90,7 +90,7 @@ const buildLists = computed(() => {
                       </li>
                     </ul>
                     <router-link v-if="list.id === 'meetups'" :to="{ name: 'meetups.details', params: { id: elem[1].id } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
-                    <router-link v-if="list.id === 'speakers'" :to="{ name: 'people.details', params: { id: elem[1].name } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
+                    <router-link v-if="list.id === 'speakers'" :to="{ name: 'people.details', params: { id: elem[1].slug } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
                   </div>
                   <div class="flex space-x-6">
                     <you-tube-icon v-if="elem[1].youtube" :href="elem[1].youtube" class="h-7 w-7 self-center"/>
