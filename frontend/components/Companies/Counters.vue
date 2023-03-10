@@ -9,25 +9,21 @@ const props = defineProps({
     default: () => [],
   },
   company: {
-    type: String,
-    default: () => '',
+    type: Object,
+    default: () => {},
   },
 })
 
 const buildLists = computed(() => {
   if (props.meetups.length === 0) return {}
-  const { lists } = useBuildLists(props.meetups, props.company)
+  const { lists } = useBuildLists(props.meetups, props.company.name)
   return lists.value
 })
-
-function buildSlug(name) {
-  return name.toLowerCase().replaceAll(' ', '-')
-}
 
 </script>
 <template>
   <div>
-    <router-link v-if="buildLists.meetups" class="my-5 grid grid-cols-3" :to="{ name: 'companies.details.list', params: { id: buildSlug(company), tabs: 'tabs' } }">
+    <router-link v-if="buildLists.meetups" class="my-5 grid grid-cols-3" :to="{ name: 'companies.details', params: { id: company.slug, tabs: 'tabs' } }">
       <div v-if="buildLists.meetups">
         <p class="text-laravel border-laravel text-3xl hover:scale-110">
           {{ buildLists.meetups.data.size }}

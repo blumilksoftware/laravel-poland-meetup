@@ -21,7 +21,6 @@ defineProps({
 })
 
 </script>
-
 <template>
   <div class="relative overflow-hidden bg-white shadow-lg">
     <PulseBackgroundAnimation/>
