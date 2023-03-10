@@ -10,11 +10,19 @@ const props = defineProps({
     type: [ Object, Array ],
     default: () => {},
   },
+  zoom: {
+    type: Number,
+    default: 5,
+  },
+  center: {
+    type: Array,
+    default: () => [18, 52],
+  },
 })
 
 const center = ref({
-  center: [18, 52], 
-  zoom:5,
+  center: props.center, 
+  zoom: props.zoom,
 })
 
 const newLocation = computed(() => {
@@ -31,6 +39,8 @@ onMounted(() => {
     center: center.value.center,
     zoom: center.value.zoom,
   })
+  console.log('center', center.value.center)
+  console.log('zoom', center.value.zoom)
 
   addNavigation(map, center)
   addMarkers(map, props.data)
