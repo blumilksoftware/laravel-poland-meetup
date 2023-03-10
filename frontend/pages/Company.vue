@@ -26,8 +26,6 @@ const findCompany = computed(() => {
   return company.value
 })
 
-company.value = findCompany
-
 onMounted (() => {
   async function fetchCompanies () {
     const response = await fetch('/api/companies.json')
@@ -61,9 +59,9 @@ onMounted (() => {
   <NoDataError :error="error" text="Nie ma takiej firmy"/>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!error && !loading">
-    <company-header :name="route.params.id" :company="company.value"/>
-    <company-details :name="route.params.id" :company="company.value" :meetups="meetups"/>
-    <list-tabs :name="route.params.id" :meetups="meetups"/>
-    <company-map :name="route.params.id" :company="company.value"/>
+    <company-header :company="findCompany"/>
+    <company-details :company="findCompany" :meetups="meetups"/>
+    <list-tabs :name="findCompany.name" :meetups="meetups"/>
+    <company-map :company="findCompany"/>
   </div>
 </template>

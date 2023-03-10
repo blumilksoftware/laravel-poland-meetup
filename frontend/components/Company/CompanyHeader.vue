@@ -10,10 +10,6 @@ defineProps({
     type: Object,
     default: () => { },
   },
-  name: {
-    type: String,
-    default: '',
-  },
 })
 
 </script>

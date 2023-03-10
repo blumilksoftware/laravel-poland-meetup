@@ -90,7 +90,7 @@ const buildLists = computed(() => {
                       </li>
                     </ul>
                     <router-link v-if="list.id === 'meetups'" :to="{ name: 'meetups.details', params: { id: elem[1].id } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
-                    <router-link v-if="list.id === 'speakers'" :to="{ name: 'people.details', params: { id: elem[1].name } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
+                    <router-link v-if="list.id === 'speakers'" :to="{ name: 'people.details', params: { id: elem[1].slug } }" :class="['absolute inset-0 rounded-md w-full', 'ring-zinc-400 focus:z-10 focus:outline-none focus:ring-2']"/>
                   </div>
                   <div class="flex space-x-6">
                     <you-tube-icon v-if="elem[1].youtube" :href="elem[1].youtube" class="h-7 w-7 self-center"/>
