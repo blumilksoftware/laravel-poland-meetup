@@ -12,7 +12,7 @@ import { ArrowUturnLeftIcon, ExclamationCircleIcon } from '@heroicons/vue/24/out
         <div class="flex items-center space-x-3">
           <exclamation-circle-icon class="h-6 w-6"/>
           <p class="text-md mx-8 text-left sm:my-3 sm:mx-20 sm:text-xl">
-            Wprowadź inny adres url lub...
+            Wprowadź inny adres URL lub...
           </p>
         </div>
         <router-link :to="{ name: 'landing' }" class="flex items-center space-x-3">
