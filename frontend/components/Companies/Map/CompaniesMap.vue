@@ -14,7 +14,7 @@ const props = defineProps({
 
 const center = ref({
   center: [18, 52], 
-  zoom:5,
+  zoom: 5,
 })
 
 const newLocation = computed(() => {
