@@ -26,7 +26,8 @@ const center = ref({
 })
 
 const newLocation = computed(() => {
-  const { companyLocation } = useFlyTo()
+  const { setLocation, companyLocation } = useFlyTo()
+  setLocation(props.center, props.zoom)
   return companyLocation.value
 })
 
