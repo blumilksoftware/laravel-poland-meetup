@@ -4,23 +4,31 @@ import { useRoute } from 'vue-router'
 import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 import SpeakerTable from '@/components/Speaker/SpeakerTable.vue'
 import PeopleSlider from '@/components/Speaker/PeopleSlider.vue'
-import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import router from '@/router'
 
 const meetups = ref([])
 const people = ref([])
-const route = useRoute()
-let loading = ref(true)
-let error = ref(false)
 const speaker = ref({})
+const route = useRoute()
+const loading = ref(true)
 
 function findSpeaker() {
+  speaker.value = {}
+    let path = '' 
+
   for(let person of people.value) { 
     if(person.slug === route.params.id) {
       speaker.value = person
+      path = speaker.value.slug
+      loading.value = false
+      break
+    } else  {
+      path ='/page-not-found'
     }
   }
-  loading.value = false
+  
+  router.push({ path: path })
 }
 
 onMounted(() => {
@@ -33,7 +41,7 @@ onMounted(() => {
     meetups
   })
   .catch(() => {
-    error.value = true
+    router.push({ path: '/404' })
   })
   async function fetchPeople () {
     const response = await fetch('/api/people.json')
@@ -44,7 +52,7 @@ onMounted(() => {
     people
   })
   .catch(() => {
-    error.value = true
+    router.push({ path: '/404' })
   })
 
   findSpeaker()
@@ -62,8 +70,7 @@ watch(route, () => {
 </script>
 <template>
   <LoadingSpinner v-if="loading"/>
-  <NoDataError :error="error" text="Brak prelegenta"/>
-  <div v-if="!error && !loading">
+  <div v-if="!loading">
     <PageHeader :word1="speaker.name"/>
     <SpeakerTable :meetups="meetups" :speaker="speaker"/>
     <PeopleSlider :speaker="speaker" :meetups="meetups" :speakers="people"/>
