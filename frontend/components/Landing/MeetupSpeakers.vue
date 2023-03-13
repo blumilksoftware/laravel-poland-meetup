@@ -58,7 +58,7 @@ const computedNextMeetup = computed(() => {
                   </router-link>
                   <router-link :to="{ name: 'companies' }">
                     <p class="text-zinc-600">
-                      {{ speaker.company }}
+                      {{ speaker.company.name }}
                     </p>
                   </router-link>
                 </div>

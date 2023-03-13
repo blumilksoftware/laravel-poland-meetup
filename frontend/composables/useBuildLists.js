@@ -31,9 +31,9 @@ export function useBuildLists(meetupsList, company) {
       meetup.presentations.filter(function(presentation) {
         presentation.speakers.filter(function(speaker) {
           let speakerCompany = ''
-
+          
           if (speaker.company) {
-            speakerCompany = speaker.company.toLowerCase().replaceAll(' ', '-')
+            speakerCompany = speaker.company.name.toLowerCase().replaceAll(' ', '-')
           }
           if(speakerCompany === companyName) {
             meetups.value.set(meetup.name, meetup)
