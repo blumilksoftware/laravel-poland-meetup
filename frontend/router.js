@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouterView } from 'vue-router'
 import { h } from 'vue'
 
 const routes = [
-    { path: '/home', name: 'landing', component: () => import('@/pages/Landing.vue') },
+    { path: '/', name: 'landing', component: () => import('@/pages/Landing.vue') },
     { path: '/meetups', component: { render: () => h(RouterView) },
         children: [
             { path: '', name: 'meetups', component: () => import('@/pages/Meetups.vue') },
