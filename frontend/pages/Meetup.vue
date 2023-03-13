@@ -22,10 +22,13 @@ onMounted(() => {
   })
   .catch(() => {
     notFound.value = true
-    router.push({ path: '/404' })
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
 
-  if(notFound.value) {
+  if(!notFound.value) {
     loading.value = false
   }
 })

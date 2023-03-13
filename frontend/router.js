@@ -11,8 +11,7 @@ const routes = [
     { path: '/people', name: 'people', component: () => import('@/pages/People.vue') },
     { path: '/people/:id', name: 'people.details', component: () => import('@/pages/Speaker.vue') },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
-    { path: '/404', name: '404', component: () => import('@/pages/404.vue') },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/404' },
+    { path: '/:pathMatch(.*)*', name: 'not.found', component: () => import('@/pages/404.vue') },
 ]
 
 export default createRouter({

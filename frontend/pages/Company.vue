@@ -15,21 +15,20 @@ const route = useRoute()
 const loading = ref(true)
 
 function findCompany () {
-  company.value = {}
-  let path = '' 
-
   for(let elem of companies.value) {
     if(elem.slug === route.params.id) {
       company.value = elem
-      path = company.value.slug
       loading.value = false
       break
-    } else  {
-      path ='/page-not-found'
     }
   }
 
-  router.push({ path: path })
+  if (!Object.keys(company.value).length) {
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
+  }
 }
 
 onMounted (() => {
@@ -38,28 +37,35 @@ onMounted (() => {
     companies.value = await response.json()
     return companies
   }
+
   fetchCompanies().then(companies => {
     companies
   })
   .catch(() => {
-    router.push({ path: '/404' })
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
+
   async function fetchMeetups () {
     const response = await fetch('/api/meetups.json')
     meetups.value = await response.json()
     return meetups
   }
+
   fetchMeetups().then(meetups => {
     meetups
   })
   .catch(() => {
-    router.push({ path: '/404' })
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
-
-  findCompany()
 })
 
-watch(companies, ()=> {
+watch(companies, () => {
   findCompany()
 })
 
