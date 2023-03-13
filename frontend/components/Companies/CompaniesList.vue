@@ -5,6 +5,8 @@ import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import TwitterIcon from '@/components/Icons/TwitterIcon.vue'
 import Counters from '@/components/Companies/Counters.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import useFlyTo from '@/composables/useFlyTo.js'
+
 
 defineProps({
   companies: {
@@ -12,7 +14,7 @@ defineProps({
     default: () => [],
   },
   meetups: {
-    type: Array, 
+    type: Array,
     default: () => [],
   },
   name: {
@@ -24,6 +26,11 @@ defineProps({
     default: true,
   },
 })
+
+function showLocation(coordinates) {
+  const { setLocation } = useFlyTo()
+  setLocation(coordinates, 15)
+}
 
 </script>
 <template>
@@ -74,7 +81,7 @@ defineProps({
                   </router-link>
                   <div class="flex space-x-3 transition duration-200 hover:translate-x-1">
                     <map-pin-icon class="h-7 w-7 sm:h-8 sm:w-8"/>
-                    <a href="#map" class="col-span-11">
+                    <a id="location" href="#map" class="col-span-11" @click="showLocation(company.coordinates)">
                       {{ company.location }}
                     </a>
                   </div>

@@ -6,36 +6,48 @@ export default function (map, data) {
     closeOnClick: true,
   }
 
-  if(data.length > 1) {
+  if (data.length > 1) {
     for (let company of data) {
       buildMarker(company)
     }
   }
-  else { 
+  else {
     buildMarker(data)
   }
 
-  function buildMarker (company) {
-    if(company.coordinates) {
-    const lat = company.coordinates.lat
-    const lng = company.coordinates.lng
-    const el = document.createElement('img')
+  function addListeners(mapboxMarker, markerHtmlElement) {
+    markerHtmlElement.addEventListener('mouseenter', function () {
+      mapboxMarker.togglePopup()
+    })
+    markerHtmlElement.addEventListener('mouseleave', function () {
+      mapboxMarker.togglePopup()
+    })
+  }
 
-    const width = '50'
-    const height = '50'
-    el.className = 'h-6 w-6'
-    el.src = '/images/marker.png'
-    el.style.width = `${width}px`
-    el.style.height = `${height}px`
-    el.style.backgroundSize = '100%'
+  function buildMarker(company) {
+    if (company.coordinates) {
+      const lat = company.coordinates.lat
+      const lng = company.coordinates.lng
+      const el = document.createElement('img')
 
-    const popupHTML = '<div class="px-4 -m-1"><a class="text-lg font-semibold flex">' + company.name + '</a><p>' + company.location + '</p></div>'
+      const width = '50'
+      const height = '50'
+      el.className = 'h-6 w-6'
+      el.src = '/images/marker.png'
+      el.style.width = `${width}px`
+      el.style.height = `${height}px`
+      el.style.backgroundSize = '100%'
 
-    new mapboxgl.Marker(el)
-      .setLngLat([lng, lat])
-      .setPopup(new mapboxgl.Popup(popupOptions).setHTML(popupHTML))
-      .togglePopup()
-      .addTo(map)
+      const popupHTML = '<div class="px-4 -m-1"><a class="text-lg font-semibold flex">' + company.name + '</a><p>' + company.location + '</p></div>'
+
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat([lng, lat])
+        .setPopup(new mapboxgl.Popup(popupOptions).setLngLat([lng, lat]).setHTML(popupHTML))
+        .togglePopup()
+        .addTo(map)
+
+      addListeners(marker, el)
     }
+
   }
 }

@@ -23,7 +23,7 @@ const buildLists = computed(() => {
 </script>
 <template>
   <div>
-    <router-link v-if="buildLists.meetups" class="my-5 grid grid-cols-3" :to="{ name: 'companies.details', params: { id: company.slug, tabs: 'tabs' } }">
+    <router-link v-if="buildLists.meetups" class="my-5 grid grid-cols-3" :to="{ name: 'companies.details', hash: '#tabs', params: { id: company.slug } }">
       <div v-if="buildLists.meetups">
         <p class="text-laravel border-laravel text-3xl hover:scale-110">
           {{ buildLists.meetups.data.size }}
