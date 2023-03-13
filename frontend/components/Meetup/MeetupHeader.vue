@@ -24,7 +24,7 @@ defineProps({
           <p>{{ meetup.dateFull }}</p>
         </div>
         <div class="flex items-center justify-center">
-          <signal-icon class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
+          <signal-icon v-if="meetup.location === 'online'" class="mr-1.5 h-7 w-7 shrink-0 text-gray-400" aria-hidden="true"/>
           <p>
             {{ meetup.location }}
           </p>
