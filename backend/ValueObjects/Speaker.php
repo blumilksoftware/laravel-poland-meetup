@@ -20,7 +20,7 @@ class Speaker
             "slug" => $this->person->slug,
             "avatar" => "https://ui-avatars.com/api/?background=random&font-size=.33&size-128&rounded=true&name=" . str_replace(" ", "-", $this->person->name),
             "linkedin" => $this->person->linkedin,
-            "company" => $this->company?->name,
+            "company" => $this->company?->toPresentationEntry(),
         ];
     }
 }
