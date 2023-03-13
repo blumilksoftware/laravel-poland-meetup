@@ -1,30 +1,35 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import CompanyDetails from '@/components/Company/CompanyDetails.vue'
 import CompanyHeader from '@/components/Company/CompanyHeader.vue'
 import ListTabs from '@/components/Company/ListTabs.vue'
 import CompanyMap from '@/components/Company/CompanyMap.vue'
-import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import router from '@/router'
 
+const meetups = ref([])
+const companies = ref([])
+const company = ref({})
 const route = useRoute()
-let meetups = ref([])
-let companies = ref([])
-let company = ref({})
-let loading = ref(true)
-let error = ref(false)
+const loading = ref(true)
 
-const findCompany = computed(() => {
-  if (companies.value.length === 0) return {}
-
+function findCompany () {
   for(let elem of companies.value) {
     if(elem.slug === route.params.id) {
-      return elem
+      company.value = elem
+      loading.value = false
+      break
     }
   }
-  return company.value
-})
+
+  if (!Object.keys(company.value).length) {
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
+  }
+}
 
 onMounted (() => {
   async function fetchCompanies () {
@@ -32,36 +37,51 @@ onMounted (() => {
     companies.value = await response.json()
     return companies
   }
+
   fetchCompanies().then(companies => {
     companies
   })
   .catch(() => {
-    error.value = true
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
+
   async function fetchMeetups () {
     const response = await fetch('/api/meetups.json')
     meetups.value = await response.json()
     return meetups
   }
+
   fetchMeetups().then(meetups => {
     meetups
   })
   .catch(() => {
-    error.value = true
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
+})
 
-  loading.value = false
+watch(companies, () => {
+  findCompany()
+})
+
+watch(route, () => {
+  findCompany()
+  window.scrollTo(0,0)
 })
 
 </script>
 
 <template>
-  <NoDataError :error="error" text="Nie ma takiej firmy"/>
   <LoadingSpinner v-if="loading"/>
-  <div v-if="!error && !loading">
-    <company-header :company="findCompany"/>
-    <company-details :company="findCompany" :meetups="meetups"/>
-    <list-tabs :name="findCompany.name" :meetups="meetups"/>
-    <company-map :company="findCompany"/>
+  <div v-if="!loading">
+    <company-header :company="company"/>
+    <company-details :company="company" :meetups="meetups"/>
+    <list-tabs :name="company.name" :meetups="meetups"/>
+    <company-map :company="company"/>
   </div>
 </template>
