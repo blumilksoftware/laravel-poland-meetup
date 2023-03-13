@@ -3,13 +3,13 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import MeetupHeader from '@/components/Meetup/MeetupHeader.vue'
 import PresentationsList from '@/components/Meetup/PresentationsList.vue'
-import NoDataError from '@/components/EmptyStates/NoDataError.vue'
 import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
+import router from '@/router'
 
-let meetup = ref([])
+const meetup = ref({})
 const route = useRoute()
 let loading = ref(true)
-let error = ref(false)
+let notFound = ref(false)
 
 onMounted(() => {
   async function fetchMeetup () {
@@ -21,18 +21,22 @@ onMounted(() => {
     meetup
   })
   .catch(() => {
-    error.value = true
+    notFound.value = true
+    router.push({
+      name: 'not.found',
+      params: { pathMatch: route.path.substring(1).split('/') },
+    })
   })
 
-  loading.value = false
+  if(!notFound.value) {
+    loading.value = false
+  }
 })
 
 </script>
-
 <template>
-  <NoDataError :error="error" text="Brak meetupów"/>
   <LoadingSpinner v-if="loading"/>
-  <div v-if="!error && !loading">
+  <div v-if="!loading">
     <meetup-header :meetup="meetup"/>
     <presentations-list :presentations="meetup.presentations"/>
   </div>

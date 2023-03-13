@@ -24,6 +24,7 @@ const routes = [
         ],
     },
     { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
+    { path: '/:pathMatch(.*)*', name: 'not.found', component: () => import('@/pages/404.vue') },
 ]
 
 export default createRouter({
