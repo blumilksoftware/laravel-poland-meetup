@@ -23,7 +23,7 @@ const routes = [
             { path: ':id', name: 'people.details', component: () => import('@/pages/Speaker.vue') },
         ],
     },
-    { path: '/contact', name: 'contact', component: () => import('@/pages/Landing.vue') },
+    { path: '/contact', name: 'contact', component: () => import('@/pages/Contact.vue') },
     { path: '/:pathMatch(.*)*', name: 'not.found', component: () => import('@/pages/404.vue') },
 ]
 
