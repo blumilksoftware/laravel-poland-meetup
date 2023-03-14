@@ -2,6 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { Bars3Icon } from '@heroicons/vue/24/solid'
+
 </script>
 
 <template>
@@ -38,7 +39,6 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
         </div>
       </div>
     </div>
-
     <disclosure-panel class="lg:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <router-link :to="{ name: 'landing' }">
@@ -70,3 +70,12 @@ import { Bars3Icon } from '@heroicons/vue/24/solid'
     </disclosure-panel>
   </disclosure>
 </template>
+
+<style scoped>
+
+.router-link-active {
+  background-color: rgb(231, 231, 231);
+  color: rgb(22, 22, 22);
+}
+
+</style>

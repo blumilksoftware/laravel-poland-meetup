@@ -74,9 +74,9 @@ defineProps({
                         <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }">
                           <h3>{{ speaker.name }}</h3>
                         </router-link>
-                        <router-link :to="{ name: 'companies.details', params: { id: speaker.slug } }">
+                        <router-link v-if="speaker.company" :to="{ name: 'companies.details', params: { id: speaker.company.slug } }">
                           <p class="text-zinc-600">
-                            {{ speaker.company }}
+                            {{ speaker.company.name }}
                           </p>
                         </router-link>
                       </div>

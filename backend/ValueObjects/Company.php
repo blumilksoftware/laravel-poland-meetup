@@ -39,4 +39,12 @@ class Company
             "coordinates" => $this->coordinates,
         ];
     }
+
+    public function toPresentationEntry(): array
+    {
+        return [
+            "name" => $this->name,
+            "slug" => $this->slug,
+        ];
+    }
 }
