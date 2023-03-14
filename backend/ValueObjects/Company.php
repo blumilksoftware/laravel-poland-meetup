@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace LaravelPolandMeetup\ValueObjects;
 
 use Illuminate\Support\Str;
-    
+
 class Company
 {
     public readonly string $slug;
