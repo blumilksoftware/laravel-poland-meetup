@@ -1,7 +1,7 @@
 <script setup>
 import PulseBackgroundAnimation from '@/components/ReusableComponents/PulseBackgroundAnimation.vue'
 
-let url = import.meta.env['VITE_CONTACT_FORM_URL'] + '/formResponse?embedded=true'
+let url = import.meta.env['VITE_CONTACT_FORM_URL'] + '/formResponse'
 let emailName = import.meta.env.VITE_CONTACT_FORM_EMAIL_NAME
 let messageName = import.meta.env.VITE_CONTACT_FORM_MESSAGE_NAME
 
@@ -47,7 +47,6 @@ function handleFormSubmit () {
                 <button :click="handleFormSubmit" class="mt-1 cursor-pointer rounded-md bg-zinc-200 px-4 py-2 text-center text-zinc-700">
                   Wyślij przez Google Forms
                 </button>
-                <input type='submit' value='Submit'>
               </div>
             </div>
           </form>
