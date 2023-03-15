@@ -34,15 +34,15 @@ function handleFormSubmit () {
           <form id="contact" onsubmit="" class="relative z-10 text-base" method="POST" target="_blank" :action="url">
             <div class="space-y-4 py-4 md:px-4">
               <div>
-                <label :for="emailName" class="block text-left text-gray-700">Email</label>
-                <input :id="emailName" type="email" :name="emailName" placeholder="example@example.com" class="my-1 block w-full rounded-md border-gray-300 px-4 py-2 shadow-sm">
+                <label :for="emailName" class="block text-left text-zinc-700">Email</label>
+                <input :id="emailName" type="email" :name="emailName" placeholder="example@example.com" class="my-1 block w-full rounded-md border-zinc-300 px-4 py-2 shadow-sm focus:border-zinc-500 focus:ring-zinc-300">
               </div>
               <div>
-                <label :for="messageName" class="block text-left text-gray-700">Wiadomość</label>
-                <textarea :id="messageName" rows="8" :name="messageName" placeholder="Zadaj nam pytanie" class="mt-1 block w-full rounded-md border-gray-300 px-4 py-2 shadow-sm"/>
+                <label :for="messageName" class="block text-left text-zinc-700">Wiadomość</label>
+                <textarea :id="messageName" rows="8" :name="messageName" placeholder="Zadaj nam pytanie" class="mt-1 block w-full rounded-md border-zinc-300 px-4 py-2 shadow-sm focus:border-zinc-500 focus:ring-zinc-300"/>
               </div>
               <div class="md:flex md:justify-end">
-                <button :click="handleFormSubmit" class="mt-1 flex cursor-pointer rounded-md bg-zinc-200 px-4 py-2 text-center text-zinc-700">
+                <button :click="handleFormSubmit" class="mt-1 flex cursor-pointer rounded-md border-zinc-300 bg-zinc-200 px-4 py-2 text-center text-zinc-700 transition-transform focus:border-zinc-500  focus:outline-none focus:ring-zinc-300 active:scale-75">
                   Wyślij przez <GoogleIcon class="mx-1 flex h-5 w-5 self-center"/> Forms
                 </button>
               </div>
