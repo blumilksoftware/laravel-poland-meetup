@@ -25,7 +25,7 @@ function handleFormSubmit () {
               Napisz do nas
             </h2>
             <p class="text-base md:text-lg">
-              Masz pytanie? Chętnie Ci na nie odpowiemy!
+              Chętnie odpowiemy na Twoje pytania.
             </p>
             <p class="text-base md:text-lg">
               Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać - skontaktujemy się z Tobą. 
