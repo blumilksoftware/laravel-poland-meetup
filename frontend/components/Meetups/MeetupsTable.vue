@@ -81,7 +81,9 @@ const searchCompany = ( meetups ) => {
     return meetups }
   return meetups.filter(meetup => meetup.presentations.some(({ speakers }) => 
     speakers.some(({ company }) => {
-      return checkedCompanies.value.includes(company)
+      if(company) {
+        return checkedCompanies.value.includes(company.name)
+      }
     }),
   ))
 }
