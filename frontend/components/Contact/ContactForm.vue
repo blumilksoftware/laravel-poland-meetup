@@ -47,7 +47,7 @@ function handleFormSubmit () {
           </form>
         </div>
         <div class="flex w-full items-center justify-center md:w-1/2">
-          <img class="opacity-0.5" src="images/placeholders/workingon.webp">
+          <img class="opacity-0.5" src="/images/placeholders/workingon.webp">
         </div>
       </div>
     </div>
