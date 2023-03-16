@@ -10,8 +10,6 @@ function handleFormSubmit () {
   document.getElementById('contact').submit()
 }
 
-
-
 </script>
 
 <template>
