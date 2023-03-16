@@ -8,7 +8,7 @@
     {
       "title": "Nowości w Laravel 5.7",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/nowoci-w-laravel-57",
       "blurb": null,
       "speakers": [
         {
@@ -20,9 +20,9 @@
       "tags": []
     },
     {
-      "title": "Standardy kodowania, czyli co poza PSR-x",
+      "title": "Standardy programowania, czyli co poza PSR-x",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/standardy-programowania-czyli-co-poza-psrx",
       "blurb": null,
       "speakers": [
         {
@@ -34,9 +34,9 @@
       "tags": []
     },
     {
-      "title": "Obalmy mity o wydajności frameworka Laravel, część 2",
+      "title": "Obalamy mity o wydajności frameworka Laravel, część 2",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/obalamy-mity-o-wydajnoci-frameworka-laravel-cz-ii",
       "blurb": null,
       "speakers": [
         {

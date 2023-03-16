@@ -7,8 +7,8 @@
   "presentations": [
     {
       "title": "Vue.js - Zastosowanie i budowa komponentów",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=uFguos09aWs",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/vuejs-zastosowanie-i-budowa-komponentw",
       "blurb": null,
       "speakers": [
         {
@@ -22,7 +22,7 @@
     {
       "title": "Wstęp do profilowania aplikacji",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/wstp-do-profilowania-aplikacji",
       "blurb": null,
       "speakers": [
         {
@@ -34,9 +34,9 @@
       "tags": []
     },
     {
-      "title": "Obalmy mity o wydajności frameworka Laravel",
+      "title": "Obalamy mity o wydajności frameworka Laravel",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/obalamy-mity-o-wydajnoci-frameworka-laravel",
       "blurb": null,
       "speakers": [
         {

@@ -7,8 +7,8 @@
   "presentations": [
     {
       "title": "Action-based Laravel",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=zn_mhczP2_c",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/actionbased-laravel",
       "blurb": null,
       "speakers": [
         {
@@ -21,13 +21,13 @@
     },
     {
       "title": "Laravel/PHP - zderzenie z PDF-ami",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=Soc2ygQdJlQ",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravelphp-zderzenie-z-pdfami",
       "blurb": null,
       "speakers": [
         {
           "person": "@pawelspychalski",
-          "company": null
+          "company": "@polcode"
         }
       ],
       "links": [],
