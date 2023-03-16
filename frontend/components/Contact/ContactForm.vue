@@ -28,7 +28,7 @@ function handleFormSubmit () {
               Chętnie odpowiemy na Twoje pytania.
             </p>
             <p class="text-base md:text-lg">
-              Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać - skontaktujemy się z Tobą. 
+              Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać — skontaktujemy się z Tobą. 
             </p>
           </div>
           <form id="contact" onsubmit="" class="relative z-10 text-base" method="POST" target="_blank" :action="url">
