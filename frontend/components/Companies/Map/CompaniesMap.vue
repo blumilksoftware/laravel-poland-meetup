@@ -40,8 +40,6 @@ onMounted(() => {
     center: center.value.center,
     zoom: center.value.zoom,
   })
-  console.log('center', center.value.center)
-  console.log('zoom', center.value.zoom)
 
   addNavigation(map, center)
   addMarkers(map, props.data)
