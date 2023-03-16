@@ -23,16 +23,16 @@ function handleFormSubmit () {
               Napisz do nas
             </h2>
             <p class="text-base md:text-lg">
-              Masz pytanie? Chętnie Ci na nie odpowiemy!
+              Chętnie odpowiemy na Twoje pytania.
             </p>
             <p class="text-base md:text-lg">
-              Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać - skontaktujemy się z Tobą. 
+              Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać — skontaktujemy się z Tobą. 
             </p>
           </div>
           <form id="contact" onsubmit="" class="relative z-10 text-base" method="POST" target="_blank" :action="url">
             <div class="space-y-4 py-4 md:px-4">
               <div>
-                <label :for="emailName" class="block text-left text-zinc-700">Email</label>
+                <label :for="emailName" class="block text-left text-zinc-700">E-mail</label>
                 <input :id="emailName" type="email" :name="emailName" placeholder="example@example.com" class="my-1 block w-full rounded-md border-zinc-300 px-4 py-2 shadow-sm focus:border-zinc-500 focus:ring-zinc-300">
               </div>
               <div>
