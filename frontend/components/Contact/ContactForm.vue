@@ -9,7 +9,6 @@ let messageName = import.meta.env.VITE_CONTACT_FORM_MESSAGE_NAME
 function handleFormSubmit () {
   document.getElementById('contact').submit()
 }
-
 </script>
 
 <template>
