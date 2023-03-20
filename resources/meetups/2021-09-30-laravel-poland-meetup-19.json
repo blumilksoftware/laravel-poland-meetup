@@ -7,8 +7,8 @@
   "presentations": [
     {
       "title": "(prawie) Wszystko o Tinkerze",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=2Qa_wuZh18M",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/prawie-wszystko-o-tinkerze",
       "blurb": null,
       "speakers": [
         {
@@ -21,8 +21,8 @@
     },
     {
       "title": "Walidacja w Laravelu",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=FomFSpHudH4",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/walidacja-w-laravelu",
       "blurb": null,
       "speakers": [
         {

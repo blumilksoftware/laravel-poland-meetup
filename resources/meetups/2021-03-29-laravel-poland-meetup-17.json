@@ -7,8 +7,8 @@
   "presentations": [
     {
       "title": "Wszystko o Laravel Livewire",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=O0bEn6I1zD8",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/wszystko-o-laravel-livewire",
       "blurb": null,
       "speakers": [
         {
@@ -21,8 +21,8 @@
     },
     {
       "title": "Laravel Jobs i PHP8 - ulepszony cykl życia i automatyczne wstrzykiwanie zależności",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=_On4GaqF01c",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-jobs-i-php8",
       "blurb": null,
       "speakers": [
         {

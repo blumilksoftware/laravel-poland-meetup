@@ -7,8 +7,8 @@
   "presentations": [
     {
       "title": "Laravel Octane, czy na pewno taki szybki?",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=wjb36c_1Xls&t=2s",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-octane-czy-na-pewno-taki-szybki",
       "blurb": null,
       "speakers": [
         {
@@ -21,8 +21,8 @@
     },
     {
       "title": "Laravel Dusk - prosty przepis na testy E2E",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=TvbV83fKB4g",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-dusk-prosty-przepis-na-testy-e2e",
       "blurb": null,
       "speakers": [
         {

@@ -35,8 +35,8 @@
     },
     {
       "title": "Automatyzacja i utrzymanie jakości kodu",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=TDF2wqsOvaA",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/automatyzacja-utrzymania-jakoci-w-rodowisku-php",
       "speakers": [
         {
           "person": "@krzysztofrewak",
