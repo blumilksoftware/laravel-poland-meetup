@@ -102,7 +102,7 @@ const meetupTags = ( meetup ) => {
             <div class="hidden md:flex">
               <ul class="flex -space-x-2 overflow-hidden">
                 <li v-for="speaker in meetupSpeakers(meetup)" :key="speaker.name" class="inline-block w-10">
-                  <img v-if="speaker.image === ''" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
+                  <img v-if="!speaker.image.length" :src="speaker.avatar" :alt="`${speaker.name} zdjęcie`" class="my-2 rounded-full shadow-md">
                   <img v-else :src="speaker.image" :alt="`${speaker.name} logo`" class="my-2 rounded-full shadow-md">
                 </li>
               </ul>
@@ -114,7 +114,7 @@ const meetupTags = ( meetup ) => {
         </router-link>
       </transition>
     </li>
-    <li v-if="(!data.length && !loading && !error)" class="space-y-7 text-xl text-zinc-500">
+    <li v-if="(!data.length && !loading)" class="space-y-7 text-xl text-zinc-500">
       <NoResults/>
     </li>
   </ul>

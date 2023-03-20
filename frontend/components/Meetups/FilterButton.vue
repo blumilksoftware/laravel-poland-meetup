@@ -58,7 +58,7 @@ watch(selectedSpeakers, () => {
         <adjustments-horizontal-icon class="h-5 w-5 self-center text-zinc-600"/>
       </DisclosureButton>
       <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-x-72 opacity-0" enter-to-class="transform translate-x-0 opacity-100" leave-active-class="transition duration-100 ease-out" leave-from-class="transform translate-x-0 opacity-100" leave-to-class="transform -translate-x-72 opacity-0">
-        <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white sm:w-1/2 sm:shadow-xl md:w-1/3 lg:w-1/4">
+        <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white sm:w-1/2 sm:shadow-xl md:max-w-[400px]">
           <div class="mx-5">
             <div class="flex justify-end">
               <DisclosureButton class="active:scale-120 my-2 flex justify-end">
