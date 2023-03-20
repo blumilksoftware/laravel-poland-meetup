@@ -17,7 +17,7 @@ class Presentation
         public readonly ?string $youtube = null,
         public readonly ?string $slideshare = null,
         public readonly Collection $speakers = new Collection(),
-        public readonly Collection $tags = new Collection(),
+        public readonly ?array $tags = null,
     ) {}
 
     public function toMeetupEntry(): array
@@ -29,7 +29,7 @@ class Presentation
             "speakers" => $this->speakers->map(
                 fn(Speaker $speaker): array => $speaker->toMeetupDetailsEntry(),
             ),
-            "tags" => $this->tags->values(),
+            "tags" => $this->tags,
         ];
     }
 }

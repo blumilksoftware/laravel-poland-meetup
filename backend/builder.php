@@ -67,7 +67,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
                         company: $companies[$speaker["company"]] ?? null,
                     ),
                 ),
-                tags: Collection::make(),
+                tags: $presentation["tags"] ?? [],
             ),
         ),
     ));
