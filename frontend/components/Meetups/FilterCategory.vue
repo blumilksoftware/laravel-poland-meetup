@@ -49,7 +49,7 @@ watch(selectedElements, () => {
         <ComboboxOption v-for="item in filteredElements" v-slot="{ active, selected }" :key="item.name" :value="item.name" as="div">
           <li :class="['flex justify-between cursor-default select-none', active ? 'bg-zinc-100 text-zinc-700' : 'text-zinc-700', selected ? 'bg-zinc-200' : '']">
             <div class="ml-3 mr-1 flex items-center py-3">
-              <img v-if="item.image && !item.image.length" src="/images/speakers/placeholder.webp" alt="" class="h-6 w-6 shrink-0 rounded-full">
+              <img v-if="item.image === ''" src="/images/speakers/placeholder.webp" alt="" class="h-6 w-6 shrink-0 rounded-full">
               <img v-else-if="item.image" :src="item.image" alt="" class="h-6 w-6 shrink-0 rounded-full">
               <span :class="['ml-3 truncate text-base text-zinc-500', selected && 'font-semibold']">
                 {{ item.name }}
