@@ -37,7 +37,7 @@ onMounted(() => {
 <template>
   <LoadingSpinner v-if="loading"/>
   <div v-if="!loading">
-    <meetup-header :meetup="meetup"/>
-    <presentations-list :presentations="meetup.presentations"/>
+    <meetup-header :loading="loading" :meetup="meetup"/>
+    <presentations-list :loading="loading" :presentations="meetup.presentations"/>
   </div>
 </template>
