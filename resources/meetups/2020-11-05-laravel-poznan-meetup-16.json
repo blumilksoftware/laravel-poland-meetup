@@ -9,6 +9,7 @@
       "title": "Action-based Laravel",
       "youtube": "https://www.youtube.com/watch?v=zn_mhczP2_c",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/actionbased-laravel",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/dTILSrjyxrurO0",
       "blurb": null,
       "speakers": [
         {
@@ -23,6 +24,7 @@
       "title": "Laravel/PHP - zderzenie z PDF-ami",
       "youtube": "https://www.youtube.com/watch?v=Soc2ygQdJlQ",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravelphp-zderzenie-z-pdfami",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/M5s5ENa2zj3Atc",
       "blurb": null,
       "speakers": [
         {
@@ -37,6 +39,7 @@
       "title": "Automatyzacja i utrzymanie jakości kodu",
       "youtube": "https://www.youtube.com/watch?v=TDF2wqsOvaA",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/automatyzacja-utrzymania-jakoci-w-rodowisku-php",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/u33QdiVDPhVpOt",
       "speakers": [
         {
           "person": "@krzysztofrewak",

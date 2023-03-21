@@ -9,6 +9,7 @@
       "title": "Praca z Legacy Code",
       "youtube": "https://www.youtube.com/watch?v=41kEJfFodKo",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/praca-z-legacy-code",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/4jjXyVjHybyKGa",
       "blurb": null,
       "speakers": [
         {
@@ -22,7 +23,8 @@
     {
       "title": "Testy dymne, integracyjne i jednostkowe w Laravel",
       "youtube": "https://www.youtube.com/watch?v=bxsJiKGY7DQ",
-      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/testy-dymne-integracyjne-i-jednostkowe-w-laravel?qid=9bf50498-9574-4799-aa1e-749286ddc576&v=&b=&from_search=1",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/testy-dymne-integracyjne-i-jednostkowe-w-laravel",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/wt7l1ScXsvoQyL",
       "blurb": null,
       "speakers": [
         {
@@ -37,6 +39,7 @@
       "title": "Uruchomienie i praca z Laravel w wirtualnym kontenerze Dockera",
       "youtube": "https://www.youtube.com/watch?v=R5KGqN9RqS4",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/uruchomienie-i-praca-z-laravel-w-wirtualnym-kontenerze-dockera",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/KIeLiBJNNLBddR",
       "blurb": null,
       "speakers": [
         {
