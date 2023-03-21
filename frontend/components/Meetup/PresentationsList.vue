@@ -3,6 +3,7 @@ import { PresentationChartLineIcon } from '@heroicons/vue/24/outline'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
+
 defineProps({
   presentations: {
     type: Array,
@@ -21,24 +22,24 @@ defineProps({
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="block p-6">
-          <div class="mb-4 flex text-lg font-medium">
+          <div class="mb-10 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink-0 text-zinc-400" aria-hidden="true"/>
             {{ presentation.title }}
           </div>
-          <div v-if="presentation.tags.length" class="mb-10 flex items-start">
-            <p class="mr-3 text-zinc-500 ">
-              Tagi:
-            </p>
-            <ul class="flex w-full space-x-2 text-zinc-400">
-              <li v-for="tag of presentation.tags" :key="tag">
-                <router-link :to="{ name: 'searching.results', params: { id: tag }} " class="underline">
-                  {{ tag }}{{ ',' }}
-                </router-link>
-              </li>
-            </ul>
-          </div>
           <div class="flex w-full justify-center">
-            <div class="block lg:w-1/3">
+            <div class="block self-center lg:w-1/3">
+              <div v-if="presentation.tags.length" class="mx-9 -mt-5 mb-5 flex">
+                <p class="mr-3 text-zinc-500 ">
+                  Tagi:
+                </p>
+                <ul class="flex w-full space-x-2 text-zinc-400">
+                  <li v-for="tag of presentation.tags" :key="tag">
+                    <a href="#" class="underline">
+                      {{ tag }}{{ ',' }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div class="w-full flex-col">
                 <div class="mx-9 block items-center space-y-4 text-base sm:flex sm:space-y-0 sm:space-x-16">
                   <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group flex w-fit space-x-2 font-semibold transition hover:scale-105 md:space-x-3">
