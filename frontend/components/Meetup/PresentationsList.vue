@@ -10,6 +10,7 @@ defineProps({
     default: () => [],
   },
 })
+
 </script>
 
 <template>
