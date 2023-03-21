@@ -61,7 +61,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
                 title: $presentation["title"],
                 youtube: $presentation["youtube"],
                 slideshare: $presentation["slideshare"],
-                slideshareEmbeded: $presentation["slideshareEmbeded"],
+                slideshareEmbed: $presentation["slideshareEmbed"],
                 speakers: Collection::make($presentation["speakers"])->map(
                     fn(array $speaker): Speaker => new Speaker(
                         person: $people[$speaker["person"]],

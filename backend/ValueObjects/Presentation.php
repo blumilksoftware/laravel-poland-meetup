@@ -16,7 +16,7 @@ class Presentation
         public readonly string $title,
         public readonly ?string $youtube = null,
         public readonly ?string $slideshare = null,
-        public readonly ?string $slideshareEmbeded = null,
+        public readonly ?string $slideshareEmbed = null,
         public readonly Collection $speakers = new Collection(),
         public readonly ?array $tags = null,
     ) {}
@@ -27,7 +27,7 @@ class Presentation
             "title" => $this->title,
             "youtube" => $this->youtube,
             "slideshare" => $this->slideshare,
-            "slideshareEmbeded" => $this->slideshareEmbeded,
+            "slideshareEmbed" => $this->slideshareEmbed,
             "speakers" => $this->speakers->map(
                 fn(Speaker $speaker): array => $speaker->toMeetupDetailsEntry(),
             ),
