@@ -96,7 +96,7 @@ defineProps({
             </div>
             <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
               <div class="relative hidden lg:block">
-                <iframe class="relative" src="https://www.slideshare.net/slideshow/embed_code/key/o9jxGUln7m5Vat" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
+                <iframe class="relative" :src="presentation.slideshareEmbed" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
               </div>
             </div>
           </div>
