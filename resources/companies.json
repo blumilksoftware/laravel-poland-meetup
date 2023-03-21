@@ -160,5 +160,19 @@
       "lat": 52.40578020316559,
       "lng": 16.925787449461488
     }
+  },
+  "@airavanasystems": {
+    "id": "13",
+    "name": "Airavana Systems",
+    "logo": "/images/companies/airavanasystems.webp",
+    "location": "Poznań",
+    "bio": "Firma utworzona w 2016 roku przez Kamila Kiełczewskiego zajmująca się szeroko pojętym oprogramowaniem komputerowym i web developmentem.",
+    "website": "https://airavana.net/",
+    "linkedin": "",
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.385073065001,
+      "lng": 16.8883701228753
+    }
   }
 }
