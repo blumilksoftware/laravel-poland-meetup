@@ -1,5 +1,5 @@
 <script setup>
-import { CalendarDaysIcon, SignalIcon } from '@heroicons/vue/24/outline'
+import { CalendarDaysIcon, SignalIcon, MapPinIcon } from '@heroicons/vue/24/outline'
 import FacebookIcon from '@/components/Icons/FacebookIcon.vue'
 import PulseBackgroundAnimation from '@/components/ReusableComponents/PulseBackgroundAnimation.vue'
 
@@ -22,19 +22,20 @@ defineProps({
       <h1 v-if="meetup" class="text-laravel text-2xl font-bold tracking-tight sm:text-5xl">
         {{ meetup.name }}
       </h1>
-      <div class="text-md space-y-2 text-gray-500 sm:text-2xl">
+      <div class="text-md space-y-2 text-zinc-500 sm:text-2xl">
         <div class="flex items-center justify-center">
-          <calendar-days-icon class="mr-1.5 h-6 w-6 shrink-0 text-gray-400" aria-hidden="true"/>
+          <calendar-days-icon class="mr-1.5 h-6 w-6 shrink-0 text-zinc-400 sm:h-7 sm:w-7" aria-hidden="true"/>
           <p>{{ meetup.dateFull }}</p>
         </div>
         <div class="flex items-center justify-center">
-          <signal-icon v-if="meetup.location === 'online'" class="mr-1.5 h-6 w-6 shrink-0 text-gray-400" aria-hidden="true"/>
+          <signal-icon v-if="meetup.location === 'online'" class="mr-1.5 h-6 w-6 shrink-0 text-zinc-400" aria-hidden="true"/>
+          <map-pin-icon v-else class="mr-1.5 h-6 w-6 shrink-0 text-zinc-400 sm:h-7 sm:w-7" aria-hidden="true"/>
           <p>
             {{ meetup.location }}
           </p>
         </div>
       </div>
-      <div class="flex justify-center text-gray-500 sm:text-2xl">
+      <div class="flex justify-center text-zinc-500 sm:text-2xl">
         <a :href="meetup.facebookEvent" class="flex justify-center space-x-5">
           <span class="hidden sm:flex">
             Sprawdź wydarzenie na Facebooku! 
