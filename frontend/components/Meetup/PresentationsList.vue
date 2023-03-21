@@ -3,14 +3,12 @@ import { PresentationChartLineIcon } from '@heroicons/vue/24/outline'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
 import YouTubeIcon from '@/components/Icons/YouTubeIcon.vue'
 import SlideShareIcon from '@/components/Icons/SlideShareIcon.vue'
-
 defineProps({
   presentations: {
     type: Array,
     default: () => [],
   },
 })
-
 </script>
 
 <template>
