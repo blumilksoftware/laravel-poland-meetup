@@ -20,16 +20,18 @@ defineProps({
 <template>
   <div v-if="!loading" class="mt-12 bg-white text-zinc-700 shadow-lg">
     <div class="border-b border-zinc-200 bg-zinc-800 px-4 py-5 text-zinc-100 sm:px-6">
-      <h3 class="pl-4 text-xl font-medium leading-8">
+      <h2 class="pl-4 text-xl font-medium leading-8">
         Prezentacje
-      </h3>
+      </h2>
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="block p-6">
           <div class="mb-4 flex text-lg font-medium">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink text-zinc-400" aria-hidden="true"/>
-            {{ presentation.title }}
+            <h3>
+              {{ presentation.title }}
+            </h3>
           </div>
           <div v-if="presentation.tags.length" class="mb-6 flex items-start md:mb-10">
             <p class="mr-3 text-zinc-500">
@@ -47,7 +49,7 @@ defineProps({
           </div>
           <div class="flex w-full items-center justify-center">
             <div class="block w-full lg:w-1/3">
-              <div class="flex justify-center text-base">
+              <div class="flex justify-center text-base sm:space-x-5">
                 <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-auto flex w-fit items-center space-x-2 text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <you-tube-icon class="h-10 w-10 sm:h-6 sm:w-6 sm:shrink-0" aria-hidden="true" :href="presentation.youtube"/>
                   <p class="group-hover:text-laravel hidden sm:ml-2 sm:inline-block">
@@ -73,9 +75,11 @@ defineProps({
                     <p class="-mb-3 inline text-sm text-zinc-500">
                       Prelegent:
                     </p>
-                    <div class="text-laravel my-3 inline text-base font-medium leading-6 sm:text-lg">
+                    <div class="my-3 inline text-base font-medium leading-6 sm:text-lg">
                       <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }">
-                        <h3>{{ speaker.name }}</h3>
+                        <p class="text-laravel">
+                          {{ speaker.name }}
+                        </p>
                       </router-link>
                       <router-link v-if="speaker.company" :to="{ name: 'companies.details', params: { id: speaker.company.slug } }">
                         <p class="inline text-zinc-600">
@@ -83,8 +87,8 @@ defineProps({
                         </p>
                       </router-link>
                     </div>
-                    <div v-if="speaker.linkedin" class="my-4 flex space-x-3">
-                      <linkedin-icon :href="speaker.linkedin"/>
+                    <div v-if="speaker.linkedin" class="my-2 h-6 w-6">
+                      <linkedin-icon :href="speaker.linkedin" class="text-zinc-600"/>
                     </div>
                   </div>
                 </div>
