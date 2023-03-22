@@ -27,7 +27,7 @@ defineProps({
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="block p-6">
-          <div class="mb-4 flex text-lg font-medium">
+          <div class="mb-4 flex text-lg font-medium sm:text-xl">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink text-zinc-400" aria-hidden="true"/>
             <h3>
               {{ presentation.title }}
@@ -94,7 +94,7 @@ defineProps({
                 </div>
               </div>
             </div>
-            <div class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
+            <div v-if="presentation.slideshareEmbed" class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
               <div class="relative hidden lg:block">
                 <iframe class="relative" :src="presentation.slideshareEmbed" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
               </div>
