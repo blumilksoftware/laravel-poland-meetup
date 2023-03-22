@@ -7,8 +7,9 @@
   "presentations": [
     {
       "title": "Laravel 8 - co nowego?",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=DNboKDFTFp8",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-80-co-nowego",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/KseVbMtvZCEgrq",
       "blurb": null,
       "speakers": [
         {
@@ -21,8 +22,9 @@
     },
     {
       "title": "Laravel Collection - czyli tablice na sterydach",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=gaBMnyVBy3c",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-collection-tablice-na-sterydach",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/pJwsP6ysLKTZV6",
       "blurb": null,
       "speakers": [
         {
@@ -35,8 +37,10 @@
     },
     {
       "title": "Wstęp do CI/CD w aplikacjach stworzonych w Laravel",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=y93wlvqk8OY",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/wstp-do-gitlab-cicd-w-aplikacjach-napisanych-w-laravel",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/8VR1ORnJPgYSAo",
+      "blurb": null,
       "speakers": [
         {
           "person": "@tomekzmudzinski",
