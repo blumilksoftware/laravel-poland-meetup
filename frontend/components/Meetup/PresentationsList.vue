@@ -18,7 +18,7 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="!loading" class="mt-12 bg-white pb-12 text-zinc-700 shadow-lg">
+  <div v-if="!loading" class="mt-12 bg-white text-zinc-700 shadow-lg">
     <div class="border-b border-zinc-200 bg-zinc-800 px-4 py-5 text-zinc-100 sm:px-6">
       <h2 class="pl-4 text-xl font-medium leading-8">
         Prezentacje
@@ -47,8 +47,8 @@ defineProps({
               </li>
             </ul>
           </div>
-          <div class="mt-8 flex w-full items-center justify-center lg:mt-0">
-            <div class="block w-full lg:w-1/3">
+          <div class="mt-8 flex w-full items-center justify-between lg:mt-0">
+            <div class="block w-full lg:w-1/3" :class="[presentation.slideshareEmbed ? '' : 'lg:w-full']">
               <div class="flex justify-center text-base sm:space-x-5">
                 <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <you-tube-icon class="h-10 w-10 sm:h-6 sm:w-6 sm:shrink-0" aria-hidden="true" :href="presentation.youtube"/>

@@ -87,11 +87,15 @@ const meetupTags = ( meetup ) => {
                   </ul>
                 </div>
                 <div class="block items-center opacity-100 transition duration-700 ease-in-out">
-                  <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
-                    <p>Tagi: </p>
-                    <ul class="space-x-1 overflow-hidden text-ellipsis text-zinc-400">
-                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="inline">
-                        {{ tag }}{{ ',' }}
+                  <div v-if="meetupTags(meetup).size" class="flex items-start">
+                    <p class="mr-3 text-zinc-500">
+                      Tagi:
+                    </p>
+                    <ul class="flex flex-wrap items-center pb-2 text-sm text-zinc-600">
+                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="m-0.5 inline rounded-full bg-zinc-200 px-2 text-center hover:bg-zinc-300">
+                        <p class="flex w-fit flex-nowrap">
+                          {{ tag }}
+                        </p>
                       </li>
                     </ul>
                   </div>
