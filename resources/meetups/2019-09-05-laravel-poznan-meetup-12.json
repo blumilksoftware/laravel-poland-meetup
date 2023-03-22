@@ -6,9 +6,10 @@
   "facebook": "https://www.facebook.com/events/291362435056567/355357785323698",
   "presentations": [
     {
-      "title": "Po premierze Laravela 6.0 - co nowego?",
+      "title": "Laravel 6.0 - co nowego?",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-60-co-nowego",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/AGSHcvQFSfrXZk",
       "blurb": null,
       "speakers": [
         {
@@ -22,7 +23,8 @@
     {
       "title": "Zwiększenie wydajności API z Laravel i Swoole z użyciem Docker",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/speed-up-web-api-with-laravel-and-swoole-using-docker",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/JCH3V6XiAlH42V",
       "blurb": null,
       "speakers": [
         {

@@ -160,5 +160,19 @@
       "lat": 52.40578020316559,
       "lng": 16.925787449461488
     }
+  },
+  "@polcode": {
+    "id": "13",
+    "name": "Polcode",
+    "logo": "/images/companies/polcode.webp",
+    "location": "Warszawa",
+    "bio": "Jesteśmy wielokrotnie nagradzaną agencją programistyczną, cieszącą się zaufaniem na całym świecie w zakresie naszych usług świadczonych zdalnie w projektach webowych i mobilnych.",
+    "website": "https://polcode.com/",
+    "linkedin": "https://www.linkedin.com/company/polcode/",
+    "organizer": false,
+    "coordinates": {
+      "lat": 52.22383532611707,
+      "lng": 20.988013253972873
+    }
   }
 }

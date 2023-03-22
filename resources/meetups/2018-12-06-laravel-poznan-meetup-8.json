@@ -8,7 +8,8 @@
     {
       "title": "Laravel dokumentacja Restful API - swagger (OA)",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-dokumentacja-restful-api-swagger",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/hEOc4WgV4nVqca",
       "blurb": null,
       "speakers": [
         {
@@ -22,7 +23,8 @@
     {
       "title": "Laravel czy Lumen, o to jest pytanie",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-czy-lumen-oto-jest-pytanie",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/yLHdoSvW1WfoFF",
       "blurb": null,
       "speakers": [
         {
@@ -36,7 +38,8 @@
     {
       "title": "Laravel Telescope - niezastąpione narzędzie do debugowania",
       "youtube": null,
-      "slideshare": null,
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/laravel-telescope-niezastpione-narzdzie-do-debugowania",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/2tq1PwOTjPoBdB",
       "blurb": null,
       "speakers": [
         {

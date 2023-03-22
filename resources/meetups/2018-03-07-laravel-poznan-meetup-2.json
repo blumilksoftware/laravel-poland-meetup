@@ -7,8 +7,9 @@
   "presentations": [
     {
       "title": "Wykorzystanie Form Request przy implementacji API w Laravelu",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=bt6YWlmvM0o&t=2s",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/wykorzystanie-form-request-przy-implementacji-api-w-laravelu",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/jOTEJzwkFnB2Ex",
       "blurb": null,
       "speakers": [
         {
@@ -21,8 +22,9 @@
     },
     {
       "title": "Koniec CSS? Jest Tailwind!",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=ddq9BHbrnhs&t=89s",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/koniec-css-jest-tailwind",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/Ik2B1m11SnzHGv",
       "blurb": null,
       "speakers": [
         {
@@ -35,8 +37,9 @@
     },
     {
       "title": "Tworzenie chatbotów z wykorzystaniem BotMan",
-      "youtube": null,
-      "slideshare": null,
+      "youtube": "https://www.youtube.com/watch?v=81RZlbXHat4",
+      "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/creating-chatbots-with-chatman-english",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/AOjyrkP69AD5f8",
       "blurb": null,
       "speakers": [
         {

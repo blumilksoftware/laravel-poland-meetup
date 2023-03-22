@@ -9,6 +9,7 @@
       "title": "Kilka słów o castowaniu atrybutów w Eloquent",
       "youtube": "https://www.youtube.com/watch?v=xtqrRu1RK88",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/kilka-slajdw-o-castowaniu-atrybutw-w-eloquent",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/4cyTCVI3wKM1MA",
       "blurb": "Tym, którzy nie czytają dokumentacji Laravela do poduszki mogła umknąć nowa funkcjonalność Eloquenta. Mowa o Custom Casts, które pojawiły się wraz z 7 wersją frameworka. Miłosz opowie m.in. kiedy warto skorzystać z Custom Casts, jaka jest przewaga interfejsu Castable, a także postara się napisać uniwersalną klasę castującą do Value Object.",
       "speakers": [
         {
@@ -16,15 +17,14 @@
           "company": "@highsolutions"
         }
       ],
-      "links": [
-        "https://www.youtube.com/watch?v=ARclLwEsqa0"
-      ],
+      "links": [],
       "tags": ["Eloquent", "Laravel 7", "custom casts", "value objects"]
     },
     {
       "title": "Licencje otwartego oprogramowania",
       "youtube": "https://www.youtube.com/watch?v=SbZ46ZnJSFA",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/licencje-otwartego-oprogramowania",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/18TCZz1Js5vav4",
       "blurb": "Jakie są zasady działania licencji otwartego oprogramowania? Na to pytanie podczas jednej z prelekcji Laravel Poland MeetUp #22 odpowie Joanna Rewak - radca prawny, pasjonatka zagadnień z zakresu prawa nowych technologii, prawa autorskiego oraz ochrony danych osobowych, która współpracuje z Blumilkiem. Joanna podczas swojej prelekcji opowie o zasadach działania licencji na przykładzie licencji MIT (X11), która pozwala udostępniać kod źródłowy Laravela. Podczas krótkiego Q&A Joanna odpowie na Wasze pytania związane z licencjami.",
       "speakers": [
         {
@@ -32,15 +32,14 @@
           "company": "@blumilk"
         }
       ],
-      "links": [
-        "https://www.youtube.com/watch?v=SbZ46ZnJSFA"
-      ],
+      "links": [],
       "tags": ["prawo", "licencje", "licencja MIT"]
     },
     {
       "title": "Jak przyspieszyłem aplikację produkcyjną o ponad 40%",
       "youtube": "https://www.youtube.com/watch?v=ARclLwEsqa0",
       "slideshare": "https://www.slideshare.net/Laravel_Poznan_Meetup/jak-przyspieszyem-aplikacj-produkcyjn-o-ponad-40",
+      "slideshareEmbed": "//www.slideshare.net/slideshow/embed_code/key/xtKvm4CjQe4Nbz",
       "blurb": "Jeśli zadasz pytanie Czy PHP jest szybki?” - Patryk odpowie: To zależy. Jesteś programistą i mierzysz się z wyzwaniem - jak stworzyć kod aplikacji, która będzie szybka (czyli taka, której oczekuje biznes)? Tego dowiesz się podczas tej 30-minutowej prelekcji. Patryk przekaże kilka prostych porad do wdrożenia w aplikacji produkcyjnej, które przyspieszą aplikację, a także da praktyczne wskazówki, jak mierzyć wydajność tworzonej aplikacji.",
       "speakers": [
         {
@@ -48,9 +47,7 @@
           "company": null
         }
       ],
-      "links": [
-        "https://www.youtube.com/watch?v=xtqrRu1RK88"
-      ],
+      "links": [],
       "tags": ["Apache Benchmark", "cache", "problem n+1 zapytań", "case study"]
     }
   ]
