@@ -27,13 +27,13 @@ defineProps({
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
         <div class="block p-6">
-          <div class="mb-4 flex text-lg font-medium sm:text-xl">
+          <div class="text-md mb-4 flex font-bold sm:text-xl">
             <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink text-zinc-400" aria-hidden="true"/>
             <h3>
               {{ presentation.title }}
             </h3>
           </div>
-          <div v-if="presentation.tags.length" class="mb-6 flex items-start md:mb-10">
+          <div v-if="presentation.tags.length" class="flex items-start">
             <p class="mr-3 text-zinc-500">
               Tagi:
             </p>
@@ -47,16 +47,16 @@ defineProps({
               </li>
             </ul>
           </div>
-          <div class="flex w-full items-center justify-center">
+          <div class="mt-8 flex w-full items-center justify-center lg:mt-0">
             <div class="block w-full lg:w-1/3">
               <div class="flex justify-center text-base sm:space-x-5">
-                <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-auto flex w-fit items-center space-x-2 text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
+                <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <you-tube-icon class="h-10 w-10 sm:h-6 sm:w-6 sm:shrink-0" aria-hidden="true" :href="presentation.youtube"/>
                   <p class="group-hover:text-laravel hidden sm:ml-2 sm:inline-block">
                     Zobacz na YouTube
                   </p>
                 </a>
-                <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="group mx-auto flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 md:mx-2 lg:space-x-1">
+                <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <slide-share-icon aria-hidden="true" :href="presentation.slideshare" class="h-10 w-10 fill-zinc-600 sm:h-6 sm:w-6 sm:shrink-0"/>
                   <p class="group-hover:text-laravel hidden sm:ml-2 sm:inline-block">
                     Zobacz na SlideShare
@@ -96,7 +96,7 @@ defineProps({
             </div>
             <div v-if="presentation.slideshareEmbed" class="mx-auto hidden min-w-0 flex-1 justify-center px-4 lg:flex lg:w-2/3">
               <div class="relative hidden lg:block">
-                <iframe class="relative" :src="presentation.slideshareEmbed" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border-width:1px; margin-bottom:10px; max-width: 100%;" allowfullscreen/> 
+                <iframe :src="presentation.slideshareEmbed" width="595" height="385" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:10px; max-width: 100%;"/> 
               </div>
             </div>
           </div>
