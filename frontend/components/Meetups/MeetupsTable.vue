@@ -106,26 +106,23 @@ const filteredMeetups = computed(() => {
 </script>
 <template>
   <NoDataError :error="error" text="Brak meetupów"/>
-  <div v-if="!error" class="mx-auto my-12 mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
-    <div class="my-1 block py-4 text-zinc-700">
-      <form class="block justify-center bg-zinc-800 sm:flex">
-        <div class="my-4 w-full sm:w-2/5 md:mx-4 md:my-0">
-          <label for="meetup" class="ml-px block pl-4 text-sm font-medium text-zinc-50">Meetupy</label>
+  <div v-if="!error" class="mx-auto my-12">
+    <div class="inline-block w-full items-center justify-between bg-zinc-800 px-3 text-zinc-700 sm:flex">
+      <form class="block w-full justify-center sm:order-2 sm:flex sm:w-3/5">
+        <div class="my-4 w-full sm:w-full md:mx-4">
           <div class="relative mt-1 h-12">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-5">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
-            <input v-model="searchMeetup" type="text" name="meetup" class="border-1 m-2 block h-full w-full rounded-md border-zinc-300 px-4 pl-8 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
+            <input v-model="searchMeetup" type="text" name="meetup" class="border-1 block h-full w-full border-zinc-300 pr-4 pl-12 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
           </div>
         </div>
       </form>
-      <div class="my-1 flex w-full justify-between sm:mx-2">
-        <div class="">
-          <FilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
-        </div>
-        <div class="flex sm:mx-3">
-          <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>
-        </div>
+      <div class="inline-block justify-center w-1/2 sm:order-1 sm:flex sm:w-1/5">
+        <FilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
+      </div>
+      <div class="inline-block w-1/2 justify-center sm:order-3 sm:flex sm:w-1/5">
+        <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>
       </div>
     </div>
     <div class="overflow-hidden bg-white">

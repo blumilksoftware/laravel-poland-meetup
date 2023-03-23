@@ -48,14 +48,17 @@ watch(selectedSpeakers, () => {
 </script>
 
 <template>
-  <div>
+  <div class="flex items-end justify-center">
     <Disclosure as="div" class="relative block">
-      <DisclosureButton class="flex w-full cursor-default space-x-3 rounded-md border border-zinc-300 bg-white py-2 px-4 text-center shadow-sm focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5">
-        <div class="flex space-x-1">
-          <p>Filtry</p>
-          <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline self-center text-sm font-semibold tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
+      <DisclosureButton>
+        <div class="hidden w-full cursor-default space-x-3 border border-zinc-300 bg-white py-2 px-4 text-center shadow-sm focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5 md:flex">
+          <div class="flex space-x-1">
+            <p>Filtry</p>
+            <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline self-center text-sm font-semibold tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
+          </div>
+          <adjustments-horizontal-icon class="h-5 w-5 self-center text-zinc-600"/>
         </div>
-        <adjustments-horizontal-icon class="h-5 w-5 self-center text-zinc-600"/>
+        <adjustments-horizontal-icon class="flex h-10 w-10 self-center text-zinc-100 md:hidden"/>
       </DisclosureButton>
       <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-x-72 opacity-0" enter-to-class="transform translate-x-0 opacity-100" leave-active-class="transition duration-100 ease-out" leave-from-class="transform translate-x-0 opacity-100" leave-to-class="transform -translate-x-72 opacity-0">
         <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white sm:w-1/2 sm:shadow-xl md:max-w-[400px]">
