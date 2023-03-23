@@ -8,15 +8,11 @@ defineProps({
     type: Object,
     default: () => {},
   },
-  loading: {
-    type: Boolean, 
-    default: true,
-  },
 })
 </script>
 
 <template>
-  <div v-if="!loading" class="relative overflow-hidden bg-white shadow-lg">
+  <div class="relative overflow-hidden bg-white shadow-lg">
     <PulseBackgroundAnimation/>
     <div class="relative z-10 mx-auto max-w-7xl space-y-5 py-16 px-4 text-center sm:py-24 sm:px-6 lg:block lg:justify-center lg:px-8">
       <h1 v-if="meetup" class="text-laravel text-2xl font-bold tracking-tight sm:text-5xl">

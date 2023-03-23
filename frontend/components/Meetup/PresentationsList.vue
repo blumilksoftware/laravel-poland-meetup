@@ -9,16 +9,11 @@ defineProps({
     type: Array,
     default: () => [],
   },
-  loading: {
-    type: Boolean, 
-    default: true,
-  },
 })
-
 </script>
 
 <template>
-  <div v-if="!loading" class="mt-12 bg-white text-zinc-700 shadow-lg">
+  <div class="mt-12 bg-white text-zinc-700 shadow-lg">
     <div class="border-b border-zinc-200 bg-zinc-800 px-4 py-5 text-zinc-100 sm:px-6">
       <h2 class="pl-4 text-xl font-medium leading-8">
         Prezentacje
