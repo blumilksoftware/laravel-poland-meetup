@@ -118,7 +118,7 @@ const filteredMeetups = computed(() => {
           </div>
         </div>
       </form>
-      <div class="inline-block justify-center w-1/2 sm:order-1 sm:flex sm:w-1/5">
+      <div class="inline-block w-1/2 justify-center sm:order-1 sm:flex sm:w-1/5">
         <FilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
       </div>
       <div class="inline-block w-1/2 justify-center sm:order-3 sm:flex sm:w-1/5">
