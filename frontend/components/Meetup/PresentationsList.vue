@@ -26,29 +26,31 @@ defineProps({
     </div>
     <ul role="list" class="divide-y divide-zinc-200">
       <li v-for="presentation in presentations" :key="presentation.id" class="hover:bg-zinc-50">
-        <div class="block p-6">
-          <div class="text-md mb-4 flex font-bold sm:text-xl">
-            <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink text-zinc-400" aria-hidden="true"/>
-            <h3>
-              {{ presentation.title }}
-            </h3>
+        <div class="block p-6" :class="[presentation.slideshareEmbed? '': 'md:flex']">
+          <div class="w-full">
+            <div class="text-md mb-4 flex font-bold sm:text-xl">
+              <presentation-chart-line-icon class="mr-3 h-7 w-7 shrink text-zinc-400" aria-hidden="true"/>
+              <h3>
+                {{ presentation.title }}
+              </h3>
+            </div>
+            <div v-if="presentation.tags.length" class="flex items-start">
+              <p class="mr-3 text-zinc-500">
+                Tagi:
+              </p>
+              <ul class="flex flex-wrap items-center pb-2 text-zinc-600">
+                <li v-for="tag of presentation.tags" :key="tag" class="m-0.5 inline rounded-full bg-zinc-200 px-2 text-center hover:bg-zinc-300">
+                  <router-link :to="{ name: 'searching.results', params: { id: tag }}" class="rounded-full">
+                    <p class="flex w-fit flex-nowrap">
+                      {{ tag }}
+                    </p>
+                  </router-link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div v-if="presentation.tags.length" class="flex items-start">
-            <p class="mr-3 text-zinc-500">
-              Tagi:
-            </p>
-            <ul class="flex flex-wrap items-center pb-2 text-zinc-600">
-              <li v-for="tag of presentation.tags" :key="tag" class="m-0.5 inline rounded-full bg-zinc-200 px-2 text-center hover:bg-zinc-300">
-                <router-link :to="{ name: 'searching.results', params: { id: tag }}" class="rounded-full">
-                  <p class="flex w-fit flex-nowrap">
-                    {{ tag }}
-                  </p>
-                </router-link>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-8 flex w-full items-center justify-between lg:mt-0">
-            <div class="block w-full lg:w-1/3" :class="[presentation.slideshareEmbed ? '' : 'lg:w-full']">
+          <div class="flex w-full items-center justify-between lg:mt-0">
+            <div class="block w-full" :class="[presentation.slideshareEmbed ? 'my-5 lg:w-1/3' : 'lg:w-full']">
               <div class="flex justify-center text-base sm:space-x-5">
                 <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <you-tube-icon class="h-10 w-10 sm:h-6 sm:w-6 sm:shrink-0" aria-hidden="true" :href="presentation.youtube"/>
@@ -63,8 +65,8 @@ defineProps({
                   </p>
                 </a> 
               </div>
-              <div v-for="speaker in presentation.speakers" :key="speaker.name" class="my-5 flex min-w-0 flex-1 sm:ml-9">
-                <div class="text-md flex w-full justify-center">
+              <div v-for="speaker in presentation.speakers" :key="speaker.name" class="flex min-w-0 flex-1 sm:ml-9">
+                <div class="text-md flex w-full" :class="[presentation.slideshareEmbed ? 'justify-center' : 'justify-center md:justify-start']">
                   <div class="block w-fit md:ml-0">
                     <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }" class="my-8 flex justify-center">
                       <img v-if="speaker.image.length > 2" class="max-w-32 max-h-32 rounded-full shadow-xl sm:items-start" :src="speaker.image" alt="">
