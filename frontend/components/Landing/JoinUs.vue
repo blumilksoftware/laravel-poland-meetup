@@ -15,7 +15,7 @@
         <router-link :to="{ name: 'contact' }" class="mb-4 flex items-center justify-center rounded-md border border-transparent bg-red-600 px-5 py-3 text-xl font-medium text-white shadow duration-300 hover:scale-105 hover:bg-red-800 md:mb-0 md:mr-6">
           Zgłaszam prezentację
         </router-link>
-        <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR1T_Qe0E6vIkfwm0Z4_W39tP_IsWKxv06KCLwoPxKlMZzn9-3jmIcri8pg" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-lg font-medium text-zinc-700 duration-300 hover:scale-105 hover:bg-zinc-200">Biorę udział jako słuchacz</a>
+        <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR1T_Qe0E6vIkfwm0Z4_W39tP_IsWKxv06KCLwoPxKlMZzn9-3jmIcri8pg" target="_blank" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-lg font-medium text-zinc-700 duration-300 hover:scale-105 hover:bg-zinc-200">Biorę udział jako słuchacz</a>
       </div>
     </div>
   </div>

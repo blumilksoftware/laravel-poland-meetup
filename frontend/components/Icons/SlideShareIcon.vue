@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="href" class="group transition duration-200 hover:scale-110 ">
+  <a :href="href" target="_blank" class="group transition duration-200 hover:scale-110 ">
     <span class="sr-only">SlideShare</span>
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 509 511.64">
       <path class="group-hover:text-[#026C97]" d="M76.028.013h359.709a44.094 44.094 0 0130.931 12.909 44.138 44.138 0 0112.916 30.938v226.988h-19.089V43.94a25.025 25.025 0 00-7.327-17.518 24.986 24.986 0 00-17.518-7.32H75.639a24.95 24.95 0 00-9.749 1.684 24.933 24.933 0 00-8.326 5.334 24.944 24.944 0 00-5.61 8.152 24.945 24.945 0 00-2.006 9.668v226.908H30.86V43.86a44.09 44.09 0 013.536-17.083 44.149 44.149 0 019.889-14.371 44.063 44.063 0 0114.694-9.414A44.17 44.17 0 0176.028.013z"/>

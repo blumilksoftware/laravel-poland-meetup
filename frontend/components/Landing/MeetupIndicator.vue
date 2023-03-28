@@ -49,7 +49,7 @@ const computedNextMeetup = computed(() => {
             Już niedługo ogłosimy datę kolejnego <span class="text-laravel">meetupu!</span>
           </h1>
           <p class="text-2xl text-zinc-300">
-            Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" class="font-bold tracking-normal text-cyan-600">Facebooku</a>, aby być na bieżąco!
+            Obserwuj nasz profil na <a href="https://www.facebook.com/laravelpolandmeetup/" target="_blank" class="font-bold tracking-normal text-cyan-600">Facebooku</a>, aby być na bieżąco!
           </p>
           <p class="text-2xl font-medium text-zinc-300">
             Sprawdź też, czy nie ominęło Cię coś interesującego w
