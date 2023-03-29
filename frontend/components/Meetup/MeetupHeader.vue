@@ -31,7 +31,7 @@ defineProps({
         </div>
       </div>
       <div class="flex justify-center text-gray-500 sm:text-2xl">
-        <a :href="meetup.facebookEvent" target="_blank" class="flex justify-center space-x-5">
+        <a :href="meetup.facebookEvent" target="_blank" rel="noopener" class="flex justify-center space-x-5">
           <span>
             Sprawdź wydarzenie na Facebooku! 
           </span>

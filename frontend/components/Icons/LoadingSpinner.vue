@@ -1,5 +1,5 @@
 <template>
-  <div target="_blank" class="flex h-full w-full justify-center">
+  <div class="flex h-full w-full justify-center">
     <img src="/images/placeholders/spinner.svg" class="h-56 w-56 self-center" alt="ładowanie strony">
   </div>
 </template>
