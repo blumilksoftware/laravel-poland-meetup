@@ -51,10 +51,8 @@ const meetupTags = ( meetup ) => {
             <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div class="w-full space-y-2 truncate p-4 sm:px-6">
                 <div class="text-laravel flex space-x-4 text-xl font-medium">
-                  <div v-if="!Object.keys(findNextMeetup).length || meetup.date < findNextMeetup.date" class="flex text-red-800">
-                    <p class="truncate">
-                      {{ meetup.name }}
-                    </p>
+                  <div v-if="!Object.keys(findNextMeetup).length || meetup.date < findNextMeetup.date" class="truncate text-red-800">
+                    {{ meetup.name }}
                   </div>
                   <div v-else-if="meetup.date >= findNextMeetup.date" class="block sm:flex">
                     <p class="truncate">
@@ -69,7 +67,7 @@ const meetupTags = ( meetup ) => {
                   </div>
                 </div>
                 <div class="mt-2 flex">
-                  <div class="flex items-center gap-4 text-sm text-zinc-500">
+                  <div class="block items-center gap-4 space-y-2 truncate text-sm text-zinc-500 sm:flex sm:space-y-0">
                     <div class="flex">
                       <calendar-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/>
                       <time :datetime="meetup.date">{{ meetup.dateFull }}</time>
@@ -83,16 +81,21 @@ const meetupTags = ( meetup ) => {
                 <div v-if="meetup.presentations.length">
                   <ul class="text-md my-3 list-inside tracking-tight text-zinc-600">
                     <li v-for="presentation in meetup.presentations" :key="presentation.title" class="truncate py-1 font-medium">
-                      <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>{{ presentation.title }}
+                      <chat-bubble-left-icon class="mr-1.5 inline-block h-5 w-5 shrink-0 space-x-4 text-zinc-400" aria-hidden="true"/>
+                      {{ presentation.title }}
                     </li>
                   </ul>
                 </div>
                 <div class="block items-center opacity-100 transition duration-700 ease-in-out">
-                  <div v-if="meetupTags(meetup).size" class="flex space-x-3 text-zinc-500">
-                    <p>Tagi: </p>
-                    <ul class="flex space-x-1">
-                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="text-zinc-400">
-                        {{ tag }}{{ ',' }}
+                  <div v-if="meetupTags(meetup).size" class="flex items-start">
+                    <p class="mr-3 text-zinc-500">
+                      Tagi:
+                    </p>
+                    <ul class="flex flex-wrap items-center pb-2 text-sm text-zinc-600">
+                      <li v-for="tag of meetupTags(meetup)" :key="tag" class="m-0.5 inline rounded-full bg-zinc-200 px-2 text-center hover:bg-zinc-300">
+                        <p class="flex w-fit flex-nowrap">
+                          {{ tag }}
+                        </p>
                       </li>
                     </ul>
                   </div>
@@ -107,7 +110,7 @@ const meetupTags = ( meetup ) => {
                 </li>
               </ul>
             </div>
-            <div class="visible ml-5 shrink-0 p-4 sm:px-6">
+            <div class="visible shrink-0 px-2 sm:ml-5 sm:px-6">
               <chevron-right-icon class="h-5 w-5 text-zinc-400" aria-hidden="true"/>
             </div>
           </div>
