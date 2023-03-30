@@ -3,7 +3,7 @@ import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headless
 import { BarsArrowDownIcon, BarsArrowUpIcon } from '@heroicons/vue/24/outline'
 import { ref, onMounted, watch } from 'vue'
 import { useSortedMeetups } from '@/composables/useSortedMeetups.js'
-import CheckedIcon from '@/components/Icons/CheckedIcon.vue'
+import CheckIcon from '@/components/Icons/CheckIcon.vue'
 
 const props = defineProps({
   data: {
@@ -75,7 +75,7 @@ onMounted(() => {
                     {{ option.value }}
                   </span>
                   <span v-if="selected" :class="`${ active ? 'text-zinc-600' : 'text-zinc-600' } absolute inset-y-0 left-0 flex items-center pl-1.5`">
-                    <CheckedIcon/>
+                    <CheckIcon/>
                   </span>
                 </div>
               </ListboxOption>
