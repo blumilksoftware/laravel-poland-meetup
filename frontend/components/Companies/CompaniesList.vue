@@ -35,7 +35,7 @@ function showLocation(coordinates) {
 </script>
 <template>
   <div class="my-12 bg-white text-center text-3xl font-bold tracking-tight text-zinc-700 sm:text-4xl">
-    <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-7xl bg-white py-12 px-4 sm:px-6 lg:px-8 lg:py-12">
       <div class="space-y-12 text-zinc-700">
         <h2 class="first-letter:text-laravel h-16 w-auto border-b border-zinc-200 text-center sm:h-20">
           {{ name }}

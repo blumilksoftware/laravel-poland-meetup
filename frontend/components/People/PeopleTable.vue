@@ -30,13 +30,13 @@ onMounted(() => {
   const { newArrayOfSpeakers } = useCountedPresentations(props.meetups, props.speakers)
   updatedSpeakers.value = newArrayOfSpeakers
 })
-
 </script>
+
 <template>
   <div class="my-10 bg-white tracking-tight text-zinc-700 shadow-lg">
-    <div class="mx-auto max-w-7xl p-4 sm:px-6 lg:py-24 lg:px-8">
+    <div class="mx-auto max-w-7xl p-4 sm:px-6 lg:py-12 lg:px-8">
       <div class="space-y-12">
-        <h2 class="first-letter:text-laravel lg:py-18 w-full justify-center border-b py-10 px-7 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
+        <h2 class="first-letter:text-laravel lg:pb-18 w-full justify-center border-b px-7 pb-10 text-2xl font-bold sm:px-6 md:text-4xl lg:px-8">
           Nasi prelegenci
         </h2>
         <LoadingSpinner v-if="!updatedSpeakers.length"/>
