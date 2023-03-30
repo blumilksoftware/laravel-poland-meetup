@@ -53,18 +53,14 @@ onMounted(() => {
         <div class="relative">
           <span class="flex w-full self-center">
             <ListboxButton>
-              <div class="flex md:hidden">
-                <bars-arrow-down-icon class="h-10 w-10 text-zinc-100"/>
+              <div class="flex cursor-pointer md:hidden">
+                <bars-arrow-down-icon class="h-9 w-9 text-zinc-100"/>
               </div>
-              <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
+              <div class="mx-auto hidden w-full cursor-pointer space-x-3 border border-zinc-300 bg-white py-2 px-4 text-center hover:cursor-pointer focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
                 <span class="block truncate">
-                  {{ sortBy.value }}
+                  Sortuj
                 </span>
-                <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                  <svg class="h-5 w-5 text-zinc-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
+                <bars-arrow-down-icon class="h-6 w-6 text-zinc-700"/>
               </div>
             </ListboxButton>
           </span>

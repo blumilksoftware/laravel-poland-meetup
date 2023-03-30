@@ -109,7 +109,7 @@ const filteredMeetups = computed(() => {
   <div v-if="!error" class="mx-auto my-12">
     <div class="inline-block w-full items-center justify-between bg-zinc-800 px-3 text-zinc-700 sm:flex">
       <form class="block w-full justify-center sm:order-2 sm:flex sm:w-3/5">
-        <div class="my-4 w-full sm:w-full md:mx-4">
+        <div class="my-3 w-full sm:w-full md:mx-4">
           <div class="relative mt-1 h-12">
             <span class="absolute inset-y-0 left-0 flex items-center pl-5">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
