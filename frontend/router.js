@@ -30,4 +30,14 @@ const routes = [
 export default createRouter({
     history: createWebHistory(),
     routes,
+        scrollBehavior: function (to, _from, savedPosition) {
+        if (savedPosition) {
+          return savedPosition
+        }
+        if (to.hash) {
+          return { el: to.hash, behavior: 'smooth' }
+        } else {
+          window.scrollTo(0, 0)
+        }
+     },
 })
