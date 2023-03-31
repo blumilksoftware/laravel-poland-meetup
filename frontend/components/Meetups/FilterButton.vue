@@ -48,17 +48,17 @@ watch(selectedSpeakers, () => {
 </script>
 
 <template>
-  <div class="flex items-end justify-center">
+  <div class="flex items-end h-12 justify-center">
     <Disclosure as="div" class="relative block">
       <DisclosureButton>
-        <div class="hidden w-full space-x-3 border border-zinc-300 bg-white py-2 px-4 text-center shadow-sm hover:cursor-pointer focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5 md:flex">
+        <div class="hidden w-full space-x-3 bg-white px-4 text-center hover:cursor-pointer focus:border-zinc-300 focus:outline-none sm:text-base sm:leading-5 md:flex">
           <div class="flex space-x-1">
             <p>Filtruj</p>
             <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline self-center text-sm font-semibold tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
           </div>
           <adjustments-horizontal-icon class="h-6 w-6 self-center text-zinc-600"/>
         </div>
-        <adjustments-horizontal-icon class="flex h-9 w-9 self-center text-zinc-100 md:hidden"/>
+        <adjustments-horizontal-icon class="flex h-9 w-9 self-center text-zinc-800 md:hidden"/>
       </DisclosureButton>
       <transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-x-72 opacity-0" enter-to-class="transform translate-x-0 opacity-100" leave-active-class="transition duration-100 ease-out" leave-from-class="transform translate-x-0 opacity-100" leave-to-class="transform -translate-x-72 opacity-0">
         <DisclosurePanel v-slot="{ close }" class="fixed top-0 left-0 z-50 block h-screen w-screen overflow-auto bg-white sm:w-1/2 sm:shadow-xl md:max-w-[400px]">

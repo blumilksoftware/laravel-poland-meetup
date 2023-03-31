@@ -55,8 +55,8 @@ onMounted(() => {
           <ListboxButton>
             <div class="flex w-full cursor-pointer">
               <div class="md:hidden">
-                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-9 w-9 text-zinc-100"/>
-                <bars-arrow-down-icon v-else class="h-9 w-9 text-zinc-100"/>
+                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-9 w-9 text-zinc-800"/>
+                <bars-arrow-down-icon v-else class="h-9 w-9 text-zinc-800"/>
               </div>
               <div class="hidden w-full space-x-3 border border-zinc-300 bg-white py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
                 <span class="block truncate">
