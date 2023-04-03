@@ -118,10 +118,10 @@ const filteredMeetups = computed(() => {
           </div>
         </div>
       </form>
-      <div class="mx-auto w-1/2 shrink-[50%] border-r border-zinc-200 sm:order-1 sm:mb-0 sm:w-1/5 sm:border-none">
+      <div class="my-1 w-1/2 shrink-[50%] border-r border-zinc-200 sm:order-1 sm:my-0 sm:w-1/5 sm:border-none">
         <FilterButton :companies="companies" :speakers="speakers" :sorted-meetups="sortedMeetups" @updated-speakers="updateSpeakersFilter" @updated-companies="updateCompaniesFilter"/>
       </div>
-      <div class="mx-auto w-1/2 shrink-[50%] sm:order-3 sm:mb-0 sm:w-1/5">
+      <div class="my-1 w-1/2 shrink-[50%] sm:order-3 sm:my-0 sm:w-1/5">
         <SortButton id="sorters" :data="filteredMeetups" @updated="updateSortedMeetups"/>
       </div>
     </div>
