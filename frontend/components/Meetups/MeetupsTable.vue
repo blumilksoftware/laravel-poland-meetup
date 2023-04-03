@@ -107,7 +107,7 @@ const filteredMeetups = computed(() => {
 <template>
   <NoDataError :error="error" text="Brak meetupów"/>
   <div v-if="!error" class="mx-auto my-12">
-    <div class="mb-2 flex w-full flex-wrap items-center justify-between border-b border-zinc-200 bg-white py-2 text-zinc-700">
+    <div class="flex w-full flex-wrap items-center justify-between border-b border-zinc-200 bg-white py-2 text-zinc-700">
       <form class="shrink-1 w-full justify-center sm:order-2 sm:flex sm:w-3/5">
         <div class="w-full p-2">
           <div class="relative">
