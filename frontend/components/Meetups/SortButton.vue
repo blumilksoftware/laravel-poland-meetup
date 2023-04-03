@@ -53,13 +53,13 @@ onMounted(() => {
       <Listbox v-slot="{ open }" v-model="sortBy" as="div">
         <div class="relative flex items-center">
           <ListboxButton>
-            <div class="flex w-full cursor-pointer">
-              <div class="md:hidden">
-                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-9 w-9 text-zinc-800"/>
-                <bars-arrow-down-icon v-else class="h-9 w-9 text-zinc-800"/>
+            <div class="cursor-pointer">
+              <div class="text-zinc-600 md:hidden">
+                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-9 w-9 "/>
+                <bars-arrow-down-icon v-else class="h-9 w-9"/>
               </div>
-              <div class="hidden w-full space-x-3 border border-zinc-300 bg-zinc-100 py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
-                <span class="block truncate">
+              <div class="hidden h-12 w-full items-center space-x-3 border border-zinc-300 bg-zinc-100 py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
+                <span class="text-sm tracking-wider">
                   Sortuj
                 </span>
                 <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-6 w-6 text-zinc-600"/>
@@ -68,7 +68,7 @@ onMounted(() => {
             </div>
           </ListboxButton>
           <div v-if="open" class="absolute right-0 top-10 z-50 mt-1 w-60 bg-white shadow-lg">
-            <ListboxOptions static class="shadow-xs max-h-60 bg-zinc-50 overflow-auto py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
+            <ListboxOptions static class="shadow-xs max-h-60 overflow-auto bg-zinc-50 py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
               <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
                 <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
                   <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
