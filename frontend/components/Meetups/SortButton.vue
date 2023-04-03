@@ -58,17 +58,17 @@ onMounted(() => {
                 <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-9 w-9 text-zinc-800"/>
                 <bars-arrow-down-icon v-else class="h-9 w-9 text-zinc-800"/>
               </div>
-              <div class="hidden w-full space-x-3 border border-zinc-300 bg-white py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
+              <div class="hidden w-full space-x-3 border border-zinc-300 bg-zinc-100 py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
                 <span class="block truncate">
                   Sortuj
                 </span>
-                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-6 w-6 text-zinc-700"/>
-                <bars-arrow-down-icon v-else class="h-6 w-6 text-zinc-700"/>
+                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-6 w-6 text-zinc-600"/>
+                <bars-arrow-down-icon v-else class="h-6 w-6 text-zinc-600"/>
               </div>
             </div>
           </ListboxButton>
-          <div v-if="open" class="absolute right-1 z-50 mt-1 w-60 bg-white shadow-lg">
-            <ListboxOptions static class="shadow-xs max-h-60 overflow-auto py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
+          <div v-if="open" class="absolute right-0 top-10 z-50 mt-1 w-60 bg-white shadow-lg">
+            <ListboxOptions static class="shadow-xs max-h-60 bg-zinc-50 overflow-auto py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
               <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
                 <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
                   <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
