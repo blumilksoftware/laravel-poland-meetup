@@ -114,7 +114,7 @@ const filteredMeetups = computed(() => {
             <span class="absolute inset-y-0 left-0 flex items-center pl-5">
               <magnifying-glass-icon class="mr-1.5 h-5 w-5 shrink-0 text-zinc-400" aria-hidden="true"/> 
             </span>
-            <input v-model="searchMeetup" type="text" name="meetup" class="block h-12 w-full border-r border-zinc-300 bg-zinc-100 pr-4 pl-12 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
+            <input v-model="searchMeetup" type="text" name="meetup" class="block h-12 w-full rounded-md border-r border-zinc-300 bg-zinc-100 pr-4 pl-12 shadow-sm placeholder:text-zinc-400 focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm" placeholder="#23" @keydown.enter.prevent>
           </div>
         </div>
       </form>

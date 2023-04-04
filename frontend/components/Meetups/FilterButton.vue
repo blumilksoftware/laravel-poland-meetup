@@ -51,7 +51,7 @@ watch(selectedSpeakers, () => {
   <div class="flex">
     <Disclosure as="div" class="relative mx-auto flex items-center">
       <DisclosureButton>
-        <div class="hidden h-12 w-full items-center space-x-3 bg-zinc-100 px-4 py-2 text-center hover:cursor-pointer focus:border-zinc-300 focus:outline-none sm:text-base md:flex md:border md:border-zinc-300 md:leading-5">
+        <div class="hidden h-12 w-full items-center space-x-3 rounded-md bg-zinc-100 px-4 py-2 text-center hover:cursor-pointer focus:border-zinc-300 focus:outline-none sm:text-base md:flex md:border md:border-zinc-300 md:leading-5">
           <div class="space-x-1 text-sm tracking-wider">
             <p>Filtruj</p>
             <span v-if="selectedSpeakers.length + selectedCompanies.length > 0" class="inline self-center font-semibold tracking-wider">({{ selectedSpeakers.length + selectedCompanies.length }})</span>
