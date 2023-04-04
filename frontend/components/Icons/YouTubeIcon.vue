@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="href" class="group transition duration-200 hover:scale-110 hover:text-[#cd201f]">
+  <a :href="href" target="_blank" rel="noopener" class="group transition duration-200 hover:scale-110 hover:text-[#cd201f]">
     <span class="sr-only">YouTube</span>
     <svg id="meteor-icon-kit__regular-youtube" fill="currentColor" viewBox="0 -3.5 24 24" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"/>
