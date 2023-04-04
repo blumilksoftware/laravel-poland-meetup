@@ -28,7 +28,7 @@ function handleFormSubmit () {
               Jeśli chcesz dołączyć do nas, współtworzyć <strong>Laravel <span class="text-laravel">Poland</span> Meetup</strong> i promować swoją firmę, to daj nam znać — skontaktujemy się z Tobą. 
             </p>
           </div>
-          <form id="contact" onsubmit="" class="relative z-10 text-base" method="POST" target="_blank" :action="url">
+          <form id="contact" onsubmit="" class="relative z-10 text-base" method="POST" :action="url">
             <div class="space-y-4 py-4 md:px-4">
               <div>
                 <label :for="emailName" class="block text-left text-zinc-700">E-mail</label>

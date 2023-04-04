@@ -28,8 +28,8 @@ onMounted(async () => {
 
   loading.value = false
 })
-
 </script>
+
 <template>
   <NoDataError :error="error" text="Brak firm"/>
   <LoadingSpinner v-if="loading"/>

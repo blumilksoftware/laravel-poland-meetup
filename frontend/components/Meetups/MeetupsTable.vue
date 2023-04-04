@@ -102,8 +102,8 @@ const searchSpeaker = ( meetups ) => {
 const filteredMeetups = computed(() => {
   return searchSpeaker(searchCompany(searchMeetupAndPresentation(props.meetups)))
 })
-
 </script>
+
 <template>
   <NoDataError :error="error" text="Brak meetupów"/>
   <div v-if="!error" class="mx-auto my-12 mt-2 max-w-7xl px-2 sm:px-4 lg:px-8">
