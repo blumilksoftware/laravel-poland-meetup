@@ -1,8 +1,9 @@
 <script setup>
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
-import { BarsArrowDownIcon } from '@heroicons/vue/24/outline'
+import { BarsArrowDownIcon, BarsArrowUpIcon } from '@heroicons/vue/24/outline'
 import { ref, onMounted, watch } from 'vue'
 import { useSortedMeetups } from '@/composables/useSortedMeetups.js'
+import CheckIcon from '@/components/Icons/CheckIcon.vue'
 
 const props = defineProps({
   data: {
@@ -47,45 +48,39 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center ">
-    <div class="min-w-56 mx-auto">
+  <div class="flex">
+    <div class="mx-auto">
       <Listbox v-slot="{ open }" v-model="sortBy" as="div">
-        <div class="relative">
-          <span class="inline-block w-full ">
-            <ListboxButton>
-              <div class="mr-3 flex md:hidden">
-                <bars-arrow-down-icon class="h-9 w-9"/>
+        <div class="relative flex items-center">
+          <ListboxButton>
+            <div class="cursor-pointer">
+              <div class="text-zinc-600 md:hidden">
+                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-7 w-7 "/>
+                <bars-arrow-down-icon v-else class="h-7 w-7"/>
               </div>
-              <div class="focus:shadow-outline-zinc relative hidden w-full cursor-default rounded-md border border-zinc-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm transition duration-150 ease-in-out focus:border-zinc-300 focus:outline-none sm:text-sm sm:leading-5 md:flex">
-                <span class="block truncate">
-                  {{ sortBy.value }}
+              <div class="hidden h-12 w-full items-center space-x-3 rounded-md border border-zinc-300 bg-zinc-100 py-2 px-4 focus:border-zinc-300 focus:outline-none sm:text-sm md:flex">
+                <span class="text-sm tracking-wider">
+                  Sortuj
                 </span>
-                <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                  <svg class="h-5 w-5 text-zinc-400" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
+                <bars-arrow-up-icon v-if="sortBy.name === 'oldestFirst'" class="h-6 w-6 text-zinc-600"/>
+                <bars-arrow-down-icon v-else class="h-6 w-6 text-zinc-600"/>
               </div>
-            </ListboxButton>
-          </span>
-          <transition leave-active-class="transition ease-in-out duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
-            <div v-if="open" class="absolute right-1 z-50 mt-1 w-60 rounded-md bg-white shadow-lg">
-              <ListboxOptions static class="shadow-xs max-h-60 overflow-auto rounded-md py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
-                <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
-                  <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
-                    <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
-                      {{ option.value }}
-                    </span>
-                    <span v-if="selected" :class="`${ active ? 'text-zinc-600' : 'text-zinc-600' } absolute inset-y-0 left-0 flex items-center pl-1.5`">
-                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                      </svg>
-                    </span>
-                  </div>
-                </ListboxOption>
-              </ListboxOptions>
             </div>
-          </transition>
+          </ListboxButton>
+          <div v-if="open" class="absolute right-0 top-10 z-50 mt-1 w-60 bg-white shadow-lg">
+            <ListboxOptions static class="shadow-xs max-h-60 overflow-auto bg-zinc-50 py-1 text-base leading-6 focus:outline-none sm:text-sm sm:leading-5">
+              <ListboxOption v-for="option in sortOptions" :key="option.name" v-slot="{ selected, active }" :value="option">
+                <div :class="`${ active ? 'bg-zinc-200' : 'text-zinc-700' } cursor-default select-none relative py-2 pl-8 pr-4`">
+                  <span :class="`${ selected ? 'font-semibold' : 'font-normal' } block`">
+                    {{ option.value }}
+                  </span>
+                  <span v-if="selected" :class="`${ active ? 'text-zinc-600' : 'text-zinc-600' } absolute inset-y-0 left-0 flex items-center pl-1.5`">
+                    <CheckIcon/>
+                  </span>
+                </div>
+              </ListboxOption>
+            </ListboxOptions>
+          </div>
         </div>
       </Listbox>
     </div>

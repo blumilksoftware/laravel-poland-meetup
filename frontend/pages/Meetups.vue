@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import MeetupsTable from '@/components/Meetups/MeetupsTable.vue'
+import PageHeader from '@/components/ReusableComponents/PageHeader.vue'
 
 const meetups = ref([])
 const companies = ref([])
@@ -33,5 +34,6 @@ onMounted(async () => {
 
 </script>
 <template>
+  <page-header word1="Meetupy"/>
   <meetups-table :error="error" :loading="loading" :meetups="meetups" :companies="companies" :speakers="people"/>
 </template>
