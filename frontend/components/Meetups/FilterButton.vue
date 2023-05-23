@@ -44,7 +44,6 @@ watch(selectedCompanies, () => {
 watch(selectedSpeakers, () => {
   emit('updated-speakers', selectedSpeakers.value)
 })
-
 </script>
 
 <template>

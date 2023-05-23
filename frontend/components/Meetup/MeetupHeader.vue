@@ -34,7 +34,7 @@ defineProps({
         </div>
       </div>
       <div class="flex justify-center text-zinc-500 sm:text-2xl">
-        <a :href="meetup.facebookEvent" class="flex justify-center space-x-5">
+        <a :href="meetup.facebookEvent" target="_blank" rel="noopener" class="flex justify-center space-x-5">
           <facebook-icon :href="meetup.facebook" class="h-6 w-6 self-center"/>
         </a>
       </div>

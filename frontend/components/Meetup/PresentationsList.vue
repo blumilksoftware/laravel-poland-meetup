@@ -47,13 +47,13 @@ defineProps({
           <div class="flex w-full items-center justify-between lg:mt-0">
             <div class="block w-full" :class="[presentation.slideshareEmbed ? 'my-5 lg:w-1/3' : 'lg:w-full']">
               <div class="flex justify-center text-base sm:space-x-5">
-                <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
+                <a v-if="presentation.youtube" :href="presentation.youtube" target="_blank" rel="noopener" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <you-tube-icon class="h-10 w-10 sm:h-6 sm:w-6 sm:shrink-0" aria-hidden="true" :href="presentation.youtube"/>
                   <p class="group-hover:text-laravel hidden sm:ml-2 sm:inline-block">
                     Zobacz na YouTube
                   </p>
                 </a>
-                <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
+                <a v-if="presentation.slideshare" :href="presentation.slideshare" target="_blank" rel="noopener" class="group mx-10 flex w-fit items-center text-center font-semibold transition hover:scale-105 sm:mx-2 lg:space-x-1">
                   <slide-share-icon aria-hidden="true" :href="presentation.slideshare" class="h-10 w-10 fill-zinc-600 sm:h-6 sm:w-6 sm:shrink-0"/>
                   <p class="group-hover:text-laravel hidden sm:ml-2 sm:inline-block">
                     Zobacz na SlideShare
