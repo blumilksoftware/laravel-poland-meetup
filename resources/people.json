@@ -108,7 +108,7 @@
     "id": "16",
     "name": "Kamil Piech",
     "image": "/images/speakers/kamilpiech.webp",
-    "bio": null,
+    "bio": "Kamil jest związany z Blumilkiem od 2021 roku, a z Laravelem i PHP od ponad 5 lat! Poza tym jest wielbicielem wycieczek rowerowych i piłki nożnej!",
     "linkedin": "https://www.linkedin.com/in/kamil-piech-9ab65619b/"
   },
   "@kamilpietka": {
@@ -222,5 +222,12 @@
     "image": "/images/speakers/katarzynazurek.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/katarzyna-zurek/"
+  },
+  "@marcinlenkowski": {
+    "id": "33",
+    "name": "Marcin Lenkowski",
+    "image": "/images/speakers/marcinlenkowski.webp",
+    "bio": "Marcin to prawdziwy guru programowania - pracuje z PHP i JavaScript od ponad 12 lat, tworzy oprogramowanie w technologiach takich jak Laravel, Symfony, Nest czy React, jest nauczycielem akademickim i prowadzi swoją szkołę programowania na Lenkowski.net!",
+    "linkedin": "https://www.linkedin.com/in/marcin-lenkowski-0a876860/"
   }
 }

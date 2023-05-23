@@ -13,7 +13,6 @@ const computedNextMeetup = computed(() => {
   if(props.nextMeetup === 0) return {}
   return props.nextMeetup.value
 })
-
 </script>
 
 <template>
