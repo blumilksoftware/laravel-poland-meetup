@@ -229,5 +229,12 @@
     "image": "/images/speakers/marcinlenkowski.webp",
     "bio": "Marcin to prawdziwy guru programowania - pracuje z PHP i JavaScript od ponad 12 lat, tworzy oprogramowanie w technologiach takich jak Laravel, Symfony, Nest czy React, jest nauczycielem akademickim i prowadzi swoją szkołę programowania na Lenkowski.net!",
     "linkedin": "https://www.linkedin.com/in/marcin-lenkowski-0a876860/"
+  },
+  "@aleksandertabor": {
+    "id": "34",
+    "name": "Aleksander Tabor",
+    "image": "/images/speakers/aleksandertabor.webp",
+    "bio": "Aleksander jest full-stack developerem. Ma ponad 3 lata doświadczenia komercyjnego. Nie istnieje technologia, która by go przeraziła. Aktualnie pracuje z PHP, LAravelem, JavaScriptem oraz Vue.js.",
+    "linkedin": "https://www.linkedin.com/in/aleksander-tabor/"
   }
 }

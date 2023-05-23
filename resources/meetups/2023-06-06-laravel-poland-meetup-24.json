@@ -4,6 +4,7 @@
   "location": "online",
   "organizers": ["@blumilk", "@amsterdamstandard"],
   "facebook": "https://www.facebook.com/events/189043327381947",
+  "signUpLink": "https://subscribepage.io/UrOF0T",
   "presentations": [
     {
       "title": "Coupling w Laravelu - jak odzyskać zdrowe relacje ze swoim kodem?",
@@ -34,6 +35,21 @@
       ],
       "links": [],
       "tags": ["saloon", "integracja", "api"]
+    },
+    {
+      "title": "Budowa nowoczesnego monolitu z wykorzystaniem Inertia.js i TypeScript",
+      "youtube": "",
+      "slideshare": "",
+      "slideshareEmbed": "",
+      "blurb": "Aleksander opowie o wykorzystaniu Inertii i TypeScriptu w budowaniu nowoczesnej apki.",
+      "speakers": [
+        {
+          "person": "@aleksandertabor",
+          "company": "@amsterdamstandard"
+        }
+      ],
+      "links": [],
+      "tags": ["inertiajs", "typescript"]
     }
   ]
 }
