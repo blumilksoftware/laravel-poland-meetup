@@ -36,6 +36,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
         id: $person["id"],
         name: $person["name"],
         image: $person["image"] ?? "",
+        imageMin: $person["imageMin"] ?? "",
         bio: $person["bio"] ?? "",
         linkedin: $person["linkedin"] ?? "",
     ));

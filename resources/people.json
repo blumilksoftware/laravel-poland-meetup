@@ -3,6 +3,7 @@
     "id": "1",
     "name": "Mateusz Antkowiak",
     "image": null,
+    "imageMi_minn": null,
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateusz-antkowiak-696357109/"
   },
@@ -10,6 +11,7 @@
     "id": "2",
     "name": "Karol Barcki",
     "image": "/images/speakers/karolbarcki.webp", 
+    "imageMin": "/images/speakers/karolbarcki_min.webp", 
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/karol-barcki/"
     },
@@ -17,6 +19,7 @@
     "id": "3",
     "name": "Kamil Bartczak",
     "image": "/images/speakers/kamilbartczak.webp", 
+    "imageMin": "/images/speakers/kamilbartczak_min.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/kamil-bartczak/"
   },
@@ -24,6 +27,7 @@
     "id": "4",
     "name": "Krzysztof Czechowski",
     "image": "/images/speakers/krzysztofczechowski.webp",
+    "imageMin": "/images/speakers/krzysztofczechowski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/krzysztof-czechowski-39bb73a3/"
   },
@@ -31,6 +35,7 @@
     "id": "5",
     "name": "Miłosz Dziurzyński",
     "image": "/images/speakers/miloszdziurzynski.webp", 
+    "imageMin": "/images/speakers/miloszdziurzynski_min.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/mdziurzynski/"
   },
@@ -38,6 +43,7 @@
     "id": "6",
     "name": "Andrzej Fenzel",
     "image": "/images/speakers/andrzejfenzel.webp",
+    "imageMin": "/images/speakers/andrzejfenzel_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/andrzej-fenzel-58403082/"
   },
@@ -45,6 +51,7 @@
     "id": "7",
     "name": "Patryk Filipiak",
     "image": "/images/speakers/patrykfilipiak.webp", 
+    "imageMin": "/images/speakers/patrykfilipiak_min.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/filipiak-patryk/"
   },
@@ -52,6 +59,7 @@
     "id": "8",
     "name": "Mateusz Garbarczyk",
     "image": "/images/speakers/mateuszgarbarczyk.webp",
+    "imageMin": "/images/speakers/mateuszgarbarczyk_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateusz-garbarczyk-1386a5162/"
   },
@@ -59,6 +67,7 @@
     "id": "9",
     "name": "Robert Kabat",
     "image": "/images/speakers/robertkabat.webp",
+    "imageMin": "/images/speakers/robertkabat_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/robert-kabat-70436bab/"
   },
@@ -66,6 +75,7 @@
     "id": "10",
     "name": "Kamil Kiełczewski",
     "image": "/images/speakers/kamilkielczewski.webp",
+    "imageMin": "/images/speakers/kamilkielczewski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/kamilkkielczewski/"
   },
@@ -73,6 +83,7 @@
     "id": "11",
     "name": "Amadeusz Kozłowski",
     "image": "/images/speakers/amadeuszkozlowski.webp",
+    "imageMin": "/images/speakers/amadeuszkozlowski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/vuefrontenddeveloper/"
   },
@@ -80,6 +91,7 @@
     "id": "12",
     "name": "Mateusz Lencki",
     "image": "/images/speakers/mateuszlencki.webp",
+    "imageMin": "/images/speakers/mateuszlencki_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateusz-lencki"
   },
@@ -87,6 +99,7 @@
     "id": "13",
     "name": "Adam Matysiak",
     "image": "/images/speakers/adammatysiak.webp",
+    "imageMin": "/images/speakers/adammatysiak_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/adammatysiak/"
   },
@@ -94,6 +107,7 @@
     "id": "14",
     "name": "Paweł Nuckowski",
     "image": "/images/speakers/pawelnuckowski.webp",
+    "imageMin": "/images/speakers/pawelnuckowski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/pawe%C5%82-nuckowski-06905a5b/"
   },
@@ -101,6 +115,7 @@
     "id": "15",
     "name": "Piotr Nowak",
     "image": "/images/speakers/piotrnowak.webp",
+    "imageMin": "/images/speakers/piotrnowak_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/nowakjestem/"
   },
@@ -108,6 +123,7 @@
     "id": "16",
     "name": "Kamil Piech",
     "image": "/images/speakers/kamilpiech.webp",
+    "imageMin": "/images/speakers/kamilpiech_min.webp",
     "bio": "Kamil jest związany z Blumilkiem od 2021 roku, a z Laravelem i PHP od ponad 5 lat! Poza tym jest wielbicielem wycieczek rowerowych i piłki nożnej!",
     "linkedin": "https://www.linkedin.com/in/kamil-piech-9ab65619b/"
   },
@@ -115,6 +131,7 @@
     "id": "17",
     "name": "Kamil Piętka",
     "image": "/images/speakers/kamilpietka.webp",
+    "imageMin": "/images/speakers/kamilpietka_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/kamil-pi%C4%99tka-531b3470/"
   },
@@ -122,6 +139,7 @@
     "id": "18",
     "name": "Joanna Rewak",
     "image": "/images/speakers/joannarewak.webp", 
+    "imageMin": "/images/speakers/joannarewak_min.webp", 
     "bio": null,
     "linkedin":  "https://pl.linkedin.com/in/joanna-rewak-745ba9133"
   },
@@ -129,6 +147,7 @@
     "id": "19",
     "name": "Krzysztof Rewak",
     "image": "/images/speakers/krzysztofrewak.webp", 
+    "imageMin": "/images/speakers/krzysztofrewak_min.webp", 
     "bio": "Współzałożyciel i współwłaściciel Blumilka, dyrektor ds. technologii w tymże, inżynier oprogramowania, nauczyciel akademicki, piwowar domowy. W Laravelu programuje od 2014 roku, Laravel Poland Meetup współorganizuje od 2020. Lubi mapy, nieoczywiste scrapowanie danych i łączenie ze sobą systemów informatycznych.",
     "linkedin": "https://www.linkedin.com/in/krzysztofrewak/"
   },
@@ -136,6 +155,7 @@
     "id": "20",
     "name": "Mateusz Rusyn",
     "image": "/images/speakers/mateuszrusyn.webp",
+    "imageMin": "/images/speakers/mateuszrusyn_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/mateuszrusyn/"
   },
@@ -143,6 +163,7 @@
     "id": "21",
     "name": "Piotr Rybak",
     "image": null,
+    "imageMi_minn": null,
     "bio": null,
     "linkedin": null
   },
@@ -150,6 +171,7 @@
     "id": "22",
     "name": "Jacek Sawoszczuk",
     "image": "/images/speakers/jaceksawoszczuk.webp",
+    "imageMin": "/images/speakers/jaceksawoszczuk_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/jacek-sawoszczuk-535058114"
   },
@@ -157,6 +179,7 @@
     "id": "23",
     "name": "Hubert Sitarski",
     "image": "/images/speakers/hubertsitarski.webp",
+    "imageMin": "/images/speakers/hubertsitarski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/hubert-sitarski/"
   },
@@ -164,6 +187,7 @@
     "id": "24",
     "name": "Paweł Spychalski",
     "image": "/images/speakers/pawelspychalski.webp",
+    "imageMin": "/images/speakers/pawelspychalski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/pawsp/"
   },
@@ -171,6 +195,7 @@
     "id": "25",
     "name": "Piotr Suchanek",
     "image": "/images/speakers/piotrsuchanek.webp",
+    "imageMin": "/images/speakers/piotrsuchanek_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/piotr-suchanek-1572a978/"
   },
@@ -178,6 +203,7 @@
     "id": "26",
     "name": "Przemek Szustak",
     "image": "/images/speakers/przemekszustak.webp", 
+    "imageMin": "/images/speakers/przemekszustak_min.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/przemek-szustak/"
   },
@@ -185,6 +211,7 @@
     "id": "27",
     "name": "Marek Tenus",
     "image": "/images/speakers/marektenus.webp",
+    "imageMin": "/images/speakers/marektenus_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/marektenus/"
   },
@@ -192,6 +219,7 @@
     "id": "28",
     "name": "Marcin Tracz",
     "image": "/images/speakers/marcintracz.webp",
+    "imageMin": "/images/speakers/marcintracz_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/marcin-tracz-2a3307139/"
   },
@@ -199,6 +227,7 @@
     "id": "29",
     "name": "Filip Zdunek",
     "image": "/images/speakers/filipzdunek.webp", 
+    "imageMin": "/images/speakers/filipzdunek_min.webp", 
     "bio": null,
     "linkedin":  "https://www.linkedin.com/in/filipzdunek/"
   },
@@ -206,6 +235,7 @@
     "id": "30",
     "name": "Andrzej Zieliński",
     "image": "/images/speakers/andrzejzielinski.webp",
+    "imageMin": "/images/speakers/andrzejzielinski_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/zielinskiandrzej/"
   },
@@ -213,6 +243,7 @@
     "id": "31",
     "name": "Tomek Żmudziński",
     "image": "/images/speakers/tomekzmudzinski.webp", 
+    "imageMin": "/images/speakers/tomekzmudzinski_min.webp", 
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/tzmudzinski/"
   },
@@ -220,6 +251,7 @@
     "id": "32",
     "name": "Katarzyna Żurek",
     "image": "/images/speakers/katarzynazurek.webp",
+    "imageMin": "/images/speakers/katarzynazurek_min.webp",
     "bio": null,
     "linkedin": "https://www.linkedin.com/in/katarzyna-zurek/"
   },
@@ -227,6 +259,7 @@
     "id": "33",
     "name": "Marcin Lenkowski",
     "image": "/images/speakers/marcinlenkowski.webp",
+    "imageMin": "/images/speakers/marcinlenkowski_min.webp",
     "bio": "Marcin to prawdziwy guru programowania - pracuje z PHP i JavaScript od ponad 12 lat, tworzy oprogramowanie w technologiach takich jak Laravel, Symfony, Nest czy React, jest nauczycielem akademickim i prowadzi swoją szkołę programowania na Lenkowski.net!",
     "linkedin": "https://www.linkedin.com/in/marcin-lenkowski-0a876860/"
   },
@@ -234,6 +267,7 @@
     "id": "34",
     "name": "Aleksander Tabor",
     "image": "/images/speakers/aleksandertabor.webp",
+    "imageMin": "/images/speakers/aleksandertabor_min.webp",
     "bio": "Aleksander jest full-stack developerem. Ma ponad 3 lata doświadczenia komercyjnego. Nie istnieje technologia, która by go przeraziła. Aktualnie pracuje z PHP, LAravelem, JavaScriptem oraz Vue.js.",
     "linkedin": "https://www.linkedin.com/in/aleksander-tabor/"
   }

@@ -28,8 +28,8 @@ const findNextMeetup = computed(() => {
 
 const meetupSpeakers = ( meetup ) => {
   let setSpeakers = new Set()
-  meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ name, avatar, image }) => 
-    setSpeakers.add({ name: name, avatar: avatar, image:image }),
+  meetup.presentations.forEach(({ speakers }) => speakers.forEach(({ name, avatar, imageMin }) => 
+    setSpeakers.add({ name: name, avatar: avatar, image:imageMin }),
   ))
   return setSpeakers
 }
