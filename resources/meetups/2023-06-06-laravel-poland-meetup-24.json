@@ -8,7 +8,7 @@
   "presentations": [
     {
       "title": "Coupling w Laravelu - jak odzyskać zdrowe relacje ze swoim kodem?",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/watch?v=4ZxuEN6VFA8",
       "slideshare": "",
       "slideshareEmbed": "",
       "blurb": "Marcin przybliży Wam temat couplingu w Laravelu, czyli jak odzyskać zdrowe relacje ze swoim kodem. Przybliży Wam, czym jest coupling i dlaczego Twój kod może być trudny w rozwijaniu. Nauczy, jak pracować z parametrami i jak tworzyć kod niezależny od frameworka, nadal będąc w dobrej relacji z Laravelem.",
@@ -23,7 +23,7 @@
     },
     {
       "title": "Saloon - integracja z API nigdy nie była tak prosta",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/watch?v=HbPNKbbaMgU",
       "slideshare": "",
       "slideshareEmbed": "",
       "blurb": "Prezentacja Kamila będzie o Saloon - paczce dla Laravela, która sprawia, że integracja z API nigdy nie była tak prosta. Kamil opowie Wam, jak Saloon może ułatwić tworzenie integracji z zewnętrznymi API i jakie podstawowe funkcjonalności nam dostarcza.",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Budowa nowoczesnego monolitu z wykorzystaniem Inertia.js i TypeScript",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/watch?v=lmvaVmVYY0w",
       "slideshare": "",
       "slideshareEmbed": "",
       "blurb": "Aleksander opowie o wykorzystaniu Inertii i TypeScriptu w budowaniu nowoczesnej apki.",
