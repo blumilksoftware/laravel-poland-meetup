@@ -36,6 +36,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
         id: $person["id"],
         name: $person["name"],
         image: $person["image"] ?? "",
+        imageMin: $person["imageMin"] ?? "",
         bio: $person["bio"] ?? "",
         linkedin: $person["linkedin"] ?? "",
     ));
@@ -54,6 +55,7 @@ function mapData(Collection $people, Collection $companies, Collection $meetups)
     $meetups = $meetups->map(fn(array $meetup): Meetup => new Meetup(
         name: $meetup["name"],
         location: $meetup["location"] ?? "",
+        signUpLink: $meetup["signUpLink"] ?? "",
         date: isset($meetup["date"]) ? Carbon::parse($meetup["date"])->locale("pl_PL") : null,
         facebook: $meetup["facebook"] ?? null,
         presentations: Collection::make($meetup["presentations"])->map(

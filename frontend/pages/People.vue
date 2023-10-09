@@ -7,8 +7,8 @@ import LoadingSpinner from '@/components/Icons/LoadingSpinner.vue'
 
 const people = ref([])
 const meetups = ref([])
-let error = ref(false)
-let loading = ref(true)
+const error = ref(false)
+const loading = ref(true)
 
 onMounted(() => {
   async function fetchPeople () {
@@ -36,7 +36,6 @@ onMounted(() => {
 
   loading.value = false
 })
-
 </script>
 
 <template>

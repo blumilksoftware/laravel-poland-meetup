@@ -35,7 +35,7 @@ const computedNextMeetup = computed(() => {
         </p>
         <div class="mt-8">
           <div class="block gap-4 rounded-md tracking-wide shadow sm:block md:block lg:w-3/5">
-            <a href="https://www.subscribepage.com/lpm23?fbclid=IwAR2mdIHtj7U2kCAlRMzpzbenpyKdO6HkdMsXTeFjzBm1lypc5oOwmsIfSzI" class="bg-laravel my-3 flex items-center justify-center rounded-md border border-transparent px-8 py-3 text-xl font-bold text-white duration-300 hover:scale-105 hover:bg-red-800" target="_blank" rel="noopener">Zapisz się!</a>
+            <a :href="computedNextMeetup.signUpLink" class="bg-laravel my-3 flex items-center justify-center rounded-md border border-transparent px-8 py-3 text-xl font-bold text-white duration-300 hover:scale-105 hover:bg-red-800" target="_blank">Zapisz się!</a>
             <router-link :to="{ name: 'meetups' }" class="flex items-center justify-center rounded-md border border-transparent bg-zinc-100 px-5 py-3 text-base font-medium text-zinc-900 duration-300 hover:scale-105 hover:bg-zinc-300">
               Poprzednie meetupy
             </router-link>

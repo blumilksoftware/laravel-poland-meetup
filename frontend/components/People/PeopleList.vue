@@ -51,8 +51,8 @@ const sortedUpdatedSpeakers = (speakers) => {
       <tr v-for="speaker in speakersToRender" :key="speaker.id" class="group hover:bg-zinc-100">
         <td class="justify-fit whitespace-nowrap py-3.5 pl-4 pr-3 text-sm font-medium text-zinc-900 sm:py-3 sm:pl-6">
           <router-link :to="{ name: 'people.details', params: { id: speaker.slug } }" class="w-full focus:z-10">
-            <img v-if="!speaker.image.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12" alt="awatar prelegenta">
-            <img v-else :src="speaker.image" class="h-8 w-8 rounded-full md:h-12 md:w-12" :alt="'zdjęcie prelegenta ' + speaker.name">
+            <img v-if="!speaker.imageMin.length" :src="speaker.avatar" class="h-8 w-8 rounded-full md:h-12 md:w-12" alt="awatar prelegenta">
+            <img v-else :src="speaker.imageMin" class="h-8 w-8 rounded-full md:h-12 md:w-12" :alt="'zdjęcie prelegenta ' + speaker.name">
           </router-link>
         </td>
         <td class="whitespace-nowrap py-3.5 pl-4 pr-1 text-left text-sm font-semibold text-zinc-500 sm:text-base md:text-lg">

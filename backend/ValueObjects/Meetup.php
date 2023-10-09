@@ -19,6 +19,7 @@ class Meetup
         public readonly string $name,
         public readonly ?string $location = null,
         public readonly ?Carbon $date = null,
+        public readonly ?string $signUpLink = null,
         public readonly ?string $facebook = null,
         public readonly Collection $presentations = new Collection(),
     ) {
@@ -31,6 +32,7 @@ class Meetup
             "id" => $this->id,
             "name" => $this->name,
             "location" => $this->location,
+            "signUpLink" => $this->signUpLink,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
@@ -46,6 +48,7 @@ class Meetup
             "location" => $this->location,
             "date" => $this->date->format("Y-m-d H:i:s"),
             "dateFull" => $this->date->isoFormat("LL, LT"),
+            "signUpLink" => $this->signUpLink,
             "presentations" => $this->presentations->map(fn(Presentation $presentation): array => $presentation->toMeetupEntry()),
             "facebook" => $this->facebook,
         ];

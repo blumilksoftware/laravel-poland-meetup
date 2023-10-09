@@ -188,5 +188,19 @@
       "lat": 52.22383532611707,
       "lng": 20.988013253972873
     }
+  },
+  "@escola": {
+    "id": "14",
+    "name": "Escola",
+    "logo": "/images/companies/escola.webp",
+    "location": "Warszawa",
+    "bio": "Rozumiemy, że każdy projekt jest inny i wymaga indywidualnego podejścia. Wiemy co musimy zrobić, aby projekt odniósł sukces. Stosujemy pięcioetapowy model design thinking. Skupiamy się przede wszystkim na dostrzeżeniu perspektywy użytkownika, zrozumieniu jego potrzeb i zarazem realizujemy Twój cel biznesowy.",
+    "website": "https://escola.pl/",
+    "linkedin": "https://www.linkedin.com/company/escola-s-a/",
+    "organizer": false,
+    "coordinates": { 
+      "lat": 52.23794439364628,
+      "lng": 20.98952060000376
+    }
   }
 }
