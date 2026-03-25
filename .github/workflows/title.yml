@@ -4,9 +4,12 @@ on:
     branches: [ "main" ]
     types: [opened, edited, synchronize, ready_for_review, reopened]
 
+permissions:
+  pull-requests: read
+
 jobs:
   check-pr-title:
     name: Check pull request title
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: blumilksoftware/action-pr-title@v1.2.0
