@@ -15,7 +15,7 @@ services:
 
   php:
     container_name: lpm-php
-    image: ghcr.io/blumilksoftware/php:8.1
+    image: ghcr.io/blumilksoftware/php:8.2@sha256:773d1e15c41501ba70fb61e02c4c083afda89a8ea9e5f301b9b030c87dbba56d
     working_dir: /application
     user: ${CURRENT_UID:-1000}
     volumes:
